@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tesla — History, Models, Reliability & Market Position | AmericanCarBrands.com</title>
+<meta name="description" content="Complete Tesla guide: full history from startup to EV giant, all models (Model S, 3, X, Y, Cybertruck), reliability data, stock ticker TSLA, market position, and FAQs. Updated 2026.">
+<meta name="keywords" content="Tesla car brand, Tesla history, Tesla models 2026, Tesla reliability, TSLA stock, Tesla Cybertruck, Tesla Model 3, American EV brands">
+<link rel="canonical" href="https://americancarbrands.com/tesla.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --red: #C8102E;
+    --white: #F5F0E8;
+    --gray-light: #C9C4B8;
+    --gray: #7A7570;
+    --black: #0D0D0D;
+    --dark: #141414;
+    --dark2: #1C1C1C;
+    --dark3: #242424;
+    --accent-gold: #C9962A;
+    --green: #2DB37A;
+    --tesla-red: #E31937;
+    --tesla-silver: #8C8C8C;
+    --blue: #1A6FD4;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--black); color: var(--white); font-family: 'Barlow', sans-serif; font-weight: 300; line-height: 1.6; overflow-x: hidden; }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 40px; height: 64px;
+    background: rgba(13,13,13,0.96);
+    border-bottom: 1px solid rgba(200,16,46,0.3);
+    backdrop-filter: blur(10px);
+  }
+  .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 0.1em; color: var(--white); text-decoration: none; }
+  .nav-logo span { color: var(--red); }
+  .nav-breadcrumb { display: flex; align-items: center; gap: 8px; font-family: 'Barlow Condensed', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray); }
+  .nav-breadcrumb a { color: var(--gray); text-decoration: none; transition: color 0.2s; }
+  .nav-breadcrumb a:hover { color: var(--red); }
+  .nav-breadcrumb .current { color: var(--white); }
+  .nav-back { display: flex; align-items: center; gap: 8px; color: var(--gray-light); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.2s; border: 1px solid rgba(255,255,255,0.1); padding: 6px 16px; border-radius: 2px; }
+  .nav-back:hover { color: var(--red); border-color: var(--red); }
+
+  .brand-hero {
+    min-height: 70vh; display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 100px 60px 72px; position: relative; overflow: hidden;
+  }
+  .brand-hero-bg {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 70% 60% at 80% 50%, rgba(227,25,55,0.18) 0%, transparent 65%),
+      radial-gradient(ellipse 40% 40% at 10% 20%, rgba(26,111,212,0.08) 0%, transparent 60%), var(--black);
+  }
+  .brand-hero-watermark { position: absolute; right: -30px; bottom: -30px; font-family: 'Bebas Neue', sans-serif; font-size: clamp(180px, 25vw, 380px); color: rgba(255,255,255,0.025); line-height: 1; pointer-events: none; }
+  .brand-hero-accent { position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--tesla-red), #FF6080, var(--blue)); }
+  .brand-eyebrow { font-family: 'Barlow Condensed', sans-serif; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gray); margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
+  .brand-eyebrow span { color: var(--gray-light); }
+  .brand-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: rgba(255,255,255,0.2); }
+  .brand-hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(72px, 12vw, 160px); line-height: 0.85; letter-spacing: 0.02em; margin-bottom: 24px; }
+  .brand-tagline { font-size: 1.15rem; color: var(--gray-light); max-width: 600px; margin-bottom: 40px; font-style: italic; border-left: 3px solid var(--tesla-red); padding-left: 20px; line-height: 1.6; }
+  .brand-meta-bar { display: flex; flex-wrap: wrap; gap: 32px; padding: 24px 0; border-top: 1px solid rgba(255,255,255,0.08); }
+  .meta-item { display: flex; flex-direction: column; }
+  .meta-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gray); margin-bottom: 4px; }
+  .meta-value { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 600; color: var(--white); letter-spacing: 0.04em; }
+  .meta-value.ticker { color: var(--accent-gold); font-size: 1.1rem; }
+  .meta-value.active-green { color: var(--green); }
+
+  .page-layout { display: grid; grid-template-columns: 1fr 320px; gap: 2px; max-width: 1400px; margin: 0 auto; }
+  .main-content { padding: 64px 60px; }
+  .sidebar { background: var(--dark2); padding: 40px 32px; position: sticky; top: 64px; height: fit-content; }
+
+  .content-section { margin-bottom: 64px; padding-bottom: 64px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .content-section:last-of-type { border-bottom: none; }
+  .section-heading { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+  .section-heading h2 { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; letter-spacing: 0.06em; color: var(--white); }
+  .section-num { font-family: 'Bebas Neue', sans-serif; font-size: 1rem; color: var(--tesla-red); opacity: 0.6; }
+  .content-section p { color: var(--gray-light); font-size: 0.95rem; line-height: 1.85; margin-bottom: 16px; }
+  .content-section a { color: var(--tesla-red); text-decoration: none; }
+  .content-section a:hover { text-decoration: underline; }
+  .content-section strong { color: var(--white); font-weight: 500; }
+
+  .models-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin-top: 28px; }
+  .model-card { background: var(--dark2); padding: 20px 22px; border: 1px solid rgba(255,255,255,0.05); border-radius: 3px; transition: border-color 0.2s, background 0.2s; }
+  .model-card:hover { border-color: rgba(227,25,55,0.3); background: var(--dark3); }
+  .model-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 0.04em; color: var(--white); margin-bottom: 6px; }
+  .model-type { font-family: 'Barlow Condensed', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray); margin-bottom: 8px; }
+  .model-desc { font-size: 0.82rem; color: var(--gray-light); line-height: 1.5; }
+  .model-range { display: inline-block; margin-top: 10px; padding: 3px 10px; background: rgba(45,179,122,0.12); color: var(--green); border-radius: 2px; font-family: 'Barlow Condensed', sans-serif; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+
+  .timeline { position: relative; margin-top: 24px; }
+  .timeline::before { content: ''; position: absolute; left: 14px; top: 0; bottom: 0; width: 2px; background: rgba(255,255,255,0.07); }
+  .timeline-item { display: flex; gap: 24px; margin-bottom: 28px; }
+  .timeline-dot { width: 30px; height: 30px; border-radius: 50%; background: var(--dark2); border: 2px solid var(--tesla-red); flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
+  .timeline-dot-inner { width: 8px; height: 8px; border-radius: 50%; background: var(--tesla-red); }
+  .timeline-year { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; color: var(--tesla-red); letter-spacing: 0.06em; }
+  .timeline-event { font-weight: 500; color: var(--white); margin: 4px 0; font-size: 0.95rem; }
+  .timeline-desc { font-size: 0.85rem; color: var(--gray); line-height: 1.6; }
+
+  .faq-list { margin-top: 8px; }
+  .faq-item { border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .faq-question { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; cursor: pointer; font-weight: 500; font-size: 0.95rem; color: var(--white); transition: color 0.2s; user-select: none; }
+  .faq-question:hover { color: var(--tesla-red); }
+  .faq-icon { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; color: var(--tesla-red); transition: transform 0.25s; flex-shrink: 0; margin-left: 16px; }
+  .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.2s; }
+  .faq-answer.open { max-height: 500px; padding-bottom: 20px; }
+  .faq-answer p { color: var(--gray-light); font-size: 0.9rem; line-height: 1.75; }
+  .faq-icon.open { transform: rotate(45deg); }
+
+  .market-card { background: var(--dark2); padding: 24px 28px; border-radius: 4px; margin-bottom: 12px; display: flex; align-items: flex-start; gap: 16px; }
+  .market-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+  .market-card h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray); margin-bottom: 6px; }
+  .market-card p { font-size: 0.9rem; color: var(--gray-light); line-height: 1.65; margin: 0 !important; }
+
+  .sidebar-block { margin-bottom: 32px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .sidebar-block:last-child { border-bottom: none; margin-bottom: 0; }
+  .sidebar-title { font-family: 'Barlow Condensed', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gray); margin-bottom: 14px; }
+  .sidebar-stat { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 0.88rem; }
+  .sidebar-stat:last-child { border-bottom: none; }
+  .sidebar-stat-label { color: var(--gray); }
+  .sidebar-stat-value { color: var(--white); font-weight: 500; }
+  .sidebar-stat-value.green { color: var(--green); }
+  .sidebar-stat-value.gold { color: var(--accent-gold); }
+  .sidebar-links { display: flex; flex-direction: column; gap: 8px; }
+  .sidebar-links a { color: var(--gray-light); text-decoration: none; font-size: 0.88rem; padding: 8px 12px; background: rgba(255,255,255,0.03); border-radius: 3px; transition: all 0.2s; display: flex; justify-content: space-between; }
+  .sidebar-links a:hover { background: rgba(227,25,55,0.1); color: var(--tesla-red); }
+  .ticker-box { background: linear-gradient(135deg, rgba(201,150,42,0.15), rgba(201,150,42,0.05)); border: 1px solid rgba(201,150,42,0.25); border-radius: 4px; padding: 20px; text-align: center; }
+  .ticker-symbol { font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; color: var(--accent-gold); letter-spacing: 0.08em; display: block; margin-bottom: 4px; }
+  .ticker-exchange { font-size: 0.72rem; color: var(--gray); letter-spacing: 0.1em; text-transform: uppercase; }
+  .ticker-disclaimer { font-size: 0.7rem; color: var(--gray); margin-top: 10px; line-height: 1.5; font-style: italic; }
+
+  .jump-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 48px; padding: 20px; background: var(--dark2); border-radius: 4px; }
+  .jump-link { font-family: 'Barlow Condensed', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-light); text-decoration: none; padding: 6px 14px; border: 1px solid rgba(255,255,255,0.08); border-radius: 2px; transition: all 0.2s; }
+  .jump-link:hover { color: var(--tesla-red); border-color: var(--tesla-red); }
+
+  .brand-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+  .brand-nav-card { background: var(--dark2); padding: 24px 28px; text-decoration: none; display: flex; align-items: center; gap: 16px; transition: background 0.2s; }
+  .brand-nav-card:hover { background: var(--dark3); }
+  .brand-nav-dir { font-family: 'Barlow Condensed', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray); margin-bottom: 4px; }
+  .brand-nav-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; color: var(--white); letter-spacing: 0.04em; }
+
+  footer { background: #080808; padding: 60px; border-top: 1px solid rgba(255,255,255,0.06); }
+  .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-bottom: 40px; }
+  .footer-col-title { font-family: 'Barlow Condensed', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gray); margin-bottom: 16px; }
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-links a { color: var(--gray-light); text-decoration: none; font-size: 0.88rem; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--red); }
+  .footer-bottom { display: flex; align-items: center; justify-content: space-between; font-size: 0.78rem; color: var(--gray); padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.06); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  .brand-hero > * { animation: fadeUp 0.5s ease both; }
+  .brand-hero .brand-eyebrow { animation-delay: 0.1s; }
+  .brand-hero h1 { animation-delay: 0.2s; }
+  .brand-hero .brand-tagline { animation-delay: 0.3s; }
+  .brand-hero .brand-meta-bar { animation-delay: 0.4s; }
+
+  @media (max-width: 1024px) { .page-layout { grid-template-columns: 1fr; } .sidebar { position: static; } }
+  @media (max-width: 768px) { nav { padding: 0 20px; } .brand-hero { padding: 100px 24px 56px; } .main-content { padding: 40px 24px; } footer { padding: 40px 24px; } .footer-grid { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">AMERICAN<span>CAR</span>BRANDS</a>
+  <div class="nav-breadcrumb">
+    <a href="index.html">All Brands</a>
+    <span style="color: rgba(255,255,255,0.2);">›</span>
+    <span class="current">Tesla</span>
+  </div>
+  <a href="index.html" class="nav-back">← All Brands</a>
+</nav>
+
+<section class="brand-hero">
+  <div class="brand-hero-bg"></div>
+  <div class="brand-hero-watermark">TESLA</div>
+  <div class="brand-hero-accent"></div>
+
+  <div class="brand-eyebrow">American EV Brand · <span>Active Since 2003</span></div>
+  <h1>Tesla,<br>Inc.</h1>
+  <p class="brand-tagline">The company that proved EVs could be desirable, fast, and aspirational. From Silicon Valley startup to the world's most valuable automaker — Tesla changed everything.</p>
+
+  <div class="brand-meta-bar">
+    <div class="meta-item"><span class="meta-label">Founded</span><span class="meta-value">July 1, 2003</span></div>
+    <div class="meta-item"><span class="meta-label">Founders</span><span class="meta-value">Musk, Tarpenning,<br>Eberhard, Wright, Straubel</span></div>
+    <div class="meta-item"><span class="meta-label">Headquarters</span><span class="meta-value">Austin, Texas</span></div>
+    <div class="meta-item"><span class="meta-label">Status</span><span class="meta-value active-green">● Active</span></div>
+    <div class="meta-item"><span class="meta-label">Stock Ticker</span><span class="meta-value ticker">NASDAQ: TSLA</span></div>
+    <div class="meta-item"><span class="meta-label">Annual Revenue</span><span class="meta-value">~$97B USD</span></div>
+    <div class="meta-item"><span class="meta-label">Employees</span><span class="meta-value">~125,000</span></div>
+  </div>
+</section>
+
+<div class="page-layout">
+  <main class="main-content">
+
+    <nav class="jump-nav">
+      <a href="#history" class="jump-link">History</a>
+      <a href="#ownership" class="jump-link">Ownership</a>
+      <a href="#models" class="jump-link">Models</a>
+      <a href="#reliability" class="jump-link">Reliability</a>
+      <a href="#market" class="jump-link">Market Position</a>
+      <a href="#faq" class="jump-link">FAQs</a>
+    </nav>
+
+    <div class="content-section" id="history">
+      <div class="section-heading"><span class="section-num">01</span><h2>Tesla's History</h2></div>
+
+      <p>Tesla is the most consequential American automotive startup since Ford Motor Company itself. Founded on July 1, 2003, by engineers <strong>Martin Eberhard and Marc Tarpenning</strong> (with Elon Musk joining as chairman and lead investor in 2004), Tesla was born from a simple but radical premise: that electric vehicles didn't have to be boring, slow, or compromise-ridden.</p>
+
+      <p>The company's name honors <strong>Nikola Tesla</strong>, the Serbian-American inventor who pioneered AC electrical systems — a fitting tribute for a company that would electrify transportation. Early Tesla was a Silicon Valley engineering project as much as a car company, which gave it a product-design DNA unlike any Detroit automaker.</p>
+
+      <p>Tesla nearly went bankrupt in 2008. Just hours before running out of money, on Christmas Eve 2008, Elon Musk closed a final funding round. That near-death moment forged Tesla's culture of intensity, speed, and existential urgency that still defines the company today.</p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"><div class="timeline-dot-inner"></div></div>
+          <div class="timeline-content">
+            <div class="timeline-year">2003</div>
+            <div class="timeline-event">Tesla Founded in San Carlos, CA</div>
+            <div class="timeline-desc">Martin Eberhard and Marc Tarpenning incorporate Tesla Motors. Elon Musk joins as chairman and lead Series A investor in 2004.</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"><div class="timeline-dot-inner"></div></div>
+          <div class="timeline-content">
+            <div class="timeline-year">2008</div>
+            <div class="timeline-event">Tesla Roadster Deliveries Begin</div>
+            <div class="timeline-desc">The $109,000 Lotus-based Roadster proves an EV can be fast (0-60 in 3.9 sec) and desirable. Tesla nearly goes bankrupt — saved on Christmas Eve by a last-minute Musk investment.</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"><div class="timeline-dot-inner"></div></div>
+          <div class="timeline-content">
+            <div class="timeline-year">2012</div>
+            <div class="timeline-event">Model S Launches</div>
+            <div class="timeline-desc">The Model S sedan earns a perfect Consumer Reports score — the highest ever. It wins Motor Trend Car of the Year and changes how the industry thinks about EVs forever.</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"><div class="timeline-dot-inner"></div></div>
+          <div class="timeline-content">
+            <div class="timeline-year">2017</div>
+            <div class="timeline-event">Model 3 Goes on Sale</div>
+            <div class="timeline-desc">Tesla's mass-market EV. Reservation deposits topped 400,000 before launch. "Production hell" followed, but Model 3 eventually becomes the world's best-selling EV.</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"><div class="timeline-dot-inner"></div></div>
+          <div class="timeline-content">
+            <div class="timeline-year">2021</div>
+            <div class="timeline-event">Tesla Becomes World's Most Valuable Automaker</div>
+            <div class="timeline-desc">Tesla's market cap surpasses Toyota, GM, Ford, and Volkswagen combined at peak valuation. TSLA briefly exceeds $1 trillion market cap.</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"><div class="timeline-dot-inner"></div></div>
+          <div class="timeline-content">
+            <div class="timeline-year">2023</div>
+            <div class="timeline-event">Cybertruck Begins Deliveries</div>
+            <div class="timeline-desc">After years of delays, the Cybertruck — Tesla's stainless steel, angular pickup — begins production in Austin. Love it or hate it, it's unmistakably American.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section" id="ownership">
+      <div class="section-heading"><span class="section-num">02</span><h2>Ownership Structure</h2></div>
+
+      <p>Tesla, Inc. is a <strong>publicly traded American corporation (NASDAQ: TSLA)</strong>. It is not a subsidiary of any other automaker or conglomerate — it remains fiercely independent. Elon Musk is the company's largest individual shareholder and CEO, a combination that gives him unusual control despite Tesla being fully public.</p>
+
+      <p>Unlike Ford's dual-class structure, Tesla has a single class of shares — meaning Musk's influence comes from economic ownership (approximately 13–20% of shares at various times) and his stature as the company's founder-CEO, rather than supervoting rights. This creates an unusual dynamic where Tesla's largest institutional shareholders — Vanguard (~6%), BlackRock (~5%), and others — technically have equal voting rights, but Musk's vision dominates strategic direction.</p>
+
+      <div class="market-card">
+        <div class="market-icon">👤</div>
+        <div>
+          <h3>Elon Musk — CEO & Largest Shareholder</h3>
+          <p>Musk joined Tesla as chairman and lead investor in 2004 and became CEO in 2008. His ownership stake — and the cult following around him — makes Tesla unlike any other public company. Board relationships, SEC conflicts, and Twitter/X acquisition created significant corporate governance tensions from 2022 onward.</p>
+        </div>
+      </div>
+
+      <div class="market-card">
+        <div class="market-icon">🌍</div>
+        <div>
+          <h3>No Parent Company</h3>
+          <p>Tesla is fully independent. No other automaker holds a stake. GM, Ford, and legacy OEMs have repeatedly considered or been rumored to invest in Tesla, but no such deal has occurred. Tesla's independence is a core part of its identity and competitive strategy.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section" id="models">
+      <div class="section-heading"><span class="section-num">03</span><h2>Tesla's Vehicle Lineup</h2></div>
+
+      <p>Tesla's lineup is entirely electric — no hybrids, no gas options. Every model features over-the-air software updates, access to the Supercharger network, and Tesla's proprietary driver assistance technology, Autopilot (with Full Self-Driving as an optional upgrade).</p>
+
+      <div class="models-grid">
+        <div class="model-card">
+          <div class="model-name">Model S</div>
+          <div class="model-type">Full-Size Luxury Sedan / Plaid</div>
+          <div class="model-desc">The car that started it all for mass-market Tesla. The Plaid variant does 0-60 in 1.99 seconds — the fastest production sedan ever made.</div>
+          <span class="model-range">405 mi Range</span>
+        </div>
+        <div class="model-card">
+          <div class="model-name">Model 3</div>
+          <div class="model-type">Compact Sedan</div>
+          <div class="model-desc">Tesla's best-selling car globally. Redesigned "Highland" version launched in 2023. The accessible entry point to Tesla ownership.</div>
+          <span class="model-range">341 mi Range</span>
+        </div>
+        <div class="model-card">
+          <div class="model-name">Model X</div>
+          <div class="model-type">Full-Size SUV / Falcon Doors</div>
+          <div class="model-desc">The falcon-wing doors make it instantly recognizable. 7-passenger seating, enormous cargo capacity, Plaid performance available.</div>
+          <span class="model-range">335 mi Range</span>
+        </div>
+        <div class="model-card">
+          <div class="model-name">Model Y</div>
+          <div class="model-type">Compact SUV / Crossover</div>
+          <div class="model-desc">The world's best-selling car in 2023. Practical, spacious, efficient. The Model Y is the EV that moved the mainstream.</div>
+          <span class="model-range">330 mi Range</span>
+        </div>
+        <div class="model-card">
+          <div class="model-name">Cybertruck</div>
+          <div class="model-type">Full-Size Electric Pickup</div>
+          <div class="model-desc">Stainless steel exoskeleton. Controversial, polarizing, and uniquely American. Deliveries began November 2023. AWD, RWD, and Cyberbeast trims.</div>
+          <span class="model-range">340 mi Range</span>
+        </div>
+        <div class="model-card">
+          <div class="model-name">Semi</div>
+          <div class="model-type">Class 8 Electric Truck</div>
+          <div class="model-desc">Tesla's commercial freight truck. PepsiCo received the first deliveries in 2022. Claims 500 miles of range on a single charge.</div>
+          <span class="model-range">500 mi Range</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section" id="reliability">
+      <div class="section-heading"><span class="section-num">04</span><h2>Reliability Perception</h2></div>
+
+      <p>Tesla's reliability record is one of the automotive industry's most debated topics. The reality is nuanced: <strong>Tesla's drivetrain and powertrain components are extremely reliable</strong> (EVs have far fewer moving parts than gas vehicles), but build quality, panel gaps, interior materials, and in-vehicle technology have historically drawn criticism.</p>
+
+      <p>Consumer Reports has ranked Tesla below average in overall reliability in several recent years, primarily citing concerns about <strong>body hardware, squeaks/rattles, and paint defects</strong>. However, Tesla owners consistently report high satisfaction scores and strong resale value. The over-the-air update capability means some software-related issues get fixed remotely — a capability no legacy automaker matched at scale.</p>
+
+      <div style="background: var(--dark2); padding: 28px 32px; border-radius: 4px; margin-top: 24px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+          <div>
+            <div style="font-family: 'Bebas Neue'; font-size: 3rem; line-height: 1; color: var(--white);">68 <span style="font-size: 1.2rem; color: var(--gray);">/ 100</span></div>
+            <div style="font-family: 'Barlow Condensed'; font-size: 0.72rem; color: var(--gray); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px;">Industry Rating: Mixed</div>
+          </div>
+          <div style="font-size: 0.75rem; color: var(--gray); text-align: right;">Composite based on<br>Consumer Reports & J.D. Power</div>
+        </div>
+        <div style="margin-bottom: 14px;">
+          <div style="display: flex; justify-content: space-between; font-family: 'Barlow Condensed'; font-size: 0.75rem; font-weight: 600; color: var(--gray-light); margin-bottom: 6px;"><span>Powertrain / Motor Reliability</span><span>92/100</span></div>
+          <div style="background: rgba(255,255,255,0.07); height: 6px; border-radius: 3px;"><div style="width: 92%; height: 100%; border-radius: 3px; background: linear-gradient(90deg, var(--green), #56E0A0);"></div></div>
+        </div>
+        <div style="margin-bottom: 14px;">
+          <div style="display: flex; justify-content: space-between; font-family: 'Barlow Condensed'; font-size: 0.75rem; font-weight: 600; color: var(--gray-light); margin-bottom: 6px;"><span>Build Quality / Fit & Finish</span><span>58/100</span></div>
+          <div style="background: rgba(255,255,255,0.07); height: 6px; border-radius: 3px;"><div style="width: 58%; height: 100%; border-radius: 3px; background: linear-gradient(90deg, #D4A017, #E8C85A);"></div></div>
+        </div>
+        <div style="margin-bottom: 14px;">
+          <div style="display: flex; justify-content: space-between; font-family: 'Barlow Condensed'; font-size: 0.75rem; font-weight: 600; color: var(--gray-light); margin-bottom: 6px;"><span>Software / OTA Experience</span><span>85/100</span></div>
+          <div style="background: rgba(255,255,255,0.07); height: 6px; border-radius: 3px;"><div style="width: 85%; height: 100%; border-radius: 3px; background: linear-gradient(90deg, var(--green), #56E0A0);"></div></div>
+        </div>
+        <div style="margin-top: 20px; font-size: 0.88rem; color: var(--gray-light); line-height: 1.7; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.07);">
+          <strong style="color: var(--white);">Verdict:</strong> Tesla's mechanical reliability — motors, battery, inverter — is best-in-class. The weaknesses are traditional auto build quality: panels, paint, trim. If you buy Tesla, expect a car that runs reliably for a decade but may have minor cosmetic issues. Service experience is improving but still inconsistent.
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section" id="market">
+      <div class="section-heading"><span class="section-num">05</span><h2>Market Position</h2></div>
+
+      <p>Tesla occupies a position of extraordinary, if challenged, dominance in the American EV market. <strong>At its 2023 peak, Tesla held roughly 55% of all US EV sales</strong> — a staggering market share for a single brand in any meaningful vehicle segment. That share has declined as legacy automakers and new entrants launched credible EVs, but Tesla remains the decisive EV market leader.</p>
+
+      <div class="market-card">
+        <div class="market-icon">⚡</div>
+        <div><h3>EV Market Leader — USA</h3><p>Despite growing competition from Ford, GM, Hyundai/Kia, and startups, Tesla sells more EVs in the US than any other brand. The Supercharger network — now partially open to other brands — remains a major strategic moat.</p></div>
+      </div>
+      <div class="market-card">
+        <div class="market-icon">🌐</div>
+        <div><h3>Vertically Integrated Strategy</h3><p>Tesla makes its own chips, batteries, motors, software, and even sells directly to consumers (no dealerships). This vertical integration gives Tesla cost and speed advantages — and headaches when manufacturing scales.</p></div>
+      </div>
+      <div class="market-card">
+        <div class="market-icon">🤖</div>
+        <div><h3>Autonomy & AI Ambitions</h3><p>Full Self-Driving (FSD) subscription remains Tesla's most contested product. Musk calls Tesla primarily an AI company. The Optimus humanoid robot and Tesla's dojo supercomputer signal ambitions far beyond automotive.</p></div>
+      </div>
+    </div>
+
+    <div class="content-section" id="faq">
+      <div class="section-heading"><span class="section-num">06</span><h2>Tesla FAQs</h2></div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">Is Tesla an American car brand?<span class="faq-icon">+</span></div>
+          <div class="faq-answer"><p>Yes. Tesla, Inc. was founded in California in 2003, is headquartered in Austin, Texas, and manufactures vehicles in Fremont, California and Austin, Texas. It is publicly traded on the NASDAQ under TSLA. Despite CEO Elon Musk's South African origins and global business interests, Tesla is unambiguously an American company.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">What is Tesla's stock ticker symbol?<span class="faq-icon">+</span></div>
+          <div class="faq-answer"><p>Tesla trades on the NASDAQ exchange under the ticker symbol <strong>TSLA</strong>. It is one of the most widely traded and discussed stocks in American market history. Tesla joined the S&P 500 index in December 2020 — at the time, one of the largest additions ever to the index.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">Who founded Tesla Motors?<span class="faq-icon">+</span></div>
+          <div class="faq-answer"><p>Tesla was founded by five people: Martin Eberhard, Marc Tarpenning, Elon Musk, JB Straubel, and Ian Wright. Eberhard and Tarpenning were the primary founders and first CEO/CTO respectively. Musk joined as chairman and lead investor in the Series A round in 2004 and became CEO in 2008 after Eberhard's departure. Despite popular perception, Musk did not found Tesla — though his investment, vision, and leadership are inseparable from what Tesla became.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">Are Tesla cars reliable?<span class="faq-icon">+</span></div>
+          <div class="faq-answer"><p>Tesla's reliability picture is split: the electric drivetrain and mechanical components are very reliable (EVs have far fewer failure-prone parts than gas cars), but build quality — panel gaps, paint consistency, interior trim — has historically been below class average. Consumer Reports has ranked Tesla below average in recent years on overall reliability, though satisfaction scores from owners remain high. Newer models show improvement in build quality.</p></div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <aside class="sidebar">
+    <div class="sidebar-block">
+      <div class="sidebar-title">Quick Facts</div>
+      <div class="sidebar-stat"><span class="sidebar-stat-label">Founded</span><span class="sidebar-stat-value">2003</span></div>
+      <div class="sidebar-stat"><span class="sidebar-stat-label">CEO</span><span class="sidebar-stat-value">Elon Musk</span></div>
+      <div class="sidebar-stat"><span class="sidebar-stat-label">HQ</span><span class="sidebar-stat-value">Austin, TX</span></div>
+      <div class="sidebar-stat"><span class="sidebar-stat-label">Revenue (2024)</span><span class="sidebar-stat-value green">~$97B</span></div>
+      <div class="sidebar-stat"><span class="sidebar-stat-label">US EV Market Share</span><span class="sidebar-stat-value green">~45%</span></div>
+      <div class="sidebar-stat"><span class="sidebar-stat-label">Superchargers</span><span class="sidebar-stat-value">50,000+</span></div>
+    </div>
+    <div class="sidebar-block">
+      <div class="ticker-box">
+        <span class="ticker-symbol">TSLA</span>
+        <div class="ticker-exchange">NASDAQ · Tesla, Inc.</div>
+        <div class="ticker-disclaimer">AmericanCarBrands.com does not provide investment advice. Visit a financial platform for current TSLA pricing.</div>
+      </div>
+    </div>
+    <div class="sidebar-block">
+      <div class="sidebar-title">Compare EV Brands</div>
+      <div class="sidebar-links">
+        <a href="rivian.html">Rivian <span>→</span></a>
+        <a href="lucid.html">Lucid <span>→</span></a>
+        <a href="fisker.html">Fisker <span>→</span></a>
+        <a href="ford.html">Ford (Mach-E/Lightning) <span>→</span></a>
+      </div>
+    </div>
+    <div class="sidebar-block">
+      <div class="sidebar-title">Reliability Ratings</div>
+      <div class="sidebar-stat"><span class="sidebar-stat-label">Powertrain</span><span class="sidebar-stat-value green">Excellent</span></div>
+      <div class="sidebar-stat"><span class="sidebar-stat-label">Build Quality</span><span class="sidebar-stat-value" style="color: #E07B39;">Below Avg.</span></div>
+      <div class="sidebar-stat"><span class="sidebar-stat-label">Software/OTA</span><span class="sidebar-stat-value green">Best-in-Class</span></div>
+    </div>
+  </aside>
+</div>
+
+<div class="brand-nav">
+  <a href="rivian.html" class="brand-nav-card">
+    <div><div class="brand-nav-dir">← Previous Brand</div><div class="brand-nav-name">Rivian</div></div>
+  </a>
+  <a href="lucid.html" class="brand-nav-card" style="text-align: right; justify-content: flex-end;">
+    <div><div class="brand-nav-dir">Next Brand →</div><div class="brand-nav-name">Lucid</div></div>
+  </a>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div style="font-family: 'Bebas Neue'; font-size: 1.5rem; margin-bottom: 10px; letter-spacing: 0.08em;">AMERICAN<span style="color: var(--red);">CAR</span>BRANDS</div>
+      <p style="font-size: 0.85rem; color: var(--gray); line-height: 1.7; max-width: 260px;">The definitive resource on American car brands. Every brand, every era.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Active Brands</div>
+      <ul class="footer-links">
+        <li><a href="ford.html">Ford</a></li><li><a href="chevrolet.html">Chevrolet</a></li>
+        <li><a href="dodge.html">Dodge</a></li><li><a href="cadillac.html">Cadillac</a></li>
+        <li><a href="tesla.html">Tesla</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">EV Startups</div>
+      <ul class="footer-links">
+        <li><a href="tesla.html">Tesla</a></li><li><a href="rivian.html">Rivian</a></li>
+        <li><a href="lucid.html">Lucid</a></li><li><a href="fisker.html">Fisker</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Historic Brands</div>
+      <ul class="footer-links">
+        <li><a href="pontiac.html">Pontiac</a></li><li><a href="oldsmobile.html">Oldsmobile</a></li>
+        <li><a href="packard.html">Packard</a></li><li><a href="tucker.html">Tucker</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 AmericanCarBrands.com · All rights reserved</span>
+    <span>🇺🇸</span>
+  </div>
+</footer>
+
+<script>
+  function toggleFaq(el) {
+    const answer = el.nextElementSibling;
+    const icon = el.querySelector('.faq-icon');
+    const isOpen = answer.classList.contains('open');
+    document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-icon').forEach(i => i.classList.remove('open'));
+    if (!isOpen) { answer.classList.add('open'); icon.classList.add('open'); }
+  }
+</script>
+</body>
+</html>
