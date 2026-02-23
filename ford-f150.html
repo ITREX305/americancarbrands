@@ -148,6 +148,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;background:rgba(
 .hero-bc a{color:rgba(255,255,255,.35);text-decoration:none;transition:color .15s;}.hero-bc a:hover{color:var(--ac);}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ac);margin-bottom:12px;}
 .hero-h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,60px);letter-spacing:.04em;line-height:.9;margin-bottom:10px;}
+.hero-hook{font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:.03em;color:var(--ac);line-height:1.4;margin-bottom:8px;font-style:italic;border-left:3px solid var(--ac);padding-left:12px;}
 .hero-tagline{font-size:.9rem;color:rgba(255,255,255,.65);line-height:1.6;margin-bottom:16px;}
 .hero-ins-cta{display:inline-flex;align-items:center;gap:10px;background:var(--ac);color:white;padding:13px 26px;font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:.1em;text-decoration:none;border-radius:2px;transition:all .2s;}
 .hero-ins-cta:hover{opacity:.88;transform:translateY(-1px);}
@@ -254,7 +255,8 @@ footer{background:#060608;padding:44px 52px;border-top:1px solid rgba(255,255,25
   <a href="index.html" class="nav-logo">AMERICAN<span>CAR</span>BRANDS</a>
   <div class="nav-r">
     <a href="ford.html" class="nav-home">← Ford Hub</a>
-    <a href="ins-ford-f-150.html" class="nav-cta">Compare Insurance →</a>
+    <a href="model-ford-f150.html" class="nav-home" style="border-color:rgba(var(--ar),.4);color:rgba(255,255,255,.8);">📄 F-150 Spec Sheet</a>
+    <a href="ins-ford-f-150.html" class="nav-cta">F-150 Insurance Quotes →</a>
   </div>
 </nav>
 
@@ -297,8 +299,9 @@ footer{background:#060608;padding:44px 52px;border-top:1px solid rgba(255,255,25
     <div class="hero-bc"><a href="index.html">Home</a> · <a href="ford.html">Ford</a> · Ford F-150</div>
     <div class="hero-badge">🛻 Pickup Truck · 1948 – Present</div>
     <h1 class="hero-h1">Ford F-150</h1>
+    <p class="hero-hook">America's best-selling truck — but is it <em>actually expensive</em> to own in 2026?</p>
     <p class="hero-tagline">America's best-selling vehicle for 47 years running.</p>
-    <a href="ins-ford-f-150.html" class="hero-ins-cta">🛡 Get Insurance Quotes →</a>
+    <a href="ins-ford-f-150.html" class="hero-ins-cta">🛡 Get F-150 Insurance Quotes →</a>
   </div>
 </div>
 
@@ -336,6 +339,7 @@ footer{background:#060608;padding:44px 52px;border-top:1px solid rgba(255,255,25
   <a href="#trims" class="jl">Trim Levels</a>
   <a href="#guides" class="jl">Ownership Guides</a>
   <a href="#related" class="jl">Related Models</a>
+  <a href="#tco" class="jl">5-Year Cost</a>
   <a href="#faq" class="jl">FAQ</a>
 </div>
 
@@ -530,5 +534,28 @@ window.addEventListener('scroll',function(){
   sids.forEach(function(id,i){var el=document.getElementById(id);if(el&&el.offsetTop<=t&&(el.offsetTop+el.offsetHeight)>t){jls.forEach(function(l){l.classList.remove('act');});if(jls[i])jls[i].classList.add('act');}});
 });
 </script>
+
+<!-- STICKY SCROLL BUTTON -->
+<div id="stickyBar" style="position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(80px);z-index:8888;opacity:0;transition:all .35s cubic-bezier(.4,0,.2,1);pointer-events:none;max-width:520px;width:calc(100% - 40px);">
+  <div style="background:var(--ac);border-radius:6px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.7);display:flex;align-items:stretch;">
+    <a href="ins-ford-f-150.html" style="flex:1;padding:14px 20px;color:white;text-decoration:none;font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:.1em;display:flex;align-items:center;gap:10px;">
+      🛡 Compare F-150 Insurance — Free, 60 Sec →
+    </a>
+    <button onclick="document.getElementById('stickyBar').style.opacity='0';document.getElementById('stickyBar').style.pointerEvents='none';" style="padding:0 16px;background:rgba(0,0,0,.2);border:none;color:rgba(255,255,255,.6);cursor:pointer;font-size:1.1rem;border-left:1px solid rgba(255,255,255,.15);">✕</button>
+  </div>
+</div>
+<script>
+(function(){
+  var bar=document.getElementById('stickyBar');
+  var dismissed=false;
+  window.addEventListener('scroll',function(){
+    if(dismissed)return;
+    if(window.scrollY>320){bar.style.opacity='1';bar.style.transform='translateX(-50%) translateY(0)';bar.style.pointerEvents='all';}
+    else{bar.style.opacity='0';bar.style.transform='translateX(-50%) translateY(80px)';bar.style.pointerEvents='none';}
+  });
+  bar.querySelector('button').addEventListener('click',function(){dismissed=true;});
+}());
+</script>
+
 </body>
 </html>
