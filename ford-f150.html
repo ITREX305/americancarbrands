@@ -253,10 +253,11 @@ footer{background:#060608;padding:44px 52px;border-top:1px solid rgba(255,255,25
 
 <nav>
   <a href="index.html" class="nav-logo">AMERICAN<span>CAR</span>BRANDS</a>
-  <div class="nav-r">
-    <a href="ford.html" class="nav-home">← Ford Hub</a>
-    <a href="model-ford-f150.html" class="nav-home" style="border-color:rgba(var(--ar),.4);color:rgba(255,255,255,.8);">📄 F-150 Spec Sheet</a>
-    <a href="ins-ford-f-150.html" class="nav-cta">F-150 Insurance Quotes →</a>
+        <div class="nav-r">
+    <a href="index.html" class="nav-home">&#x2190; All Brands</a>
+    <a href="ford-dealers.html" class="nav-home" style="color:rgba(255,255,255,.82);">&#x1F4CD; Find Dealers</a>
+    <a href="ford-dealers.html" class="nav-home" style="color:rgba(255,255,255,.82);">&#x1F6FB; Browse Inventory</a>
+    <a href="ins-ford-f-150.html" class="nav-cta" style="background:rgba(255,255,255,.07);color:rgba(255,255,255,.58);border:1px solid rgba(255,255,255,.13);">&#x1F6E1; F-150 Insurance</a>
   </div>
 </nav>
 
@@ -266,25 +267,25 @@ footer{background:#060608;padding:44px 52px;border-top:1px solid rgba(255,255,25
   <div class="slide-overlay"></div>
   <div class="slide-cap">
     <span class="slide-label">Exterior — Front 3/4</span>
-    <span class="slide-text">2024 Ford F-150 Lariat — Dearborn, MI</span>
+    <span class="slide-text">2025 Ford F-150 Lariat — Built in Dearborn, MI</span>
   </div>
-</div><div class="slide" style="background:#0a1520 url('https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=1400&q=80') center/cover no-repeat;background-blend-mode:overlay;">
+</div><div class="slide" style="background:#0a1020 url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=1400&q=80') center/cover no-repeat;background-blend-mode:overlay;">
   <div class="slide-overlay"></div>
   <div class="slide-cap">
-    <span class="slide-label">Exterior — Rear</span>
-    <span class="slide-text">F-150 SuperCrew — 47-Year Sales Champion</span>
+    <span class="slide-label">F-150 — Rear Angle</span>
+    <span class="slide-text">SuperCrew 4x4 · 13,000 lb Max Tow · 2,238 lb Payload</span>
   </div>
 </div><div class="slide" style="background:#100c08 url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1400&q=80') center/cover no-repeat;background-blend-mode:overlay;">
   <div class="slide-overlay"></div>
   <div class="slide-cap">
-    <span class="slide-label">Interior — Cabin</span>
-    <span class="slide-text">SYNC 4 Touchscreen · Pro Power Onboard</span>
+    <span class="slide-label">Interior — SYNC 4</span>
+    <span class="slide-text">SYNC 4 12" Touchscreen · Pro Power Onboard 2.0kW</span>
   </div>
 </div><div class="slide" style="background:#0c1008 url('https://images.unsplash.com/photo-1609752945527-56f5f9773151?w=1400&q=80') center/cover no-repeat;background-blend-mode:overlay;">
   <div class="slide-overlay"></div>
   <div class="slide-cap">
-    <span class="slide-label">Bed & Capability</span>
-    <span class="slide-text">Max Payload 2,238 lb · Max Tow 13,000 lb</span>
+    <span class="slide-label">PowerBoost Hybrid</span>
+    <span class="slide-text">400hp 3.5L EcoBoost Hybrid · 47-Year Best-Seller</span>
   </div>
 </div></div>
   <button class="slider-btn slider-prev" onclick="prevSlide()" aria-label="Previous">‹</button>
@@ -300,6 +301,113 @@ footer{background:#060608;padding:44px 52px;border-top:1px solid rgba(255,255,25
     <div class="hero-badge">🛻 Pickup Truck · 1948 – Present</div>
     <h1 class="hero-h1">Ford F-150</h1>
     <p class="hero-hook">America's best-selling truck — but is it <em>actually expensive</em> to own in 2026?</p>
+      <div style="font-size:.84rem;color:rgba(255,255,255,.62);font-style:italic;margin-bottom:12px;">Limited inventory in many regions &#x2014; check availability in your ZIP code now.</div>
+      <div style="display:flex;gap:8px;">
+        <input type="text" id="heroZipInline" placeholder="Enter ZIP Code" maxlength="5" inputmode="numeric"
+          style="flex:1;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);color:#fff;padding:10px 13px;font-family:'Barlow',sans-serif;font-size:.92rem;border-radius:2px;outline:none;"
+          onfocus="this.style.borderColor='var(--ac)'" onblur="this.style.borderColor='rgba(255,255,255,.18)'"          onkeydown="if(event.key==='Enter')window.location='ford-dealers.html?'+document.getElementById('heroZipInline').value"
+          oninput="this.value=this.value.replace(/\D/g,'').slice(0,5)">
+        <a href="ford-dealers.html" style="background:var(--ac);color:white;padding:10px 16px;font-family:'Bebas Neue',sans-serif;font-size:.95rem;letter-spacing:.08em;text-decoration:none;border-radius:2px;white-space:nowrap;display:flex;align-items:center;">Find Local F-150 Inventory &#x2192;</a>
+      </div>
+    </div>
+    <!-- ── ABOVE FOLD LEAD CAPTURE ─────────────────── -->
+    <div class="hero-lead-cap" id="heroLeadCap_ford_f_150" style="
+      background:rgba(0,0,0,.42);
+      border:1px solid rgba(255,255,255,.16);
+      border-top:3px solid var(--ac);
+      padding:20px 22px;
+      border-radius:4px;
+      margin:14px 0 10px;
+      max-width:560px;
+      backdrop-filter:blur(6px);
+    ">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--ac);margin-bottom:3px;">📍 Check Local Inventory &amp; Get Pricing</div>
+      <div style="font-size:.82rem;color:rgba(255,255,255,.62);font-style:italic;margin-bottom:14px;">Limited inventory in many regions — check availability in your ZIP code now.</div>
+
+      <!-- ROW 1: ZIP + Age -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px;">
+        <div>
+          <label style="font-family:'Barlow Condensed',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.42);display:block;margin-bottom:4px;">📍 ZIP Code <span style="color:var(--ac);">*</span></label>
+          <input type="text" id="lcZip_ford_f_150" placeholder="e.g. 33461" maxlength="5" inputmode="numeric"
+            style="width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);color:#fff;padding:9px 12px;font-family:'Barlow',sans-serif;font-size:.92rem;border-radius:2px;outline:none;box-sizing:border-box;"
+            onfocus="this.style.borderColor='var(--ac)'" onblur="this.style.borderColor='rgba(255,255,255,.18)'"
+            oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,5)">
+        </div>
+        <div>
+          <label style="font-family:'Barlow Condensed',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.42);display:block;margin-bottom:4px;">🎂 Your Age <span style="color:rgba(255,255,255,.3);font-size:.55rem;">(for rate accuracy)</span></label>
+          <select id="lcAge_ford_f_150"
+            style="width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.75);padding:9px 12px;font-family:'Barlow',sans-serif;font-size:.88rem;border-radius:2px;outline:none;box-sizing:border-box;appearance:none;cursor:pointer;"
+            onfocus="this.style.borderColor='var(--ac)'" onblur="this.style.borderColor='rgba(255,255,255,.18)'">
+            <option value="" style="background:#1C1C1C;">— Select age range —</option>
+            <option value="16-25" style="background:#1C1C1C;">16–25</option>
+            <option value="26-35" style="background:#1C1C1C;">26–35</option>
+            <option value="36-45" style="background:#1C1C1C;">36–45</option>
+            <option value="46-55" style="background:#1C1C1C;">46–55</option>
+            <option value="56-65" style="background:#1C1C1C;">56–65</option>
+            <option value="65+" style="background:#1C1C1C;">65+</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- ROW 2: Email + Vehicle Interest -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px;">
+        <div>
+          <label style="font-family:'Barlow Condensed',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.42);display:block;margin-bottom:4px;">✉ Email <span style="color:var(--ac);">*</span></label>
+          <input type="email" id="lcEmail_ford_f_150" placeholder="your@email.com"
+            style="width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);color:#fff;padding:9px 12px;font-family:'Barlow',sans-serif;font-size:.88rem;border-radius:2px;outline:none;box-sizing:border-box;"
+            onfocus="this.style.borderColor='var(--ac)'" onblur="this.style.borderColor='rgba(255,255,255,.18)'">
+        </div>
+        <div>
+          <label style="font-family:'Barlow Condensed',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.42);display:block;margin-bottom:4px;">🚗 Vehicle Interest</label>
+          <input type="text" id="lcVehicle_ford_f_150" value="Ford F-150" readonly
+            style="width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.6);padding:9px 12px;font-family:'Barlow',sans-serif;font-size:.88rem;border-radius:2px;outline:none;box-sizing:border-box;cursor:default;"
+            title="Auto-detected from this page">
+        </div>
+      </div>
+
+      <!-- SUBMIT -->
+      <button onclick="lcSubmit_ford_f_150()" style="
+        width:100%;background:var(--ac);color:white;border:none;
+        padding:12px;font-family:'Bebas Neue',sans-serif;font-size:1.1rem;
+        letter-spacing:.1em;cursor:pointer;border-radius:2px;transition:opacity .2s;
+      " onmouseover="this.style.opacity='.88'" onmouseout="this.style.opacity='1'">
+        📍 Find Local F-150 Inventory →
+      </button>
+      <div style="font-size:.68rem;color:rgba(255,255,255,.24);text-align:center;margin-top:6px;">Free · No obligation · By submitting you consent to dealer contact for marketing purposes</div>
+
+      <!-- SUCCESS STATE (hidden by default) -->
+      <div id="lcSuccess_ford_f_150" style="display:none;background:rgba(45,179,122,.1);border:1px solid rgba(45,179,122,.25);padding:14px;border-radius:3px;text-align:center;margin-top:10px;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:#2DB37A;letter-spacing:.06em;margin-bottom:4px;">✅ You're Matched!</div>
+        <div style="font-size:.8rem;color:rgba(255,255,255,.6);line-height:1.6;">Connecting you with F-150 dealers near <strong id="lcZipShow_ford_f_150" style="color:var(--ac);"></strong>. Check your email within 24 hours.</div>
+        <a href="ford-dealers.html" style="display:inline-block;background:var(--ac);color:white;padding:9px 20px;font-family:'Bebas Neue',sans-serif;font-size:.95rem;letter-spacing:.08em;text-decoration:none;border-radius:2px;margin-top:10px;">📍 See All F-150 Inventory →</a>
+      </div>
+    </div>
+
+    <script>
+    function lcSubmit_ford_f_150(){
+      var zip=document.getElementById('lcZip_ford_f_150').value.trim();
+      var email=document.getElementById('lcEmail_ford_f_150').value.trim();
+      if(!zip||!/^[0-9]{5}$/.test(zip)){
+        document.getElementById('lcZip_ford_f_150').style.borderColor='#C8102E';
+        document.getElementById('lcZip_ford_f_150').focus(); return;
+      }
+      if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+        document.getElementById('lcEmail_ford_f_150').style.borderColor='#C8102E';
+        document.getElementById('lcEmail_ford_f_150').focus(); return;
+      }
+      // Store in sessionStorage for dealer page pre-fill
+      try{
+        sessionStorage.setItem('lc_zip',zip);
+        sessionStorage.setItem('lc_email',email);
+        sessionStorage.setItem('lc_age',document.getElementById('lcAge_ford_f_150').value);
+        sessionStorage.setItem('lc_vehicle','Ford F-150');
+      }catch(e){}
+      document.getElementById('lcZipShow_ford_f_150').textContent=zip;
+      document.getElementById('lcSuccess_ford_f_150').style.display='block';
+      // Scroll to success
+      document.getElementById('lcSuccess_ford_f_150').scrollIntoView({behavior:'smooth',block:'nearest'});
+    }
+    </script>
     <p class="hero-tagline">America's best-selling vehicle for 47 years running.</p>
     <a href="ins-ford-f-150.html" class="hero-ins-cta">🛡 Get F-150 Insurance Quotes →</a>
   </div>
