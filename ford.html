@@ -70,8 +70,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;background:rgba(
 .nav-r{display:flex;align-items:center;gap:12px;}
 .nav-home{font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.65);text-decoration:none;border:1px solid rgba(255,255,255,0.15);padding:7px 16px;border-radius:2px;transition:all .2s;}
 .nav-home:hover{border-color:var(--ford-blue);color:var(--white);}
-.nav-cta{background:var(--ford-blue);color:white;padding:8px 20px;font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:background .2s;}
+.nav-cta{background:var(--ford-blue);color:white;padding:8px 20px;font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:all .2s;}
 .nav-cta:hover{background:var(--ford-blue-light);}
+.nav-cta-secondary{background:transparent;color:rgba(255,255,255,0.6);padding:7px 16px;font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;border:1px solid rgba(255,255,255,0.12);border-radius:2px;transition:all .2s;}
+.nav-cta-secondary:hover{border-color:rgba(255,255,255,0.35);color:rgba(255,255,255,0.9);}
 
 /* HERO */
 .hero{margin-top:60px;min-height:520px;background:linear-gradient(135deg, #000820 0%, #001040 40%, #002080 100%);position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:72px 60px 56px;}
@@ -257,8 +259,9 @@ footer{background:#060608;padding:48px 60px;border-top:1px solid rgba(255,255,25
   <a href="index.html" class="nav-logo">AMERICAN<span>CAR</span>BRANDS</a>
   <div class="nav-r">
     <a href="index.html" class="nav-home">&#x2190; All Brands</a>
-    <a href="https://www.ford.com/dealer/locate/" target="_blank" rel="noopener" class="nav-home" style="border-color:rgba(0,51,153,0.4);color:rgba(255,255,255,0.8);">&#x1F4CD; Find Dealers</a>
-    <a href="ins-ford-f-150.html" class="nav-cta">Ford Insurance Quotes &#x2192;</a>
+    <a href="https://www.ford.com/dealer/locate/" target="_blank" rel="noopener" class="nav-cta" style="background:transparent;border:1px solid var(--ford-blue);color:rgba(255,255,255,0.85);" onmouseover="this.style.background='var(--ford-blue)';this.style.color='white'" onmouseout="this.style.background='transparent';this.style.color='rgba(255,255,255,0.85)'">&#x1F4CD; Find Dealers</a>
+    <a href="https://www.ford.com/inventory/search" target="_blank" rel="noopener" class="nav-cta">&#x1F6FB; Browse Inventory &#x2192;</a>
+    <a href="ins-ford-f-150.html" class="nav-cta-secondary">&#x1F6E1; Insurance</a>
   </div>
 </nav>
 
@@ -912,44 +915,129 @@ footer{background:#060608;padding:48px 60px;border-top:1px solid rgba(255,255,25
 </div>
 
 <!-- ═══════════════════════════════════════════
-     FIND FORD DEALERS
+     FIND FORD DEALERS & LIVE INVENTORY
 ═══════════════════════════════════════════ -->
-<div style="padding:52px 60px;background:linear-gradient(135deg,#001A40,#002060);border-top:3px solid var(--ford-blue);border-bottom:3px solid rgba(0,51,153,0.4);">
-  <div style="display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;flex-wrap:wrap;">
+<div id="dealers" style="padding:60px 60px 52px;background:linear-gradient(135deg,#000d20,#001540,#001d52);border-top:3px solid var(--ford-blue);border-bottom:3px solid rgba(0,51,153,0.4);position:relative;overflow:hidden;">
+
+  <!-- BG grid texture -->
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(0,51,153,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(0,51,153,0.06) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;"></div>
+
+  <div style="position:relative;z-index:2;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:start;">
+
+    <!-- LEFT COLUMN -->
     <div>
-      <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.26em;text-transform:uppercase;color:var(--ford-blue-light);margin-bottom:10px;">📍 Local Inventory</div>
-      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,4vw,52px);letter-spacing:0.03em;line-height:0.92;margin-bottom:12px;">Find Ford Dealers<br><span style="color:var(--ford-blue-light);">Near You</span></h2>
-      <p style="font-size:0.95rem;color:rgba(255,255,255,0.68);line-height:1.72;max-width:520px;margin-bottom:20px;">Browse local Ford inventory, compare pricing, and check in-stock availability. See current incentives, trade-in estimates, and financing rates at dealers in your area.</p>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
-        <a href="https://www.ford.com/dealer/locate/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;background:var(--ford-blue);color:white;padding:16px 32px;font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.1em;text-decoration:none;border-radius:3px;transition:all .2s;" onmouseover="this.style.background='#1A56CC';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='var(--ford-blue)';this.style.transform='none'">
-          📍 Find Dealers Near You →
+      <!-- Eyebrow -->
+      <div style="display:inline-flex;align-items:center;gap:8px;font-family:'Barlow Condensed',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.26em;text-transform:uppercase;color:var(--ford-blue-light);margin-bottom:14px;">
+        <span style="display:inline-block;width:24px;height:2px;background:var(--ford-blue-light);"></span>
+        📍 Local Inventory · Updated Daily
+      </div>
+
+      <!-- Headline -->
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(30px,4.5vw,58px);letter-spacing:0.03em;line-height:0.9;margin-bottom:14px;">
+        Find Ford Dealers &amp;<br>
+        <span style="color:var(--ford-blue-light);">Live Inventory Near You</span><br>
+        <span style="font-size:0.42em;letter-spacing:0.08em;color:rgba(255,255,255,0.38);font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;">(Updated Daily)</span>
+      </h2>
+
+      <!-- Urgency line -->
+      <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(200,16,46,0.15);border:1px solid rgba(200,16,46,0.35);border-left:3px solid var(--red);padding:10px 16px;margin-bottom:22px;border-radius:2px;">
+        <span style="font-size:1rem;">⚠️</span>
+        <span style="font-family:'Barlow Condensed',sans-serif;font-size:0.88rem;font-weight:700;letter-spacing:0.04em;color:rgba(255,255,255,0.85);">Limited inventory in many regions — check availability in your ZIP code now.</span>
+      </div>
+
+      <!-- Description -->
+      <p style="font-size:0.92rem;color:rgba(255,255,255,0.62);line-height:1.78;max-width:500px;margin-bottom:24px;">Compare in-stock pricing, current incentives, trade-in estimates, and financing rates at Ford dealers within your area. Inventory and pricing refresh daily.</p>
+
+      <!-- ── ZIP CODE ENTRY BOX ── -->
+      <div style="margin-bottom:24px;">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:8px;">Enter Your ZIP Code to See Local Ford Inventory</div>
+        <div style="display:flex;align-items:stretch;max-width:440px;box-shadow:0 4px 24px rgba(0,0,0,0.5);">
+          <div style="display:flex;align-items:center;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.18);border-right:none;padding:0 14px;border-radius:3px 0 0 3px;">
+            <span style="font-size:1rem;">📍</span>
+          </div>
+          <input
+            id="fordZipInput"
+            type="text"
+            inputmode="numeric"
+            pattern="[0-9]*"
+            maxlength="5"
+            placeholder="Enter ZIP code (e.g. 33460)"
+            style="flex:1;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-left:none;border-right:none;color:white;font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;font-weight:600;letter-spacing:0.06em;padding:14px 16px;outline:none;min-width:0;transition:background .2s;"
+            onfocus="this.style.background='rgba(255,255,255,0.12)';this.style.borderColor='rgba(0,51,153,0.8)'"
+            onblur="this.style.background='rgba(255,255,255,0.08)';this.style.borderColor='rgba(255,255,255,0.18)'"
+            onkeydown="if(event.key==='Enter')fordFindInventory()"
+          />
+          <button
+            onclick="fordFindInventory()"
+            style="background:var(--ford-blue);color:white;border:none;padding:14px 22px;font-family:'Bebas Neue',sans-serif;font-size:1.05rem;letter-spacing:0.1em;cursor:pointer;white-space:nowrap;border-radius:0 3px 3px 0;transition:background .2s;flex-shrink:0;"
+            onmouseover="this.style.background='#1A56CC'" onmouseout="this.style.background='var(--ford-blue)'">
+            Find Local Ford Inventory →
+          </button>
+        </div>
+        <div id="fordZipMsg" style="font-size:0.76rem;color:rgba(255,255,255,0.35);margin-top:6px;min-height:18px;font-family:'Barlow Condensed',sans-serif;letter-spacing:0.04em;"></div>
+      </div>
+
+      <!-- Secondary CTAs -->
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+        <a href="https://www.ford.com/dealer/locate/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid rgba(255,255,255,0.22);color:rgba(255,255,255,0.75);padding:12px 22px;font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:0.1em;text-decoration:none;border-radius:3px;transition:all .2s;" onmouseover="this.style.borderColor='rgba(255,255,255,0.5)';this.style.color='white'" onmouseout="this.style.borderColor='rgba(255,255,255,0.22)';this.style.color='rgba(255,255,255,0.75)'">
+          📍 Dealer Locator
         </a>
-        <a href="https://www.ford.com/buy/build-your-own.html" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;background:transparent;border:1px solid rgba(255,255,255,0.25);color:rgba(255,255,255,0.8);padding:16px 32px;font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.1em;text-decoration:none;border-radius:3px;transition:all .2s;" onmouseover="this.style.borderColor='rgba(255,255,255,0.6)';this.style.color='white'" onmouseout="this.style.borderColor='rgba(255,255,255,0.25)';this.style.color='rgba(255,255,255,0.8)'">
-          🔧 Build & Price a Ford
+        <a href="https://www.ford.com/buy/build-your-own.html" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid rgba(255,255,255,0.22);color:rgba(255,255,255,0.75);padding:12px 22px;font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:0.1em;text-decoration:none;border-radius:3px;transition:all .2s;" onmouseover="this.style.borderColor='rgba(255,255,255,0.5)';this.style.color='white'" onmouseout="this.style.borderColor='rgba(255,255,255,0.22)';this.style.color='rgba(255,255,255,0.75)'">
+          🔧 Build &amp; Price
+        </a>
+        <a href="ins-ford-f-150.html" style="display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid rgba(255,255,255,0.22);color:rgba(255,255,255,0.75);padding:12px 22px;font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:0.1em;text-decoration:none;border-radius:3px;transition:all .2s;" onmouseover="this.style.borderColor='rgba(255,255,255,0.5)';this.style.color='white'" onmouseout="this.style.borderColor='rgba(255,255,255,0.22)';this.style.color='rgba(255,255,255,0.75)'">
+          🛡 Compare Insurance
         </a>
       </div>
     </div>
-    <!-- Dealer stats cluster -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;min-width:220px;">
-      <div style="background:rgba(255,255,255,0.06);padding:18px 16px;text-align:center;">
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--white);">3,000+</div>
-        <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.62rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.45);">US Dealers</div>
+
+    <!-- RIGHT COLUMN: Stats cluster -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;min-width:230px;align-self:center;">
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.07);padding:20px 16px;text-align:center;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:2.2rem;line-height:1;color:var(--white);margin-bottom:4px;">3,000+</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.4);">US Dealers</div>
       </div>
-      <div style="background:rgba(255,255,255,0.06);padding:18px 16px;text-align:center;">
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--ford-blue-light);">50</div>
-        <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.62rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.45);">States</div>
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.07);padding:20px 16px;text-align:center;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:2.2rem;line-height:1;color:var(--ford-blue-light);margin-bottom:4px;">50</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.4);">States</div>
       </div>
-      <div style="background:rgba(255,255,255,0.06);padding:18px 16px;text-align:center;">
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--green);">$0</div>
-        <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.62rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.45);">Dealer Fees</div>
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.07);padding:20px 16px;text-align:center;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:2.2rem;line-height:1;color:var(--green);margin-bottom:4px;">Daily</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.4);">Inventory Updates</div>
       </div>
-      <div style="background:rgba(255,255,255,0.06);padding:18px 16px;text-align:center;">
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--gold);">Live</div>
-        <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.62rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.45);">Inventory</div>
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.07);padding:20px 16px;text-align:center;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:2.2rem;line-height:1;color:var(--gold);margin-bottom:4px;">Live</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.4);">Pricing Data</div>
+      </div>
+      <!-- Full-width bottom stat -->
+      <div style="grid-column:1/-1;background:rgba(0,51,153,0.2);border:1px solid rgba(0,51,153,0.4);padding:16px;text-align:center;">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.62rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.38);margin-bottom:4px;">Average dealer savings found</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;line-height:1;color:var(--ford-blue-light);">$1,200–$3,400</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.6rem;color:rgba(255,255,255,0.28);margin-top:2px;">vs MSRP when comparing 3+ dealers</div>
       </div>
     </div>
+
   </div>
 </div>
+
+<script>
+function fordFindInventory() {
+  var zip = document.getElementById('fordZipInput').value.trim();
+  var msg = document.getElementById('fordZipMsg');
+  if (!zip || !/^\d{5}$/.test(zip)) {
+    msg.style.color = '#FF8888';
+    msg.textContent = '⚠ Please enter a valid 5-digit ZIP code.';
+    document.getElementById('fordZipInput').focus();
+    return;
+  }
+  msg.style.color = 'rgba(45,179,122,0.9)';
+  msg.textContent = '✓ Searching Ford inventory near ' + zip + '...';
+  setTimeout(function() {
+    window.open('https://www.ford.com/inventory/search?postalCode=' + zip, '_blank');
+    msg.textContent = '✓ Inventory search opened for ZIP ' + zip + '. Compare prices across dealers before you buy.';
+  }, 400);
+}
+</script>
 
 
 <!-- ═══════════════════════════════════════════
