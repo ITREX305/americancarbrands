@@ -241,6 +241,104 @@ footer{background:#060608;padding:48px 60px;border-top:1px solid rgba(255,255,25
   footer{padding:40px 20px;}
   .acb-widget{bottom:12px;right:12px;}
 }
+
+/* ── INTERACTIVE UPGRADES ─────────────────────────────── */
+/* Hover tooltip */
+.tip-wrap{position:relative;display:inline-block;cursor:help;}
+.tip-wrap .tip{position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:#111;border:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.85);font-family:'Barlow',sans-serif;font-size:.72rem;line-height:1.5;padding:8px 12px;border-radius:4px;width:200px;text-align:left;pointer-events:none;opacity:0;transition:opacity .18s;z-index:99;white-space:normal;}
+.tip-wrap:hover .tip{opacity:1;}
+.tip-wrap .tip::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:5px solid transparent;border-top-color:#111;}
+/* Revenue chart */
+.rev-chart-wrap{background:var(--dark2);border:1px solid rgba(255,255,255,.07);border-radius:4px;padding:24px 28px;margin-top:24px;}
+.rev-tabs{display:flex;gap:4px;margin-bottom:20px;}
+.rev-tab{font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:6px 16px;border:1px solid rgba(255,255,255,.15);border-radius:2px;cursor:pointer;color:rgba(255,255,255,.5);background:transparent;transition:all .18s;}
+.rev-tab.active{background:var(--ford-blue,#0033A0);border-color:var(--ford-blue,#0033A0);color:white;}
+.rev-tab:hover:not(.active){border-color:rgba(255,255,255,.3);color:rgba(255,255,255,.8);}
+.rev-canvas-wrap{position:relative;width:100%;height:180px;}
+#revCanvas{width:100%;height:100%;}
+.rev-legend{display:flex;gap:20px;margin-top:12px;flex-wrap:wrap;}
+.rev-leg-item{display:flex;align-items:center;gap:7px;font-family:'Barlow Condensed',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);}
+.rev-leg-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+/* Expandable data cards */
+.edc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px;margin-top:24px;}
+.edc{background:var(--dark2);border:1px solid rgba(255,255,255,.07);border-radius:4px;overflow:hidden;transition:border-color .2s;}
+.edc:hover{border-color:rgba(255,255,255,.18);}
+.edc-hdr{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;cursor:pointer;gap:12px;}
+.edc-title{font-family:'Barlow Condensed',sans-serif;font-size:.92rem;font-weight:700;letter-spacing:.05em;color:rgba(255,255,255,.82);}
+.edc-val{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:.04em;color:var(--ac,#C8102E);white-space:nowrap;}
+.edc-arr{font-size:.8rem;color:rgba(255,255,255,.3);transition:transform .22s;}
+.edc.open .edc-arr{transform:rotate(90deg);}
+.edc-body{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+.edc.open .edc-body{max-height:300px;}
+.edc-inner{padding:0 18px 16px;font-size:.82rem;color:rgba(255,255,255,.55);line-height:1.75;}
+.edc-bar-wrap{margin-top:10px;}
+.edc-bar-row{display:flex;align-items:center;gap:10px;margin-bottom:6px;}
+.edc-bar-label{font-family:'Barlow Condensed',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.08em;color:rgba(255,255,255,.45);width:90px;flex-shrink:0;}
+.edc-bar-track{flex:1;height:6px;background:rgba(255,255,255,.07);border-radius:3px;overflow:hidden;}
+.edc-bar-fill{height:100%;border-radius:3px;transition:width .5s ease .1s;}
+/* Comparison tool */
+.comp-tool{background:var(--dark);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:28px 32px;margin-top:28px;}
+.comp-selects{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;margin-bottom:24px;}
+.comp-select{background:var(--dark2);border:1px solid rgba(255,255,255,.15);color:var(--white);padding:11px 14px;font-family:'Barlow Condensed',sans-serif;font-size:.9rem;font-weight:600;letter-spacing:.04em;border-radius:3px;cursor:pointer;width:100%;outline:none;}
+.comp-select:focus{border-color:var(--ford-blue,#0033A0);}
+.comp-vs{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:.06em;color:rgba(255,255,255,.25);text-align:center;}
+.comp-table{width:100%;border-collapse:collapse;}
+.comp-table th{font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.45);padding:8px 12px;text-align:left;border-bottom:1px solid rgba(255,255,255,.07);}
+.comp-table td{padding:10px 12px;font-size:.84rem;color:rgba(255,255,255,.72);border-bottom:1px solid rgba(255,255,255,.04);}
+.comp-table td:first-child{color:rgba(255,255,255,.42);font-family:'Barlow Condensed',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;}
+.comp-win{color:#2DB37A !important;font-weight:600;}
+.comp-lose{color:rgba(255,255,255,.35) !important;}
+/* FAQ upgrade */
+.faq-item{background:var(--dark2);border:1px solid rgba(255,255,255,.06);transition:border-color .2s;}
+.faq-item.open{border-color:rgba(255,255,255,.14);}
+.faq-a-inner{padding:0 22px 20px;}
+.faq-a-inner p{font-size:.9rem;color:rgba(255,255,255,.7);line-height:1.8;margin-top:14px;}
+.faq-related{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,255,255,.06);}
+.faq-rel-link{font-family:'Barlow Condensed',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);border:1px solid rgba(255,255,255,.1);padding:4px 10px;border-radius:2px;text-decoration:none;transition:all .18s;}
+.faq-rel-link:hover{border-color:var(--ford-blue,#0033A0);color:white;}
+.faq-mini-chart{margin-top:14px;}
+.fmc-title{font-family:'Barlow Condensed',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:8px;}
+.fmc-bar-row{display:flex;align-items:center;gap:10px;margin-bottom:5px;}
+.fmc-label{font-family:'Barlow Condensed',sans-serif;font-size:.68rem;color:rgba(255,255,255,.45);width:120px;flex-shrink:0;}
+.fmc-track{flex:1;height:7px;background:rgba(255,255,255,.06);border-radius:3px;overflow:hidden;}
+.fmc-fill{height:100%;border-radius:3px;}
+.fmc-val{font-family:'Bebas Neue',sans-serif;font-size:.82rem;color:rgba(255,255,255,.55);width:40px;text-align:right;}
+/* Cross-link interruptions */
+.crosslink-band{background:linear-gradient(90deg,rgba(0,33,153,.2),rgba(0,33,153,.05));border:1px solid rgba(0,51,153,.2);border-radius:4px;padding:20px 28px;margin:28px 0;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+.crosslink-band.red-theme{background:linear-gradient(90deg,rgba(200,16,46,.15),rgba(200,16,46,.03));border-color:rgba(200,16,46,.2);}
+.cl-band-text{font-family:'Barlow Condensed',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);}
+.cl-band-title{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.04em;color:rgba(255,255,255,.88);margin-top:2px;}
+.cl-band-links{display:flex;gap:8px;flex-wrap:wrap;}
+.cl-band-link{font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.65);border:1px solid rgba(255,255,255,.12);padding:7px 14px;border-radius:2px;text-decoration:none;transition:all .2s;white-space:nowrap;}
+.cl-band-link:hover{border-color:var(--ford-blue,#0033A0);color:white;}
+/* Related exploration */
+.related-explore{padding:52px 60px;background:var(--dark);border-top:1px solid rgba(255,255,255,.05);}
+.re-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:2px;margin-top:24px;}
+.re-card{background:var(--dark2);border:1px solid rgba(255,255,255,.06);padding:20px 18px;text-decoration:none;transition:all .22s;display:block;}
+.re-card:hover{background:var(--dark3);transform:translateY(-2px);border-color:rgba(255,255,255,.14);}
+.re-card-name{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:.04em;margin-bottom:4px;}
+.re-card-desc{font-size:.75rem;color:rgba(255,255,255,.42);line-height:1.5;}
+.re-card-cta{font-family:'Barlow Condensed',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-top:10px;color:rgba(255,255,255,.3);}
+/* Cost calculator */
+.cost-calc{background:var(--dark2);border:1px solid rgba(255,255,255,.08);border-top:3px solid var(--ac,#C8102E);border-radius:4px;padding:24px 28px;margin-top:20px;}
+.calc-title{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.05em;margin-bottom:4px;}
+.calc-sub{font-size:.78rem;color:rgba(255,255,255,.4);margin-bottom:18px;}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;}
+.calc-field label{font-family:'Barlow Condensed',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.4);display:block;margin-bottom:4px;}
+.calc-field input,.calc-field select{width:100%;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);color:white;padding:9px 12px;font-family:'Barlow',sans-serif;font-size:.86rem;border-radius:2px;outline:none;box-sizing:border-box;}
+.calc-field input:focus,.calc-field select:focus{border-color:var(--ac,#C8102E);}
+.calc-btn{background:var(--ac,#C8102E);color:white;border:none;padding:11px 24px;font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.1em;cursor:pointer;border-radius:2px;transition:opacity .18s;}
+.calc-btn:hover{opacity:.88;}
+.calc-result{margin-top:16px;padding:16px 18px;background:rgba(255,255,255,.04);border-radius:3px;display:none;}
+.calc-result.show{display:block;}
+.calc-result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;}
+.calc-res-cell{background:var(--dark);padding:12px 14px;text-align:center;}
+.calc-res-num{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.04em;}
+.calc-res-label{font-family:'Barlow Condensed',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-top:2px;}
+@media(max-width:700px){.comp-selects{grid-template-columns:1fr;}.calc-grid{grid-template-columns:1fr;}.re-grid{grid-template-columns:1fr 1fr;}.related-explore{padding:44px 20px;}.crosslink-band{padding:16px 20px;}}
+
+/* faq-a transition */
+.faq-a{overflow:hidden;transition:max-height .3s ease;}
 </style>
 </head>
 <body>
@@ -266,11 +364,6 @@ footer{background:#060608;padding:48px 60px;border-top:1px solid rgba(255,255,25
   </div>
 </nav>
 
-<!-- ── INDEPENDENCE DISCLAIMER ── -->
-<div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.09);border-left:3px solid rgba(255,255,255,.2);padding:14px 18px;margin:0 0 0;font-size:.74rem;color:rgba(255,255,255,.42);line-height:1.72;">
-  <strong style="color:rgba(255,255,255,.6);font-family:'Barlow Condensed',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;">⚖ Editorial Independence Notice</strong><br>
-  AmericanCarBrands.com is an independent automotive information website and is not affiliated with or endorsed by Ford Motor Company. All information is provided for editorial, research, and consumer education purposes only. Brand names and trademarks referenced are the property of their respective owners. <a href="disclaimer.html" style="color:rgba(255,255,255,.5);">Full Disclaimer →</a>
-</div>
 
 <!-- ═══════════════════════════════════════════
      SECTION 1: HERO
@@ -411,6 +504,99 @@ function fhSubmit(){
   </div>
 </div>
 
+<!-- ═══ REVENUE TOGGLE CHART (injected after numbers-sec) ═══ -->
+<div id="tco" style="padding:40px 60px;background:var(--dark2);border-bottom:1px solid rgba(255,255,255,.05);">
+  <div style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--ford-blue-light);margin-bottom:8px;">📈 Financial Performance</div>
+  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(26px,3.5vw,44px);letter-spacing:.03em;margin-bottom:6px;">Ford Revenue &amp; Market Trends</h2>
+  <p style="font-size:.86rem;color:rgba(255,255,255,.45);margin-bottom:0;">Toggle time range to explore Ford's financial trajectory. Hover bars for detail.</p>
+
+  <div class="rev-chart-wrap">
+    <div class="rev-tabs">
+      <button class="rev-tab active" onclick="revShow('1y',this)">1Y Snapshot</button>
+      <button class="rev-tab" onclick="revShow('3y',this)">3Y Trend</button>
+      <button class="rev-tab" onclick="revShow('5y',this)">5Y Trajectory</button>
+    </div>
+    <div class="rev-canvas-wrap">
+      <canvas id="revCanvas"></canvas>
+      <div id="revTooltip" style="position:absolute;background:#0a0a0a;border:1px solid rgba(255,255,255,.2);padding:8px 12px;border-radius:3px;font-family:'Barlow',sans-serif;font-size:.75rem;color:white;pointer-events:none;display:none;z-index:10;"></div>
+    </div>
+    <div class="rev-legend">
+      <div class="rev-leg-item"><div class="rev-leg-dot" style="background:#0033A0;"></div>Total Revenue</div>
+      <div class="rev-leg-item"><div class="rev-leg-dot" style="background:#2DB37A;"></div>Ford Pro (Commercial)</div>
+      <div class="rev-leg-item"><div class="rev-leg-dot" style="background:#C9962A;"></div>Ford Blue (ICE/Hybrid)</div>
+      <div class="rev-leg-item"><div class="rev-leg-dot" style="background:#C8102E;"></div>Ford Model e (EV)</div>
+    </div>
+  </div>
+
+  <!-- Expandable Data Cards -->
+  <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.04em;margin:28px 0 6px;color:rgba(255,255,255,.7);">Segment Deep Dives — Click to Expand</h3>
+  <div class="edc-grid">
+    <div class="edc open" id="edc1">
+      <div class="edc-hdr" onclick="edcToggle('edc1')">
+        <span class="edc-title tip-wrap">Ford Pro (Commercial)<span class="tip">Ford's truck &amp; van business serving fleets, construction, and delivery companies. The most profitable segment as of 2024.</span></span>
+        <div style="display:flex;align-items:center;gap:12px;"><span class="edc-val" style="color:#2DB37A;">$58B</span><span class="edc-arr">▶</span></div>
+      </div>
+      <div class="edc-body">
+        <div class="edc-inner">
+          Largest profit contributor. F-150, Super Duty, Transit van. Growing fleet electrification with E-Transit.
+          <div class="edc-bar-wrap">
+            <div class="edc-bar-row"><span class="edc-bar-label">Revenue share</span><div class="edc-bar-track"><div class="edc-bar-fill" style="width:31%;background:#2DB37A;"></div></div><span style="font-size:.68rem;color:rgba(255,255,255,.45);margin-left:6px;">31%</span></div>
+            <div class="edc-bar-row"><span class="edc-bar-label">YoY growth</span><div class="edc-bar-track"><div class="edc-bar-fill" style="width:68%;background:#2DB37A;"></div></div><span style="font-size:.68rem;color:rgba(255,255,255,.45);margin-left:6px;">+12%</span></div>
+            <div class="edc-bar-row"><span class="edc-bar-label">Margin</span><div class="edc-bar-track"><div class="edc-bar-fill" style="width:50%;background:#2DB37A;"></div></div><span style="font-size:.68rem;color:rgba(255,255,255,.45);margin-left:6px;">~15%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="edc" id="edc2">
+      <div class="edc-hdr" onclick="edcToggle('edc2')">
+        <span class="edc-title tip-wrap">Ford Blue (ICE &amp; Hybrid)<span class="tip">Gas and hybrid vehicles: F-150, Mustang, Bronco, Explorer, Escape. The volume revenue segment.</span></span>
+        <div style="display:flex;align-items:center;gap:12px;"><span class="edc-val" style="color:#C9962A;">$98B</span><span class="edc-arr">▶</span></div>
+      </div>
+      <div class="edc-body">
+        <div class="edc-inner">
+          F-Series dominates. Mustang, Bronco, Explorer contribute meaningfully. Hybrid models gaining share.
+          <div class="edc-bar-wrap">
+            <div class="edc-bar-row"><span class="edc-bar-label">Revenue share</span><div class="edc-bar-track"><div class="edc-bar-fill" style="width:53%;background:#C9962A;"></div></div><span style="font-size:.68rem;color:rgba(255,255,255,.45);margin-left:6px;">53%</span></div>
+            <div class="edc-bar-row"><span class="edc-bar-label">YoY growth</span><div class="edc-bar-track"><div class="edc-bar-fill" style="width:30%;background:#C9962A;"></div></div><span style="font-size:.68rem;color:rgba(255,255,255,.45);margin-left:6px;">+3%</span></div>
+            <div class="edc-bar-row"><span class="edc-bar-label">Margin</span><div class="edc-bar-track"><div class="edc-bar-fill" style="width:20%;background:#C9962A;"></div></div><span style="font-size:.68rem;color:rgba(255,255,255,.45);margin-left:6px;">~8%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="edc" id="edc3">
+      <div class="edc-hdr" onclick="edcToggle('edc3')">
+        <span class="edc-title tip-wrap">Ford Model e (EV)<span class="tip">Electric vehicle division: F-150 Lightning, Mustang Mach-E, E-Transit. Currently operating at a loss as infrastructure scales.</span></span>
+        <div style="display:flex;align-items:center;gap:12px;"><span class="edc-val" style="color:#C8102E;">−$5.1B</span><span class="edc-arr">▶</span></div>
+      </div>
+      <div class="edc-body">
+        <div class="edc-inner">
+          Investing phase. $50B+ committed through 2026. Lightning and Mach-E gaining market acceptance. Loss expected to narrow by 2027.
+          <div class="edc-bar-wrap">
+            <div class="edc-bar-row"><span class="edc-bar-label">Revenue share</span><div class="edc-bar-track"><div class="edc-bar-fill" style="width:16%;background:#C8102E;"></div></div><span style="font-size:.68rem;color:rgba(255,255,255,.45);margin-left:6px;">16%</span></div>
+            <div class="edc-bar-row"><span class="edc-bar-label">Unit growth</span><div class="edc-bar-track"><div class="edc-bar-fill" style="width:60%;background:#C8102E;"></div></div><span style="font-size:.68rem;color:rgba(255,255,255,.45);margin-left:6px;">+40%</span></div>
+            <div class="edc-bar-row"><span class="edc-bar-label">Margin</span><div class="edc-bar-track"><div class="edc-bar-fill" style="width:0%;background:#C8102E;"></div></div><span style="font-size:.68rem;color:rgba(255,255,255,.45);margin-left:6px;">−17%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="edc" id="edc4">
+      <div class="edc-hdr" onclick="edcToggle('edc4')">
+        <span class="edc-title tip-wrap">Market Cap &amp; Valuation<span class="tip">Ford's total market capitalization — reflects how investors value the company relative to revenue and profit.</span></span>
+        <div style="display:flex;align-items:center;gap:12px;"><span class="edc-val" style="color:white;">$42–55B</span><span class="edc-arr">▶</span></div>
+      </div>
+      <div class="edc-body">
+        <div class="edc-inner">
+          Ford trades at low P/E multiples typical of legacy automakers. Wall St. pricing in EV transition risk.
+          <div class="edc-bar-wrap">
+            <div class="edc-bar-row"><span class="edc-bar-label">P/E Ratio</span><div class="edc-bar-track"><div class="edc-bar-fill" style="width:12%;background:#5577aa;"></div></div><span style="font-size:.68rem;color:rgba(255,255,255,.45);margin-left:6px;">~5–8x</span></div>
+            <div class="edc-bar-row"><span class="edc-bar-label">Dividend yield</span><div class="edc-bar-track"><div class="edc-bar-fill" style="width:50%;background:#5577aa;"></div></div><span style="font-size:.68rem;color:rgba(255,255,255,.45);margin-left:6px;">~5%</span></div>
+            <div class="edc-bar-row"><span class="edc-bar-label">vs GM mkt cap</span><div class="edc-bar-track"><div class="edc-bar-fill" style="width:75%;background:#5577aa;"></div></div><span style="font-size:.68rem;color:rgba(255,255,255,.45);margin-left:6px;">~75%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- JUMP NAV -->
 <div class="jump-nav" id="jumpnav">
   <a href="#seo" class="jl">Brand Intel</a>
@@ -746,7 +932,7 @@ function fhSubmit(){
     <a href="ins-ford-f-150.html" style="display:inline-flex;align-items:center;gap:12px;background:var(--ford-blue);color:white;padding:18px 40px;font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:0.1em;text-decoration:none;border-radius:3px;transition:all .2s;" onmouseover="this.style.background='#1A56CC'" onmouseout="this.style.background='var(--ford-blue)'">
       &#x1F6E1;&#xFE0F; 📊 Learn How Insurance Pricing Works
     </a>
-    <div style="margin-top:10px;font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.14em;color:rgba(255,255,255,0.35);">FREE &middot; NO OBLIGATION &middot; 60 SECONDS &middot; 20+ CARRIERS</div>
+    <div style="margin-top:10px;font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.14em;color:rgba(255,255,255,0.35);">FREE &middot; No purchase required &middot; 60 SECONDS &middot; 20+ CARRIERS</div>
   </div>
 </div>
 
@@ -828,29 +1014,45 @@ function fhSubmit(){
   </div>
 </div>
 
+<!-- ── CROSS-LINK: after corporate section ── -->
+<div class="crosslink-band" style="margin:0;border-radius:0;border-left:none;border-right:none;">
+  <div>
+    <div class="cl-band-text">🔄 Brand Intelligence Loop</div>
+    <div class="cl-band-title">Compare Ford to Other American Brands</div>
+  </div>
+  <div class="cl-band-links">
+    <a href="chevrolet.html" class="cl-band-link">GM / Chevrolet</a>
+    <a href="dodge.html" class="cl-band-link">Dodge</a>
+    <a href="ram.html" class="cl-band-link">Ram Trucks</a>
+    <a href="lincoln.html" class="cl-band-link">Lincoln</a>
+    <a href="tesla.html" class="cl-band-link">Tesla</a>
+    <a href="index.html" class="cl-band-link">All Brands →</a>
+  </div>
+</div>
+
 <!-- ═══════════════════════════════════════════
-     CONVERSION HOOKS
+     CONVERSION HOOKS — reframed as exploration
 ═══════════════════════════════════════════ -->
-<div class="hook-band">
-  <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.24em;text-transform:uppercase;color:var(--ford-blue-light);margin-bottom:10px;">&#x1F6E1; Ford Ownership Tools</div>
-  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:2.4rem;letter-spacing:0.04em;margin-bottom:6px;">Take Your Next Step</h2>
-  <p style="font-size:0.9rem;color:rgba(255,255,255,0.55);margin-bottom:4px;">Every Ford buying and ownership decision — covered.</p>
+<div class="hook-band" id="explore-costs">
+  <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.24em;text-transform:uppercase;color:var(--ford-blue-light);margin-bottom:10px;">📊 Research &amp; Intelligence</div>
+  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:2.4rem;letter-spacing:0.04em;margin-bottom:6px;">Ford Ownership Intelligence Hub</h2>
+  <p style="font-size:0.9rem;color:rgba(255,255,255,0.55);margin-bottom:24px;">Data-driven breakdown of ownership costs and risk factors — independent editorial research, no purchase required.</p>
   <div class="hooks-grid">
-    <a href="ins-ford-f-150.html" class="hook-btn">
-      <span class="hook-btn-icon">&#x1F6E1;</span>
-      <span class="hook-btn-text"><span class="hook-btn-main">📊 Learn How Insurance Pricing Works</span><span class="hook-btn-sub">Independent Analysis · No Purchase Requireds</span></span>
+    <a href="#tco" class="hook-btn">
+      <span class="hook-btn-icon">📊</span>
+      <span class="hook-btn-text"><span class="hook-btn-main">Insurance Cost Factors Explained</span><span class="hook-btn-sub">Risk class · State regulations · Credit scoring · Claims impact</span></span>
     </a>
-    <a href="ins-ford-f-150.html" class="hook-btn">
-      <span class="hook-btn-icon">&#x1F4B0;</span>
-      <span class="hook-btn-text"><span class="hook-btn-main">Get Ford Insurance Rates</span><span class="hook-btn-sub">F-150, Lightning, Mustang &amp; more</span></span>
-    </a>
-    <a href="#reliability" class="hook-btn">
-      <span class="hook-btn-icon">&#x1F4C8;</span>
-      <span class="hook-btn-text"><span class="hook-btn-main">Check Ford Resale Value</span><span class="hook-btn-sub">F-150 holds value best in class</span></span>
+    <a href="ford-f150.html#cost-calc-sec" class="hook-btn">
+      <span class="hook-btn-icon">💰</span>
+      <span class="hook-btn-text"><span class="hook-btn-main">Long-Term Cost of Ownership</span><span class="hook-btn-sub">5-Year total: fuel · maintenance · depreciation · tax</span></span>
     </a>
     <a href="#reliability" class="hook-btn">
-      <span class="hook-btn-icon">&#x1F527;</span>
-      <span class="hook-btn-text"><span class="hook-btn-main">See Ford Maintenance Costs</span><span class="hook-btn-sub">Per model &middot; Annual estimate</span></span>
+      <span class="hook-btn-icon">📈</span>
+      <span class="hook-btn-text"><span class="hook-btn-main">Depreciation &amp; Resale Trends</span><span class="hook-btn-sub">1Y · 3Y · 5Y value curves by model</span></span>
+    </a>
+    <a href="#reliability" class="hook-btn">
+      <span class="hook-btn-icon">🔧</span>
+      <span class="hook-btn-text"><span class="hook-btn-main">Maintenance Cost Analysis</span><span class="hook-btn-sub">Annual estimates per model · Service intervals · Common repairs</span></span>
     </a>
   </div>
 </div>
@@ -971,7 +1173,7 @@ function fhSubmit(){
         <a href="ford-dealers.html" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid rgba(255,255,255,0.22);color:rgba(255,255,255,0.75);padding:12px 22px;font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:0.1em;text-decoration:none;border-radius:3px;transition:all .2s;" onmouseover="this.style.borderColor='rgba(255,255,255,0.5)';this.style.color='white'" onmouseout="this.style.borderColor='rgba(255,255,255,0.22)';this.style.color='rgba(255,255,255,0.75)'">
           📍 Dealer Locator
         </a>
-        <a href="https://www.ford.com/buy/build-your-own.html" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid rgba(255,255,255,0.22);color:rgba(255,255,255,0.75);padding:12px 22px;font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:0.1em;text-decoration:none;border-radius:3px;transition:all .2s;" onmouseover="this.style.borderColor='rgba(255,255,255,0.5)';this.style.color='white'" onmouseout="this.style.borderColor='rgba(255,255,255,0.22)';this.style.color='rgba(255,255,255,0.75)'">
+        <a href="ford-dealers.html" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid rgba(255,255,255,0.22);color:rgba(255,255,255,0.75);padding:12px 22px;font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:0.1em;text-decoration:none;border-radius:3px;transition:all .2s;" onmouseover="this.style.borderColor='rgba(255,255,255,0.5)';this.style.color='white'" onmouseout="this.style.borderColor='rgba(255,255,255,0.22)';this.style.color='rgba(255,255,255,0.75)'">
           🔧 Build &amp; Price
         </a>
         <a href="ins-ford-f-150.html" style="display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid rgba(255,255,255,0.22);color:rgba(255,255,255,0.75);padding:12px 22px;font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:0.1em;text-decoration:none;border-radius:3px;transition:all .2s;" onmouseover="this.style.borderColor='rgba(255,255,255,0.5)';this.style.color='white'" onmouseout="this.style.borderColor='rgba(255,255,255,0.22)';this.style.color='rgba(255,255,255,0.75)'">
@@ -1078,84 +1280,160 @@ function fordFindInventory() {
 </div>
 
 <!-- ═══════════════════════════════════════════
-     SECTION 10: FAQ SCHEMA
+     FAQ SECTION — upgraded
 ═══════════════════════════════════════════ -->
 <div class="sec alt" id="faq">
-  <div class="sec-eyebrow">Frequently Asked Questions &middot; Schema Marked Up</div>
+  <div class="sec-eyebrow">Frequently Asked Questions · Schema Marked Up</div>
   <h2 class="sec-h2">Ford FAQ</h2>
   <p class="sec-sub">The most searched questions about Ford Motor Company — answered with data.</p>
 
   <div class="faq-list">
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
+
+    <div class="faq-item" id="fq1">
+      <div class="faq-q" onclick="faqToggle('fq1')">
         <span class="faq-q-text">Is Ford better than Chevy?</span>
         <span class="faq-icon">+</span>
       </div>
-      <div class="faq-a"><p>Depends on what matters to you. <strong>Trucks:</strong> Ford F-150 outsells the Chevy Silverado by ~200,000 units/year — 47 years running. <strong>Sports cars:</strong> Chevy's Corvette is America's definitive sports car; Ford has the Mustang's emotional heritage and price advantage. <strong>EVs:</strong> Ford is further ahead with F-150 Lightning and Mach-E. <strong>Reliability:</strong> Both score similarly in J.D. Power — neither has a decisive edge. The debate is tribal; the data is a draw.</p></div>
+      <div class="faq-a">
+        <div class="faq-a-inner">
+          <p>Depends on what matters to you. <strong>Trucks:</strong> Ford F-150 outsells the Chevy Silverado by ~200,000 units/year — 47 years running. <strong>Sports cars:</strong> Chevy's Corvette is America's definitive sports car; Ford has the Mustang's emotional heritage and price advantage. <strong>Reliability:</strong> Both rank similarly in J.D. Power — neither has a decisive edge. The debate is tribal; the data is a draw.</p>
+          <div class="faq-mini-chart">
+            <div class="fmc-title">Annual US Sales Comparison (2024)</div>
+            <div class="fmc-bar-row"><span class="fmc-label">F-Series</span><div class="fmc-track"><div class="fmc-fill" style="width:100%;background:#0033A0;"></div></div><span class="fmc-val">750K</span></div>
+            <div class="fmc-bar-row"><span class="fmc-label">Silverado</span><div class="fmc-track"><div class="fmc-fill" style="width:72%;background:#C8102E;"></div></div><span class="fmc-val">540K</span></div>
+            <div class="fmc-bar-row"><span class="fmc-label">RAM 1500</span><div class="fmc-track"><div class="fmc-fill" style="width:67%;background:#C9962A;"></div></div><span class="fmc-val">500K</span></div>
+          </div>
+          <div class="faq-related">
+            <a href="chevrolet.html" class="faq-rel-link">→ Chevrolet Brand Page</a>
+            <a href="gmc.html" class="faq-rel-link">→ GMC Overview</a>
+            <a href="ford-f150.html" class="faq-rel-link">→ F-150 Deep Dive</a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
+
+    <div class="faq-item" id="fq2">
+      <div class="faq-q" onclick="faqToggle('fq2')">
         <span class="faq-q-text">Is Ford reliable long term?</span>
         <span class="faq-icon">+</span>
       </div>
-      <div class="faq-a"><p>Ford vehicles are <strong>average to above-average</strong> for long-term reliability. The F-150 with 2.7L EcoBoost is among the most proven powertrains in the segment. The Ranger and Maverick also score well. Avoid the 2020–2023 Explorer and first-year redesigned models of any Ford nameplate — let others work out production issues. Ford ranked 14th out of 33 brands in J.D. Power's 2025 Vehicle Dependability Study.</p></div>
+      <div class="faq-a">
+        <div class="faq-a-inner">
+          <p>Ford vehicles are <strong>average to above-average</strong> for long-term reliability. The F-150 with 2.7L EcoBoost is among the most proven powertrains. Ford ranked 14th out of 33 brands in J.D. Power's 2025 Vehicle Dependability Study. Avoid the 2020–2023 Explorer — let others absorb first-year production issues on any redesigned model.</p>
+          <div class="faq-mini-chart">
+            <div class="fmc-title">J.D. Power 2025 — Problems per 100 Vehicles (lower = better)</div>
+            <div class="fmc-bar-row"><span class="fmc-label">Ford (avg)</span><div class="fmc-track"><div class="fmc-fill" style="width:62%;background:#0033A0;"></div></div><span class="fmc-val">155</span></div>
+            <div class="fmc-bar-row"><span class="fmc-label">Industry avg</span><div class="fmc-track"><div class="fmc-fill" style="width:66%;background:rgba(255,255,255,.3);"></div></div><span class="fmc-val">165</span></div>
+            <div class="fmc-bar-row"><span class="fmc-label">Toyota avg</span><div class="fmc-track"><div class="fmc-fill" style="width:48%;background:#2DB37A;"></div></div><span class="fmc-val">119</span></div>
+          </div>
+          <div class="faq-related">
+            <a href="#reliability" class="faq-rel-link">→ Ford Reliability Rankings</a>
+            <a href="ford-f150.html" class="faq-rel-link">→ F-150 Reliability</a>
+            <a href="ford-ranger.html" class="faq-rel-link">→ Ranger Overview</a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
+
+    <div class="faq-item" id="fq3">
+      <div class="faq-q" onclick="faqToggle('fq3')">
         <span class="faq-q-text">Who owns Ford Motor Company?</span>
         <span class="faq-icon">+</span>
       </div>
-      <div class="faq-a"><p>Ford Motor Company is a <strong>publicly traded corporation (NYSE: F)</strong> but is effectively controlled by the <strong>Ford family</strong> through Class B shares. Executive Chairman Bill Ford (great-grandson of Henry Ford) controls ~40% of voting power despite owning only ~2% of total shares. No outside entity owns a controlling stake. This makes Ford unique among major automakers — it's public but family-guided.</p></div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">Is Ford publicly traded?</span>
-        <span class="faq-icon">+</span>
+      <div class="faq-a">
+        <div class="faq-a-inner">
+          <p>Ford Motor Company is a <strong>publicly traded corporation (NYSE: F)</strong> but is effectively controlled by the <strong>Ford family</strong> through Class B shares. Executive Chairman Bill Ford (great-grandson of Henry Ford) controls ~40% of voting power despite owning only ~2% of total equity. No outside entity owns a controlling stake.</p>
+          <div class="faq-related">
+            <a href="#ownership" class="faq-rel-link">→ Full Corporate Structure</a>
+            <a href="#tco" class="faq-rel-link">→ Revenue Breakdown</a>
+          </div>
+        </div>
       </div>
-      <div class="faq-a"><p>Yes. Ford Motor Company has traded on the <strong>New York Stock Exchange</strong> since 1956 under the ticker symbol <strong>F</strong>. It is consistently one of the most traded stocks in the US market by volume.</p></div>
     </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">What is Ford's stock symbol?</span>
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-a"><p>Ford Motor Company trades on the NYSE under the single-letter ticker <strong style="color:var(--gold);">F</strong>. It's one of only a handful of companies with a single-letter ticker — a legacy of Ford's original listing.</p></div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">Does Ford make EVs?</span>
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-a"><p>Yes. Ford's current EV lineup includes the <strong>F-150 Lightning</strong> (electric version of America's best-selling truck), <strong>Mustang Mach-E</strong> (electric crossover SUV), and <strong>E-Transit</strong> (electric commercial van). Ford has committed $50+ billion to EV development through 2026 and operates a dedicated EV business unit called <strong>Ford Model e</strong>.</p></div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">What is Ford's most reliable truck?</span>
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-a"><p>The <strong>F-150 with the 2.7L EcoBoost V6</strong> engine is consistently rated Ford's most reliable truck powertrain. This engine has proven itself over millions of units since 2015. For compact trucks, the <strong>Ranger (2023+)</strong> scores above average. The <strong>Maverick Hybrid</strong> uses a Toyota-licensed hybrid system with very few reported issues. Best advice: avoid any Ford truck in its first model year after a full redesign.</p></div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">Where are Ford trucks manufactured?</span>
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-a"><p>Ford F-150s are built at the <strong>Dearborn Truck Plant</strong> in Dearborn, Michigan and the <strong>Kansas City Assembly Plant</strong> in Claycomo, Missouri. The F-150 Lightning is built at Ford's <strong>Rouge Electric Vehicle Center</strong> in Dearborn. The Ranger is built at the Michigan Assembly Plant in Wayne, MI. The Bronco is also built in Wayne, Michigan. All Ford trucks sold in the US are American-built.</p></div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
+
+    <div class="faq-item" id="fq4">
+      <div class="faq-q" onclick="faqToggle('fq4')">
         <span class="faq-q-text">What is Ford's annual revenue?</span>
         <span class="faq-icon">+</span>
       </div>
-      <div class="faq-a"><p>Ford Motor Company reported approximately <strong>$185 billion</strong> in annual revenue for fiscal year 2024. Ford's most profitable business unit is <strong>Ford Pro</strong> (commercial vehicles), which contributes disproportionately to earnings. Ford Model e (EVs) is currently operating at a loss as EV investment scales up. Ford Blue (gas/hybrid retail vehicles) is the largest revenue contributor.</p></div>
+      <div class="faq-a">
+        <div class="faq-a-inner">
+          <p>Ford Motor Company reported approximately <strong>$185 billion</strong> in annual revenue for FY 2024. Ford Pro (commercial) is the most profitable segment. Ford Model e (EVs) is operating at a $5.1B loss as EV investment scales. Ford Blue (gas/hybrid retail) is the largest revenue contributor at ~$98B.</p>
+          <div class="faq-mini-chart">
+            <div class="fmc-title">Revenue by Segment (FY 2024)</div>
+            <div class="fmc-bar-row"><span class="fmc-label">Ford Blue</span><div class="fmc-track"><div class="fmc-fill" style="width:100%;background:#C9962A;"></div></div><span class="fmc-val">$98B</span></div>
+            <div class="fmc-bar-row"><span class="fmc-label">Ford Pro</span><div class="fmc-track"><div class="fmc-fill" style="width:59%;background:#2DB37A;"></div></div><span class="fmc-val">$58B</span></div>
+            <div class="fmc-bar-row"><span class="fmc-label">Ford Model e</span><div class="fmc-track"><div class="fmc-fill" style="width:29%;background:#0033A0;"></div></div><span class="fmc-val">$29B</span></div>
+          </div>
+          <div class="faq-related">
+            <a href="#tco" class="faq-rel-link">→ Revenue Chart (Interactive)</a>
+            <a href="chevrolet.html" class="faq-rel-link">→ Compare GM Revenue</a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        <span class="faq-q-text">How many cars does Ford sell per year?</span>
+
+    <div class="faq-item" id="fq5">
+      <div class="faq-q" onclick="faqToggle('fq5')">
+        <span class="faq-q-text">Does Ford make EVs?</span>
         <span class="faq-icon">+</span>
       </div>
-      <div class="faq-a"><p>Ford Motor Company sells approximately <strong>4.4 million vehicles per year globally</strong> (2024 figure). In the United States, Ford sells roughly 2 million vehicles annually. The F-Series alone accounts for approximately 750,000 US units per year — making it not only America's best-selling truck but best-selling vehicle overall, by a wide margin.</p></div>
+      <div class="faq-a">
+        <div class="faq-a-inner">
+          <p>Yes. Ford's current EV lineup includes the <strong>F-150 Lightning</strong>, <strong>Mustang Mach-E</strong>, and <strong>E-Transit</strong> commercial van. Ford has committed $50B+ to EV development through 2026 through its <strong>Ford Model e</strong> division.</p>
+          <div class="faq-related">
+            <a href="ford-f150-lightning.html" class="faq-rel-link">→ F-150 Lightning</a>
+            <a href="ford-mustang.html" class="faq-rel-link">→ Mustang Mach-E</a>
+            <a href="rivian.html" class="faq-rel-link">→ Compare Rivian</a>
+            <a href="tesla.html" class="faq-rel-link">→ Compare Tesla</a>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <div class="faq-item" id="fq6">
+      <div class="faq-q" onclick="faqToggle('fq6')">
+        <span class="faq-q-text">Where are Ford trucks manufactured?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a">
+        <div class="faq-a-inner">
+          <p>F-150s are built at the <strong>Dearborn Truck Plant</strong> (MI) and <strong>Kansas City Assembly Plant</strong> (MO). F-150 Lightning is built at Ford's <strong>Rouge Electric Vehicle Center</strong> in Dearborn. The Bronco and Ranger are built in Wayne, Michigan. All Ford trucks sold in the US are American-built.</p>
+          <div class="faq-related">
+            <a href="ford-f150.html" class="faq-rel-link">→ F-150 Complete Guide</a>
+            <a href="ford-bronco.html" class="faq-rel-link">→ Bronco Overview</a>
+            <a href="ford-ranger.html" class="faq-rel-link">→ Ranger Overview</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<!-- ── CROSS-LINK: after FAQ ── -->
+<div class="crosslink-band red-theme" style="margin:0;border-radius:0;border-left:none;border-right:none;">
+  <div>
+    <div class="cl-band-text">📊 Continue Exploring</div>
+    <div class="cl-band-title">Explore Ford vs Chevy — Side by Side</div>
+  </div>
+  <div class="cl-band-links">
+    <a href="chevrolet.html" class="cl-band-link">Chevrolet Brand →</a>
+    <a href="gmc.html" class="cl-band-link">GMC →</a>
+    <a href="ford-f150.html" class="cl-band-link">F-150 Deep Dive →</a>
+    <a href="ford-bronco.html" class="cl-band-link">Bronco vs 4Runner →</a>
+  </div>
+</div>
+
+<!-- ═══ RELATED EXPLORATION ═══ -->
+<div class="related-explore" id="related-explore">
+  <div style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:8px;">🔍 Others Also Explored</div>
+  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,3vw,40px);letter-spacing:.03em;margin-bottom:6px;">People Comparing Ford Also Explored</h2>
+  <p style="font-size:.84rem;color:rgba(255,255,255,.38);margin-bottom:0;">Internal exploration loop — discover how Ford stacks up across the American market.</p>
+  <div class="re-grid" id="reGrid">
+    <!-- Populated by JS shuffle on load -->
   </div>
 </div>
 
@@ -1164,15 +1442,25 @@ function fordFindInventory() {
   <div class="ft-in">
     <a href="index.html" class="ft-logo">AMERICAN<span>CAR</span>BRANDS</a>
     <div class="ft-links">
-      <a href="index.html">&#x2190; Home</a>
+      <a href="index.html">All Brands</a>
       <a href="active-american-car-brands.html">Active Brands</a>
-      <a href="ins-ford-f-150.html">F-150 Insurance</a>
-      <a href="ins-ford-f-150-lightning.html">Lightning Insurance</a>
-      <a href="ford-f150.html">F-150 Guide</a>
-      <a href="insurance-quote.html">All Insurance</a>
+      <a href="defunct-american-car-brands.html">Defunct Brands</a>
+      <a href="complete-database.html">Full Database</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="terms-of-use.html">Terms</a>
+      <a href="affiliate-disclosure.html">Affiliate</a>
+      <a href="editorial-policy.html">Editorial Policy</a>
     </div>
   </div>
-  <div class="ft-copy">&copy; 2026 AmericanCarBrands.com &middot; Ford Motor Company brand information provided for editorial and reference purposes. Not affiliated with Ford Motor Company. &#x1F1FA;&#x1F1F8;</div>
+  <div class="ft-copy">&copy; 2026 AmericanCarBrands.com &nbsp;&middot;&nbsp; Independent Automotive Ownership Intelligence &nbsp;&middot;&nbsp; Not affiliated with any automotive manufacturer.</div>
+  <div class="ft-independent" style="border-top:1px solid rgba(255,255,255,.06);padding-top:12px;margin-top:12px;font-size:.68rem;color:rgba(255,255,255,.3);line-height:1.72;max-width:900px;">
+    This site is an independent automotive information resource and is not affiliated with or endorsed by any Motor Company referenced herein. AmericanCarBrands.com is an Independent Automotive Research &amp; Ownership Intelligence platform. We are not a marketplace, broker, dealer network, or insurance agency. All brand names and trademarks are the property of their respective owners and are referenced for editorial purposes only.
+  </div>
+  <div style="border-top:1px solid rgba(255,255,255,.07);padding-top:14px;margin-top:14px;font-size:.7rem;color:rgba(255,255,255,.35);line-height:1.75;max-width:860px;">
+    <strong style="color:rgba(255,255,255,.5);font-family:'Barlow Condensed',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;">⚖ Editorial Independence</strong> &nbsp;
+    AmericanCarBrands.com is an independent automotive information website and is not affiliated with or endorsed by Ford Motor Company. Brand names and trademarks are the property of their respective owners and are referenced for editorial and informational purposes only. &nbsp;<a href="disclaimer.html" style="color:rgba(255,255,255,.45);text-decoration:underline;">Full Disclaimer</a>
+  </div>
 </footer>
 
 <script>
@@ -1218,5 +1506,206 @@ window.addEventListener('scroll',function(){
   });
 });
 </script>
+
+<script>
+// ── Revenue Chart ──────────────────────────────────────────
+var REV_DATA = {
+  '1y': {
+    labels: ['Q1 2024','Q2 2024','Q3 2024','Q4 2024'],
+    total:  [43,48,47,47],
+    pro:    [13,15,14,16],
+    blue:   [23,25,24,26],
+    ev:     [7,8,9,5]
+  },
+  '3y': {
+    labels: ['2022','2023','2024'],
+    total:  [158,176,185],
+    pro:    [40,52,58],
+    blue:   [85,90,98],
+    ev:     [33,34,29]
+  },
+  '5y': {
+    labels: ['2020','2021','2022','2023','2024'],
+    total:  [127,136,158,176,185],
+    pro:    [28,34,40,52,58],
+    blue:   [75,78,85,90,98],
+    ev:     [24,24,33,34,29]
+  }
+};
+var currentRange = '1y';
+
+function revShow(range, btn) {
+  currentRange = range;
+  document.querySelectorAll('.rev-tab').forEach(function(b){b.classList.remove('active');});
+  btn.classList.add('active');
+  drawRevChart(range);
+}
+
+function drawRevChart(range) {
+  var canvas = document.getElementById('revCanvas');
+  if (!canvas) return;
+  var wrap = canvas.parentElement;
+  canvas.width = wrap.offsetWidth * window.devicePixelRatio || 800;
+  canvas.height = 180 * window.devicePixelRatio || 180;
+  canvas.style.width = '100%';
+  canvas.style.height = '180px';
+  var ctx = canvas.getContext('2d');
+  var dpr = window.devicePixelRatio || 1;
+  ctx.scale(dpr, dpr);
+  var W = wrap.offsetWidth, H = 180;
+  ctx.clearRect(0, 0, W, H);
+
+  var d = REV_DATA[range];
+  var n = d.labels.length;
+  var pad = {l:40,r:20,t:20,b:32};
+  var cw = W - pad.l - pad.r;
+  var ch = H - pad.t - pad.b;
+  var maxV = Math.max.apply(null, d.total) * 1.12;
+  var bw = (cw / n) * 0.6;
+  var gap = (cw / n) * 0.4;
+
+  // Grid lines
+  ctx.strokeStyle = 'rgba(255,255,255,.06)';
+  ctx.lineWidth = 1;
+  for (var i=0;i<=4;i++){
+    var y = pad.t + ch - (ch * i/4);
+    ctx.beginPath(); ctx.moveTo(pad.l, y); ctx.lineTo(pad.l+cw, y); ctx.stroke();
+    ctx.fillStyle = 'rgba(255,255,255,.25)';
+    ctx.font = '10px Barlow Condensed,sans-serif';
+    ctx.textAlign = 'right';
+    ctx.fillText('$'+(Math.round(maxV*i/4))+'B', pad.l-4, y+3);
+  }
+
+  // Bars (stacked: pro, blue, ev)
+  var colors = ['#2DB37A','#C9962A','#0033A0'];
+  var keys = ['pro','blue','ev'];
+  var tooltipData = [];
+  for (var bi=0;bi<n;bi++){
+    var x = pad.l + bi*(cw/n) + gap/2;
+    var stackY = pad.t + ch;
+    for (var ki=0;ki<keys.length;ki++){
+      var val = d[keys[ki]][bi];
+      var barH = (val / maxV) * ch;
+      ctx.fillStyle = colors[ki];
+      ctx.fillRect(x, stackY - barH, bw, barH);
+      stackY -= barH;
+    }
+    tooltipData.push({x: x + bw/2, total: d.total[bi], pro: d.pro[bi], blue: d.blue[bi], ev: d.ev[bi]});
+    // Label
+    ctx.fillStyle = 'rgba(255,255,255,.45)';
+    ctx.font = '10px Barlow Condensed,sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText(d.labels[bi], x + bw/2, H - 6);
+  }
+
+  // Store tooltip data
+  canvas._td = tooltipData;
+  canvas._pad = pad;
+  canvas._dpr = dpr;
+}
+
+// Tooltip on hover
+document.addEventListener('DOMContentLoaded', function(){
+  drawRevChart('1y');
+  var canvas = document.getElementById('revCanvas');
+  var tip = document.getElementById('revTooltip');
+  if (!canvas || !tip) return;
+  canvas.addEventListener('mousemove', function(e){
+    var rect = canvas.getBoundingClientRect();
+    var mx = e.clientX - rect.left;
+    var my = e.clientY - rect.top;
+    var found = false;
+    if (canvas._td){
+      canvas._td.forEach(function(p){
+        if (Math.abs(mx - p.x) < 32){
+          tip.style.display = 'block';
+          tip.style.left = (e.clientX - rect.left - 60) + 'px';
+          tip.style.top = (my - 80) + 'px';
+          tip.innerHTML = '<div style="font-family:Bebas Neue,sans-serif;font-size:1rem;letter-spacing:.04em;margin-bottom:4px;">$' + p.total + 'B Total</div>' +
+            '<div style="color:#2DB37A;">Pro: $'+p.pro+'B</div>' +
+            '<div style="color:#C9962A;">Blue: $'+p.blue+'B</div>' +
+            '<div style="color:#0033A0;">Model e: $'+p.ev+'B</div>';
+          found = true;
+        }
+      });
+    }
+    if (!found) tip.style.display = 'none';
+  });
+  canvas.addEventListener('mouseleave', function(){ tip.style.display = 'none'; });
+
+  // Related exploration shuffle
+  var brands = [
+    {name:'Chevrolet',url:'chevrolet.html',desc:'GM volume brand — Silverado vs F-150, Corvette, Equinox EV',color:'#C8102E'},
+    {name:'GMC',url:'gmc.html',desc:'Professional Grade trucks — Sierra, Yukon, Hummer EV',color:'#E07B39'},
+    {name:'Tesla',url:'tesla.html',desc:'EV leader — Cybertruck competes with F-150 Lightning',color:'#1A6FD4'},
+    {name:'Ram',url:'ram.html',desc:'Stellantis trucks — consistent F-150 rival in full-size segment',color:'#E07B39'},
+    {name:'Dodge',url:'dodge.html',desc:'Muscle car heritage — Charger EV vs Mustang rivalry',color:'#C8102E'},
+    {name:'Rivian',url:'rivian.html',desc:'EV trucks — R1T competes in adventure/premium EV space',color:'#1A6FD4'},
+    {name:'Lincoln',url:'lincoln.html',desc:'Ford luxury division — Navigator, Aviator, Continental',color:'#C9962A'},
+    {name:'Jeep',url:'jeep.html',desc:'Off-road rival — Wrangler vs Bronco is the defining SUV debate',color:'#E07B39'},
+    {name:'Lucid',url:'lucid.html',desc:'Ultra-luxury EV — 516-mile range, premium positioning',color:'#1A6FD4'},
+    {name:'Cadillac',url:'cadillac.html',desc:'GM luxury — LYRIQ EV, Escalade IQ compete with Lincoln',color:'#C9962A'},
+  ];
+  // Shuffle
+  brands.sort(function(){return Math.random()-.5;});
+  var grid = document.getElementById('reGrid');
+  if (grid){
+    grid.innerHTML = brands.slice(0,8).map(function(b){
+      return '<a href="'+b.url+'" class="re-card"><div class="re-card-name" style="color:'+b.color+';">'+b.name+'</div><div class="re-card-desc">'+b.desc+'</div><div class="re-card-cta">Explore →</div></a>';
+    }).join('');
+  }
+});
+
+window.addEventListener('resize', function(){drawRevChart(currentRange);});
+
+// ── Expandable Data Cards ──────────────────────────────────
+function edcToggle(id) {
+  var el = document.getElementById(id);
+  if (el) el.classList.toggle('open');
+}
+
+// ── FAQ with smooth animation ──────────────────────────────
+function faqToggle(id) {
+  var item = document.getElementById(id);
+  if (!item) return;
+  var body = item.querySelector('.faq-a');
+  var icon = item.querySelector('.faq-icon');
+  var inner = item.querySelector('.faq-a-inner');
+  if (!body) return;
+  var isOpen = item.classList.contains('open');
+  if (isOpen) {
+    body.style.maxHeight = body.scrollHeight + 'px';
+    requestAnimationFrame(function(){
+      body.style.transition = 'max-height .28s ease';
+      body.style.maxHeight = '0';
+    });
+    item.classList.remove('open');
+    if (icon) icon.textContent = '+';
+  } else {
+    body.style.maxHeight = '0';
+    body.style.display = 'block';
+    var h = inner ? inner.scrollHeight + 20 : 400;
+    requestAnimationFrame(function(){
+      body.style.transition = 'max-height .32s ease';
+      body.style.maxHeight = h + 'px';
+    });
+    item.classList.add('open');
+    if (icon) icon.textContent = '×';
+  }
+}
+// Override old toggleFaq to use new function
+function toggleFaq(el){
+  var item = el.parentElement;
+  var faqId = item.id;
+  if (faqId) faqToggle(faqId);
+  else {
+    var isOpen = item.classList.contains('open');
+    item.classList.toggle('open');
+    var icon = el.querySelector('.faq-icon,.faq-ic');
+    if (icon) icon.textContent = isOpen ? '+' : '×';
+  }
+}
+</script>
+
 </body>
 </html>
