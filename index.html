@@ -187,9 +187,39 @@ footer{background:#060608;padding:44px 52px 36px;border-top:1px solid rgba(255,2
 .ft-copy-links a{color:rgba(255,255,255,.4);text-decoration:none;transition:color .18s;}.ft-copy-links a:hover{color:#C8102E;}
 @media(max-width:768px){footer{padding:36px 20px;}.ft-in{flex-direction:column;align-items:flex-start;}}
 
+
+/* ── Collapsible Directory ─────────────────────────────── */
+.dir-toggle-btn{display:flex;align-items:center;gap:8px;background:transparent;border:1px solid rgba(255,255,255,.16);color:rgba(255,255,255,.6);font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:7px 16px;cursor:pointer;border-radius:2px;transition:all .2s;flex-shrink:0;}
+.dir-toggle-btn:hover{border-color:var(--red);color:var(--white);}
+.dir-arrow{display:inline-block;transition:transform .35s cubic-bezier(.4,0,.2,1);font-size:.8rem;}
+.dir-collapsed .dir-arrow{transform:rotate(-90deg);}
+.dir-body-wrap{overflow:hidden;transition:max-height .4s cubic-bezier(.4,0,.2,1),opacity .3s ease;}
+.dir-body-wrap.is-collapsed{max-height:0!important;opacity:0;pointer-events:none;}
+/* ── Affiliate labels ──────────────────────────────────── */
+.aff-badge{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-size:.52rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:1px 5px;border-radius:2px;background:rgba(200,16,46,.12);border:1px solid rgba(200,16,46,.25);color:var(--red);vertical-align:middle;margin-left:4px;}
 </style>
 </head>
 <body>
+<!-- ═══ FTC §255 + TRADEMARK DISCLOSURE BANNER — shown on every page ═══ -->
+<div id="acb-disc-bar" role="note"
+  style="background:#0d0d0d;border-bottom:2px solid var(--red);padding:9px 24px 9px 20px;display:flex;align-items:flex-start;justify-content:space-between;gap:14px;z-index:9998;position:relative;">
+  <div style="display:flex;gap:10px;flex:1;min-width:0;align-items:flex-start;">
+    <span style="color:var(--red);font-size:.9rem;flex-shrink:0;margin-top:2px;">&#x24D8;</span>
+    <p style="margin:0;font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.03em;color:rgba(255,255,255,.55);line-height:1.6;">
+      <strong style="color:var(--red);text-transform:uppercase;letter-spacing:.1em;font-size:.6rem;">Disclosure &amp; Disclaimer&ensp;—&ensp;</strong>
+      <strong style="color:rgba(255,255,255,.8);">Independent, unofficial editorial research site</strong> — not affiliated with, endorsed by, or sponsored by any automaker (Ford, GM, Stellantis, Tesla, or any brand referenced here).
+      &ensp;Displays <strong style="color:rgba(255,255,255,.8);">Google AdSense</strong> ads &bull; uses <strong style="color:rgba(255,255,255,.8);">Google Analytics</strong> &bull; participates in <strong style="color:rgba(255,255,255,.8);">affiliate marketing</strong> (commission earned from qualifying clicks/purchases at no extra cost to you).
+      &ensp;All brand names and trademarks belong to their owners — used here for editorial identification only.
+      &ensp;<strong style="color:rgba(255,255,255,.8);">Not financial, investment, insurance, or purchasing advice.</strong>
+      &ensp;<a href="disclaimer.html" style="color:var(--red);text-decoration:none;font-weight:700;">Disclaimer</a>
+      &ensp;<a href="affiliate-disclosure.html" style="color:rgba(255,255,255,.32);text-decoration:none;">Affiliates</a>
+      &ensp;<a href="privacy-policy.html" style="color:rgba(255,255,255,.32);text-decoration:none;">Privacy</a>
+    </p>
+  </div>
+  <button onclick="(function(){try{localStorage.setItem('acb_disc','1');}catch(e){}document.getElementById('acb-disc-bar').style.display='none';})()"
+    style="flex-shrink:0;background:transparent;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.32);font-size:.58rem;font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:.1em;padding:3px 9px;cursor:pointer;border-radius:2px;margin-top:1px;white-space:nowrap;">DISMISS &#x00D7;</button>
+</div>
+<script>(function(){try{if(localStorage.getItem('acb_disc')==='1')document.getElementById('acb-disc-bar').style.display='none';}catch(e){}})();</script>
 
 <!-- ── FLOATING WIDGET: Home + Top + Font Size ── -->
 <div class="acb-widget" id="acbWidget">
@@ -212,28 +242,28 @@ footer{background:#060608;padding:44px 52px 36px;border-top:1px solid rgba(255,2
 
 <!-- TICKER BAR -->
 <div class="ticker-bar">
-  <div class="ticker-label">&#x1F697; Live</div>
+  <div class="ticker-label" title="Editorial brand notes — not live market data">&#x1F4CB; ACB INTEL</div>
   <div class="ticker-track">
-    <div class="ticker-item">Ford F-Series <span>47th year as America&#39;s #1 seller &middot; 2026</span></div>
-    <div class="ticker-item">Tesla Cybertruck <span>Production ramping &middot; Austin TX</span></div>
-    <div class="ticker-item">Rivian R2 <span>Scheduled for production launch &middot; Normal, Illinois</span></div>
-    <div class="ticker-item">Cadillac CELESTIQ <span>$340K ultra-luxury EV &middot; Detroit</span></div>
+    <div class="ticker-item">Ford F-Series <span>Best-selling truck in the US for over four decades &middot; 2026</span></div>
+    <div class="ticker-item">Tesla Cybertruck <span>Stainless-steel all-electric truck &middot; Austin, TX</span></div>
+    <div class="ticker-item">Rivian R2 <span>Scheduled production launch &middot; Normal, Illinois</span></div>
+    <div class="ticker-item">Cadillac CELESTIQ <span>Hand-built ultra-luxury EV &middot; Detroit, MI</span></div>
     <div class="ticker-item">Scout Motors <span>Factory groundbreaking &middot; Columbia SC</span></div>
-    <div class="ticker-item">Lucid Air Grand Touring <span>516-mile EPA range &middot; World record production EV</span></div>
+    <div class="ticker-item">Lucid Air Grand Touring <span>516-mile EPA-rated range &middot; Newark, CA</span></div>
     <div class="ticker-item">Ram 1500 REV <span>Electric full-size pickup &middot; 2026</span></div>
-    <div class="ticker-item">Jeep <span>Wrangler: longest continuous nameplate in American off-road history</span></div>
-    <div class="ticker-item">Hennessey Venom F5 <span>300+ mph target &middot; Sealy TX</span></div>
-    <div class="ticker-item">Buick <span>Ranked among top mass-market brands for long-term reliability &middot; 2025</span></div>
-    <div class="ticker-item">Ford F-Series <span>750K+ units sold annually &middot; Built Michigan &amp; Missouri</span></div>
-    <div class="ticker-item">Tesla Cybertruck <span>Production ramping &middot; Austin TX</span></div>
-    <div class="ticker-item">Rivian R2 <span>Scheduled for production launch &middot; Normal, Illinois</span></div>
-    <div class="ticker-item">Cadillac CELESTIQ <span>$340K ultra-luxury EV &middot; Detroit</span></div>
+    <div class="ticker-item">Jeep Wrangler <span>Iconic American off-road nameplate &middot; Made in Toledo, OH</span></div>
+    <div class="ticker-item">Hennessey Venom F5 <span>1,817 hp American hypercar &middot; Sealy, TX</span></div>
+    <div class="ticker-item">Buick <span>#1 J.D. Power reliability 2025</span></div>
+    <div class="ticker-item">Ford F-Series <span>Best-selling truck in the US for over four decades &middot; 2026</span></div>
+    <div class="ticker-item">Tesla Cybertruck <span>Stainless-steel all-electric truck &middot; Austin, TX</span></div>
+    <div class="ticker-item">Rivian R2 <span>Scheduled production launch &middot; Normal, Illinois</span></div>
+    <div class="ticker-item">Cadillac CELESTIQ <span>Hand-built ultra-luxury EV &middot; Detroit, MI</span></div>
     <div class="ticker-item">Scout Motors <span>Factory groundbreaking &middot; Columbia SC</span></div>
-    <div class="ticker-item">Lucid Air Grand Touring <span>516-mile EPA range &middot; World record production EV</span></div>
+    <div class="ticker-item">Lucid Air Grand Touring <span>516-mile EPA-rated range &middot; Newark, CA</span></div>
     <div class="ticker-item">Ram 1500 REV <span>Electric full-size pickup &middot; 2026</span></div>
-    <div class="ticker-item">Jeep <span>Wrangler: longest continuous nameplate in American off-road history</span></div>
-    <div class="ticker-item">Hennessey Venom F5 <span>300+ mph target &middot; Sealy TX</span></div>
-    <div class="ticker-item">Buick <span>Ranked among top mass-market brands for long-term reliability &middot; 2025</span></div>
+    <div class="ticker-item">Jeep Wrangler <span>Iconic American off-road nameplate &middot; Made in Toledo, OH</span></div>
+    <div class="ticker-item">Hennessey Venom F5 <span>1,817 hp American hypercar &middot; Sealy, TX</span></div>
+    <div class="ticker-item">Buick <span>#1 J.D. Power reliability 2025</span></div>
   </div>
 </div>
 
@@ -390,10 +420,16 @@ footer{background:#060608;padding:44px 52px 36px;border-top:1px solid rgba(255,2
 
 <!-- DIRECTORY TABLE -->
 <div class="dir-sec" id="directory">
-  <div class="dir-hdr">
-    <div class="dir-title">Complete Active Brand Directory</div>
-    <div class="dir-cnt" id="dCnt">38 brands</div>
+  <div class="dir-hdr" id="dirHdr" style="cursor:pointer;" onclick="toggleDir()" title="Click to expand/collapse">
+    <div style="display:flex;align-items:center;gap:14px;">
+      <div class="dir-title">Complete Active Brand Directory</div>
+      <div class="dir-cnt" id="dCnt">38 brands</div>
+    </div>
+    <button class="dir-toggle-btn" id="dirToggleBtn" onclick="event.stopPropagation();toggleDir()" aria-expanded="true" aria-controls="dirBodyWrap">
+      <span id="dirToggleLabel">Collapse</span><span class="dir-arrow">&#x25BE;</span>
+    </button>
   </div>
+  <div class="dir-body-wrap" id="dirBodyWrap">
   <div class="dir-ctrl">
     <div class="dir-sw"><span class="dir-sw-ico">&#x1F50D;</span><input type="text" placeholder="Search brand, city, parent company, year&hellip;" oninput="dirFilter()" id="dsi"></div>
     <div class="dir-flt">
@@ -439,6 +475,7 @@ footer{background:#060608;padding:44px 52px 36px;border-top:1px solid rgba(255,2
       <tr data-types="truck"><td><a href="mack.html" class="tn"><span class="tdot" style="background:var(--orange)"></span>Mack</a></td><td>1900</td><td>Allentown, PA</td><td>Volvo Group</td><td>Heavy Trucks</td><td><span class="tbg tbg-t">&#x1F6FB; Trucks</span></td><td><span class="tpv">Volvo-owned</span></td><td><a href="mack.html" class="tv">View &#x2192;</a></td></tr>
     </tbody>
   </table></div>
+  </div><!-- /dir-body-wrap -->
 </div>
 
 <!-- SEO -->
@@ -449,65 +486,93 @@ footer{background:#060608;padding:44px 52px 36px;border-top:1px solid rgba(255,2
 </div>
 
 <!-- FOOTER -->
-
-<!-- EDITORIAL IDENTITY STRIP -->
-<div style="padding:40px 60px;background:#0a0a0a;border-top:3px solid rgba(200,16,46,.3);">
-  <div style="max-width:900px;">
-    <div style="font-family:'Barlow Condensed',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:8px;">About AmericanCarBrands.com</div>
-    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(22px,2.8vw,38px);letter-spacing:.03em;margin-bottom:16px;color:var(--white);">Independent Automotive Research — Not Affiliated With Any Manufacturer</h2>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:20px;">
-      <div style="background:var(--dark2);padding:18px 20px;">
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.04em;color:var(--white);margin-bottom:6px;">What This Site Is</div>
-        <p style="font-size:.78rem;color:rgba(255,255,255,.5);line-height:1.7;margin:0;">An independent editorial platform tracking all American car brands — active and defunct. Brand data is researched from public SEC filings, NHTSA records, and publicly available industry reports. Not affiliated with any manufacturer.</p>
-      </div>
-      <div style="background:var(--dark2);padding:18px 20px;">
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.04em;color:var(--white);margin-bottom:6px;">What This Site Is Not</div>
-        <p style="font-size:.78rem;color:rgba(255,255,255,.5);line-height:1.7;margin:0;">Not a dealer, dealership referral service, insurance provider, financial advisor, or manufacturer representative. Revenue comes from third-party display advertising. We do not receive compensation from automotive brands for content.</p>
-      </div>
-      <div style="background:var(--dark2);padding:18px 20px;">
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.04em;color:var(--white);margin-bottom:6px;">How to Use This Data</div>
-        <p style="font-size:.78rem;color:rgba(255,255,255,.5);line-height:1.7;margin:0;">All figures are editorial estimates from public sources. Reliability scores, insurance ranges, and financial data are not quotes or guarantees. Stock tickers are reference information only — not investment advice. Verify critical figures with primary sources.</p>
-      </div>
-    </div>
-    <p style="font-size:.7rem;color:rgba(255,255,255,.25);line-height:1.7;">All brand names, trademarks, and logos referenced on this platform are the property of their respective owners. Use is for editorial identification under nominative fair use. J.D. Power and Associates&reg;, Consumer Reports&reg;, and NHTSA are referenced for editorial attribution only. AmericanCarBrands.com is not affiliated with or sponsored by any of these organizations.</p>
-  </div>
-</div>
 <footer>
   <div class="ft-in">
     <a href="index.html" class="ft-logo">AMERICAN<span>CAR</span>BRANDS</a>
     <div class="ft-links">
       <a href="index.html">All Brands</a>
-      <a href="active-american-car-brands.html">Active Brands</a>
-      <a href="defunct-american-car-brands.html">Defunct Brands</a>
-      <a href="complete-database.html">Full Database</a>
+      <a href="active-american-car-brands.html">Active</a>
+      <a href="defunct-american-car-brands.html">Defunct</a>
       <a href="disclaimer.html">Disclaimer</a>
+      <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
       <a href="editorial-policy.html">Editorial Policy</a>
       <a href="privacy-policy.html">Privacy Policy</a>
       <a href="terms-of-use.html">Terms</a>
     </div>
   </div>
-  <div class="ft-canonical">
-    <p class="ft-copy-main">&copy; 2026 AmericanCarBrands.com &nbsp; Independent Automotive Ownership Intelligence.</p>
-    <p class="ft-copy-body">AmericanCarBrands.com is an independent automotive research and editorial intelligence platform. We are not affiliated with, endorsed by, or sponsored by any automotive manufacturer, dealer group, insurance provider, or financial institution. This site operates as an independent editorial publisher.</p>
-    <p class="ft-copy-body"><strong style="color:rgba(255,255,255,.45);">Trademark notice:</strong> All vehicle brand names, model names, logos, and corporate names referenced on this site (including but not limited to Ford&reg;, Chevrolet&reg;, Tesla&reg;, Jeep&reg;, Ram&reg;, Dodge&reg;, Cadillac&reg;, GMC&reg;, Lincoln&reg;, Buick&reg;, Rivian&trade;, Lucid&trade;) are the trademarks or registered trademarks of their respective owners. Use of these names is for editorial and informational purposes only under nominative fair use doctrine and does not imply affiliation, sponsorship, or endorsement.</p>
-    <p class="ft-copy-body"><strong style="color:rgba(255,255,255,.45);">Data disclaimer:</strong> Financial data, reliability estimates, insurance cost ranges, market figures, and production statistics published on this site are independently researched editorial estimates compiled from publicly available sources including company filings, NHTSA public data (nhtsa.gov), and industry reports. J.D. Power and Associates&reg; and Consumer Reports&reg; are registered trademarks of their respective owners. AmericanCarBrands.com is not affiliated with, endorsed by, or licensed by J.D. Power, Consumer Reports, or NHTSA. Data may contain inaccuracies and should not be relied upon for financial, purchasing, or insurance decisions.</p>
-    <p class="ft-copy-body"><strong style="color:rgba(255,255,255,.45);">Not financial or insurance advice:</strong> Stock tickers, market capitalization figures, and revenue data are shown for informational reference only. Nothing on this site constitutes investment, financial, or insurance advice. AmericanCarBrands.com is not a licensed investment advisor, insurance agent, or dealer broker. Always consult licensed professionals before making financial or insurance decisions.</p>
-    <p class="ft-copy-body">All vehicle brand names and trademarks are the property of their respective owners and are referenced for editorial and informational purposes only.</p>
-    <p class="ft-copy-body">We do not facilitate vehicle sales, insurance transactions, or dealer matchmaking.</p>
-    <p class="ft-copy-links">View our &nbsp;<a href="disclaimer.html">Disclaimer</a> &nbsp;&middot;&nbsp; <a href="editorial-policy.html">Editorial Policy</a> &nbsp;&middot;&nbsp; <a href="privacy-policy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="terms-of-use.html">Terms</a></p>
+
+  <!-- SINGLE CONSOLIDATED LEGAL BLOCK — covers all legal threats -->
+  <div style="padding:24px 52px 32px;border-top:1px solid rgba(255,255,255,.05);">
+    <p style="font-family:'Barlow Condensed',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:14px;">
+      &copy; 2026 AmericanCarBrands.com &mdash; Independent Automotive Research &mdash; Not affiliated with any manufacturer &mdash; Data sourced from public records
+    </p>
+
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,.04);margin-bottom:16px;">
+
+      <div style="background:#0d0d0d;padding:14px 18px;">
+        <p style="font-size:.63rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.42);margin-bottom:5px;font-family:'Barlow Condensed',sans-serif;">&#x24D8;&ensp;Independence &amp; Advertising</p>
+        <p style="font-size:.67rem;color:rgba(255,255,255,.27);line-height:1.68;margin:0;">
+          AmericanCarBrands.com is an independent editorial research site — <strong style="color:rgba(255,255,255,.44);">not affiliated with, endorsed by, or compensated by any automotive manufacturer, dealer, insurer, or financial institution.</strong>
+          Revenue is generated through <strong style="color:rgba(255,255,255,.44);">Google AdSense</strong> display advertising and participation in <strong style="color:rgba(255,255,255,.44);">affiliate marketing programs.</strong>
+          Per FTC guidelines (16 CFR &sect;255), we disclose that we may earn a commission from qualifying purchases or clicks via affiliate links — at no extra cost to you.
+          Affiliate relationships do not influence our editorial content, rankings, or recommendations.
+          <a href="affiliate-disclosure.html" style="color:var(--red);text-decoration:none;">Full Affiliate Disclosure &rarr;</a>
+        </p>
+      </div>
+
+      <div style="background:#0d0d0d;padding:14px 18px;">
+        <p style="font-size:.63rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.42);margin-bottom:5px;font-family:'Barlow Condensed',sans-serif;">&#x2122;&ensp;Trademarks &amp; Brand Names</p>
+        <p style="font-size:.67rem;color:rgba(255,255,255,.27);line-height:1.68;margin:0;">
+          All vehicle brand names, model names, corporate names, and logos referenced on this site — including Ford&reg;, F-150&reg;, Mustang&reg;, Chevrolet&reg;, Corvette&reg;, Tesla&reg;, Jeep&reg;, Ram&reg;, Dodge&reg;, Cadillac&reg;, GMC&reg;, Lincoln&reg;, Buick&reg;, Rivian&trade;, Lucid&trade; and others — are registered trademarks or trademarks of their respective owners.
+          Their use here is solely for <strong style="color:rgba(255,255,255,.44);">editorial identification and informational commentary</strong> under the nominative fair use doctrine.
+          AmericanCarBrands.com claims no trademark ownership and has no affiliation with any of these brands.
+        </p>
+      </div>
+
+      <div style="background:#0d0d0d;padding:14px 18px;">
+        <p style="font-size:.63rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.42);margin-bottom:5px;font-family:'Barlow Condensed',sans-serif;">&#x26A0;&ensp;Not Professional Advice &amp; Data Accuracy</p>
+        <p style="font-size:.67rem;color:rgba(255,255,255,.27);line-height:1.68;margin:0;">
+          <strong style="color:rgba(255,255,255,.44);">Nothing on this site is financial, investment, insurance, legal, or vehicle purchasing advice.</strong>
+          Stock tickers and revenue figures are informational reference only.
+          Insurance cost figures are independently researched editorial estimates — not quotes from licensed insurers. We are not a licensed investment adviser, insurance broker, or dealer.
+          All statistics (financial data, reliability scores, market figures) are editorial estimates compiled from public sources including SEC filings and NHTSA public data (nhtsa.gov).
+          Data may contain inaccuracies — always verify with primary sources before making any financial or purchasing decision.
+        </p>
+      </div>
+
+      <div style="background:#0d0d0d;padding:14px 18px;">
+        <p style="font-size:.63rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.42);margin-bottom:5px;font-family:'Barlow Condensed',sans-serif;">&#x1F6E1;&ensp;Analytics, Cookies &amp; Privacy</p>
+        <p style="font-size:.67rem;color:rgba(255,255,255,.27);line-height:1.68;margin:0;">
+          This site uses <strong style="color:rgba(255,255,255,.44);">Google Analytics</strong> (anonymized traffic measurement) and <strong style="color:rgba(255,255,255,.44);">Google AdSense</strong> (contextual display ads). Both services may set cookies and collect usage data per Google's own privacy policies.
+          We also use affiliate tracking links which may set cookies from partner platforms.
+          We do not sell, rent, or share personal data with third parties for their own marketing.
+          <a href="privacy-policy.html" style="color:var(--red);text-decoration:none;">Privacy Policy &rarr;</a>
+        </p>
+      </div>
+
+    </div>
+
+    <p style="font-size:.63rem;color:rgba(255,255,255,.2);line-height:1.6;">
+      J.D. Power and Associates&reg; and Consumer Reports&reg; are registered trademarks of their respective owners, referenced for editorial attribution only — AmericanCarBrands.com is not affiliated with or endorsed by either organization.
+      &ensp;We do not facilitate vehicle sales, dealer referrals, or insurance transactions.
+    </p>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
+// Font size
 function setFs(s){
   document.documentElement.classList.remove('fs-sm','fs-md','fs-lg');
   document.documentElement.classList.add(s);
   const m={'fs-sm':'fs1','fs-md':'fs2','fs-lg':'fs3'};
-  ['fs1','fs2','fs3'].forEach(id=>document.getElementById(id).classList.remove('on'));
-  document.getElementById(m[s]).classList.add('on');
+  ['fs1','fs2','fs3'].forEach(id=>{const el=document.getElementById(id);if(el)el.classList.remove('on');});
+  const target=document.getElementById(m[s]);if(target)target.classList.add('on');
   try{localStorage.setItem('acb-fs',s);}catch(e){}
 }
 (function(){try{const s=localStorage.getItem('acb-fs');if(s)setFs(s);else setFs('fs-md');}catch(e){setFs('fs-md');}})();
+
+// Font size (acb widget)
+function acbSetFs(s){setFs('fs-'+s);}
 
 let aType='all',dType='all',sAsc={};
 
@@ -515,13 +580,12 @@ function filterByType(type,el){
   document.querySelectorAll('.stat-pill').forEach(p=>p.classList.remove('active'));
   el.classList.add('active');
   aType=type;
-  document.getElementById('csi').value='';
-  const m={all:'All Active',big3:'Big Three',luxury:'\u2726 Luxury',ev:'\u26A1 EV',performance:'\u1F3C1 Performance',truck:'\u1F6FB Trucks'};
+  const csi=document.getElementById('csi');if(csi)csi.value='';
   document.querySelectorAll('.filter-btn').forEach(b=>b.classList.toggle('active',b.textContent.trim().includes(
     {all:'All Active',big3:'Big Three',luxury:'Luxury',ev:'EV',performance:'Performance',truck:'Trucks'}[type]||''
   )));
   applyCards();
-  document.getElementById('cardsSection').scrollIntoView({behavior:'smooth',block:'start'});
+  const cs=document.getElementById('cardsSection');if(cs)cs.scrollIntoView({behavior:'smooth',block:'start'});
 }
 
 function cardFilter(type,btn){
@@ -529,8 +593,8 @@ function cardFilter(type,btn){
   document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
   document.querySelectorAll('.stat-pill').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.stat-pill')[0].classList.add('active');
-  document.getElementById('csi').value='';
+  const first=document.querySelectorAll('.stat-pill')[0];if(first)first.classList.add('active');
+  const csi=document.getElementById('csi');if(csi)csi.value='';
   applyCards();
 }
 
@@ -560,6 +624,7 @@ function updateLabels(){
   });
 }
 
+// Directory filter
 function dirFilter(){
   const q=document.getElementById('dsi').value.toLowerCase();
   const rows=document.querySelectorAll('#dBody tr');let v=0;
@@ -567,15 +632,15 @@ function dirFilter(){
     const ok=(!q||r.textContent.toLowerCase().includes(q))&&(dType==='all'||(r.dataset.types||'').includes(dType));
     r.classList.toggle('rh',!ok);if(ok)v++;
   });
-  document.getElementById('dCnt').textContent=v+' brands';
-  document.getElementById('dNote').textContent=(q||dType!=='all')?'Showing '+v+' of 38 brands':'Showing all 38 active brands';
+  const cnt=document.getElementById('dCnt');if(cnt)cnt.textContent=v+' brands';
+  const note=document.getElementById('dNote');if(note)note.textContent=(q||dType!=='all')?'Showing '+v+' of 38 brands':'Showing all 38 active brands';
 }
 
 function dirTypeFilter(type,btn){
   dType=type;
   document.querySelectorAll('.dfb').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
-  document.getElementById('dsi').value='';
+  const dsi=document.getElementById('dsi');if(dsi)dsi.value='';
   dirFilter();
 }
 
@@ -585,7 +650,7 @@ function sortDir(col){
   const rows=Array.from(tbody.querySelectorAll('tr'));
   document.querySelectorAll('.dt th').forEach((th,i)=>{
     th.classList.toggle('sorted',i===col);
-    const sa=th.querySelector('.sa');if(sa)sa.textContent=i===col?(asc?'\u2191':'\u2193'):'\u2195';
+    const sa=th.querySelector('.sa');if(sa)sa.textContent=i===col?(asc?'↑':'↓'):'↕';
   });
   rows.sort((a,b)=>{
     const av=a.cells[col]?.textContent.trim().toLowerCase()||'';
@@ -597,7 +662,77 @@ function sortDir(col){
   rows.forEach(r=>tbody.appendChild(r));
 }
 
-const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';io.unobserve(e.target);}});},{threshold:0.06});
+// ── COLLAPSIBLE DIRECTORY ──────────────────────────────────
+function toggleDir(){
+  const wrap=document.getElementById('dirBodyWrap');
+  const btn=document.getElementById('dirToggleBtn');
+  const lbl=document.getElementById('dirToggleLabel');
+  const hdr=document.getElementById('dirHdr');
+  if(!wrap) return;
+  const isOpen=!wrap.classList.contains('is-collapsed');
+  if(isOpen){
+    // Collapse
+    wrap.style.maxHeight=wrap.scrollHeight+'px';
+    requestAnimationFrame(()=>{
+      requestAnimationFrame(()=>{
+        wrap.style.maxHeight='0';
+        wrap.classList.add('is-collapsed');
+        if(btn) btn.querySelector('.dir-arrow').style.transform='rotate(-90deg)';
+        if(lbl) lbl.textContent='Expand';
+        if(btn) btn.setAttribute('aria-expanded','false');
+      });
+    });
+  } else {
+    // Expand
+    wrap.classList.remove('is-collapsed');
+    if(btn) btn.querySelector('.dir-arrow').style.transform='';
+    if(lbl) lbl.textContent='Collapse';
+    if(btn) btn.setAttribute('aria-expanded','true');
+    requestAnimationFrame(()=>{
+      wrap.style.maxHeight=wrap.scrollHeight+'px';
+      setTimeout(()=>{wrap.style.maxHeight='none';},420);
+    });
+  }
+  try{localStorage.setItem('acb-dir',isOpen?'0':'1');}catch(e){}
+}
+
+// Brand card fade-in
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.style.opacity='1';
+      e.target.style.transform='translateY(0)';
+      io.unobserve(e.target);
+    }
+  });
+},{threshold:0.06});
+
 document.querySelectorAll('.brand-card').forEach((el,i)=>{
-  el.style.opacity='0';el.style.transform='translateY(14px)';
-  el.style.transition
+  el.style.opacity='0';
+  el.style.transform='translateY(14px)';
+  el.style.transition=`opacity .4s ease ${i*0.03}s, transform .4s ease ${i*0.03}s`;
+  io.observe(el);
+});
+
+// Init directory state from localStorage
+(function(){
+  const wrap=document.getElementById('dirBodyWrap');
+  if(wrap){
+    wrap.style.maxHeight=wrap.scrollHeight+'px';
+    setTimeout(()=>{wrap.style.maxHeight='none';},10);
+    // Restore collapsed state
+    try{
+      if(localStorage.getItem('acb-dir')==='0'){
+        wrap.style.maxHeight=wrap.scrollHeight+'px';
+        requestAnimationFrame(()=>{
+          wrap.style.maxHeight='0';
+          wrap.classList.add('is-collapsed');
+          const lbl=document.getElementById('dirToggleLabel');if(lbl)lbl.textContent='Expand';
+        });
+      }
+    }catch(e){}
+  }
+})();
+</script>
+</body>
+</html>
