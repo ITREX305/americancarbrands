@@ -420,6 +420,78 @@ footer{background:#060608;padding:44px 52px 36px;border-top:1px solid rgba(255,2
   "sameAs":["https://en.wikipedia.org/wiki/Tesla,_Inc.","https://twitter.com/Tesla"]
 }
 </script>
+
+<style id="acb-tesla-anim">
+/* ── Animated Model Quick-Jump Row (tesla.html) ── */
+@keyframes acb-tesla-fade {
+  from { opacity:0; transform:translateY(12px) scale(.97); }
+  to   { opacity:1; transform:translateY(0) scale(1); }
+}
+@keyframes acb-tesla-glow {
+  0%,100% { box-shadow: 0 0 0 0 rgba(204,0,0,0); }
+  50%      { box-shadow: 0 0 18px 2px rgba(204,0,0,.18); }
+}
+@keyframes acb-label-slide {
+  from { opacity:0; transform:translateX(-8px); }
+  to   { opacity:1; transform:translateX(0); }
+}
+/* Override static button styles in the jump row */
+#model-quickjump a {
+  opacity: 0;
+  animation: acb-tesla-fade .42s cubic-bezier(.22,.68,0,1.2) forwards;
+  transition: background .22s, border-color .22s, transform .22s, box-shadow .22s !important;
+}
+#model-quickjump a:hover {
+  transform: translateY(-4px) scale(1.02) !important;
+  box-shadow: 0 10px 32px rgba(0,0,0,.5), 0 0 0 1px rgba(204,0,0,.4) !important;
+  background: rgba(204,0,0,.14) !important;
+  border-color: #CC0000 !important;
+}
+/* Stagger delays */
+#model-quickjump a:nth-child(1){ animation-delay:.04s; }
+#model-quickjump a:nth-child(2){ animation-delay:.1s; }
+#model-quickjump a:nth-child(3){ animation-delay:.16s; }
+#model-quickjump a:nth-child(4){ animation-delay:.22s; }
+#model-quickjump a:nth-child(5){ animation-delay:.28s; }
+/* "UPDATED" badge pulse */
+#model-quickjump span[style*="UPDATED"] {
+  animation: acb-tesla-glow 2.2s ease infinite;
+}
+/* Label animation */
+#model-quickjump .acb-mqj-label {
+  animation: acb-label-slide .38s ease forwards;
+}
+/* View arrow on hover */
+#model-quickjump a span:last-child {
+  transition: letter-spacing .18s, color .18s;
+}
+#model-quickjump a:hover span:last-child {
+  letter-spacing: .1em;
+  color: #CC0000 !important;
+}
+/* Active card shimmer effect */
+@keyframes acb-active-shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+#model-quickjump a[style*="CC0000"] {
+  background: linear-gradient(110deg, rgba(204,0,0,.08) 30%, rgba(204,0,0,.18) 50%, rgba(204,0,0,.08) 70%) !important;
+  background-size: 200% auto !important;
+  animation: acb-tesla-fade .42s ease forwards, acb-active-shimmer 3.5s linear infinite !important;
+}
+/* Price badge color on hover */
+#model-quickjump a:hover [style*="rgba(255,255,255,.4)"] {
+  color: rgba(255,255,255,.75) !important;
+}
+/* Section label line */
+#model-quickjump > div:first-of-type::before {
+  animation: acb-label-slide .4s .05s ease both;
+}
+@media(max-width:600px){
+  #model-quickjump [style*="grid"]{grid-template-columns:repeat(3,1fr)!important;}
+}
+</style>
+
 </head>
 <body>
 <!-- ═══════════════════════════════════════════════════════════
@@ -440,6 +512,7 @@ footer{background:#060608;padding:44px 52px 36px;border-top:1px solid rgba(255,2
       &ensp;<a href="disclaimer.html" style="color:#C8102E;text-decoration:none;font-weight:700;">Disclaimer</a>
       &ensp;<a href="editorial-policy.html" style="color:rgba(255,255,255,.38);text-decoration:none;">Editorial Policy</a>
       &ensp;<a href="affiliate-disclosure.html" style="color:rgba(255,255,255,.38);text-decoration:none;">Affiliate Disclosure</a>
+    <a href="copyright.html">Copyright</a>
      No affiliation. No sponsorship. Brand names and trademarks are used solely to identify the products and companies being discussed — not to imply any official relationship.</p>
   </div>
   <button onclick="(function(){try{localStorage.setItem('acb_disc','1');}catch(e){}document.getElementById('acb-disc-bar').style.display='none';})()"
@@ -596,6 +669,71 @@ footer{background:#060608;padding:44px 52px 36px;border-top:1px solid rgba(255,2
     </div>
   </div>
 </div>
+
+<!-- ═══ MODEL QUICK-JUMP BUTTONS ═══ -->
+<div id="model-quickjump" style="padding:28px 60px 32px;background:var(--dark);border-bottom:1px solid rgba(255,255,255,.07);">
+  <div style="font-family:'Barlow Condensed',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--brand,#CC0000);margin-bottom:14px;">Jump To Model</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:10px;">
+
+    <a href="tesla-model3.html"
+      style="display:flex;flex-direction:column;align-items:flex-start;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-top:3px solid #CC0000;border-radius:3px;padding:14px 16px;text-decoration:none;transition:all .2s;"
+      onmouseover="this.style.background='rgba(255,255,255,.08)';this.style.borderColor='#CC0000'"
+      onmouseout="this.style.background='rgba(255,255,255,.04)';this.style.borderColor='rgba(255,255,255,.1)'">
+      <span style="font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);font-family:'Barlow Condensed',sans-serif;margin-bottom:4px;">SEDAN</span>
+      <span style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:.06em;color:#fff;line-height:1;">Model 3</span>
+      <span style="font-size:.72rem;color:rgba(255,255,255,.4);margin-top:4px;">From ~$40,240</span>
+      <span style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;color:#CC0000;margin-top:8px;letter-spacing:.05em;">View Guide →</span>
+    </a>
+
+    <a href="tesla-modely.html"
+      style="display:flex;flex-direction:column;align-items:flex-start;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-top:3px solid #CC0000;border-radius:3px;padding:14px 16px;text-decoration:none;transition:all .2s;"
+      onmouseover="this.style.background='rgba(255,255,255,.08)';this.style.borderColor='#CC0000'"
+      onmouseout="this.style.background='rgba(255,255,255,.04)';this.style.borderColor='rgba(255,255,255,.1)'">
+      <span style="font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);font-family:'Barlow Condensed',sans-serif;margin-bottom:4px;">SUV</span>
+      <span style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:.06em;color:#fff;line-height:1;">Model Y</span>
+      <span style="font-size:.72rem;color:rgba(255,255,255,.4);margin-top:4px;">From ~$44,990</span>
+      <span style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;color:#CC0000;margin-top:8px;letter-spacing:.05em;">View Guide →</span>
+    </a>
+
+    <a href="tesla-models.html"
+      style="display:flex;flex-direction:column;align-items:flex-start;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-top:3px solid #CC0000;border-radius:3px;padding:14px 16px;text-decoration:none;transition:all .2s;"
+      onmouseover="this.style.background='rgba(255,255,255,.08)';this.style.borderColor='#CC0000'"
+      onmouseout="this.style.background='rgba(255,255,255,.04)';this.style.borderColor='rgba(255,255,255,.1)'">
+      <span style="font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);font-family:'Barlow Condensed',sans-serif;margin-bottom:4px;">PERFORMANCE</span>
+      <span style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:.06em;color:#fff;line-height:1;">Model S</span>
+      <span style="font-size:.72rem;color:rgba(255,255,255,.4);margin-top:4px;">From ~$74,990</span>
+      <span style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;color:#CC0000;margin-top:8px;letter-spacing:.05em;">View Guide →</span>
+    </a>
+
+    <a href="tesla-modelx.html"
+      style="display:flex;flex-direction:column;align-items:flex-start;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-top:3px solid #CC0000;border-radius:3px;padding:14px 16px;text-decoration:none;transition:all .2s;"
+      onmouseover="this.style.background='rgba(255,255,255,.08)';this.style.borderColor='#CC0000'"
+      onmouseout="this.style.background='rgba(255,255,255,.04)';this.style.borderColor='rgba(255,255,255,.1)'">
+      <span style="font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);font-family:'Barlow Condensed',sans-serif;margin-bottom:4px;">SUV PREMIUM</span>
+      <span style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:.06em;color:#fff;line-height:1;">Model X</span>
+      <span style="font-size:.72rem;color:rgba(255,255,255,.4);margin-top:4px;">From ~$79,990</span>
+      <span style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;color:#CC0000;margin-top:8px;letter-spacing:.05em;">View Guide →</span>
+    </a>
+
+    <a href="tesla-cybertruck.html"
+      style="display:flex;flex-direction:column;align-items:flex-start;background:rgba(255,255,255,.04);border:1px solid rgba(204,0,0,.35);border-top:3px solid #CC0000;border-radius:3px;padding:14px 16px;text-decoration:none;transition:all .2s;position:relative;"
+      onmouseover="this.style.background='rgba(204,0,0,.12)'"
+      onmouseout="this.style.background='rgba(255,255,255,.04)'">
+      <span style="position:absolute;top:8px;right:8px;background:#CC0000;color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:.55rem;font-weight:700;letter-spacing:.1em;padding:2px 6px;border-radius:2px;">UPDATED</span>
+      <span style="font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);font-family:'Barlow Condensed',sans-serif;margin-bottom:4px;">TRUCK · EV</span>
+      <span style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:.06em;color:#fff;line-height:1;">Cybertruck</span>
+      <span style="font-size:.72rem;color:rgba(255,255,255,.4);margin-top:4px;">From ~$69,990</span>
+      <span style="font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;color:#CC0000;margin-top:8px;letter-spacing:.05em;">View Guide →</span>
+    </a>
+
+  </div>
+  <p style="font-size:.65rem;color:rgba(255,255,255,.25);margin-top:12px;font-family:'Barlow Condensed',sans-serif;">
+    &#x24D8; Prices are MSRP editorial estimates as of March 2026 — subject to change. Verify at
+    <a href="https://www.tesla.com" target="_blank" rel="noopener" style="color:rgba(255,255,255,.35);">tesla.com</a>.
+    Not affiliated with Tesla, Inc.
+  </p>
+</div>
+
 
 <!-- REVENUE / FINANCIAL SECTION -->
 <div id="tco" style="padding:40px 60px;background:var(--dark2);border-bottom:1px solid rgba(255,255,255,.05);">
