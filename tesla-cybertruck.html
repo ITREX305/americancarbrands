@@ -49,7 +49,6 @@ body{background:var(--black);color:var(--white);font-family:'Barlow',sans-serif;
 
 /* WIDGET */
 .w-on{background:var(--ac)!important;color:#fff!important;}
-html.fs-sm{font-size:16px!important;}html.fs-md{font-size:19px!important;}html.fs-lg{font-size:22px!important;}
 
 /* NAV */
 
@@ -259,8 +258,8 @@ footer{background:#060608;padding:44px 52px 36px;border-top:1px solid rgba(255,2
 .acb-model-row{padding:20px 24px 22px;background:linear-gradient(180deg,#0a0a0a 0%,#111 100%);border-bottom:1px solid rgba(255,255,255,.07);}
 .acb-model-row-label{font-family:'Barlow Condensed',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:12px;display:flex;align-items:center;gap:8px;}
 .acb-model-row-label::before{content:'';display:inline-block;width:20px;height:1px;background:#CC0000;}
-.acb-model-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;}
-.acb-mcard{display:flex;flex-direction:column;align-items:flex-start;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-top:2px solid transparent;border-radius:3px;padding:12px 14px;text-decoration:none;cursor:pointer;opacity:0;animation:acb-fadeSlideIn .45s ease forwards;transition:background .22s,border-color .22s,transform .22s,box-shadow .22s;}
+.acb-model-cards{display:flex;flex-wrap:nowrap;justify-content:center;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+.acb-mcard{display:flex;flex-direction:column;align-items:flex-start;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-top:2px solid transparent;border-radius:3px;padding:12px 14px;text-decoration:none;cursor:pointer;flex:0 0 auto;min-width:118px;max-width:150px;opacity:0;animation:acb-fadeSlideIn .45s ease forwards;transition:background .22s,border-color .22s,transform .22s,box-shadow .22s;}
 .acb-mcard:hover{background:rgba(204,0,0,.1);border-top-color:#CC0000;transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.45);}
 .acb-mcard.acb-mcard--active{border-top-color:#CC0000;background:rgba(204,0,0,.08);animation:acb-pulse-border 2.4s ease infinite;}
 .acb-mcard--active::after{content:'YOU ARE HERE';font-family:'Barlow Condensed',sans-serif;font-size:.5rem;font-weight:700;letter-spacing:.18em;color:#CC0000;display:block;margin-top:6px;}
@@ -272,14 +271,13 @@ footer{background:#060608;padding:44px 52px 36px;border-top:1px solid rgba(255,2
 .acb-mcard:nth-child(1){animation-delay:.05s}.acb-mcard:nth-child(2){animation-delay:.1s}.acb-mcard:nth-child(3){animation-delay:.15s}.acb-mcard:nth-child(4){animation-delay:.2s}.acb-mcard:nth-child(5){animation-delay:.25s}
 .acb-brand-link{display:block;font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.38);text-decoration:none;padding:4px 0;border-bottom:1px solid transparent;transition:color .18s,border-color .18s;margin-bottom:14px;}
 .acb-brand-link:hover{color:#CC0000;border-bottom-color:#CC0000;}
-@media(max-width:600px){.acb-model-cards{grid-template-columns:repeat(3,1fr)!important;}}
+@media(max-width:600px){.acb-model-cards{justify-content:flex-start;}}
 </style>
 
 
 <style id="dyn-css">
 /*────────────────────────────────────────────────────
-  CYBERTRUCK DYNAMIC MODULES — Industrial Editorial
-  Aesthetic: precision instruments + stainless steel
+  CYBERTRUCK DYNAMIC MODULES — Tow Calculator + KB Nav
 ────────────────────────────────────────────────────*/
 
 /* ── SHARED MODULE CHROME ── */
@@ -320,9 +318,6 @@ footer{background:#060608;padding:44px 52px 36px;border-top:1px solid rgba(255,2
   border-radius: 2px;
 }
 .dyn-panel--red { border-top: 3px solid #E31937; }
-.dyn-panel--gold { border-top: 3px solid #C9962A; }
-.dyn-panel--green { border-top: 3px solid #2DB37A; }
-
 .dyn-label {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: .58rem; font-weight: 700;
@@ -333,64 +328,6 @@ footer{background:#060608;padding:44px 52px 36px;border-top:1px solid rgba(255,2
   font-family: 'Bebas Neue', sans-serif;
   font-size: 1.6rem; letter-spacing: .04em;
   color: #fff; line-height: 1;
-}
-
-/* ── TSLA TICKER ── */
-#tsla-ticker {
-  display: grid;
-  grid-template-columns: auto 1fr 1fr;
-  gap: 1px;
-  background: rgba(255,255,255,.06);
-  overflow: hidden;
-  border-radius: 2px;
-  margin-bottom: 10px;
-}
-.tsla-cell {
-  background: #0d0d0d;
-  padding: 18px 22px;
-}
-#tsla-main-price {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 3.2rem; letter-spacing: .02em;
-  line-height: 1; color: #fff;
-}
-.tsla-delta {
-  display: inline-flex; align-items: center; gap: 8px;
-  margin-top: 6px;
-}
-.tsla-delta-num {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.2rem; letter-spacing: .04em;
-}
-.tsla-pct-pill {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: .72rem; font-weight: 700; letter-spacing: .1em;
-  padding: 3px 10px; border-radius: 2px;
-}
-.col-up { color: #2DB37A; }
-.col-dn { color: #E31937; }
-.col-nu { color: rgba(255,255,255,.45); }
-.bg-up { background: rgba(45,179,122,.14); border: 1px solid rgba(45,179,122,.3); }
-.bg-dn { background: rgba(227,25,55,.14);  border: 1px solid rgba(227,25,55,.3); }
-.bg-nu { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.15); }
-
-/* Sparkline */
-#tsla-spark-wrap {
-  background: #080808;
-  border: 1px solid rgba(255,255,255,.07);
-  border-radius: 2px;
-  padding: 14px 18px 10px;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 10px;
-}
-#tsla-sparkline {
-  width: 100%; height: 64px; display: block;
-}
-.spark-label {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: .6rem; font-weight: 700; letter-spacing: .18em;
-  text-transform: uppercase; color: rgba(255,255,255,.25);
 }
 
 /* ── TOWING CALCULATOR ── */
@@ -410,8 +347,6 @@ footer{background:#060608;padding:44px 52px 36px;border-top:1px solid rgba(255,2
   display: flex; flex-direction: column;
   align-items: center; justify-content: flex-start;
 }
-
-/* Range sliders — custom track */
 .calc-slider-wrap { margin-bottom: 20px; }
 .calc-slider-label {
   font-family: 'Barlow Condensed', sans-serif;
@@ -446,8 +381,6 @@ input[type=range].dyn-range::-webkit-slider-thumb:hover {
 input[type=range].dyn-range:focus::-webkit-slider-thumb {
   outline: 2px solid #E31937; outline-offset: 3px;
 }
-
-/* Chip buttons */
 .chip-group { display: flex; flex-wrap: wrap; gap: 5px; }
 .chip {
   font-family: 'Barlow Condensed', sans-serif;
@@ -490,8 +423,6 @@ input[type=range].dyn-range:focus::-webkit-slider-thumb {
   font-size: .7rem; font-weight: 700; letter-spacing: .1em;
   color: rgba(255,255,255,.4); margin-top: 4px;
 }
-
-/* Factor bar */
 .factor-row {
   display: flex; align-items: center;
   justify-content: space-between; gap: 10px;
@@ -504,7 +435,6 @@ input[type=range].dyn-range:focus::-webkit-slider-thumb {
 .factor-bar { height: 100%; border-radius: 2px; transition: width .4s ease; }
 .factor-val { font-family: 'Bebas Neue', sans-serif; font-size: .9rem; letter-spacing: .06em; min-width: 36px; text-align: right; }
 
-/* Cost extension */
 #cost-ext {
   margin-top: 10px;
   background: #080808;
@@ -525,155 +455,6 @@ input[type=range].dyn-range:focus::-webkit-slider-thumb {
 #cost-ext input[type=number]:focus {
   border-bottom-color: #E31937;
 }
-
-/* ── GALLERY ── */
-#gallery-grid {
-  display: grid;
-  grid-template-columns: 1.9fr 1fr 1fr;
-  grid-template-rows: 210px 180px;
-  gap: 3px;
-  overflow: hidden; border-radius: 2px;
-}
-.g-cell {
-  position: relative; overflow: hidden;
-  background: #111; cursor: pointer;
-}
-.g-cell img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform .5s cubic-bezier(.22,.68,0,1.2);
-}
-.g-cell:hover img { transform: scale(1.06); }
-.g-cell:focus-visible { outline: 3px solid #E31937; outline-offset: -3px; }
-.g-film {
-  position: absolute; inset: 0;
-  background: linear-gradient(160deg, transparent 40%, rgba(0,0,0,.8) 100%);
-  opacity: 0; transition: opacity .28s;
-  display: flex; flex-direction: column;
-  justify-content: flex-end; padding: 12px 14px; gap: 3px;
-}
-.g-cell:hover .g-film,
-.g-cell:focus-visible .g-film { opacity: 1; }
-.g-film-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: .88rem; letter-spacing: .06em; color: #fff;
-}
-.g-film-credit {
-  font-size: .6rem; color: rgba(255,255,255,.5);
-  font-family: 'Barlow Condensed', sans-serif;
-}
-.g-expand-badge {
-  position: absolute; top: 10px; right: 10px;
-  background: rgba(0,0,0,.6); backdrop-filter: blur(4px);
-  border: 1px solid rgba(255,255,255,.15);
-  color: rgba(255,255,255,.7); font-size: .65rem;
-  padding: 3px 8px; border-radius: 2px;
-  font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
-  letter-spacing: .1em; opacity: 0; transition: opacity .2s;
-}
-.g-cell:hover .g-expand-badge { opacity: 1; }
-.g-cell:first-child .g-film-title { font-size: 1.05rem; }
-
-/* Placeholder (when images 404) */
-.g-placeholder {
-  width: 100%; height: 100%;
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center; gap: 8px;
-  background: repeating-linear-gradient(
-    45deg, #111 0, #111 10px, #131313 10px, #131313 20px
-  );
-}
-.g-placeholder-icon { font-size: 1.8rem; opacity: .25; }
-.g-placeholder-text {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: .75rem; letter-spacing: .1em;
-  color: rgba(255,255,255,.2);
-}
-
-/* ── LIGHTBOX ── */
-#lightbox {
-  position: fixed; inset: 0; z-index: 9900;
-  background: rgba(0,0,0,.96);
-  backdrop-filter: blur(16px);
-  display: none; align-items: center; justify-content: center;
-  padding: 0;
-}
-#lightbox.lb-open { display: flex; }
-#lb-img-wrap {
-  position: relative; max-width: 90vw; max-height: 85vh;
-  display: flex; flex-direction: column; align-items: center;
-}
-#lb-img {
-  max-width: 100%; max-height: 78vh;
-  object-fit: contain; display: block;
-  border-radius: 1px;
-  transform: scale(.95); opacity: 0;
-  transition: transform .3s cubic-bezier(.22,.68,0,1.2), opacity .25s ease;
-}
-#lightbox.lb-open #lb-img { transform: scale(1); opacity: 1; }
-#lb-meta {
-  margin-top: 14px; text-align: center;
-  font-family: 'Barlow Condensed', sans-serif;
-}
-#lb-caption { font-size: .82rem; color: rgba(255,255,255,.55); letter-spacing: .04em; }
-#lb-credit  { font-size: .68rem; color: rgba(255,255,255,.28); margin-top: 4px; }
-#lb-counter { font-family: 'Bebas Neue', sans-serif; font-size: .78rem; letter-spacing: .14em; color: rgba(255,255,255,.25); margin-top: 6px; }
-
-.lb-btn {
-  position: absolute; z-index: 10;
-  background: rgba(255,255,255,.08);
-  border: 1px solid rgba(255,255,255,.15);
-  color: rgba(255,255,255,.75); cursor: pointer;
-  display: flex; align-items: center; justify-content: center;
-  transition: background .18s, color .18s;
-}
-.lb-btn:hover { background: rgba(255,255,255,.18); color: #fff; }
-.lb-btn:focus-visible { outline: 2px solid #E31937; outline-offset: 2px; }
-#lb-close { top: 20px; right: 20px; width: 40px; height: 40px; border-radius: 50%; font-size: 1.1rem; }
-#lb-prev  { left: 16px;  top: 50%; transform: translateY(-50%); width: 46px; height: 64px; border-radius: 2px; font-size: 1.6rem; }
-#lb-next  { right: 16px; top: 50%; transform: translateY(-50%); width: 46px; height: 64px; border-radius: 2px; font-size: 1.6rem; }
-
-/* Filmstrip thumbnails in lightbox */
-#lb-strip {
-  display: flex; gap: 6px; margin-top: 14px;
-  padding: 4px; overflow-x: auto;
-}
-.lb-thumb {
-  width: 52px; height: 36px; flex-shrink: 0;
-  border-radius: 1px; overflow: hidden; cursor: pointer;
-  border: 2px solid transparent; transition: border-color .18s;
-  opacity: .5; transition: opacity .18s, border-color .18s;
-}
-.lb-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.lb-thumb.active { border-color: #E31937; opacity: 1; }
-.lb-thumb:hover { opacity: .85; }
-.lb-thumb:focus-visible { outline: 2px solid #E31937; }
-
-/* ── VIDEO MODULE ── */
-.vid-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
-}
-.vid-card {
-  background: #080808;
-  border: 1px solid rgba(255,255,255,.07);
-  border-radius: 2px; overflow: hidden;
-}
-.vid-embed-wrap {
-  position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
-  background: #000;
-}
-.vid-embed-wrap iframe {
-  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-  border: none;
-}
-.vid-meta { padding: 12px 14px; border-top: 1px solid rgba(255,255,255,.05); }
-.vid-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: .95rem; letter-spacing: .05em; color: #fff;
-  margin-bottom: 3px;
-}
-.vid-source { font-size: .68rem; color: rgba(255,255,255,.32); font-family: 'Barlow Condensed', sans-serif; }
 
 /* ── KEYBOARD HELP ── */
 #kb-help {
@@ -699,29 +480,63 @@ kbd {
   color: rgba(255,255,255,.75);
 }
 
-/* ── FLOATING CONTROLS ── */
+/* ── FLOATING BUTTONS ── */
 #acbBackTop {
-  position: fixed; bottom: 80px; right: 20px; z-index: 700;
-  width: 40px; height: 40px; border-radius: 50%;
+  position: fixed; bottom: 24px; right: 20px; z-index: 900;
+  width: 42px; height: 42px; border-radius: 50%;
   background: #E31937; border: none; color: #fff;
-  font-size: 1rem; cursor: pointer;
-  box-shadow: 0 4px 20px rgba(227,25,55,.4);
-  transition: opacity .22s, transform .22s;
+  font-size: 1.1rem; cursor: pointer;
+  box-shadow: 0 4px 20px rgba(227,25,55,.45);
   display: none;
+  transition: opacity .22s, transform .22s;
+  align-items: center; justify-content: center;
+  line-height: 1;
 }
 #acbBackTop:hover { transform: scale(1.1); }
 
-#kb-toggle-btn {
-  position: fixed; bottom: 126px; right: 20px; z-index: 700;
-  width: 36px; height: 36px; border-radius: 50%;
-  background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14);
-  color: rgba(255,255,255,.4); font-family: 'Bebas Neue', sans-serif;
-  font-size: .9rem; cursor: pointer; display: none;
-  transition: all .2s; align-items: center; justify-content: center;
+#acbFontBtn {
+  position: fixed; bottom: 74px; right: 20px; z-index: 900;
+  width: 42px; height: 42px; border-radius: 50%;
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.18);
+  color: rgba(255,255,255,.55); font-family: 'Bebas Neue', sans-serif;
+  font-size: .78rem; letter-spacing: .04em; cursor: pointer;
+  display: none;
+  align-items: center; justify-content: center;
+  transition: all .2s; line-height: 1;
 }
-#kb-toggle-btn:hover { background: rgba(227,25,55,.2); color: #fff; border-color: rgba(227,25,55,.4); }
+#acbFontBtn:hover { background: rgba(255,255,255,.14); color: #fff; }
 
-/* ── SCROLL-IN ANIMATION ── */
+#kb-toggle-btn {
+  position: fixed; bottom: 124px; right: 20px; z-index: 900;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.13);
+  color: rgba(255,255,255,.38); font-family: 'Bebas Neue', sans-serif;
+  font-size: .9rem; cursor: pointer; display: none;
+  align-items: center; justify-content: center;
+  transition: all .2s;
+}
+#kb-toggle-btn:hover { background: rgba(227,25,55,.18); color: #fff; border-color: rgba(227,25,55,.38); }
+
+/* ── MODEL ROW CENTERING FIX ── */
+.acb-model-row { text-align: left; }
+.acb-model-cards {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 8px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.acb-model-cards::-webkit-scrollbar { display: none; }
+.acb-mcard { flex: 0 0 auto; min-width: 118px; max-width: 150px; }
+@media (max-width: 700px) {
+  .acb-model-cards { justify-content: flex-start; }
+  .acb-mcard { min-width: 110px; }
+}
+
+/* ── SCROLL ANIMATION ── */
 @keyframes dyn-rise {
   from { opacity: 0; transform: translateY(22px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -732,14 +547,7 @@ kbd {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 640px) {
-  #tsla-ticker { grid-template-columns: 1fr 1fr; }
-  #tsla-ticker .tsla-cell:first-child { grid-column: 1 / -1; }
   #calc-shell { grid-template-columns: 1fr; }
-  #gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 150px 150px 150px; }
-  #gallery-grid .g-cell:first-child { grid-column: 1 / -1; }
-  .vid-grid { grid-template-columns: 1fr; }
-  #lb-prev { left: 6px; }
-  #lb-next { right: 6px; }
 }
 </style>
 </head>
@@ -798,9 +606,6 @@ window.addEventListener('scroll',function(){
 </script>
 
 <!-- ── BREADCRUMB ── -->
-<button id="acbBackTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top"
-  style="display:none;position:fixed;bottom:80px;right:22px;z-index:800;width:40px;height:40px;border-radius:50%;background:#E31937;border:none;color:#fff;font-size:1rem;cursor:pointer;box-shadow:0 4px 18px rgba(0,0,0,.5);transition:opacity .2s,transform .2s;">↑</button>
-<script>window.addEventListener('scroll',function(){var b=document.getElementById('acbBackTop');if(b)b.style.display=window.scrollY>380?'block':'none';});</script>
 <!-- ── TESLA MODEL ROW ── -->
 <div class="acb-model-row" id="top">
   <a href="tesla.html" class="acb-brand-link">← Tesla Brand Guide &amp; All Models</a>
@@ -913,10 +718,7 @@ window.addEventListener('scroll',function(){
     <a href="#guides" class="jlink">Guides</a>
     <a href="#faq" class="jlink">FAQ</a>
     <a href="#sources" class="jlink">Sources</a>
-    <a href="#live-data" class="jlink">📈 Live Data</a>
     <a href="#tow-calc" class="jlink">🧮 Calculator</a>
-    <a href="#gallery" class="jlink">📸 Gallery</a>
-    <a href="#video" class="jlink">▶ Video</a>
   </div>
 </div>
 
@@ -1459,90 +1261,6 @@ window.addEventListener('scroll',function(){
   </ul>
 </div>
 
-
-<!-- ████ LIVE DATA — TSLA MARKET INTELLIGENCE ████ -->
-<div class="dyn-module" id="live-data">
-  <div class="dyn-eyebrow">Real-Time · Financial Intelligence</div>
-  <h2 class="dyn-h2">TSLA Live Market Data</h2>
-  <p class="dyn-sub">Tesla stock price + market indicators — 15-min delayed data via public finance API. <strong style="color:rgba(255,255,255,.65);">Not investment advice.</strong> Useful context: Cybertruck pricing closely tracks Tesla's margin decisions.</p>
-
-  <!-- Ticker grid -->
-  <div id="tsla-ticker" class="dyn-panel">
-    <!-- Main price cell -->
-    <div class="tsla-cell" style="padding:22px 26px;min-width:220px;">
-      <div class="dyn-label" style="margin-bottom:10px;">TSLA · NASDAQ · 15-MIN DELAY</div>
-      <div id="tsla-main-price">—</div>
-      <div class="tsla-delta">
-        <span id="tsla-chg" class="tsla-delta-num col-nu">—</span>
-        <span id="tsla-pct" class="tsla-pct-pill bg-nu">—</span>
-      </div>
-      <div id="tsla-status" style="font-family:'Barlow Condensed',sans-serif;font-size:.6rem;color:rgba(255,255,255,.22);margin-top:10px;letter-spacing:.06em;">
-        Fetching data…
-      </div>
-    </div>
-
-    <!-- Range + Volume -->
-    <div class="tsla-cell" style="padding:18px 20px;">
-      <div class="dyn-label" style="margin-bottom:8px;">52-Week Range</div>
-      <div id="tsla-52w" class="dyn-val" style="font-size:1.15rem;">—</div>
-      <div style="margin:14px 0 8px;" class="dyn-label">Volume</div>
-      <div id="tsla-vol" class="dyn-val" style="font-size:1.15rem;">—</div>
-    </div>
-
-    <!-- Market Cap + Open -->
-    <div class="tsla-cell" style="padding:18px 20px;">
-      <div class="dyn-label" style="margin-bottom:8px;">Market Cap (est.)</div>
-      <div id="tsla-mcap" class="dyn-val" style="font-size:1.15rem;">—</div>
-      <div style="margin:14px 0 8px;" class="dyn-label">Open / Prev Close</div>
-      <div id="tsla-open" class="dyn-val" style="font-size:1.15rem;">—</div>
-    </div>
-  </div>
-
-  <!-- Sparkline -->
-  <div id="tsla-spark-wrap">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-      <span class="spark-label">Intraday Price Movement</span>
-      <span id="tsla-spark-trend" class="spark-label">—</span>
-    </div>
-    <canvas id="tsla-sparkline" aria-label="TSLA intraday chart" role="img"></canvas>
-    <div style="display:flex;justify-content:space-between;margin-top:5px;font-family:'Barlow Condensed',sans-serif;font-size:.58rem;color:rgba(255,255,255,.18);">
-      <span>Market Open</span>
-      <span id="tsla-spark-range">—</span>
-      <span>Now</span>
-    </div>
-  </div>
-
-  <!-- Cybertruck context -->
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(255,255,255,.05);border-radius:2px;overflow:hidden;margin-bottom:10px;">
-    <div style="background:#0a0a0a;padding:14px 18px;">
-      <div class="dyn-label" style="margin-bottom:6px;">Cybertruck Base MSRP</div>
-      <div class="dyn-val">$69,990</div>
-      <div style="font-size:.62rem;color:rgba(255,255,255,.22);margin-top:3px;">AWD · Mar 2026 est.</div>
-    </div>
-    <div style="background:#0a0a0a;padding:14px 18px;">
-      <div class="dyn-label" style="margin-bottom:6px;">Cyberbeast MSRP</div>
-      <div class="dyn-val">$99,990</div>
-      <div style="font-size:.62rem;color:rgba(255,255,255,.22);margin-top:3px;">Tri-Motor · Mar 2026 est.</div>
-    </div>
-    <div style="background:#0a0a0a;padding:14px 18px;">
-      <div class="dyn-label" style="margin-bottom:6px;">Tesla Revenue (FY2024)</div>
-      <div class="dyn-val">$97.7B</div>
-      <div style="font-size:.62rem;color:rgba(255,255,255,.22);margin-top:3px;">Annual · SEC filing</div>
-    </div>
-  </div>
-
-  <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
-    <p style="font-size:.62rem;color:rgba(255,255,255,.22);line-height:1.6;">&#x24D8; Data via Yahoo Finance public API (15-min delay) · Not investment advice · Not affiliated with Tesla · Verify prices at <a href="https://www.tesla.com/cybertruck" target="_blank" rel="noopener" style="color:rgba(255,255,255,.35);">tesla.com</a></p>
-    <button onclick="fetchTSLA(true)" id="tsla-refresh-btn"
-      style="font-family:'Barlow Condensed',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.45);padding:6px 16px;cursor:pointer;border-radius:2px;transition:all .2s;flex-shrink:0;"
-      onmouseover="this.style.borderColor='rgba(227,25,55,.5)';this.style.color='#fff';"
-      onmouseout="this.style.borderColor='rgba(255,255,255,.12)';this.style.color='rgba(255,255,255,.45)';"
-      aria-label="Refresh TSLA data">↻ REFRESH</button>
-  </div>
-</div>
-
-
-
 <!-- ████ TOWING RANGE ESTIMATOR ████ -->
 <div class="dyn-module" id="tow-calc">
   <div class="dyn-eyebrow">Interactive Tool · Physics-Based Model</div>
@@ -1705,192 +1423,27 @@ window.addEventListener('scroll',function(){
 
 
 
-<!-- ████ IMAGE GALLERY ████ -->
-<div class="dyn-module" id="gallery">
-  <div class="dyn-eyebrow">Visual Reference · Wikimedia Commons</div>
-  <h2 class="dyn-h2">Cybertruck Photo Gallery</h2>
-  <p class="dyn-sub">Production-era photographs from Wikimedia Commons CC-licensed sources. Click any image to expand. Use <kbd>← →</kbd> keys in lightbox, <kbd>Esc</kbd> to close.</p>
-
-  <div id="gallery-grid" role="group" aria-label="Cybertruck photo gallery">
-    <div class="g-cell" style="grid-row:1/3;" onclick="lbOpen(0)"
-         tabindex="0" role="button" aria-label="View image 1: Gigafactory Texas — Production Model"
-         onkeydown="if(event.key==='Enter'||event.key===' '){lbOpen(0);event.preventDefault();}"
-         data-idx="0">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Tesla_Cybertruck_at_Texas_Gigafactory_%28cropped%29.jpg/1280px-Tesla_Cybertruck_at_Texas_Gigafactory_%28cropped%29.jpg"
-           alt="Tesla Cybertruck at Gigafactory Texas production facility"
-           loading="eager"
-           onerror="this.parentElement.querySelector('.g-placeholder').style.display='flex';this.style.display='none';">
-      <div class="g-placeholder" style="display:none;position:absolute;inset:0;">
-        <div class="g-placeholder-icon">🚛</div>
-        <div class="g-placeholder-text">Gigafactory Texas — Production Model</div>
-      </div>
-      <div class="g-film" aria-hidden="true">
-        <span class="g-film-title">Gigafactory Texas — Production Model</span>
-        <span class="g-film-credit">Wikimedia Commons · CC BY-SA 4.0 (creativecommons.org/licenses/by-sa/4.0)</span>
-      </div>
-      <span class="g-expand-badge" aria-hidden="true">EXPAND ⤢</span>
-    </div>
-    <div class="g-cell" style="" onclick="lbOpen(1)"
-         tabindex="0" role="button" aria-label="View image 2: Cybertruck 2023 — Production Release"
-         onkeydown="if(event.key==='Enter'||event.key===' '){lbOpen(1);event.preventDefault();}"
-         data-idx="1">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Tesla_Cybertruck_%282023%29.jpg/1280px-Tesla_Cybertruck_%282023%29.jpg"
-           alt="Tesla Cybertruck 2023 production release"
-           loading="lazy"
-           onerror="this.parentElement.querySelector('.g-placeholder').style.display='flex';this.style.display='none';">
-      <div class="g-placeholder" style="display:none;position:absolute;inset:0;">
-        <div class="g-placeholder-icon">🚛</div>
-        <div class="g-placeholder-text">Cybertruck 2023 — Production Release</div>
-      </div>
-      <div class="g-film" aria-hidden="true">
-        <span class="g-film-title">Cybertruck 2023 — Production Release</span>
-        <span class="g-film-credit">Wikimedia Commons · CC BY-SA 4.0 (creativecommons.org/licenses/by-sa/4.0)</span>
-      </div>
-      <span class="g-expand-badge" aria-hidden="true">EXPAND ⤢</span>
-    </div>
-    <div class="g-cell" style="" onclick="lbOpen(2)"
-         tabindex="0" role="button" aria-label="View image 3: Side Profile — Stainless Steel Body"
-         onkeydown="if(event.key==='Enter'||event.key===' '){lbOpen(2);event.preventDefault();}"
-         data-idx="2">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Tesla_Cybertruck%2C_London_%2811%29.jpg/1280px-Tesla_Cybertruck%2C_London_%2811%29.jpg"
-           alt="Tesla Cybertruck side profile showing stainless steel exoskeleton"
-           loading="lazy"
-           onerror="this.parentElement.querySelector('.g-placeholder').style.display='flex';this.style.display='none';">
-      <div class="g-placeholder" style="display:none;position:absolute;inset:0;">
-        <div class="g-placeholder-icon">🚛</div>
-        <div class="g-placeholder-text">Side Profile — Stainless Steel Body</div>
-      </div>
-      <div class="g-film" aria-hidden="true">
-        <span class="g-film-title">Side Profile — Stainless Steel Body</span>
-        <span class="g-film-credit">Wikimedia Commons · CC BY-SA 4.0 (creativecommons.org/licenses/by-sa/4.0)</span>
-      </div>
-      <span class="g-expand-badge" aria-hidden="true">EXPAND ⤢</span>
-    </div>
-    <div class="g-cell" style="" onclick="lbOpen(3)"
-         tabindex="0" role="button" aria-label="View image 4: Angular Design Language"
-         onkeydown="if(event.key==='Enter'||event.key===' '){lbOpen(3);event.preventDefault();}"
-         data-idx="3">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Tesla_Cybertruck_%28cropped%29.jpg/1280px-Tesla_Cybertruck_%28cropped%29.jpg"
-           alt="Tesla Cybertruck angular design profile"
-           loading="lazy"
-           onerror="this.parentElement.querySelector('.g-placeholder').style.display='flex';this.style.display='none';">
-      <div class="g-placeholder" style="display:none;position:absolute;inset:0;">
-        <div class="g-placeholder-icon">🚛</div>
-        <div class="g-placeholder-text">Angular Design Language</div>
-      </div>
-      <div class="g-film" aria-hidden="true">
-        <span class="g-film-title">Angular Design Language</span>
-        <span class="g-film-credit">Wikimedia Commons · CC BY-SA 4.0 (creativecommons.org/licenses/by-sa/4.0)</span>
-      </div>
-      <span class="g-expand-badge" aria-hidden="true">EXPAND ⤢</span>
-    </div>
-    <div class="g-cell" style="" onclick="lbOpen(4)"
-         tabindex="0" role="button" aria-label="View image 5: Front View — Reveal Edition"
-         onkeydown="if(event.key==='Enter'||event.key===' '){lbOpen(4);event.preventDefault();}"
-         data-idx="4">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Tesla_Cybertruck_Unveil%2C_Front_View.jpg/1280px-Tesla_Cybertruck_Unveil%2C_Front_View.jpg"
-           alt="Tesla Cybertruck front view at reveal event"
-           loading="lazy"
-           onerror="this.parentElement.querySelector('.g-placeholder').style.display='flex';this.style.display='none';">
-      <div class="g-placeholder" style="display:none;position:absolute;inset:0;">
-        <div class="g-placeholder-icon">🚛</div>
-        <div class="g-placeholder-text">Front View — Reveal Edition</div>
-      </div>
-      <div class="g-film" aria-hidden="true">
-        <span class="g-film-title">Front View — Reveal Edition</span>
-        <span class="g-film-credit">Wikimedia Commons · CC BY-SA 4.0 (creativecommons.org/licenses/by-sa/4.0)</span>
-      </div>
-      <span class="g-expand-badge" aria-hidden="true">EXPAND ⤢</span>
-    </div>
-  </div>
-
-  <p style="font-size:.62rem;color:rgba(255,255,255,.2);margin-top:8px;line-height:1.65;">&#x24D8; Images from Wikimedia Commons under Creative Commons licenses. Tesla™ and Cybertruck™ trademarks belong to Tesla, Inc. — used for editorial identification only. AmericanCarBrands.com is not affiliated with Tesla.</p>
-
-  <!-- LIGHTBOX -->
-  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox" tabindex="-1">
-    <button id="lb-close" class="lb-btn" onclick="lbClose()" aria-label="Close lightbox (Esc)">✕</button>
-    <button id="lb-prev"  class="lb-btn" onclick="lbNav(-1)"  aria-label="Previous image (←)">‹</button>
-    <button id="lb-next"  class="lb-btn" onclick="lbNav(1)"   aria-label="Next image (→)">›</button>
-
-    <div id="lb-img-wrap">
-      <img id="lb-img" src="" alt="">
-      <div id="lb-meta">
-        <div id="lb-caption"></div>
-        <div id="lb-credit"></div>
-        <div id="lb-counter"></div>
-      </div>
-      <div id="lb-strip" role="group" aria-label="Thumbnail navigation">
-    <div class="lb-thumb" data-idx="0" onclick="lbGoTo(0)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')lbGoTo(0)" role="button" aria-label="Thumbnail 1"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Tesla_Cybertruck_at_Texas_Gigafactory_%28cropped%29.jpg/320px-Tesla_Cybertruck_at_Texas_Gigafactory_%28cropped%29.jpg" alt="Tesla Cybertruck at Gigafactory Texas production facility" loading="lazy"></div>
-    <div class="lb-thumb" data-idx="1" onclick="lbGoTo(1)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')lbGoTo(1)" role="button" aria-label="Thumbnail 2"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Tesla_Cybertruck_%282023%29.jpg/320px-Tesla_Cybertruck_%282023%29.jpg" alt="Tesla Cybertruck 2023 production release" loading="lazy"></div>
-    <div class="lb-thumb" data-idx="2" onclick="lbGoTo(2)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')lbGoTo(2)" role="button" aria-label="Thumbnail 3"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Tesla_Cybertruck%2C_London_%2811%29.jpg/320px-Tesla_Cybertruck%2C_London_%2811%29.jpg" alt="Tesla Cybertruck side profile showing stainless steel exoskeleton" loading="lazy"></div>
-    <div class="lb-thumb" data-idx="3" onclick="lbGoTo(3)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')lbGoTo(3)" role="button" aria-label="Thumbnail 4"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Tesla_Cybertruck_%28cropped%29.jpg/320px-Tesla_Cybertruck_%28cropped%29.jpg" alt="Tesla Cybertruck angular design profile" loading="lazy"></div>
-    <div class="lb-thumb" data-idx="4" onclick="lbGoTo(4)" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')lbGoTo(4)" role="button" aria-label="Thumbnail 5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Tesla_Cybertruck_Unveil%2C_Front_View.jpg/320px-Tesla_Cybertruck_Unveil%2C_Front_View.jpg" alt="Tesla Cybertruck front view at reveal event" loading="lazy"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<!-- ████ VIDEO EMBEDS ████ -->
-<div class="dyn-module" id="video">
-  <div class="dyn-eyebrow">Video · YouTube · Official &amp; Editorial</div>
-  <h2 class="dyn-h2">Cybertruck in Motion</h2>
-  <p class="dyn-sub">Official delivery event footage and independent real-world performance tests embedded from YouTube.</p>
-
-  <div class="vid-grid">
-    <div class="vid-card">
-      <div class="vid-embed-wrap">
-        <iframe
-          src="https://www.youtube.com/embed/eOZyhBpFqbY?rel=0&modestbranding=1"
-          title="Tesla Cybertruck Delivery Event — Official"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen loading="lazy"
-          aria-label="Tesla Cybertruck official delivery event video"></iframe>
-      </div>
-      <div class="vid-meta">
-        <div class="vid-title">Cybertruck Delivery Event — Official</div>
-        <div class="vid-source">Tesla, Inc. · YouTube · Nov 2023 · Gigafactory Texas</div>
-      </div>
-    </div>
-    <div class="vid-card">
-      <div class="vid-embed-wrap">
-        <iframe
-          src="https://www.youtube.com/embed/ItNDnY7KBGI?rel=0&modestbranding=1"
-          title="Tesla Cybertruck Real-World Range Test — Independent"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen loading="lazy"
-          aria-label="Tesla Cybertruck real-world range and towing test video"></iframe>
-      </div>
-      <div class="vid-meta">
-        <div class="vid-title">Real-World Range &amp; Tow Test — Independent</div>
-        <div class="vid-source">Independent third-party test · YouTube · not affiliated with Tesla or ACB</div>
-      </div>
-    </div>
-  </div>
-
-  <p style="font-size:.62rem;color:rgba(255,255,255,.2);margin-top:10px;line-height:1.65;">&#x24D8; Videos embedded from YouTube via standard iframe embed API. All video content and trademarks belong to their respective creators and Tesla, Inc. AmericanCarBrands.com is not affiliated with any video creator or Tesla.</p>
-</div>
-
-
-
 <!-- ████ FLOATING CONTROLS ████ -->
-<button id="acbBackTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top" aria-label="Scroll to top">↑</button>
-<button id="kb-toggle-btn" onclick="kbToggle()" title="Keyboard shortcuts (?)" aria-label="Show keyboard shortcuts">?</button>
+<!-- Back to top -->
+<button id="acbBackTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+  title="Back to top" aria-label="Scroll to top">↑</button>
+
+<!-- Font size toggle -->
+<button id="acbFontBtn" onclick="cycleFontSize()"
+  title="Cycle font size" aria-label="Change text size">Aa</button>
+
+<!-- Keyboard shortcut help -->
+<button id="kb-toggle-btn" onclick="kbToggle()"
+  title="Keyboard shortcuts (?)" aria-label="Show keyboard shortcuts">?</button>
 
 <div id="kb-help" role="dialog" aria-label="Keyboard shortcuts" style="display:none;">
   <div id="kb-help-head">Keyboard Shortcuts</div>
   <div class="kb-row"><span>Navigate sections</span><kbd>Alt+1–9</kbd></div>
-  <div class="kb-row"><span>Jump to Gallery</span><kbd>G</kbd></div>
   <div class="kb-row"><span>Jump to Calculator</span><kbd>C</kbd></div>
-  <div class="kb-row"><span>Jump to Live Data</span><kbd>L</kbd></div>
-  <div class="kb-row"><span>Jump to Video</span><kbd>V</kbd></div>
-  <div class="kb-row"><span>Lightbox prev/next</span><kbd>← →</kbd></div>
-  <div class="kb-row"><span>Close lightbox</span><kbd>Esc</kbd></div>
-  <div class="kb-row"><span>Refresh stock data</span><kbd>R</kbd></div>
+  <div class="kb-row"><span>Back to top</span><kbd>T</kbd></div>
+  <div class="kb-row"><span>Font size cycle</span><kbd>F</kbd></div>
   <div class="kb-row"><span>Toggle this help</span><kbd>?</kbd></div>
 </div>
-
 
 <footer>
   <div class="ft-in">
@@ -2090,210 +1643,65 @@ window.addEventListener('scroll', function(){
 <script id="acb-engine">
 'use strict';
 /*═══════════════════════════════════════════════════════════════
-  AMERICANCARBRANDS — Cybertruck Dynamic Engine v2.0
-  Modules: TSLA Ticker · Towing Calculator · Gallery/Lightbox · Keyboard Nav
+  AMERICANCARBRANDS — Cybertruck Engine v3.0
+  Modules: Towing Range Calculator · Keyboard Nav · Font Size · Scroll
 ═══════════════════════════════════════════════════════════════*/
 
 /* ──────────────────────────────────────────────────────────
-   MODULE 1: TSLA LIVE MARKET DATA
-   Source: Yahoo Finance v8 public chart API (no auth)
-   Fallback: shows last known / offline message
-────────────────────────────────────────────────────────── */
-var TSLA = {
-  cache: null,
-  lastFetch: 0,
-  CACHE_MS: 300000, // 5 min
-  SHARES_EST: 3190000000,
-
-  async fetch(force) {
-    var now = Date.now();
-    if (!force && this.cache && now - this.lastFetch < this.CACHE_MS) {
-      this.render(this.cache); return;
-    }
-    var btn = document.getElementById('tsla-refresh-btn');
-    if (btn) btn.textContent = '↻ LOADING…';
-    try {
-      // Yahoo Finance v8 chart API — public, no key required
-      var url = 'https://query1.finance.yahoo.com/v8/finance/chart/TSLA' +
-                '?interval=5m&range=1d&includePrePost=false&events=div';
-      var r = await fetch(url, { mode: 'cors', cache: 'no-store' });
-      if (!r.ok) throw new Error('HTTP ' + r.status);
-      var data = await r.json();
-      var result = data.chart.result[0];
-      var meta = result.meta;
-      var closes = (result.indicators.quote[0].close || []).filter(x => x != null);
-      this.cache = { meta, closes };
-      this.lastFetch = now;
-      this.render(this.cache);
-    } catch(e) {
-      this.renderError(e.message);
-    }
-    if (btn) btn.textContent = '↻ REFRESH';
-  },
-
-  render({ meta, closes }) {
-    var price = meta.regularMarketPrice || meta.chartPreviousClose || 0;
-    var prev  = meta.chartPreviousClose || meta.previousClose || price;
-    var chg   = price - prev;
-    var pct   = prev ? chg / prev * 100 : 0;
-    var up    = chg >= 0;
-
-    var cls = up ? 'col-up' : 'col-dn';
-    var bgcls = up ? 'bg-up' : 'bg-dn';
-    var sign  = up ? '+' : '';
-
-    set('tsla-main-price', '$' + price.toFixed(2), cls);
-    set('tsla-chg',  sign + chg.toFixed(2), cls);
-    setPill('tsla-pct', sign + pct.toFixed(2) + '%', bgcls);
-
-    var low52 = meta.fiftyTwoWeekLow, hi52 = meta.fiftyTwoWeekHigh;
-    if (low52 && hi52) set('tsla-52w', '$' + low52.toFixed(2) + ' – $' + hi52.toFixed(2));
-    var vol = meta.regularMarketVolume;
-    if (vol) set('tsla-vol', vol > 1e6 ? (vol/1e6).toFixed(1) + 'M' : (vol/1e3).toFixed(0) + 'K');
-    var mc = price * this.SHARES_EST;
-    set('tsla-mcap', mc > 1e12 ? '$' + (mc/1e12).toFixed(2) + 'T' : '$' + (mc/1e9).toFixed(0) + 'B');
-    var open = meta.regularMarketOpen || meta.open;
-    if (open) set('tsla-open', '$' + open.toFixed(2) + ' / $' + prev.toFixed(2));
-
-    set('tsla-status', 'Updated ' + new Date().toLocaleTimeString() + ' · 15-min delay · Not investment advice');
-    set('tsla-spark-trend', up ? '↑ Trading up today' : '↓ Trading down today', cls);
-
-    if (closes.length) {
-      var lo = Math.min(...closes), hi = Math.max(...closes);
-      set('tsla-spark-range', '$' + lo.toFixed(2) + ' – $' + hi.toFixed(2));
-    }
-    this.drawSparkline(closes, prev, up);
-  },
-
-  renderError(msg) {
-    set('tsla-main-price', 'N/A', 'col-nu');
-    set('tsla-status', 'Data unavailable — check connection · ' + new Date().toLocaleTimeString());
-    set('tsla-spark-trend', 'Offline');
-    this.drawSparkline([], 0, true);
-  },
-
-  drawSparkline(vals, baseline, up) {
-    var cv = document.getElementById('tsla-sparkline');
-    if (!cv) return;
-    var W = cv.offsetWidth || 900, H = 64;
-    cv.width = W; cv.height = H;
-    var ctx = cv.getContext('2d');
-    ctx.clearRect(0,0,W,H);
-
-    if (!vals || vals.length < 3) {
-      ctx.fillStyle = '#0d0d0d';
-      ctx.fillRect(0,0,W,H);
-      ctx.fillStyle = 'rgba(255,255,255,.15)';
-      ctx.font = '600 11px Barlow Condensed';
-      ctx.textAlign = 'center';
-      ctx.fillText('Live data loading…', W/2, H/2+4);
-      return;
-    }
-    var min = Math.min(...vals), max = Math.max(...vals), range = max - min || 1;
-    var pad = 6;
-    var color = up ? '#2DB37A' : '#E31937';
-
-    var px = (i) => (i / (vals.length-1)) * W;
-    var py = (v) => pad + (1 - (v-min)/range) * (H - pad*2);
-
-    // Gradient fill
-    var grad = ctx.createLinearGradient(0,0,0,H);
-    grad.addColorStop(0, up ? 'rgba(45,179,122,.3)' : 'rgba(227,25,55,.3)');
-    grad.addColorStop(1, 'rgba(0,0,0,0)');
-    ctx.beginPath();
-    vals.forEach((v,i) => i===0 ? ctx.moveTo(px(i),py(v)) : ctx.lineTo(px(i),py(v)));
-    ctx.lineTo(W, H); ctx.lineTo(0, H); ctx.closePath();
-    ctx.fillStyle = grad; ctx.fill();
-
-    // Main line
-    ctx.beginPath();
-    vals.forEach((v,i) => i===0 ? ctx.moveTo(px(i),py(v)) : ctx.lineTo(px(i),py(v)));
-    ctx.strokeStyle = color; ctx.lineWidth = 1.8; ctx.lineJoin = 'round'; ctx.stroke();
-
-    // Baseline
-    var by = py(baseline);
-    ctx.beginPath(); ctx.moveTo(0,by); ctx.lineTo(W,by);
-    ctx.setLineDash([5,5]); ctx.strokeStyle = 'rgba(255,255,255,.2)'; ctx.lineWidth = 1; ctx.stroke();
-    ctx.setLineDash([]);
-
-    // Current price dot
-    var lv = vals[vals.length-1];
-    ctx.beginPath(); ctx.arc(W, py(lv), 4, 0, Math.PI*2);
-    ctx.fillStyle = color; ctx.fill();
-    ctx.beginPath(); ctx.arc(W, py(lv), 7, 0, Math.PI*2);
-    ctx.strokeStyle = color + '55'; ctx.lineWidth = 2; ctx.stroke();
-  }
-};
-
-/* ──────────────────────────────────────────────────────────
-   MODULE 2: TOWING RANGE ESTIMATOR
-   Physics model with multi-factor coefficients
+   MODULE 1: TOWING RANGE ESTIMATOR
 ────────────────────────────────────────────────────────── */
 var CALC = {
   state: { trim:'awd', temp:'mild', terrain:'flat' },
-
-  // EPA base ranges (March 2026 editorial estimates)
-  EPA: { awd: 325, beast: 320 },
+  EPA:     { awd: 325, beast: 320 },
   MAX_TOW: { awd: 8500, beast: 11000 },
+  TEMP:    { hot:0.97, mild:1.0, cold:0.76, xc:0.60 },
+  TERRAIN: { flat:1.0, roll:0.91, mtn:0.78 },
 
-  // Temperature coefficient (based on published cold-weather range studies)
-  TEMP: { hot:0.97, mild:1.0, cold:0.76, xc:0.60 },  // refined: cold-weather owner data 2025-2026
-
-  // Terrain multiplier
-  TERRAIN: { flat:1.0, roll:0.91, mtn:0.78 },  // refined: owner mountain reports show ~22% avg penalty
-
-  // Speed penalty — EPA combined ~55mph effective
   speedFactor(mph) {
-    var lut = {45:1.10,50:1.05,55:1.01,60:0.97,65:0.93,70:0.88,75:0.83,80:0.78};  // updated: 80mph tests show ~22% loss
-    return lut[mph] || 0.92;
+    var lut = {45:1.10,50:1.05,55:1.01,60:0.97,65:0.93,70:0.88,75:0.83,80:0.78};
+    return lut[mph] || 0.90;
   },
 
-  // Tow drag — quadratic curve per SAE drag coefficient data
   towFactor(lbs) {
     if (lbs <= 0) return 1.0;
-    var maxTow = this.MAX_TOW[this.state.trim];
-    var r = lbs / maxTow;
-    // Empirical: at max tow ~55% range loss (recent owner data shows steeper than EPA model)
+    var r = lbs / this.MAX_TOW[this.state.trim];
     return 1.0 - r * (0.42 + 0.16 * r);
   },
 
   run() {
-    var lbs = +document.getElementById('sl-tow').value;
-    var mph = +document.getElementById('sl-spd').value;
-    var ext = document.getElementById('ck-ext').checked;
+    var lbs  = +document.getElementById('sl-tow').value;
+    var mph  = +document.getElementById('sl-spd').value;
+    var ext  = document.getElementById('ck-ext').checked;
     var { trim, temp, terrain } = this.state;
 
     var base = this.EPA[trim];
-    var tf = this.towFactor(lbs);
-    var sf = this.speedFactor(mph);
-    var tc = this.TEMP[temp];
-    var tr = this.TERRAIN[terrain];
+    var tf   = this.towFactor(lbs);
+    var sf   = this.speedFactor(mph);
+    var tc   = this.TEMP[temp];
+    var tr   = this.TERRAIN[terrain];
 
-    var est = Math.round(base * tf * sf * tc * tr);
+    var est  = Math.round(base * tf * sf * tc * tr);
     if (ext) est += 50;
     est = Math.max(35, Math.min(est, base + 60));
 
-    // Update gauge
     this.drawGauge(est, base);
 
-    // EPA comparison bar
     var barPct = Math.min(100, Math.round(est / (base + 60) * 100));
-    var barEl = document.getElementById('gauge-bar');
+    var barEl  = document.getElementById('gauge-bar');
     if (barEl) {
-      barEl.style.width = barPct + '%';
+      barEl.style.width      = barPct + '%';
       barEl.style.background = barPct > 70 ? '#2DB37A' : barPct > 40 ? '#C9962A' : '#E31937';
     }
     set('gauge-miles', est);
     set('gauge-epa-label', 'EPA ' + base + ' mi');
     set('gauge-trim', (trim === 'beast' ? 'Cyberbeast' : 'AWD') + (ext ? ' + Ext.' : ''));
 
-    // Factors display
     var factors = [
-      { name:'Base EPA',      val: base + ' mi',             pct: 1.0,   col:'rgba(255,255,255,.6)' },
-      { name:'Temperature',   val: Math.round((tc-1)*100) + '%',   pct: tc,    col: tc<0.9?'#E31937':tc<0.99?'#C9962A':'#2DB37A' },
-      { name:'Tow Drag',      val: Math.round((tf-1)*100) + '%',   pct: tf,    col: tf<0.7?'#E31937':tf<0.9?'#C9962A':'#2DB37A' },
-      { name:'Speed Penalty', val: Math.round((sf-1)*100) + '%',   pct: sf,    col: sf<0.9?'#C9962A':'rgba(255,255,255,.5)' },
-      { name:'Terrain',       val: Math.round((tr-1)*100) + '%',   pct: tr,    col: tr<0.9?'#E31937':tr<1?'#C9962A':'rgba(255,255,255,.5)' },
+      { name:'Base EPA',      val: base + ' mi',              pct: 1.0,    col:'rgba(255,255,255,.6)' },
+      { name:'Temperature',   val: Math.round((tc-1)*100)+'%',pct: tc,     col: tc<0.9?'#E31937':tc<0.99?'#C9962A':'#2DB37A' },
+      { name:'Tow Drag',      val: Math.round((tf-1)*100)+'%',pct: tf,     col: tf<0.7?'#E31937':tf<0.9?'#C9962A':'#2DB37A' },
+      { name:'Speed Penalty', val: Math.round((sf-1)*100)+'%',pct: sf,     col: sf<0.9?'#C9962A':'rgba(255,255,255,.5)' },
+      { name:'Terrain',       val: Math.round((tr-1)*100)+'%',pct: tr,     col: tr<0.9?'#E31937':tr<1?'#C9962A':'rgba(255,255,255,.5)' },
     ];
     var fl = document.getElementById('factor-list');
     if (fl) fl.innerHTML = factors.map(f => `
@@ -2305,7 +1713,6 @@ var CALC = {
         <span class="factor-val" style="color:${f.col};">${f.val}</span>
       </div>`).join('');
 
-    // Supercharger stops
     var stops = est > 0 ? Math.max(0, Math.ceil(300 / (est * 0.9)) - 1) : 99;
     set('sc-stops', stops + ' stop' + (stops!==1?'s':'') + ' per 300 miles');
     set('sc-note', stops === 0
@@ -2317,24 +1724,21 @@ var CALC = {
 
   calcCost() {
     var rate  = parseFloat(document.getElementById('ci-rate')?.value)  || 14;
-    var miles = parseInt(document.getElementById('ci-miles')?.value)  || 15000;
-    var gas   = parseFloat(document.getElementById('ci-gas')?.value)  || 3.50;
+    var miles = parseInt(document.getElementById('ci-miles')?.value)   || 15000;
+    var gas   = parseFloat(document.getElementById('ci-gas')?.value)   || 3.50;
 
-    var kwhPer100 = 55; // Cybertruck AWD EPA: ~55 kWh/100mi combined
-    var annKwh    = (miles / 100) * kwhPer100;
-    var annElec   = annKwh * (rate / 100);
-    var annGas    = (miles / 14) * gas; // 14 MPG full-size truck
-    var savings   = annGas - annElec;
+    var annKwh  = (miles / 100) * 55;
+    var annElec = annKwh * (rate / 100);
+    var annGas  = (miles / 14) * gas;
+    var savings = annGas - annElec;
 
     var sv = document.getElementById('cost-savings');
     if (sv) {
-      sv.textContent  = (savings >= 0 ? '+$' : '-$') + Math.abs(Math.round(savings)).toLocaleString();
-      sv.style.color  = savings >= 0 ? '#2DB37A' : '#E31937';
+      sv.textContent = (savings >= 0 ? '+$' : '-$') + Math.abs(Math.round(savings)).toLocaleString();
+      sv.style.color = savings >= 0 ? '#2DB37A' : '#E31937';
     }
     var det = document.getElementById('cost-detail');
-    if (det) det.textContent =
-      'Elec: ~$' + Math.round(annElec).toLocaleString() + '/yr\n' +
-      'Gas: ~$' + Math.round(annGas).toLocaleString() + '/yr';
+    if (det) det.textContent = 'Elec: ~$' + Math.round(annElec).toLocaleString() + '/yr  |  Gas: ~$' + Math.round(annGas).toLocaleString() + '/yr';
   },
 
   drawGauge(val, epa) {
@@ -2349,28 +1753,23 @@ var CALC = {
     var pct    = Math.min(1, val / (epa + 60));
     var fillA  = startA + (endA - startA) * pct;
 
-    var trackColor = 'rgba(255,255,255,.06)';
-    var arcColor   = pct > 0.65 ? '#2DB37A' : pct > 0.38 ? '#C9962A' : '#E31937';
-    var glowColor  = pct > 0.65 ? 'rgba(45,179,122,.35)' : pct > 0.38 ? 'rgba(201,150,42,.35)' : 'rgba(227,25,55,.35)';
+    var arcColor  = pct > 0.65 ? '#2DB37A' : pct > 0.38 ? '#C9962A' : '#E31937';
+    var glowColor = pct > 0.65 ? 'rgba(45,179,122,.35)' : pct > 0.38 ? 'rgba(201,150,42,.35)' : 'rgba(227,25,55,.35)';
 
-    // Track
     ctx.beginPath(); ctx.arc(cx,cy,r,startA,endA);
-    ctx.strokeStyle = trackColor; ctx.lineWidth = 12; ctx.lineCap = 'round'; ctx.stroke();
+    ctx.strokeStyle = 'rgba(255,255,255,.06)'; ctx.lineWidth = 12; ctx.lineCap = 'round'; ctx.stroke();
 
-    // Glow
     ctx.beginPath(); ctx.arc(cx,cy,r,startA,fillA);
     ctx.shadowBlur = 16; ctx.shadowColor = glowColor;
     ctx.strokeStyle = arcColor; ctx.lineWidth = 12; ctx.lineCap = 'round'; ctx.stroke();
     ctx.shadowBlur = 0;
 
-    // Inner ring
     ctx.beginPath(); ctx.arc(cx,cy,r-16,startA,endA);
     ctx.strokeStyle = 'rgba(255,255,255,.03)'; ctx.lineWidth = 1; ctx.stroke();
 
-    // Tick marks
     for (var i=0; i<=10; i++) {
       var a = startA + (endA-startA) * (i/10);
-      var r1 = r + 10, r2 = r + (i%5===0 ? 18 : 14);
+      var r1 = r+10, r2 = r + (i%5===0 ? 18 : 14);
       ctx.beginPath();
       ctx.moveTo(cx + r1*Math.cos(a), cy + r1*Math.sin(a));
       ctx.lineTo(cx + r2*Math.cos(a), cy + r2*Math.sin(a));
@@ -2381,133 +1780,52 @@ var CALC = {
 };
 
 /* ──────────────────────────────────────────────────────────
-   MODULE 3: GALLERY + LIGHTBOX
+   MODULE 2: FONT SIZE CYCLE (Sm → Md → Lg → Sm)
 ────────────────────────────────────────────────────────── */
-var LB = {
-  imgs: null,
-  idx: 0,
+var FS_SIZES = ['fs-sm','fs-md','fs-lg'];
+var fs_idx   = 1; // start at md
 
-  init() {
-    this.imgs = Array.from(document.querySelectorAll('#gallery-grid .g-cell img'));
-  },
-
-  open(idx) {
-    this.idx = idx;
-    var lb = document.getElementById('lightbox');
-    if (!lb) return;
-    lb.classList.add('lb-open');
-    document.body.style.overflow = 'hidden';
-    this.show();
-    document.getElementById('lb-close').focus();
-  },
-
-  close() {
-    var lb = document.getElementById('lightbox');
-    if (lb) lb.classList.remove('lb-open');
-    document.body.style.overflow = '';
-  },
-
-  nav(dir) {
-    if (!this.imgs) return;
-    this.idx = (this.idx + dir + this.imgs.length) % this.imgs.length;
-    this.show();
-  },
-
-  goTo(idx) { this.idx = idx; this.show(); },
-
-  show() {
-    var img = this.imgs[this.idx];
-    if (!img) return;
-    var lbImg = document.getElementById('lb-img');
-    var lbCap = document.getElementById('lb-caption');
-    var lbCred = document.getElementById('lb-credit');
-    var lbCnt = document.getElementById('lb-counter');
-
-    // Animate swap
-    if (lbImg) {
-      lbImg.style.transition = 'none';
-      lbImg.style.opacity = '0';
-      lbImg.style.transform = 'scale(.95)';
-      requestAnimationFrame(() => {
-        lbImg.src = img.src;
-        lbImg.alt = img.alt;
-        requestAnimationFrame(() => {
-          lbImg.style.transition = 'transform .3s cubic-bezier(.22,.68,0,1.2), opacity .25s';
-          lbImg.style.opacity = '1';
-          lbImg.style.transform = 'scale(1)';
-        });
-      });
-    }
-
-    // Get cell data
-    var cell = this.imgs[this.idx].closest('.g-cell');
-    var title  = cell?.querySelector('.g-film-title')?.textContent || img.alt;
-    var credit = cell?.querySelector('.g-film-credit')?.textContent || 'Wikimedia Commons';
-
-    if (lbCap)  lbCap.textContent  = title;
-    if (lbCred) lbCred.textContent = '📷 ' + credit;
-    if (lbCnt)  lbCnt.textContent  = (this.idx+1) + ' / ' + this.imgs.length;
-
-    // Filmstrip
-    document.querySelectorAll('.lb-thumb').forEach((t,i) => {
-      t.classList.toggle('active', i === this.idx);
-    });
-  }
-};
+function cycleFontSize() {
+  document.documentElement.classList.remove(...FS_SIZES);
+  fs_idx = (fs_idx + 1) % 3;
+  document.documentElement.classList.add(FS_SIZES[fs_idx]);
+  var labels = ['A−', 'Aa', 'A+'];
+  var btn = document.getElementById('acbFontBtn');
+  if (btn) btn.title = 'Text size: ' + ['Small','Medium','Large'][fs_idx];
+  try { localStorage.setItem('acb_fs', fs_idx); } catch(e) {}
+}
 
 /* ──────────────────────────────────────────────────────────
-   MODULE 4: KEYBOARD NAVIGATION
+   MODULE 3: KEYBOARD NAVIGATION
 ────────────────────────────────────────────────────────── */
 var KB = {
-  sections: ['updates','overview','trims','specs','recalls','compare','guides','faq','sources','live-data','tow-calc','gallery','video'],
-
   init() {
     document.addEventListener('keydown', e => this.handle(e));
   },
-
   handle(e) {
     var tag = document.activeElement?.tagName;
-    var inInput = tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT';
-    var lbOpen = document.getElementById('lightbox')?.classList.contains('lb-open');
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    if (e.ctrlKey || e.metaKey) return;
 
-    // --- Lightbox keys (always active when open) ---
-    if (lbOpen) {
-      if (e.key === 'ArrowLeft')  { LB.nav(-1); e.preventDefault(); return; }
-      if (e.key === 'ArrowRight') { LB.nav(1);  e.preventDefault(); return; }
-      if (e.key === 'Escape')     { LB.close(); e.preventDefault(); return; }
+    if (e.key === 'c' || e.key === 'C') {
+      var el = document.getElementById('tow-calc');
+      if (el) { el.scrollIntoView({behavior:'smooth',block:'start'}); e.preventDefault(); }
     }
-
-    if (inInput) return; // Don't intercept in form fields
-
-    // --- Section shortcuts ---
-    var jumps = { g:'gallery', c:'tow-calc', l:'live-data', v:'video' };
-    var jTarget = jumps[e.key.toLowerCase()];
-    if (jTarget && !e.ctrlKey && !e.altKey && !e.metaKey) {
-      var el = document.getElementById(jTarget);
-      if (el) { el.scrollIntoView({ behavior:'smooth', block:'start' }); e.preventDefault(); }
-      return;
+    if (e.key === 't' || e.key === 'T') {
+      window.scrollTo({top:0,behavior:'smooth'}); e.preventDefault();
     }
-
-    // --- Alt+number → jump nav links ---
-    if (e.altKey && /^[1-9]$/.test(e.key)) {
-      var links = document.querySelectorAll('#jumpNav .jlink');
-      var link = links[+e.key - 1];
-      if (link) { link.click(); e.preventDefault(); }
-      return;
+    if (e.key === 'f' || e.key === 'F') {
+      cycleFontSize(); e.preventDefault();
     }
-
-    // --- R → refresh TSLA ---
-    if (e.key === 'r' && !e.ctrlKey && !e.altKey && !e.metaKey) {
-      TSLA.fetch(true); e.preventDefault(); return;
-    }
-
-    // --- ? → help toggle ---
-    if (e.key === '?') { kbToggle(); e.preventDefault(); return; }
-
-    // --- Escape → close KB help ---
+    if (e.key === '?') { kbToggle(); e.preventDefault(); }
     if (e.key === 'Escape') {
       var h = document.getElementById('kb-help');
-      if (h && h.style.display !== 'none') { h.style.display = 'none'; return; }
+      if (h && h.style.display !== 'none') { h.style.display = 'none'; e.preventDefault(); }
+    }
+    if (e.altKey && /^[1-9]$/.test(e.key)) {
+      var links = document.querySelectorAll('#jumpNav .jlink');
+      var link  = links[+e.key - 1];
+      if (link) { link.click(); e.preventDefault(); }
     }
   }
 };
@@ -2521,17 +1839,9 @@ function set(id, val, cls) {
   el.textContent = val;
   if (cls) el.className = cls;
 }
-function setPill(id, val, cls) {
-  var el = document.getElementById(id);
-  if (!el) return;
-  el.textContent = val;
-  el.className = 'tsla-pct-pill ' + (cls||'');
-}
 function sliderSync(input, labelId) {
-  var v = +input.value;
-  var min = +input.min, max = +input.max;
-  var pct = ((v - min) / (max - min) * 100).toFixed(1) + '%';
-  input.style.setProperty('--pct', pct);
+  var v = +input.value, min = +input.min, max = +input.max;
+  input.style.setProperty('--pct', ((v-min)/(max-min)*100).toFixed(1) + '%');
   var lbl = document.getElementById(labelId);
   if (lbl) {
     if (input.id === 'sl-tow') lbl.textContent = v === 0 ? 'No Trailer' : v.toLocaleString() + ' lbs';
@@ -2544,13 +1854,8 @@ function calcChip(btn) {
   document.querySelectorAll(`.chip[data-g="${g}"]`).forEach(b => b.classList.toggle('on', b===btn));
   CALC.run();
 }
-function calcRun() { CALC.run(); }
+function calcRun()  { CALC.run(); }
 function calcCost() { CALC.calcCost(); }
-function fetchTSLA(force) { TSLA.fetch(force); }
-function lbOpen(idx) { LB.open(idx); }
-function lbClose() { LB.close(); }
-function lbNav(dir) { LB.nav(dir); }
-function lbGoTo(idx) { LB.goTo(idx); }
 function kbToggle() {
   var h = document.getElementById('kb-help');
   if (h) h.style.display = h.style.display === 'none' ? 'block' : 'none';
@@ -2560,22 +1865,22 @@ function kbToggle() {
    SCROLL / RESIZE / INIT
 ────────────────────────────────────────────────────────── */
 window.addEventListener('scroll', function() {
-  var btn = document.getElementById('acbBackTop');
-  var kbb = document.getElementById('kb-toggle-btn');
-  if (btn) btn.style.display = window.scrollY > 400 ? 'block' : 'none';
-  if (kbb) kbb.style.display = window.scrollY > 400 ? 'flex' : 'none';
+  var show = window.scrollY > 320;
+  ['acbBackTop','acbFontBtn','kb-toggle-btn'].forEach(id => {
+    var el = document.getElementById(id);
+    if (el) el.style.display = show ? 'flex' : 'none';
+  });
 });
 
-var sparkTimer;
+var resizeTimer;
 window.addEventListener('resize', function() {
-  clearTimeout(sparkTimer);
-  sparkTimer = setTimeout(() => {
-    if (TSLA.cache) TSLA.drawSparkline(TSLA.cache.closes, TSLA.cache.meta.chartPreviousClose||0, true);
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
     CALC.drawGauge(+document.getElementById('gauge-miles')?.textContent || 325, 325);
   }, 180);
 });
 
-// Scroll-spy for jump nav
+/* Scroll-spy for jump nav */
 var spyTimer;
 window.addEventListener('scroll', function() {
   clearTimeout(spyTimer);
@@ -2591,30 +1896,35 @@ window.addEventListener('scroll', function() {
     if (active) {
       active.style.color = '#fff';
       active.style.borderColor = 'rgba(227,25,55,.6)';
-      active.style.background = 'rgba(227,25,55,.09)';
+      active.style.background  = 'rgba(227,25,55,.09)';
     }
   }, 50);
 });
 
-// IntersectionObserver for reveal animations
-var revealObs = new IntersectionObserver((entries) => {
+/* IntersectionObserver for reveal */
+var revealObs = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('dyn-reveal'); revealObs.unobserve(e.target); }
   });
 }, { threshold: 0.08 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Init modules
-  LB.init();
   KB.init();
   CALC.run();
-  TSLA.fetch(false);
 
-  // Register reveal targets
-  ['live-data','tow-calc','gallery','video'].forEach(id => {
-    var el = document.getElementById(id);
-    if (el) revealObs.observe(el);
-  });
+  /* Restore saved font size preference */
+  try {
+    var saved = parseInt(localStorage.getItem('acb_fs'));
+    if (!isNaN(saved) && saved >= 0 && saved <= 2) {
+      document.documentElement.classList.remove(...FS_SIZES);
+      document.documentElement.classList.add(FS_SIZES[saved]);
+      fs_idx = saved;
+    }
+  } catch(e) {}
+
+  /* Observe tow-calc for reveal */
+  var tc = document.getElementById('tow-calc');
+  if (tc) revealObs.observe(tc);
 });
 </script>
 
