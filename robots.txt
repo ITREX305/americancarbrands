@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /PAGE-TEMPLATE.html
+Disallow: /design-showcase.html
+Disallow: /insurance-quote.html
+Disallow: /index_v2.html
+
+Sitemap: https://americancarbrands.com/sitemap.xml
