@@ -333,6 +333,13 @@ footer{background:#060608;padding:44px 52px 36px;border-top:1px solid rgba(255,2
 .hero-sub{color:rgba(255,255,255,.9) !important;font-size:1rem;}
 .acb-mu-body{color:rgba(255,255,255,.85);}
 .acb-updates-text{color:rgba(255,255,255,.85);}
+
+.acb-mu-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-left:3px solid var(--ac);border-radius:3px;padding:16px;}
+.acb-mu-card-badge{font-family:'Barlow Condensed',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ac);margin-bottom:12px;}
+.acb-mu-stat-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.05);}
+.acb-mu-stat-row:last-child{border-bottom:none;}
+.acb-mu-stat-label{font-family:'Barlow Condensed',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.38);}
+.acb-mu-stat-value{font-family:'Barlow Condensed',sans-serif;font-size:.78rem;font-weight:700;color:rgba(255,255,255,.85);}
 </style>
 </head>
 <body>
@@ -432,31 +439,30 @@ footer{background:#060608;padding:44px 52px 36px;border-top:1px solid rgba(255,2
     <a href="https://www.tesla.com/cybertruck" target="_blank" rel="noopener" style="color:#E31937;">Verify at tesla.com ↗</a>
   </p>
 
-  <!-- Snapshot stats - UPDATED March 2026 -->
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:24px;">
+  <!-- Snapshot stats -->
+  <div class="snap-grid" style="margin-bottom:22px;">
     <div class="snap-box">
       <div class="snap-v">$69,990</div>
       <div class="snap-l">Starting MSRP · AWD</div>
-      <div style="font-size:.65rem;color:rgba(255,193,7,.6);margin-top:3px;">As of Mar 2026 · <a href="https://www.tesla.com/cybertruck" target="_blank" rel="noopener" style="color:#E31937;text-decoration:none;">verify at tesla.com</a></div>
+      <div class="snap-sub">Mar 2026 · <a href="https://www.tesla.com/cybertruck" target="_blank" rel="noopener" style="color:#E31937;text-decoration:none;">verify ↗</a></div>
     </div>
     <div class="snap-box">
-      <div class="snap-v" style="font-size:1.1rem;">~325 mi EPA / 260–290 mi hwy</div>
-      <div class="snap-l">EPA vs Real-World Range</div>
-      <div style="font-size:.65rem;color:rgba(255,193,7,.6);margin-top:3px;">Hwy unloaded · owner-reported avg</div>
+      <div class="snap-v" style="font-size:1rem;line-height:1.2;">~325 mi EPA</div>
+      <div class="snap-l">Official Range (AWD)</div>
+      <div class="snap-sub">265–290 mi real-world hwy</div>
     </div>
     <div class="snap-box">
       <div class="snap-v" style="font-size:1.4rem;">★★★☆☆</div>
-      <div class="snap-l">Reliability (early production)</div>
-      <div style="font-size:.65rem;color:rgba(255,255,255,.3);margin-top:3px;">5 NHTSA recalls 2024–2025</div>
+      <div class="snap-l">Reliability</div>
+      <div class="snap-sub">5 NHTSA recalls 2024–25</div>
     </div>
     <div class="snap-box">
-      <div class="snap-v" style="font-size:1rem;line-height:1.3;">600 hp / 845 hp</div>
+      <div class="snap-v" style="font-size:1rem;line-height:1.2;">600 / 845 hp</div>
       <div class="snap-l">AWD / Cyberbeast</div>
-      <div style="font-size:.65rem;color:rgba(255,255,255,.3);margin-top:3px;">Dual / Tri-Motor</div>
+      <div class="snap-sub">Dual / Tri-Motor</div>
     </div>
   </div>
-
-  <!-- STICKY JUMP NAV -->
+  <!-- STICKY JUMP NAV<!-- STICKY JUMP NAV -->
   <div class="acb-jumpnav" id="jumpnav">
   <a href="#updates" class="acb-jn">2026 Updates</a>
   <a href="#overview" class="acb-jn">Overview</a>
@@ -476,49 +482,42 @@ footer{background:#060608;padding:44px 52px 36px;border-top:1px solid rgba(255,2
     <div class="acb-mu-left">
       <div class="acb-mu-eyebrow">&#x26A1; 2026 Changes &amp; Updates</div>
       <div class="acb-mu-body">
-        <div class="acb-updates-item"><div class="acb-updates-dot"></div><div class="acb-updates-text"><strong style="color:#fff;">Pricing Shift</strong> — AWD Dual Motor jumped from a brief $59,990 flash sale to $69,990 (~$72,235 w/ destination). Cyberbeast dropped to ~$99,990. Premium AWD at ~$79,990 fills the gap.</div></div>
-        <div class="acb-updates-item"><div class="acb-updates-dot"></div><div class="acb-updates-text"><strong style="color:#fff;">OTA 2026.2.6.1</strong> — Active Road Noise Cancellation went live. Uses microphones + speakers to cancel low-frequency road noise — owners calling it transformative for highway NVH.</div></div>
-        <div class="acb-updates-item"><div class="acb-updates-dot"></div><div class="acb-updates-text"><strong style="color:#fff;">FSD Supervised v13.2</strong> — City Streets improvements, better lane-keeping in construction zones, reduced phantom braking in tunnels.</div></div>
-        <div class="acb-updates-item"><div class="acb-updates-dot"></div><div class="acb-updates-text"><strong style="color:#fff;">Foundation Series</strong> — Wrapping up. Extended Range AWD (single motor, ~440 mi range) fills the lineup. Range Extender add-on now shipping to confirmed reservation holders.</div></div>
+        <div class="acb-update-block">
+          <div class="acb-update-title">&#x1F4B0; March 2026 Pricing</div>
+          <div class="acb-update-body">AWD Dual Motor: <strong>$69,990</strong> (~$72,235 w/ destination) · Premium AWD: <strong>~$79,990</strong> · Cyberbeast: <strong>~$99,990</strong>. Prices change frequently — <a href="https://www.tesla.com/cybertruck" target="_blank" rel="noopener" style="color:#E31937;">verify at tesla.com ↗</a></div>
+        </div>
+        <div class="acb-update-block">
+          <div class="acb-update-title">&#x1F6F0; OTA 2026.2.6.1 — Active Noise Cancellation</div>
+          <div class="acb-update-body">Active Road Noise Cancellation now live — microphones + speakers cancel low-frequency road noise. Owners report transformative improvement for highway NVH.</div>
+        </div>
+        <div class="acb-update-block">
+          <div class="acb-update-title">&#x1F916; FSD Supervised v13.2</div>
+          <div class="acb-update-body">City Streets improvements — better lane-keeping in construction zones, reduced phantom braking in tunnels. Improved stop sign and traffic light recognition.</div>
+        </div>
+        <div class="acb-update-block">
+          <div class="acb-update-title">&#x1F4CF; Range Extender &amp; Foundation Series</div>
+          <div class="acb-update-body">Foundation Series wrapping up. Extended Range AWD (~440 mi) fills lineup gap. Range Extender ($16,000 add-on) now shipping to confirmed reservation holders.</div>
+        </div>
+        <div class="acb-update-block">
+          <div class="acb-update-title">&#x26A0; Real-World Range vs. EPA</div>
+          <div class="acb-update-body">EPA rates AWD at <strong>~325 mi</strong>. Owner-reported highway reality: <strong style="color:#FFC107;">265–290 mi</strong> unloaded at 70 mph · Cold weather: 200–230 mi · Light towing (5K lbs): ~200 mi · Heavy towing (10K lbs): <strong style="color:#E31937;">~120–150 mi</strong>. Always plan charging stops when towing.</div>
+        </div>
       </div>
-      <p style="font-size:.6rem;color:rgba(255,255,255,.2);margin-top:8px;">&#x24D8; Editorial estimates. <a href="https://www.tesla.com/cybertruck" target="_blank" rel="noopener" style="color:rgba(255,255,255,.25);">Verify at tesla.com ↗</a></p>
+      <p style="font-size:.62rem;color:rgba(255,255,255,.25);margin-top:10px;">&#9432; Editorial estimates. Not affiliated with Tesla. <a href="https://www.tesla.com/cybertruck" target="_blank" rel="noopener" style="color:rgba(255,255,255,.3);">Verify at tesla.com ↗</a></p>
     </div>
     <div class="acb-mu-right">
-      <div class="acb-mu-pill">March 2026</div>
-      <div class="acb-mu-label">Base Price</div>
-      <div class="acb-mu-val">$69,990</div>
-      <div class="acb-mu-label">Top Config</div>
-      <div class="acb-mu-val">~$101,985</div>
-      <div class="acb-mu-label">Range (AWD)</div>
-      <div class="acb-mu-val">320 mi EPA</div>
-      <div class="acb-mu-label">Wait Time</div>
-      <div class="acb-mu-val">2027 Queue</div>
+      <div class="acb-mu-card">
+        <div class="acb-mu-card-badge">MARCH 2026</div>
+        <div class="acb-mu-stat-row"><span class="acb-mu-stat-label">BASE PRICE</span><span class="acb-mu-stat-value">$69,990</span></div>
+        <div class="acb-mu-stat-row"><span class="acb-mu-stat-label">TOP CONFIG</span><span class="acb-mu-stat-value">~$101,985</span></div>
+        <div class="acb-mu-stat-row"><span class="acb-mu-stat-label">RANGE (AWD)</span><span class="acb-mu-stat-value">325 MI EPA</span></div>
+        <div class="acb-mu-stat-row"><span class="acb-mu-stat-label">REAL-WORLD</span><span class="acb-mu-stat-value">265–290 MI HWY</span></div>
+        <div class="acb-mu-stat-row"><span class="acb-mu-stat-label">WAIT TIME</span><span class="acb-mu-stat-value">2027 QUEUE</span></div>
+        <div class="acb-mu-stat-row"><span class="acb-mu-stat-label">DATA STATUS</span><span class="acb-mu-stat-value">CURRENT</span></div>
+        <div class="acb-mu-stat-row"><span class="acb-mu-stat-label">RESEARCH</span><span class="acb-mu-stat-value">EDITORIAL</span></div>
+      </div>
     </div>
   </div>
-</div>
-
-  <!-- ── RANGE REALITY NOTE ── -->
-  <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);border-radius:3px;padding:14px 18px;margin-bottom:16px;">
-    <div style="font-family:'Bebas Neue',sans-serif;font-size:.95rem;letter-spacing:.08em;color:rgba(255,255,255,.55);margin-bottom:8px;">RANGE REALITY: EPA VS REAL WORLD (2026 DATA)</div>
-    <div style="font-size:.84rem;color:rgba(255,255,255,.65);line-height:1.85;">
-      EPA-rated <strong style="color:#fff;">~325 miles (AWD)</strong> is a combined city/highway test. 2026 independent tests and aggregated owner data:
-      <ul style="margin:10px 0 6px;padding-left:18px;line-height:1.95;">
-        <li><strong style="color:#fff;">Highway unloaded (70–75 mph):</strong> <span style="color:#FFC107;">~265–290 miles</span> — consistent across multiple 2026 third-party tests</li>
-        <li><strong style="color:#fff;">Cold weather (&lt;30°F):</strong> 200–230 miles highway</li>
-        <li><strong style="color:#fff;">Light towing (3,000–5,000 lbs):</strong> ~180–220 miles</li>
-        <li><strong style="color:#fff;">Heavy/boxy loads at highway speed (8,000–10,000 lbs):</strong> <span style="color:#E31937;">~120–150 miles</span> — some mountain reports sub-120 mi</li>
-        <li><strong style="color:#fff;">Cyberbeast highway unloaded:</strong> ~255–285 mi</li>
-      </ul>
-    </div>
-    <div style="margin-top:8px;font-size:.72rem;color:rgba(255,255,255,.3);">Source: Third-party EV tests and owner reports (Tesla Motors Club, r/cybertruck) · March 2026 · EPA via fueleconomy.gov · Results vary by load, speed, temp, terrain</div>
-  </div>
-
-  <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.06em;color:rgba(255,255,255,.5);margin-bottom:8px;">Other 2025–2026 Notable Changes</h3>
-  <ul style="font-size:.86rem;color:rgba(255,255,255,.6);line-height:1.9;padding-left:18px;margin-bottom:0;">
-    <li>2025–2026 production addressed early reliability issues (accelerator pedal cover, trim adhesion, wiper motor)</li>
-    <li>Range extender add-on remains available — verify current availability and pricing at tesla.com</li>
-    <li>Rear-seat screen standard on newer builds; improved climate control preconditioning</li>
-  </ul>
 </div>
 
 <!-- ── OVERVIEW ── -->
@@ -1532,5 +1531,7 @@ document.addEventListener('DOMContentLoaded', function(){
 })();
 </script>
 
+
+</style>
 </body>
 </html>
