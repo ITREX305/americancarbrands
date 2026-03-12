@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Are American Cars Reliable? | AmericanCarBrands.com</title>
+<meta name="description" content="Are American cars reliable in 2026? We examine decades of J.D. Power, Consumer Reports, and NHTSA data for an honest answer about US-brand reliability by brand and model.">
+<link rel="canonical" href="https://americancarbrands.com/are-american-cars-reliable.html">
+<meta property="og:title" content="Are American Cars Reliable?">
+<meta property="og:description" content="Are American cars reliable in 2026? We examine decades of J.D. Power, Consumer Reports, and NHTSA data for an honest answer about US-brand reliability by brand and model.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,600;0,700;1,400&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+
+/* ── UNIVERSAL MODEL BUTTON BAR ── */
+.acb-model-row{background:#0a0a0a;border-bottom:1px solid rgba(255,255,255,.09);padding:0;position:sticky;top:58px;z-index:510;}
+.acb-model-row-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:0;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;}
+.acb-model-row-inner::-webkit-scrollbar{display:none;}
+.acb-model-row-label{font-family:'Barlow Condensed',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.28);padding:0 16px 0 20px;white-space:nowrap;flex-shrink:0;border-right:1px solid rgba(255,255,255,.08);}
+.acb-model-cards{display:flex;align-items:stretch;gap:0;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;}
+.acb-model-cards::-webkit-scrollbar{display:none;}
+.acb-mcard{flex:0 0 auto;display:flex;flex-direction:column;align-items:flex-start;padding:10px 16px;min-width:100px;border-right:1px solid rgba(255,255,255,.06);border-bottom:3px solid transparent;text-decoration:none;transition:background .15s,border-color .15s;cursor:pointer;}
+.acb-mcard:hover{background:rgba(255,255,255,.06);border-bottom-color:rgba(var(--ar),.5);}
+.acb-mcard--active,.acb-mcard.cur{background:rgba(var(--ar),.08);border-bottom-color:var(--ac);}
+.acb-mcard-type{font-family:'Barlow Condensed',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.38);line-height:1;margin-bottom:3px;}
+.acb-mcard-name{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.05em;color:#fff;line-height:1;margin-bottom:2px;}
+.acb-mcard-price{font-family:'Barlow Condensed',sans-serif;font-size:.65rem;font-weight:600;color:var(--ac);letter-spacing:.04em;}
+
+/* ══════════════════════════════════════════════════
+   UNIVERSAL MODEL JUMP NAV — ACB v3
+   ══════════════════════════════════════════════════ */
+.acb-jumpnav {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 6px;
+  padding: 10px 20px 10px;
+  background: #111;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  position: sticky;
+  top: 110px;
+  z-index: 300;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.acb-jumpnav::-webkit-scrollbar { display: none; }
+
+.acb-jn {
+  flex-shrink: 0;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.48);
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 3px;
+  white-space: nowrap;
+  transition: color .2s ease, background .2s ease, border-color .2s ease, transform .15s ease;
+  position: relative;
+  overflow: hidden;
+}
+.acb-jn::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--ac);
+  transform: scaleX(0);
+  transition: transform .2s ease;
+  transform-origin: left;
+}
+.acb-jn:hover {
+  color: rgba(255,255,255,.9);
+  background: rgba(255,255,255,.05);
+  border-color: rgba(255,255,255,.2);
+  transform: translateY(-1px);
+}
+.acb-jn.active,
+.acb-jn.act {
+  color: #fff;
+  background: rgba(var(--ar), .12);
+  border-color: rgba(var(--ar), .5);
+  transform: translateY(0);
+}
+.acb-jn.active::after,
+.acb-jn.act::after {
+  transform: scaleX(1);
+}
+@media(max-width:600px) {
+  .acb-jumpnav { padding: 8px 12px; gap: 5px; }
+  .acb-jn { font-size: .75rem; padding: 7px 12px; }
+}
+
+html{font-size:19px;scroll-behavior:smooth;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--black);color:var(--white);font-family:'Barlow',sans-serif;line-height:1.65;overflow-x:hidden;}
+
+/* WIDGET */
+.w-on{background:var(--ac)!important;color:#fff!important;}
+html.fs-sm{font-size:16px!important;}html.fs-md{font-size:19px!important;}html.fs-lg{font-size:22px!important;}
+
+/* NAV */
+
+.nav-logo span{color:var(--red);}
+
+
+
+.nav-cta{background:var(--ac);color:white;padding:8px 20px;font-family:'Barlow Condensed',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:background .2s;}
+
+
+
+
+
+
+
+
+
+
+
+
+.dot{width:8px;height:8px;border-radius:50%;border:none;background:rgba(255,255,255,.3);cursor:pointer;transition:all .2s;padding:0;}
+.dot.active{background:var(--ac);transform:scale(1.3);}
+
+
+/* HERO OVERLAY */
+.hero-overlay{position:relative;margin-top:-100px;padding:0 52px 0;pointer-events:none;z-index:10;}
+.hero-card{background:rgba(13,13,13,.95);border:1px solid rgba(139,105,20,.3);border-top:4px solid var(--ac);padding:28px 32px;max-width:560px;pointer-events:all;backdrop-filter:blur(8px);}
+.hero-bc{font-family:'Barlow Condensed',sans-serif;font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:10px;}
+.hero-bc a{color:rgba(255,255,255,.35);text-decoration:none;transition:color .15s;}.hero-bc a:hover{color:var(--ac);}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ac);margin-bottom:12px;}
+.hero-h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,60px);letter-spacing:.04em;line-height:.9;margin-bottom:10px;}
+.hero-hook{font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:.03em;color:var(--ac);line-height:1.4;margin-bottom:8px;font-style:italic;border-left:3px solid var(--ac);padding-left:12px;}
+.hero-tagline{font-size:.9rem;color:rgba(255,255,255,.90);line-height:1.6;margin-bottom:16px;}
+.hero-ins-cta{display:inline-flex;align-items:center;gap:10px;background:var(--ac);color:white;padding:13px 26px;font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:.1em;text-decoration:none;border-radius:2px;transition:all .2s;}
+.hero-ins-cta:hover{opacity:.88;transform:translateY(-1px);}
+
+/* SNAPSHOT GRID */
+.snap-grid{display:grid;grid-template-columns:repeat(6,1fr);background:var(--ac);}
+.snap-cell{padding:22px 18px;border-right:1px solid rgba(255,255,255,.14);transition:background .2s;}.snap-cell:hover{background:rgba(255,255,255,.1);}.snap-cell:last-child{border-right:none;}
+.snap-v{font-family:'Bebas Neue',sans-serif;font-size:1.9rem;line-height:1;color:white;margin-bottom:3px;}
+.snap-l{font-family:'Barlow Condensed',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.68);line-height:1.2;}
+.snap-n{font-size:.68rem;color:rgba(255,255,255,.42);margin-top:2px;}
+
+/* JUMP NAV */
+
+
+.jl{font-family:'Barlow Condensed',sans-serif;font-size:.73rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5);padding:15px 18px;text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:all .2s;}
+.jl:hover,.jl.act{color:white;border-bottom-color:var(--ac);}
+
+/* SECTIONS */
+.sec{padding:56px 52px;}
+.sec.alt{background:var(--dark);}
+.sec-ey{font-family:'Barlow Condensed',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--ac);margin-bottom:10px;}
+.sec-h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,3.8vw,50px);letter-spacing:.03em;line-height:.92;margin-bottom:8px;}
+.sec-sub{font-size:.88rem;color:rgba(255,255,255,.46);margin-bottom:28px;}
+.sec p{color:rgba(255,255,255,.78);font-size:.94rem;line-height:1.85;margin-bottom:14px;max-width:820px;}
+
+/* OWNERSHIP OVERVIEW */
+.oo-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:24px;}
+.oo-card{background:var(--dark2);border:1px solid rgba(255,255,255,.06);padding:24px;}
+.oo-title{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:.05em;color:var(--white);margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+.oo-body{font-size:.88rem;color:rgba(255,255,255,.68);line-height:1.78;}
+.sw-list{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.sw-item{font-size:.88rem;line-height:1.5;padding-left:2px;}
+.sw-str{color:rgba(45,179,122,.9);}.sw-wk{color:rgba(201,150,42,.9);}
+
+/* TRIMS TABLE */
+.trims-wrap{overflow-x:auto;border:1px solid rgba(255,255,255,.07);border-radius:4px;margin-top:20px;}
+.trims-tbl{width:100%;border-collapse:collapse;}
+.trims-tbl th{background:var(--dark3);color:rgba(255,255,255,.65);padding:11px 16px;text-align:left;font-family:'Barlow Condensed',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.08);}
+.trims-tbl td{padding:13px 16px;border-bottom:1px solid rgba(255,255,255,.04);font-size:.86rem;color:rgba(255,255,255,.74);}
+.trims-tbl tbody tr:hover td{background:rgba(255,255,255,.02);}.trims-tbl tbody tr:last-child td{border-bottom:none;}
+.trim-n{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.04em;color:var(--white);}
+.trim-p{font-family:'Bebas Neue',sans-serif;font-size:1rem;color:var(--gold);}
+
+/* OWNERSHIP GUIDES */
+.og-list{display:flex;flex-direction:column;gap:2px;margin-top:20px;}
+.og-card{display:flex;align-items:center;gap:16px;background:var(--dark2);border:1px solid rgba(255,255,255,.06);padding:18px 20px;text-decoration:none;transition:all .2s;border-left:4px solid transparent;}
+.og-card:hover{background:var(--dark3);border-left-color:var(--ac);transform:translateX(4px);}
+.og-icon{font-size:1.5rem;flex-shrink:0;width:36px;text-align:center;}
+.og-title{font-family:'Bebas Neue',sans-serif;font-size:1.05rem;letter-spacing:.04em;color:var(--white);margin-bottom:3px;}
+.og-desc{font-size:.8rem;color:rgba(255,255,255,.5);}
+.og-arr{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;color:var(--ac);margin-left:auto;flex-shrink:0;}
+
+/* CROSS LINKS */
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:2px;margin-top:20px;}
+.faq-item{background:var(--dark2);border:1px solid rgba(255,255,255,.06);}
+.faq-q{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px 20px;cursor:pointer;transition:background .2s;}.faq-q:hover{background:var(--dark3);}
+.faq-qt{font-family:'Barlow Condensed',sans-serif;font-size:.98rem;font-weight:700;letter-spacing:.04em;color:var(--white);}
+.faq-ic{font-size:1.1rem;color:rgba(255,255,255,.32);transition:transform .25s;flex-shrink:0;}
+.faq-item.open .faq-ic{transform:rotate(45deg);color:var(--ac);}
+.faq-a{display:none;padding:0 20px 18px;border-top:1px solid rgba(255,255,255,.05);}.faq-item.open .faq-a{display:block;}
+.faq-a p{font-size:.88rem;color:rgba(255,255,255,.68);line-height:1.82;margin-top:12px;max-width:none;}
+
+/* FOOTER */
+
+
+
+
+
+
+@media(max-width:960px){
+  nav{padding:0 20px;}
+  .hero-overlay{margin-top:-60px;padding:0 20px;}
+  .snap-grid{grid-template-columns:repeat(3,1fr);}
+  .sec{padding:44px 20px;}
+  .oo-grid{grid-template-columns:1fr;}
+  
+  footer{padding:36px 20px;}
+  }
+
+/* ── CANONICAL FOOTER ── */
+footer{background:#060608;padding:44px 52px 36px;border-top:1px solid rgba(255,255,255,.07);}
+.ft-in{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.06);}
+.ft-logo{font-family:'Bebas Neue',sans-serif;font-size:1.45rem;letter-spacing:.08em;text-decoration:none;color:#F5F0E8;flex-shrink:0;}.ft-logo span{color:#C8102E;}
+.ft-links{display:flex;gap:18px;flex-wrap:wrap;}.ft-links a{color:rgba(255,255,255,.38);text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;transition:color .2s;}.ft-links a:hover{color:#C8102E;}
+.ft-canonical{max-width:860px;}
+.ft-copy-main{font-family:'Barlow Condensed',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.06em;color:rgba(255,255,255,.5);margin-bottom:10px;}
+.ft-copy-body{font-size:.72rem;color:rgba(255,255,255,.28);line-height:1.72;margin-bottom:5px;}
+.ft-copy-links{font-size:.7rem;color:rgba(255,255,255,.25);margin-top:12px;letter-spacing:.02em;}
+.ft-copy-links a{color:rgba(255,255,255,.4);text-decoration:none;transition:color .18s;}.ft-copy-links a:hover{color:#C8102E;}
+@media(max-width:768px){footer{padding:36px 20px;}.ft-in{flex-direction:column;align-items:flex-start;}}
+
+
+/* ── MEGA NAV ── */
+.site-nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(8,8,8,.97);border-bottom:1px solid rgba(255,255,255,.07);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);}
+.site-nav-inner{display:flex;align-items:center;justify-content:space-between;height:58px;padding:0 40px;gap:0;}
+/* Left: identity + logo */
+.nav-identity{display:flex;flex-direction:column;justify-content:center;gap:1px;text-decoration:none;}
+.nav-identity-sub{font-family:'Barlow Condensed',sans-serif;font-size:.52rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.28);line-height:1;}
+.nav-identity-logo{font-family:'Bebas Neue',sans-serif;font-size:1.42rem;letter-spacing:.1em;color:#F5F0E8;line-height:1;}.nav-identity-logo span{color:#C8102E;}
+/* Center: nav items */
+.nav-items{display:flex;align-items:center;gap:2px;height:100%;}
+.nav-item{position:relative;height:100%;display:flex;align-items:center;}
+.nav-item-btn{font-family:'Barlow Condensed',sans-serif;font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.58);background:none;border:none;cursor:pointer;padding:0 14px;height:100%;display:flex;align-items:center;gap:5px;transition:color .18s;white-space:nowrap;}
+.nav-item-btn:hover,.nav-item.open .nav-item-btn{color:white;}
+.nav-item-btn .nav-arrow{font-size:.5rem;opacity:.5;transition:transform .2s;}
+.nav-item.open .nav-arrow{transform:rotate(180deg);}
+/* All Brands link (no dropdown) */
+.nav-allbrands{font-family:'Barlow Condensed',sans-serif;font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.58);text-decoration:none;padding:0 14px;height:100%;display:flex;align-items:center;transition:color .18s;}
+.nav-allbrands:hover{color:white;}
+/* Dropdown */
+.nav-dropdown{position:absolute;top:100%;left:0;min-width:230px;background:#0d0d0d;border:1px solid rgba(255,255,255,.1);border-top:2px solid #C8102E;box-shadow:0 20px 60px rgba(0,0,0,.7);opacity:0;visibility:hidden;transform:translateY(-6px);transition:all .2s;z-index:600;}
+.nav-item.open .nav-dropdown{opacity:1;visibility:visible;transform:translateY(0);}
+.nav-drop-section{padding:10px 0;}
+.nav-drop-label{font-family:'Barlow Condensed',sans-serif;font-size:.56rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.22);padding:6px 18px 4px;}
+.nav-drop-link{display:flex;align-items:center;gap:10px;padding:9px 18px;font-family:'Barlow Condensed',sans-serif;font-size:.8rem;font-weight:600;letter-spacing:.05em;color:rgba(255,255,255,.6);text-decoration:none;transition:all .15s;}
+.nav-drop-link:hover{background:rgba(255,255,255,.05);color:white;padding-left:22px;}
+.nav-drop-link .ddi{font-size:.85rem;width:18px;text-align:center;flex-shrink:0;opacity:.65;}
+.nav-drop-divider{height:1px;background:rgba(255,255,255,.05);margin:4px 0;}
+/* Search */
+.nav-search{position:relative;display:flex;align-items:center;}
+.nav-search-input{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.75);font-family:'Barlow',sans-serif;font-size:.8rem;padding:6px 32px 6px 12px;border-radius:2px;width:180px;outline:none;transition:all .22s;}
+.nav-search-input::placeholder{color:rgba(255,255,255,.28);}
+.nav-search-input:focus{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.28);width:220px;}
+.nav-search-icon{position:absolute;right:9px;font-size:.78rem;color:rgba(255,255,255,.3);pointer-events:none;}
+/* Search results dropdown */
+.nav-search-results{position:absolute;top:calc(100% + 8px);right:0;width:320px;background:#0d0d0d;border:1px solid rgba(255,255,255,.12);box-shadow:0 20px 60px rgba(0,0,0,.7);display:none;z-index:600;max-height:360px;overflow-y:auto;}
+.nav-search-results.show{display:block;}
+.sr-item{display:flex;align-items:center;gap:12px;padding:10px 16px;text-decoration:none;transition:background .15s;}
+.sr-item:hover{background:rgba(255,255,255,.05);}
+.sr-item-label{font-family:'Barlow Condensed',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.04em;color:rgba(255,255,255,.75);}
+.sr-item-type{font-family:'Barlow Condensed',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.28);}
+.sr-empty{padding:14px 16px;font-size:.78rem;color:rgba(255,255,255,.3);text-align:center;}
+/* Mobile */
+.nav-mobile-toggle{display:none;background:none;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.7);padding:6px 10px;cursor:pointer;font-size:.9rem;border-radius:2px;}
+@media(max-width:960px){
+  .nav-items{display:none;}.nav-items.open{display:flex;flex-direction:column;position:fixed;top:58px;left:0;right:0;bottom:0;background:#0a0a0a;padding:20px;overflow-y:auto;z-index:499;align-items:stretch;height:auto;gap:0;}
+  .nav-item{height:auto;flex-direction:column;align-items:stretch;}
+  .nav-item-btn{height:auto;padding:12px 0;font-size:.82rem;justify-content:space-between;}
+  .nav-allbrands{height:auto;padding:12px 0;}
+  .nav-dropdown{position:static;transform:none;opacity:1;visibility:visible;display:none;border:none;border-top:1px solid rgba(255,255,255,.06);box-shadow:none;background:rgba(255,255,255,.03);}
+  .nav-item.open .nav-dropdown{display:block;}
+  .nav-search{display:none;}
+  .nav-search-input{width:100%;}
+  .nav-mobile-toggle{display:block;}
+  .site-nav-inner{padding:0 20px;}
+}
+
+
+/* ══ CYBERTRUCK ARCHITECTURE — EV PAGE PORT ══ */
+
+/* Floating widget pill */
+.acb-widget{position:fixed;bottom:22px;right:20px;z-index:9999;display:flex;align-items:stretch;background:#1C1C1C;border:1px solid rgba(255,255,255,.2);border-radius:8px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.85);}
+.acb-widget a,.acb-widget button{padding:11px 13px;background:transparent;color:rgba(255,255,255,.72);border:none;border-right:1px solid rgba(255,255,255,.1);font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.04em;cursor:pointer;transition:all .15s;line-height:1;text-decoration:none;display:flex;align-items:center;justify-content:center;white-space:nowrap;}
+.acb-widget a:last-child,.acb-widget button:last-child{border-right:none;}
+.acb-widget a:hover,.acb-widget button:hover{background:#242424;color:#fff;}
+.acb-widget .w-label{font-size:.5rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.38);padding:0 10px;border-right:1px solid rgba(255,255,255,.1);display:flex;align-items:center;background:#141414;cursor:default;}
+.acb-widget button.w-on{background:var(--ac);color:#fff;}
+@media(max-width:480px){.acb-widget{bottom:14px;right:12px;}}
+
+/* EV Model / Brand Row */
+.ev-model-row{background:#0d0d0d;border-bottom:1px solid rgba(255,255,255,.07);padding:16px 24px;}
+.ev-model-row-inner{max-width:960px;margin:0 auto;}
+.ev-brand-link{font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);text-decoration:none;display:inline-flex;align-items:center;gap:6px;margin-bottom:10px;transition:color .15s;}
+.ev-brand-link:hover{color:var(--ac);}
+.ev-model-row-label{font-family:'Barlow Condensed',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.ev-model-row-label::before{content:'';display:inline-block;width:20px;height:1px;background:var(--ac);}
+.ev-model-cards{display:flex;flex-wrap:nowrap;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:2px;}
+.ev-model-cards::-webkit-scrollbar{display:none;}
+.ev-mcard{flex:0 0 auto;min-width:118px;max-width:150px;display:flex;flex-direction:column;align-items:center;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:10px 12px;text-decoration:none;transition:all .18s;}
+.ev-mcard:hover{background:rgba(255,255,255,.07);border-color:rgba(var(--ar,201,150,42),.4);}
+.ev-mcard--active{border-color:var(--ac)!important;background:rgba(var(--ar,201,150,42),.08)!important;}
+.ev-mcard-type{font-family:'Barlow Condensed',sans-serif;font-size:.54rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:2px;}
+.ev-mcard-name{font-family:'Bebas Neue',sans-serif;font-size:.92rem;letter-spacing:.05em;color:#fff;margin-bottom:2px;}
+.ev-mcard-price{font-size:.68rem;color:rgba(255,255,255,.38);font-family:'Barlow Condensed',sans-serif;}
+.ev-mcard-arrow{font-size:.6rem;color:var(--ac);margin-top:3px;font-family:'Barlow Condensed',sans-serif;font-weight:700;}
+
+/* Jump nav — sticky horizontal scroll */
+
+
+
+
+
+
+/* Section primitives */
+.ev-sec-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--ac);margin-bottom:10px;}
+.ev-sec-h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.5rem,3vw,2.3rem);letter-spacing:.03em;color:#fff;margin-bottom:16px;}
+
+/* Update blocks */
+.ev-update-block{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.09);border-left:4px solid var(--ac);border-radius:3px;padding:15px 18px;margin-bottom:12px;}
+.ev-update-title{font-family:'Bebas Neue',sans-serif;font-size:.95rem;letter-spacing:.06em;color:#fff;margin-bottom:6px;}
+.ev-update-body{font-size:.84rem;color:rgba(255,255,255,.65);line-height:1.8;}
+
+/* Recall accordion */
+.ev-recall-accordion{border:1px solid rgba(255,255,255,.08);border-radius:3px;overflow:hidden;margin-bottom:16px;}
+.ev-recall-toggle{width:100%;background:rgba(255,255,255,.04);border:none;border-bottom:1px solid rgba(255,255,255,.08);color:#fff;text-align:left;padding:16px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;}
+.ev-recall-toggle:hover{background:rgba(255,255,255,.06);}
+.ev-recall-toggle-title{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.06em;}
+.ev-recall-toggle-sub{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;color:rgba(255,255,255,.38);margin-top:3px;font-weight:600;letter-spacing:.06em;}
+.ev-recall-chevron{font-size:1.1rem;color:rgba(255,255,255,.35);flex-shrink:0;transition:transform .25s;}
+.ev-recall-body{display:none;}
+.ev-recall-item{padding:13px 18px;border-bottom:1px solid rgba(255,255,255,.05);}
+.ev-recall-item:last-child{border-bottom:none;}
+.ev-recall-item-head{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:6px;margin-bottom:5px;}
+.ev-recall-item-name{font-family:'Bebas Neue',sans-serif;font-size:.9rem;letter-spacing:.05em;color:#fff;}
+.ev-recall-item-meta{font-family:'Barlow Condensed',sans-serif;font-size:.68rem;font-weight:700;color:rgba(255,193,7,.8);}
+.ev-recall-item-desc{font-size:.81rem;color:rgba(255,255,255,.6);line-height:1.6;}
+.ev-recall-item-remedy{margin-top:5px;font-size:.74rem;}
+.ev-recall-ota{color:#2DB37A;}.ev-recall-dealer{color:#FFC107;}
+.ev-recall-footer{padding:11px 18px;background:rgba(255,255,255,.02);border-top:1px solid rgba(255,255,255,.06);font-size:.73rem;color:rgba(255,255,255,.32);line-height:1.6;}
+
+/* Compare table */
+.ev-compare-wrap{overflow-x:auto;margin-top:16px;}
+.ev-compare-tbl{width:100%;border-collapse:collapse;font-size:.81rem;min-width:680px;}
+.ev-compare-tbl thead tr{background:rgba(var(--ar,201,150,42),.07);}
+.ev-compare-tbl th{padding:10px 13px;font-family:'Barlow Condensed',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45);border-bottom:1px solid rgba(255,255,255,.1);}
+.ev-compare-tbl th:nth-child(2){color:var(--ac);}
+.ev-compare-tbl td{padding:9px 13px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.72);}
+.ev-compare-tbl td:nth-child(2){color:#fff;font-weight:700;}
+.ev-compare-tbl tbody tr:hover td{background:rgba(255,255,255,.02);}
+
+/* Used market */
+.ev-used-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-bottom:14px;}
+.ev-used-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:16px 18px;}
+.ev-used-card-title{font-family:'Bebas Neue',sans-serif;font-size:.95rem;letter-spacing:.06em;margin-bottom:8px;}
+.ev-used-list{font-size:.83rem;color:rgba(255,255,255,.65);line-height:1.9;padding-left:16px;margin:0;}
+
+/* Author bar */
+.ev-author-bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;}
+.ev-badge{font-family:'Barlow Condensed',sans-serif;font-size:.64rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:2px;}
+.ev-badge--author{color:rgba(255,255,255,.45);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);}
+.ev-badge--date{color:rgba(255,255,255,.45);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);}
+.ev-badge--live{color:var(--ac);background:rgba(var(--ar,201,150,42),.1);border:1px solid rgba(var(--ar,201,150,42),.3);}
+
+@media(max-width:768px){
+  .ev-model-row{padding:12px 16px;}
+  
+}
+
+/* ══ CYBERTRUCK ARCHITECTURE — EV PAGE PORT ══ */
+
+/* Floating widget pill */
+.acb-widget{position:fixed;bottom:22px;right:20px;z-index:9999;display:flex;align-items:stretch;background:#1C1C1C;border:1px solid rgba(255,255,255,.2);border-radius:8px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.85);}
+.acb-widget a,.acb-widget button{padding:11px 13px;background:transparent;color:rgba(255,255,255,.72);border:none;border-right:1px solid rgba(255,255,255,.1);font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.04em;cursor:pointer;transition:all .15s;line-height:1;text-decoration:none;display:flex;align-items:center;justify-content:center;white-space:nowrap;}
+.acb-widget a:last-child,.acb-widget button:last-child{border-right:none;}
+.acb-widget a:hover,.acb-widget button:hover{background:#242424;color:#fff;}
+.acb-widget .w-label{font-size:.5rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.38);padding:0 10px;border-right:1px solid rgba(255,255,255,.1);display:flex;align-items:center;background:#141414;cursor:default;}
+.acb-widget button.w-on{background:var(--ac);color:#fff;}
+@media(max-width:480px){.acb-widget{bottom:14px;right:12px;}}
+
+/* EV Model / Brand Row */
+.ev-model-row{background:#0d0d0d;border-bottom:1px solid rgba(255,255,255,.07);padding:16px 24px;}
+.ev-model-row-inner{max-width:960px;margin:0 auto;}
+.ev-brand-link{font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);text-decoration:none;display:inline-flex;align-items:center;gap:6px;margin-bottom:10px;transition:color .15s;}
+.ev-brand-link:hover{color:var(--ac);}
+.ev-model-row-label{font-family:'Barlow Condensed',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.ev-model-row-label::before{content:'';display:inline-block;width:20px;height:1px;background:var(--ac);}
+.ev-model-cards{display:flex;flex-wrap:nowrap;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:2px;}
+.ev-model-cards::-webkit-scrollbar{display:none;}
+.ev-mcard{flex:0 0 auto;min-width:118px;max-width:150px;display:flex;flex-direction:column;align-items:center;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:10px 12px;text-decoration:none;transition:all .18s;}
+.ev-mcard:hover{background:rgba(255,255,255,.07);border-color:rgba(var(--ar,201,150,42),.4);}
+.ev-mcard--active{border-color:var(--ac)!important;background:rgba(var(--ar,201,150,42),.08)!important;}
+.ev-mcard-type{font-family:'Barlow Condensed',sans-serif;font-size:.54rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:2px;}
+.ev-mcard-name{font-family:'Bebas Neue',sans-serif;font-size:.92rem;letter-spacing:.05em;color:#fff;margin-bottom:2px;}
+.ev-mcard-price{font-size:.68rem;color:rgba(255,255,255,.38);font-family:'Barlow Condensed',sans-serif;}
+.ev-mcard-arrow{font-size:.6rem;color:var(--ac);margin-top:3px;font-family:'Barlow Condensed',sans-serif;font-weight:700;}
+
+/* Jump nav — sticky horizontal scroll */
+
+
+
+
+
+
+/* Section primitives */
+.ev-sec-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--ac);margin-bottom:10px;}
+.ev-sec-h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.5rem,3vw,2.3rem);letter-spacing:.03em;color:#fff;margin-bottom:16px;}
+
+/* Update blocks */
+.ev-update-block{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.09);border-left:4px solid var(--ac);border-radius:3px;padding:15px 18px;margin-bottom:12px;}
+.ev-update-title{font-family:'Bebas Neue',sans-serif;font-size:.95rem;letter-spacing:.06em;color:#fff;margin-bottom:6px;}
+.ev-update-body{font-size:.84rem;color:rgba(255,255,255,.65);line-height:1.8;}
+
+/* Recall accordion */
+.ev-recall-accordion{border:1px solid rgba(255,255,255,.08);border-radius:3px;overflow:hidden;margin-bottom:16px;}
+.ev-recall-toggle{width:100%;background:rgba(255,255,255,.04);border:none;border-bottom:1px solid rgba(255,255,255,.08);color:#fff;text-align:left;padding:16px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;}
+.ev-recall-toggle:hover{background:rgba(255,255,255,.06);}
+.ev-recall-toggle-title{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.06em;}
+.ev-recall-toggle-sub{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;color:rgba(255,255,255,.38);margin-top:3px;font-weight:600;letter-spacing:.06em;}
+.ev-recall-chevron{font-size:1.1rem;color:rgba(255,255,255,.35);flex-shrink:0;transition:transform .25s;}
+.ev-recall-body{display:none;}
+.ev-recall-item{padding:13px 18px;border-bottom:1px solid rgba(255,255,255,.05);}
+.ev-recall-item:last-child{border-bottom:none;}
+.ev-recall-item-head{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:6px;margin-bottom:5px;}
+.ev-recall-item-name{font-family:'Bebas Neue',sans-serif;font-size:.9rem;letter-spacing:.05em;color:#fff;}
+.ev-recall-item-meta{font-family:'Barlow Condensed',sans-serif;font-size:.68rem;font-weight:700;color:rgba(255,193,7,.8);}
+.ev-recall-item-desc{font-size:.81rem;color:rgba(255,255,255,.6);line-height:1.6;}
+.ev-recall-item-remedy{margin-top:5px;font-size:.74rem;}
+.ev-recall-ota{color:#2DB37A;}.ev-recall-dealer{color:#FFC107;}
+.ev-recall-footer{padding:11px 18px;background:rgba(255,255,255,.02);border-top:1px solid rgba(255,255,255,.06);font-size:.73rem;color:rgba(255,255,255,.32);line-height:1.6;}
+
+/* Compare table */
+.ev-compare-wrap{overflow-x:auto;margin-top:16px;}
+.ev-compare-tbl{width:100%;border-collapse:collapse;font-size:.81rem;min-width:680px;}
+.ev-compare-tbl thead tr{background:rgba(var(--ar,201,150,42),.07);}
+.ev-compare-tbl th{padding:10px 13px;font-family:'Barlow Condensed',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45);border-bottom:1px solid rgba(255,255,255,.1);}
+.ev-compare-tbl th:nth-child(2){color:var(--ac);}
+.ev-compare-tbl td{padding:9px 13px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.72);}
+.ev-compare-tbl td:nth-child(2){color:#fff;font-weight:700;}
+.ev-compare-tbl tbody tr:hover td{background:rgba(255,255,255,.02);}
+
+/* Used market */
+.ev-used-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-bottom:14px;}
+.ev-used-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:16px 18px;}
+.ev-used-card-title{font-family:'Bebas Neue',sans-serif;font-size:.95rem;letter-spacing:.06em;margin-bottom:8px;}
+.ev-used-list{font-size:.83rem;color:rgba(255,255,255,.65);line-height:1.9;padding-left:16px;margin:0;}
+
+/* Author bar */
+.ev-author-bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;}
+.ev-badge{font-family:'Barlow Condensed',sans-serif;font-size:.64rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:2px;}
+.ev-badge--author{color:rgba(255,255,255,.45);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);}
+.ev-badge--date{color:rgba(255,255,255,.45);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);}
+.ev-badge--live{color:var(--ac);background:rgba(var(--ar,201,150,42),.1);border:1px solid rgba(var(--ar,201,150,42),.3);}
+
+@media(max-width:768px){
+  .ev-model-row{padding:12px 16px;}
+  
+}
+
+/* ══ CYBERTRUCK ARCHITECTURE — EV PAGE PORT ══ */
+
+/* Floating widget pill */
+.acb-widget{position:fixed;bottom:22px;right:20px;z-index:9999;display:flex;align-items:stretch;background:#1C1C1C;border:1px solid rgba(255,255,255,.2);border-radius:8px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.85);}
+.acb-widget a,.acb-widget button{padding:11px 13px;background:transparent;color:rgba(255,255,255,.72);border:none;border-right:1px solid rgba(255,255,255,.1);font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.04em;cursor:pointer;transition:all .15s;line-height:1;text-decoration:none;display:flex;align-items:center;justify-content:center;white-space:nowrap;}
+.acb-widget a:last-child,.acb-widget button:last-child{border-right:none;}
+.acb-widget a:hover,.acb-widget button:hover{background:#242424;color:#fff;}
+.acb-widget .w-label{font-size:.5rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.38);padding:0 10px;border-right:1px solid rgba(255,255,255,.1);display:flex;align-items:center;background:#141414;cursor:default;}
+.acb-widget button.w-on{background:var(--ac);color:#fff;}
+@media(max-width:480px){.acb-widget{bottom:14px;right:12px;}}
+
+/* EV Model / Brand Row */
+.ev-model-row{background:#0d0d0d;border-bottom:1px solid rgba(255,255,255,.07);padding:16px 24px;}
+.ev-model-row-inner{max-width:960px;margin:0 auto;}
+.ev-brand-link{font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);text-decoration:none;display:inline-flex;align-items:center;gap:6px;margin-bottom:10px;transition:color .15s;}
+.ev-brand-link:hover{color:var(--ac);}
+.ev-model-row-label{font-family:'Barlow Condensed',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.ev-model-row-label::before{content:'';display:inline-block;width:20px;height:1px;background:var(--ac);}
+.ev-model-cards{display:flex;flex-wrap:nowrap;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:2px;}
+.ev-model-cards::-webkit-scrollbar{display:none;}
+.ev-mcard{flex:0 0 auto;min-width:118px;max-width:150px;display:flex;flex-direction:column;align-items:center;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:10px 12px;text-decoration:none;transition:all .18s;}
+.ev-mcard:hover{background:rgba(255,255,255,.07);border-color:rgba(var(--ar,201,150,42),.4);}
+.ev-mcard--active{border-color:var(--ac)!important;background:rgba(var(--ar,201,150,42),.08)!important;}
+.ev-mcard-type{font-family:'Barlow Condensed',sans-serif;font-size:.54rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:2px;}
+.ev-mcard-name{font-family:'Bebas Neue',sans-serif;font-size:.92rem;letter-spacing:.05em;color:#fff;margin-bottom:2px;}
+.ev-mcard-price{font-size:.68rem;color:rgba(255,255,255,.38);font-family:'Barlow Condensed',sans-serif;}
+.ev-mcard-arrow{font-size:.6rem;color:var(--ac);margin-top:3px;font-family:'Barlow Condensed',sans-serif;font-weight:700;}
+
+/* Jump nav — sticky horizontal scroll */
+
+
+
+
+
+
+/* Section primitives */
+.ev-sec-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--ac);margin-bottom:10px;}
+.ev-sec-h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.5rem,3vw,2.3rem);letter-spacing:.03em;color:#fff;margin-bottom:16px;}
+
+/* Update blocks */
+.ev-update-block{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.09);border-left:4px solid var(--ac);border-radius:3px;padding:15px 18px;margin-bottom:12px;}
+.ev-update-title{font-family:'Bebas Neue',sans-serif;font-size:.95rem;letter-spacing:.06em;color:#fff;margin-bottom:6px;}
+.ev-update-body{font-size:.84rem;color:rgba(255,255,255,.65);line-height:1.8;}
+
+/* Recall accordion */
+.ev-recall-accordion{border:1px solid rgba(255,255,255,.08);border-radius:3px;overflow:hidden;margin-bottom:16px;}
+.ev-recall-toggle{width:100%;background:rgba(255,255,255,.04);border:none;border-bottom:1px solid rgba(255,255,255,.08);color:#fff;text-align:left;padding:16px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;}
+.ev-recall-toggle:hover{background:rgba(255,255,255,.06);}
+.ev-recall-toggle-title{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.06em;}
+.ev-recall-toggle-sub{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;color:rgba(255,255,255,.38);margin-top:3px;font-weight:600;letter-spacing:.06em;}
+.ev-recall-chevron{font-size:1.1rem;color:rgba(255,255,255,.35);flex-shrink:0;transition:transform .25s;}
+.ev-recall-body{display:none;}
+.ev-recall-item{padding:13px 18px;border-bottom:1px solid rgba(255,255,255,.05);}
+.ev-recall-item:last-child{border-bottom:none;}
+.ev-recall-item-head{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:6px;margin-bottom:5px;}
+.ev-recall-item-name{font-family:'Bebas Neue',sans-serif;font-size:.9rem;letter-spacing:.05em;color:#fff;}
+.ev-recall-item-meta{font-family:'Barlow Condensed',sans-serif;font-size:.68rem;font-weight:700;color:rgba(255,193,7,.8);}
+.ev-recall-item-desc{font-size:.81rem;color:rgba(255,255,255,.6);line-height:1.6;}
+.ev-recall-item-remedy{margin-top:5px;font-size:.74rem;}
+.ev-recall-ota{color:#2DB37A;}.ev-recall-dealer{color:#FFC107;}
+.ev-recall-footer{padding:11px 18px;background:rgba(255,255,255,.02);border-top:1px solid rgba(255,255,255,.06);font-size:.73rem;color:rgba(255,255,255,.32);line-height:1.6;}
+
+/* Compare table */
+.ev-compare-wrap{overflow-x:auto;margin-top:16px;}
+.ev-compare-tbl{width:100%;border-collapse:collapse;font-size:.81rem;min-width:680px;}
+.ev-compare-tbl thead tr{background:rgba(var(--ar,201,150,42),.07);}
+.ev-compare-tbl th{padding:10px 13px;font-family:'Barlow Condensed',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45);border-bottom:1px solid rgba(255,255,255,.1);}
+.ev-compare-tbl th:nth-child(2){color:var(--ac);}
+.ev-compare-tbl td{padding:9px 13px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.72);}
+.ev-compare-tbl td:nth-child(2){color:#fff;font-weight:700;}
+.ev-compare-tbl tbody tr:hover td{background:rgba(255,255,255,.02);}
+
+/* Used market */
+.ev-used-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-bottom:14px;}
+.ev-used-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:16px 18px;}
+.ev-used-card-title{font-family:'Bebas Neue',sans-serif;font-size:.95rem;letter-spacing:.06em;margin-bottom:8px;}
+.ev-used-list{font-size:.83rem;color:rgba(255,255,255,.65);line-height:1.9;padding-left:16px;margin:0;}
+
+/* Author bar */
+.ev-author-bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;}
+.ev-badge{font-family:'Barlow Condensed',sans-serif;font-size:.64rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:2px;}
+.ev-badge--author{color:rgba(255,255,255,.45);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);}
+.ev-badge--date{color:rgba(255,255,255,.45);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);}
+.ev-badge--live{color:var(--ac);background:rgba(var(--ar,201,150,42),.1);border:1px solid rgba(var(--ar,201,150,42),.3);}
+
+@media(max-width:768px){
+  .ev-model-row{padding:12px 16px;}
+  
+}
+
+/* ══ CYBERTRUCK ARCHITECTURE — EV PAGE PORT ══ */
+
+/* Floating widget pill */
+.acb-widget{position:fixed;bottom:22px;right:20px;z-index:9999;display:flex;align-items:stretch;background:#1C1C1C;border:1px solid rgba(255,255,255,.2);border-radius:8px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.85);}
+.acb-widget a,.acb-widget button{padding:11px 13px;background:transparent;color:rgba(255,255,255,.72);border:none;border-right:1px solid rgba(255,255,255,.1);font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.04em;cursor:pointer;transition:all .15s;line-height:1;text-decoration:none;display:flex;align-items:center;justify-content:center;white-space:nowrap;}
+.acb-widget a:last-child,.acb-widget button:last-child{border-right:none;}
+.acb-widget a:hover,.acb-widget button:hover{background:#242424;color:#fff;}
+.acb-widget .w-label{font-size:.5rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.38);padding:0 10px;border-right:1px solid rgba(255,255,255,.1);display:flex;align-items:center;background:#141414;cursor:default;}
+.acb-widget button.w-on{background:var(--ac);color:#fff;}
+@media(max-width:480px){.acb-widget{bottom:14px;right:12px;}}
+
+/* EV Model / Brand Row */
+.ev-model-row{background:#0d0d0d;border-bottom:1px solid rgba(255,255,255,.07);padding:16px 24px;}
+.ev-model-row-inner{max-width:960px;margin:0 auto;}
+.ev-brand-link{font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);text-decoration:none;display:inline-flex;align-items:center;gap:6px;margin-bottom:10px;transition:color .15s;}
+.ev-brand-link:hover{color:var(--ac);}
+.ev-model-row-label{font-family:'Barlow Condensed',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.ev-model-row-label::before{content:'';display:inline-block;width:20px;height:1px;background:var(--ac);}
+.ev-model-cards{display:flex;flex-wrap:nowrap;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:2px;}
+.ev-model-cards::-webkit-scrollbar{display:none;}
+.ev-mcard{flex:0 0 auto;min-width:118px;max-width:150px;display:flex;flex-direction:column;align-items:center;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:10px 12px;text-decoration:none;transition:all .18s;}
+.ev-mcard:hover{background:rgba(255,255,255,.07);border-color:rgba(var(--ar,201,150,42),.4);}
+.ev-mcard--active{border-color:var(--ac)!important;background:rgba(var(--ar,201,150,42),.08)!important;}
+.ev-mcard-type{font-family:'Barlow Condensed',sans-serif;font-size:.54rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:2px;}
+.ev-mcard-name{font-family:'Bebas Neue',sans-serif;font-size:.92rem;letter-spacing:.05em;color:#fff;margin-bottom:2px;}
+.ev-mcard-price{font-size:.68rem;color:rgba(255,255,255,.38);font-family:'Barlow Condensed',sans-serif;}
+.ev-mcard-arrow{font-size:.6rem;color:var(--ac);margin-top:3px;font-family:'Barlow Condensed',sans-serif;font-weight:700;}
+
+/* Jump nav — sticky horizontal scroll */
+
+
+
+
+
+
+/* Section primitives */
+.ev-sec-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--ac);margin-bottom:10px;}
+.ev-sec-h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.5rem,3vw,2.3rem);letter-spacing:.03em;color:#fff;margin-bottom:16px;}
+
+/* Update blocks */
+.ev-update-block{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.09);border-left:4px solid var(--ac);border-radius:3px;padding:15px 18px;margin-bottom:12px;}
+.ev-update-title{font-family:'Bebas Neue',sans-serif;font-size:.95rem;letter-spacing:.06em;color:#fff;margin-bottom:6px;}
+.ev-update-body{font-size:.84rem;color:rgba(255,255,255,.65);line-height:1.8;}
+
+/* Recall accordion */
+.ev-recall-accordion{border:1px solid rgba(255,255,255,.08);border-radius:3px;overflow:hidden;margin-bottom:16px;}
+.ev-recall-toggle{width:100%;background:rgba(255,255,255,.04);border:none;border-bottom:1px solid rgba(255,255,255,.08);color:#fff;text-align:left;padding:16px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;}
+.ev-recall-toggle:hover{background:rgba(255,255,255,.06);}
+.ev-recall-toggle-title{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.06em;}
+.ev-recall-toggle-sub{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;color:rgba(255,255,255,.38);margin-top:3px;font-weight:600;letter-spacing:.06em;}
+.ev-recall-chevron{font-size:1.1rem;color:rgba(255,255,255,.35);flex-shrink:0;transition:transform .25s;}
+.ev-recall-body{display:none;}
+.ev-recall-item{padding:13px 18px;border-bottom:1px solid rgba(255,255,255,.05);}
+.ev-recall-item:last-child{border-bottom:none;}
+.ev-recall-item-head{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:6px;margin-bottom:5px;}
+.ev-recall-item-name{font-family:'Bebas Neue',sans-serif;font-size:.9rem;letter-spacing:.05em;color:#fff;}
+.ev-recall-item-meta{font-family:'Barlow Condensed',sans-serif;font-size:.68rem;font-weight:700;color:rgba(255,193,7,.8);}
+.ev-recall-item-desc{font-size:.81rem;color:rgba(255,255,255,.6);line-height:1.6;}
+.ev-recall-item-remedy{margin-top:5px;font-size:.74rem;}
+.ev-recall-ota{color:#2DB37A;}.ev-recall-dealer{color:#FFC107;}
+.ev-recall-footer{padding:11px 18px;background:rgba(255,255,255,.02);border-top:1px solid rgba(255,255,255,.06);font-size:.73rem;color:rgba(255,255,255,.32);line-height:1.6;}
+
+/* Compare table */
+.ev-compare-wrap{overflow-x:auto;margin-top:16px;}
+.ev-compare-tbl{width:100%;border-collapse:collapse;font-size:.81rem;min-width:680px;}
+.ev-compare-tbl thead tr{background:rgba(var(--ar,201,150,42),.07);}
+.ev-compare-tbl th{padding:10px 13px;font-family:'Barlow Condensed',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45);border-bottom:1px solid rgba(255,255,255,.1);}
+.ev-compare-tbl th:nth-child(2){color:var(--ac);}
+.ev-compare-tbl td{padding:9px 13px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.72);}
+.ev-compare-tbl td:nth-child(2){color:#fff;font-weight:700;}
+.ev-compare-tbl tbody tr:hover td{background:rgba(255,255,255,.02);}
+
+/* Used market */
+.ev-used-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-bottom:14px;}
+.ev-used-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:16px 18px;}
+.ev-used-card-title{font-family:'Bebas Neue',sans-serif;font-size:.95rem;letter-spacing:.06em;margin-bottom:8px;}
+.ev-used-list{font-size:.83rem;color:rgba(255,255,255,.65);line-height:1.9;padding-left:16px;margin:0;}
+
+/* Author bar */
+.ev-author-bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;}
+.ev-badge{font-family:'Barlow Condensed',sans-serif;font-size:.64rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:2px;}
+.ev-badge--author{color:rgba(255,255,255,.45);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);}
+.ev-badge--date{color:rgba(255,255,255,.45);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);}
+.ev-badge--live{color:var(--ac);background:rgba(var(--ar,201,150,42),.1);border:1px solid rgba(var(--ar,201,150,42),.3);}
+
+@media(max-width:768px){
+  .ev-model-row{padding:12px 16px;}
+  
+}
+
+/* ══ CYBERTRUCK ARCHITECTURE — EV PAGE PORT ══ */
+
+/* Floating widget pill */
+.acb-widget{position:fixed;bottom:22px;right:20px;z-index:9999;display:flex;align-items:stretch;background:#1C1C1C;border:1px solid rgba(255,255,255,.2);border-radius:8px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.85);}
+.acb-widget a,.acb-widget button{padding:11px 13px;background:transparent;color:rgba(255,255,255,.72);border:none;border-right:1px solid rgba(255,255,255,.1);font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.04em;cursor:pointer;transition:all .15s;line-height:1;text-decoration:none;display:flex;align-items:center;justify-content:center;white-space:nowrap;}
+.acb-widget a:last-child,.acb-widget button:last-child{border-right:none;}
+.acb-widget a:hover,.acb-widget button:hover{background:#242424;color:#fff;}
+.acb-widget .w-label{font-size:.5rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.38);padding:0 10px;border-right:1px solid rgba(255,255,255,.1);display:flex;align-items:center;background:#141414;cursor:default;}
+.acb-widget button.w-on{background:var(--ac);color:#fff;}
+@media(max-width:480px){.acb-widget{bottom:14px;right:12px;}}
+
+/* EV Model / Brand Row */
+.ev-model-row{background:#0d0d0d;border-bottom:1px solid rgba(255,255,255,.07);padding:16px 24px;}
+.ev-model-row-inner{max-width:960px;margin:0 auto;}
+.ev-brand-link{font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);text-decoration:none;display:inline-flex;align-items:center;gap:6px;margin-bottom:10px;transition:color .15s;}
+.ev-brand-link:hover{color:var(--ac);}
+.ev-model-row-label{font-family:'Barlow Condensed',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.ev-model-row-label::before{content:'';display:inline-block;width:20px;height:1px;background:var(--ac);}
+.ev-model-cards{display:flex;flex-wrap:nowrap;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:2px;}
+.ev-model-cards::-webkit-scrollbar{display:none;}
+.ev-mcard{flex:0 0 auto;min-width:118px;max-width:150px;display:flex;flex-direction:column;align-items:center;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:10px 12px;text-decoration:none;transition:all .18s;}
+.ev-mcard:hover{background:rgba(255,255,255,.07);border-color:rgba(var(--ar,201,150,42),.4);}
+.ev-mcard--active{border-color:var(--ac)!important;background:rgba(var(--ar,201,150,42),.08)!important;}
+.ev-mcard-type{font-family:'Barlow Condensed',sans-serif;font-size:.54rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:2px;}
+.ev-mcard-name{font-family:'Bebas Neue',sans-serif;font-size:.92rem;letter-spacing:.05em;color:#fff;margin-bottom:2px;}
+.ev-mcard-price{font-size:.68rem;color:rgba(255,255,255,.38);font-family:'Barlow Condensed',sans-serif;}
+.ev-mcard-arrow{font-size:.6rem;color:var(--ac);margin-top:3px;font-family:'Barlow Condensed',sans-serif;font-weight:700;}
+
+/* Jump nav — sticky horizontal scroll */
+
+
+
+
+
+
+/* Section primitives */
+.ev-sec-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--ac);margin-bottom:10px;}
+.ev-sec-h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.5rem,3vw,2.3rem);letter-spacing:.03em;color:#fff;margin-bottom:16px;}
+
+/* Update blocks */
+.ev-update-block{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.09);border-left:4px solid var(--ac);border-radius:3px;padding:15px 18px;margin-bottom:12px;}
+.ev-update-title{font-family:'Bebas Neue',sans-serif;font-size:.95rem;letter-spacing:.06em;color:#fff;margin-bottom:6px;}
+.ev-update-body{font-size:.84rem;color:rgba(255,255,255,.65);line-height:1.8;}
+
+/* Recall accordion */
+.ev-recall-accordion{border:1px solid rgba(255,255,255,.08);border-radius:3px;overflow:hidden;margin-bottom:16px;}
+.ev-recall-toggle{width:100%;background:rgba(255,255,255,.04);border:none;border-bottom:1px solid rgba(255,255,255,.08);color:#fff;text-align:left;padding:16px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;}
+.ev-recall-toggle:hover{background:rgba(255,255,255,.06);}
+.ev-recall-toggle-title{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:.06em;}
+.ev-recall-toggle-sub{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;color:rgba(255,255,255,.38);margin-top:3px;font-weight:600;letter-spacing:.06em;}
+.ev-recall-chevron{font-size:1.1rem;color:rgba(255,255,255,.35);flex-shrink:0;transition:transform .25s;}
+.ev-recall-body{display:none;}
+.ev-recall-item{padding:13px 18px;border-bottom:1px solid rgba(255,255,255,.05);}
+.ev-recall-item:last-child{border-bottom:none;}
+.ev-recall-item-head{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:6px;margin-bottom:5px;}
+.ev-recall-item-name{font-family:'Bebas Neue',sans-serif;font-size:.9rem;letter-spacing:.05em;color:#fff;}
+.ev-recall-item-meta{font-family:'Barlow Condensed',sans-serif;font-size:.68rem;font-weight:700;color:rgba(255,193,7,.8);}
+.ev-recall-item-desc{font-size:.81rem;color:rgba(255,255,255,.6);line-height:1.6;}
+.ev-recall-item-remedy{margin-top:5px;font-size:.74rem;}
+.ev-recall-ota{color:#2DB37A;}.ev-recall-dealer{color:#FFC107;}
+.ev-recall-footer{padding:11px 18px;background:rgba(255,255,255,.02);border-top:1px solid rgba(255,255,255,.06);font-size:.73rem;color:rgba(255,255,255,.32);line-height:1.6;}
+
+/* Compare table */
+.ev-compare-wrap{overflow-x:auto;margin-top:16px;}
+.ev-compare-tbl{width:100%;border-collapse:collapse;font-size:.81rem;min-width:680px;}
+.ev-compare-tbl thead tr{background:rgba(var(--ar,201,150,42),.07);}
+.ev-compare-tbl th{padding:10px 13px;font-family:'Barlow Condensed',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45);border-bottom:1px solid rgba(255,255,255,.1);}
+.ev-compare-tbl th:nth-child(2){color:var(--ac);}
+.ev-compare-tbl td{padding:9px 13px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.72);}
+.ev-compare-tbl td:nth-child(2){color:#fff;font-weight:700;}
+.ev-compare-tbl tbody tr:hover td{background:rgba(255,255,255,.02);}
+
+/* Used market */
+.ev-used-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-bottom:14px;}
+.ev-used-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:16px 18px;}
+.ev-used-card-title{font-family:'Bebas Neue',sans-serif;font-size:.95rem;letter-spacing:.06em;margin-bottom:8px;}
+.ev-used-list{font-size:.83rem;color:rgba(255,255,255,.65);line-height:1.9;padding-left:16px;margin:0;}
+
+/* Author bar */
+.ev-author-bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;}
+.ev-badge{font-family:'Barlow Condensed',sans-serif;font-size:.64rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:2px;}
+.ev-badge--author{color:rgba(255,255,255,.45);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);}
+.ev-badge--date{color:rgba(255,255,255,.45);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);}
+.ev-badge--live{color:var(--ac);background:rgba(var(--ar,201,150,42),.1);border:1px solid rgba(var(--ar,201,150,42),.3);}
+
+@media(max-width:768px){
+  .ev-model-row{padding:12px 16px;}
+  
+}
+
+/* ── MODEL PAGE UPDATES 2-COL ── */
+.acb-model-updates{display:grid;grid-template-columns:1fr 220px;gap:20px;align-items:start;max-width:960px;padding:24px 24px 0;}
+@media(max-width:660px){.acb-model-updates{grid-template-columns:1fr;}}
+.acb-mu-left{border-left:3px solid var(--ac);padding-left:14px;}
+.acb-mu-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ac);margin-bottom:8px;}
+.acb-mu-body{font-size:.83rem;color:rgba(255,255,255,.8);line-height:1.6;}
+.acb-mu-right{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:4px;padding:14px;}
+.acb-mu-pill{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:rgba(var(--ar),.15);color:var(--ac);border-radius:2px;padding:3px 8px;margin-bottom:8px;}
+.acb-mu-label{font-family:'Barlow Condensed',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:3px;}
+.acb-mu-val{font-family:'Bebas Neue',sans-serif;font-size:.9rem;color:rgba(255,255,255,.8);margin-bottom:8px;}
+
+/* ── READABILITY BOOST ── */
+.hero-sub{color:rgba(255,255,255,.9) !important;font-size:1rem;}
+.acb-mu-body{color:rgba(255,255,255,.85);}
+.acb-updates-text{color:rgba(255,255,255,.85);}
+
+/* ── HERO & BADGES ── */
+body{background:#0a0a0a;}
+.acb-breadcrumb{font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.38);padding:0 24px;margin-bottom:12px;}
+.acb-breadcrumb a{color:rgba(255,255,255,.38);text-decoration:none;}.acb-breadcrumb a:hover{color:rgba(255,255,255,.7);}
+.acb-hero-wrap{padding:0 24px 24px;}
+.acb-badges{display:flex;gap:8px;margin-bottom:10px;}
+.acb-badge-author,.acb-badge-date{font-family:'Barlow Condensed',sans-serif;font-size:.63rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:2px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.5);}
+.acb-hero-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--ac);margin-bottom:8px;}
+.acb-hero-h1{font-family:'Bebas Neue',sans-serif;font-size:3.2rem;letter-spacing:.04em;line-height:1;color:#fff;margin:0 0 10px;}
+.acb-hero-sub{font-family:'Barlow',sans-serif;font-size:.95rem;color:rgba(255,255,255,.72);line-height:1.55;margin-bottom:22px;max-width:680px;}
+/* ── HERO SNAP STATS ── */
+.acb-snap-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-top:16px;}
+.acb-snap-box{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:3px;padding:16px 20px;transition:background .2s;}
+.acb-snap-box:hover{background:rgba(255,255,255,.07);}
+.acb-snap-v{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;line-height:1;color:#fff;margin-bottom:4px;}
+.acb-snap-l{font-family:'Barlow Condensed',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.4);}
+
+/* ── UPDATE BLOCKS ── */
+.acb-update-block{margin-bottom:12px;padding:10px 14px;background:rgba(255,255,255,.025);border-radius:3px;border-left:2px solid rgba(var(--ar),.4);}
+.acb-update-title{font-family:'Barlow Condensed',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.78);margin-bottom:4px;}
+.acb-update-body{font-family:'Barlow',sans-serif;font-size:.82rem;color:rgba(255,255,255,.65);line-height:1.55;}
+/* ── DATA STATUS CARD ── */
+.acb-mu-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-left:3px solid var(--ac);border-radius:3px;padding:16px;}
+.acb-mu-card-badge{font-family:'Barlow Condensed',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ac);margin-bottom:12px;}
+.acb-mu-stat-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.05);}
+.acb-mu-stat-row:last-child{border-bottom:none;}
+.acb-mu-stat-label{font-family:'Barlow Condensed',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.38);}
+.acb-mu-stat-value{font-family:'Barlow Condensed',sans-serif;font-size:.78rem;font-weight:700;color:rgba(255,255,255,.85);}
+
+
+
+body{background-color:#131416;background-image:repeating-linear-gradient(0deg,transparent 0px,transparent 3px,rgba(255,255,255,.018) 3px,rgba(255,255,255,.018) 4px),linear-gradient(150deg,#191b1e 0%,#111315 35%,#1a1c1f 60%,#0f1113 100%);color:rgba(255,255,255,.8);font-family:'Barlow',sans-serif;line-height:1.75;margin:0;overflow-x:hidden;}body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 100% 22% at 50% 0%,rgba(210,220,230,.05) 0%,transparent 100%),linear-gradient(90deg,rgba(0,0,0,.14) 0%,transparent 6%,transparent 94%,rgba(0,0,0,.14) 100%);pointer-events:none;z-index:0;}
+/* HERO */
+.art-hero{margin-top:58px;padding:70px 0 52px;position:relative;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.07);}
+.art-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(var(--ar),.04) 1px,transparent 1px),linear-gradient(90deg,rgba(var(--ar),.04) 1px,transparent 1px);background-size:52px 52px;pointer-events:none;}
+.art-hero-inner{max-width:900px;margin:0 auto;padding:0 28px;position:relative;z-index:1;}
+.art-crumb{font-family:'Barlow Condensed',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:18px;}
+.art-crumb a{color:rgba(255,255,255,.3);text-decoration:none;transition:color .2s;}.art-crumb a:hover{color:var(--ac);}
+.art-cat{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--ac);background:rgba(var(--ar),.1);border:1px solid rgba(var(--ar),.28);padding:4px 11px;border-radius:2px;margin-bottom:16px;}
+.art-h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.2rem,6vw,4.2rem);letter-spacing:.03em;line-height:1.02;color:#fff;margin:0 0 18px;}
+.art-sub{font-size:.97rem;color:rgba(255,255,255,.58);line-height:1.68;max-width:700px;margin:0 0 26px;}
+.art-meta{display:flex;flex-wrap:wrap;gap:10px;}
+.art-badge{font-family:'Barlow Condensed',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.36);background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);padding:4px 10px;border-radius:2px;}
+/* LAYOUT */
+.art-outer{max-width:900px;margin:0 auto;padding:52px 28px 96px;display:grid;grid-template-columns:1fr 230px;gap:56px;align-items:start;}
+@media(max-width:780px){.art-outer{grid-template-columns:1fr;}.art-sidebar{display:none;}}
+/* CONTENT */
+.art-content h2{font-family:'Bebas Neue',sans-serif;font-size:1.9rem;letter-spacing:.04em;color:#fff;margin:52px 0 14px;padding-top:6px;border-top:1px solid rgba(255,255,255,.07);}
+.art-content h2:first-of-type{margin-top:0;border-top:none;}
+.art-content h3{font-family:'Barlow Condensed',sans-serif;font-size:.9rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.6);margin:28px 0 10px;}
+.art-content p{margin:0 0 17px;font-size:.92rem;color:rgba(255,255,255,.7);line-height:1.82;}
+.art-content ul,.art-content ol{margin:0 0 18px;padding-left:22px;}
+.art-content li{font-size:.91rem;color:rgba(255,255,255,.66);line-height:1.74;margin-bottom:6px;}
+.art-content a{color:var(--ac);text-decoration:none;border-bottom:1px solid rgba(var(--ar),.22);transition:border-color .2s;}.art-content a:hover{border-bottom-color:var(--ac);}
+.art-content strong{color:rgba(255,255,255,.9);}
+.art-content em{color:rgba(255,255,255,.75);font-style:italic;}
+/* CALLOUT */
+.callout{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-left:3px solid var(--ac);border-radius:3px;padding:16px 22px;margin:24px 0;}
+.callout-label{font-family:'Barlow Condensed',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ac);margin-bottom:8px;}
+.callout p{margin:0;font-size:.88rem;color:rgba(255,255,255,.66);}
+/* TABLE */
+.data-table{width:100%;border-collapse:collapse;margin:22px 0;font-size:.85rem;display:block;overflow-x:auto;}
+.data-table th{text-align:left;padding:9px 13px;font-family:'Barlow Condensed',sans-serif;font-size:.59rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.34);border-bottom:1px solid rgba(255,255,255,.1);white-space:nowrap;background:rgba(255,255,255,.025);}
+.data-table td{padding:10px 13px;border-bottom:1px solid rgba(255,255,255,.055);color:rgba(255,255,255,.68);vertical-align:top;}
+.data-table tr:last-child td{border-bottom:none;}
+.data-table tr:hover td{background:rgba(255,255,255,.02);}
+.td-n{font-family:'Barlow Condensed',sans-serif;font-size:.92rem;font-weight:700;color:#fff;letter-spacing:.02em;}
+.td-good{color:#2DB37A;font-weight:600;}
+.td-warn{color:#F5A623;font-weight:600;}
+.td-bad{color:#E35050;font-weight:600;}
+.tbl-note{font-size:.72rem;color:rgba(255,255,255,.28);margin-top:8px;display:block;}
+/* PICK CARDS */
+.picks{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin:24px 0;}
+.pick{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:4px;padding:20px;transition:border-color .2s;}
+.pick:hover{border-color:rgba(var(--ar),.4);}
+.pick-n{font-family:'Bebas Neue',sans-serif;font-size:2.4rem;color:rgba(var(--ar),.25);line-height:1;margin-bottom:2px;}
+.pick-name{font-family:'Bebas Neue',sans-serif;font-size:1.25rem;letter-spacing:.04em;color:#fff;margin-bottom:4px;}
+.pick-name a{color:inherit;border-bottom:none;}.pick-name a:hover{color:var(--ac);}
+.pick-tag{font-family:'Barlow Condensed',sans-serif;font-size:.63rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--ac);margin-bottom:10px;}
+.pick-desc{font-size:.83rem;color:rgba(255,255,255,.56);line-height:1.65;}
+/* STAT BOXES */
+.stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:11px;margin:24px 0;}
+.stat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:16px;text-align:center;}
+.stat-v{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;color:#fff;line-height:1;}
+.stat-l{font-family:'Barlow Condensed',sans-serif;font-size:.56rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.32);margin-top:5px;}
+/* TOC */
+.toc{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:3px;padding:18px 22px;margin:0 0 38px;}
+.toc-title{font-family:'Barlow Condensed',sans-serif;font-size:.59rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:10px;}
+.toc ol{margin:0;padding-left:20px;}.toc li{font-size:.84rem;color:rgba(255,255,255,.46);margin-bottom:5px;}
+.toc a{color:rgba(255,255,255,.46);text-decoration:none;border-bottom:none;transition:color .2s;}.toc a:hover{color:var(--ac);}
+/* SIDEBAR */
+.art-sidebar{position:sticky;top:120px;}
+.s-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:4px;padding:18px;margin-bottom:14px;}
+.s-title{font-family:'Barlow Condensed',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:11px;}
+.s-card a{display:block;font-family:'Barlow Condensed',sans-serif;font-size:.83rem;font-weight:700;letter-spacing:.02em;color:rgba(255,255,255,.55);text-decoration:none;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05);transition:color .2s;}
+.s-card a:last-child{border-bottom:none;}.s-card a:hover{color:var(--ac);}
+/* SOURCES */
+.sources{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:3px;padding:18px 22px;margin-top:48px;}
+.sources-title{font-family:'Barlow Condensed',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.26);margin-bottom:10px;}
+.sources ul{margin:0;padding:0;list-style:none;}
+.sources li{font-size:.76rem;color:rgba(255,255,255,.33);margin-bottom:5px;padding-left:14px;position:relative;line-height:1.55;}
+.sources li::before{content:'↗';position:absolute;left:0;color:rgba(var(--ar),.45);}
+/* DISCLAIMER */
+.disclaimer{font-size:.7rem;color:rgba(255,255,255,.24);line-height:1.68;margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.06);}
+
+:root{--ac:#8B1C2C;--ar:139,28,44;}
+.art-hero{background:linear-gradient(155deg,#0d0505 0%,#150606 55%,#1a0808 100%);}
+</style>
+</head>
+<body>
+<div id="acb-disc-bar" role="note" aria-live="polite" aria-label="Site disclosure and disclaimer" aria-atomic="true"
+  style="background:#0d0d0d;border-bottom:2px solid #C8102E;padding:9px 24px 9px 20px;display:flex;align-items:flex-start;justify-content:space-between;gap:14px;z-index:9998;position:relative;">
+  <div style="display:flex;gap:10px;flex:1;min-width:0;align-items:flex-start;">
+    <span style="color:#C8102E;font-size:.9rem;flex-shrink:0;margin-top:2px;">&#x24D8;</span>
+    <p style="margin:0;font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.03em;color:rgba(255,255,255,.55);line-height:1.6;">
+      <strong style="color:#C8102E;text-transform:uppercase;letter-spacing:.1em;font-size:.6rem;">Disclosure &amp; Disclaimer&ensp;—&ensp;</strong>
+      <strong style="color:rgba(255,255,255,.8);">Independent, unofficial editorial research site</strong> — not affiliated with, endorsed by, or sponsored by any automotive manufacturer.
+      &ensp;Displays <strong style="color:rgba(255,255,255,.8);">Google AdSense</strong> ads &bull; uses <strong style="color:rgba(255,255,255,.8);">Google Analytics</strong> &bull; participates in <strong style="color:rgba(255,255,255,.8);">affiliate marketing</strong> (commissions from qualifying clicks/purchases at no extra cost to you).
+      &ensp;All brand names and trademarks belong to their owners — used for editorial identification only.
+      &ensp;<strong style="color:rgba(255,255,255,.8);">Not financial, investment, insurance, or purchasing advice.</strong>
+      &ensp;<a href="disclaimer.html" style="color:#C8102E;text-decoration:none;font-weight:700;">Disclaimer</a>
+    <a href="copyright.html">Copyright</a>
+      &ensp;<a href="affiliate-disclosure.html" style="color:rgba(255,255,255,.32);text-decoration:none;">Affiliates</a>
+      <a href="privacy-policy.html#do-not-sell">Do Not Sell or Share My Info</a>
+      <a href="privacy-policy.html#limit-spi">Limit Use of My Sensitive Personal Information</a>
+      &ensp;<a href="privacy-policy.html" style="color:rgba(255,255,255,.32);text-decoration:none;">Privacy</a>
+    </p>
+  </div>
+  <button onclick="(function(){try{localStorage.setItem('acb_disc','1');}catch(e){}document.getElementById('acb-disc-bar').style.display='none';})()"
+    style="flex-shrink:0;background:transparent;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.32);font-size:.58rem;font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:.1em;padding:3px 9px;cursor:pointer;border-radius:2px;margin-top:1px;white-space:nowrap;">DISMISS &#x00D7;</button>
+</div>
+<nav class="site-nav">
+  <div class="site-nav-inner">
+
+    <!-- LEFT: Identity + Logo -->
+    <a href="index.html" class="nav-identity">
+      <span class="nav-identity-sub">Independent Automotive Intelligence</span>
+      <span class="nav-identity-logo">AMERICAN<span>CAR</span>BRANDS</span>
+    </a>
+
+    <!-- CENTER: Nav items -->
+    <div class="nav-items" id="navItems">
+
+      <div class="nav-item" id="ni-brands">
+        <a href="index.html" class="nav-allbrands">All Brands</a>
+      </div>
+
+      <div class="nav-item" id="ni-models">
+        <button class="nav-item-btn" onclick="navToggle('ni-models')">Models <span class="nav-arrow">▼</span></button>
+        <div class="nav-dropdown">
+          <div class="nav-drop-section">
+            <div class="nav-drop-label">By Body Type</div>
+            <a href="ford-f150.html" class="nav-drop-link"><span class="ddi">🛻</span>Trucks</a>
+            <a href="ford-explorer.html" class="nav-drop-link"><span class="ddi">🚙</span>SUVs &amp; Crossovers</a>
+            <a href="ford-mustang.html" class="nav-drop-link"><span class="ddi">🏎</span>Sports &amp; Performance</a>
+            <div class="nav-drop-divider"></div>
+            <div class="nav-drop-label">By Powertrain</div>
+            <a href="ford-f150-lightning.html" class="nav-drop-link"><span class="ddi">⚡</span>Electric Vehicles (EVs)</a>
+            <a href="ford-f150.html" class="nav-drop-link"><span class="ddi">⛽</span>ICE &amp; Hybrid</a>
+            <div class="nav-drop-divider"></div>
+            <div class="nav-drop-label">By Status</div>
+            <a href="active-american-car-brands.html" class="nav-drop-link"><span class="ddi">✅</span>Current Models</a>
+            <a href="defunct-american-car-brands.html" class="nav-drop-link"><span class="ddi">📚</span>Discontinued Models</a>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="nav-item" id="ni-tools">
+        <button class="nav-item-btn" onclick="navToggle('ni-tools')">Tools <span class="nav-arrow">▼</span></button>
+        <div class="nav-dropdown">
+          <div class="nav-drop-section">
+            <div class="nav-drop-label">Ownership Calculators</div>
+            <a href="ford-f150.html#cost-calc-sec" class="nav-drop-link"><span class="ddi">💰</span>Total Cost Calculator</a>
+            <a href="insurance-quote.html" class="nav-drop-link"><span class="ddi">🔍</span>Insurance Risk Estimator</a>
+            <a href="ford.html#reliability" class="nav-drop-link"><span class="ddi">📉</span>Depreciation Simulator</a>
+            <div class="nav-drop-divider"></div>
+            <div class="nav-drop-label">Analysis Tools</div>
+            <a href="ford.html#reliability" class="nav-drop-link"><span class="ddi">⭐</span>Reliability Score Engine</a>
+            <a href="ford-f150.html#compare-tool" class="nav-drop-link"><span class="ddi">🔄</span>Model Comparison Tool</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-item" id="ni-rankings">
+        <button class="nav-item-btn" onclick="navToggle('ni-rankings')">Rankings <span class="nav-arrow">▼</span></button>
+        <div class="nav-dropdown">
+          <div class="nav-drop-section">
+            <div class="nav-drop-label">By Ownership Metric</div>
+            <a href="ford.html#reliability" class="nav-drop-link"><span class="ddi">🏆</span>Most Reliable Models</a>
+            <a href="insurance-quote.html" class="nav-drop-link"><span class="ddi">🛡</span>Cheapest to Insure</a>
+            <a href="ford.html#reliability" class="nav-drop-link"><span class="ddi">📈</span>Best Resale Value</a>
+            <a href="ford-f150.html#cost-calc-sec" class="nav-drop-link"><span class="ddi">📅</span>Lowest 5-Year Cost</a>
+            <a href="ford.html#reliability" class="nav-drop-link"><span class="ddi">🔧</span>Most Expensive to Maintain</a>
+          </div>
+        </div>
+      </div>
+
+      
+
+    </div><!-- /nav-items -->
+
+    <!-- RIGHT: Search + Mobile toggle -->
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div class="nav-search" id="navSearch">
+        <input type="text" class="nav-search-input" id="navSearchInput" placeholder="Search models, brands…" 
+               oninput="navSearch(this.value)" onblur="setTimeout(()=>document.getElementById('navSR').classList.remove('show'),200)">
+        <span class="nav-search-icon">🔎</span>
+        <div class="nav-search-results" id="navSR"></div>
+      </div>
+      <button class="nav-mobile-toggle" onclick="document.getElementById('navItems').classList.toggle('open')">☰</button>
+    </div>
+
+  </div>
+</nav>
+<div class="art-hero">
+  <div class="art-hero-inner">
+    <div class="art-crumb"><a href="index.html">Home</a> &rsaquo; <a href="index.html">Research</a> &rsaquo; Reliability</div>
+    <div class="art-cat">Reliability</div>
+    <h1 class="art-h1">Are American Cars Reliable?</h1>
+    <p class="art-sub">The honest, data-grounded answer — where American brands have genuinely improved and where gaps remain.</p>
+    <div class="art-meta">
+      <span class="art-badge">&#x270D; Automotive Research Team</span>
+      <span class="art-badge">&#x1F554; March 2026</span>
+      <span class="art-badge">&#x1F4CB; Independent Editorial</span>
+    </div>
+  </div>
+</div>
+<div class="art-outer">
+  <div class="art-content">
+
+<div class="toc"><div class="toc-title">Contents</div><ol>
+<li><a href="#short">The short answer</a></li>
+<li><a href="#history">How we got here</a></li>
+<li><a href="#today">Where each brand stands today</a></li>
+<li><a href="#data">What the data shows</a></li>
+<li><a href="#nuance">The nuance most comparisons skip</a></li>
+<li><a href="#verdict">Bottom line</a></li>
+</ol></div>
+
+<h2 id="short">The Short Answer</h2>
+<p>It depends on the brand, the model, and the model year — and anyone who gives you a simpler answer than that is leaving out the part that actually matters. American brands are not uniformly reliable, and they're not uniformly unreliable. The reality in 2026 is considerably more complicated, and more positive, than the reputation that was baked in during the 1980s and 1990s.</p>
+<p>The broad version: reliability from American automakers has improved meaningfully over the past two decades. Some models from <a href="ford.html">Ford</a>, <a href="chevrolet.html">Chevrolet</a>, <a href="buick.html">Buick</a>, and <a href="ram.html">RAM</a> score consistently well in third-party studies. Others — particularly from <a href="jeep.html">Jeep</a> and <a href="dodge.html">Dodge</a> — lag behind comparable vehicles. The significant reliability gap that existed between American and certain non-US brands in earlier decades has narrowed. It hasn't uniformly closed.</p>
+
+<div class="stat-row">
+<div class="stat"><div class="stat-v">3+</div><div class="stat-l">American brands in upper half of J.D. Power VDS brand rankings (2024)</div></div>
+<div class="stat"><div class="stat-v">~20yr</div><div class="stat-l">Timeframe over which the reliability gap has meaningfully narrowed</div></div>
+<div class="stat"><div class="stat-v">#1</div><div class="stat-l">Buick: highest-ranked domestic brand in several recent J.D. Power cycles</div></div>
+</div>
+
+<h2 id="history">How We Got Here</h2>
+<p>The reliability reputation of American automakers suffered its most significant damage in the late 1970s and 1980s. That era produced genuinely troubled vehicles — the result of rapid design changes under financial pressure, emissions regulations that were implemented hastily enough to hurt driveability and durability, and an industry that hadn't fully internalized the quality-first approach being demonstrated by Japanese competitors entering the US market.</p>
+<p>The gap was real and measurable. Consumer Reports data from that period documented consistent quality advantages for certain Japanese brands in long-term reliability categories. American automakers were aware of the problem. The 1990s and 2000s were defined, inside the Big Three, by significant quality initiatives — Ford's "Quality is Job 1" wasn't just marketing, it reflected an internal reckoning. GM invested heavily in statistical quality control methods. Chrysler went through restructuring that forced operational discipline.</p>
+<p>Results take time to show up in reliability data, which typically lags real-world production by three to five years. By the mid-2010s, multiple American models had achieved segment parity or better. The 2019&ndash;2022 period introduced new noise into the data, as pandemic-related supply chain disruptions affected production quality across the industry — American and non-American brands alike. That period's data is still being normalized out of longer-term trend analyses.</p>
+
+<h2 id="today">Where Each Brand Stands Today</h2>
+<h3><a href="chevrolet.html">Chevrolet</a> and <a href="gmc.html">GMC</a></h3>
+<p>Chevrolet and its corporate sibling GMC have posted some of the stronger results among American brands in recent J.D. Power VDS data. The <a href="chevrolet-silverado.html">Silverado</a> and <a href="chevrolet-tahoe.html">Tahoe</a> platforms — available with naturally aspirated V8 options that have deep field histories — stand out. GM's newer turbocharged engines have a shorter track record and somewhat more mixed early data. Infotainment systems have been a recurring weak point across much of the industry, GM included, though recent-generation systems have improved.</p>
+<h3><a href="buick.html">Buick</a></h3>
+<p>Buick is worth specific mention. In several recent J.D. Power VDS cycles, Buick has ranked as the highest or second-highest American brand, occasionally reaching the top three overall. It's an under-discussed data point, likely because Buick's profile in American car culture is quieter than its reliability performance warrants.</p>
+<h3><a href="ford.html">Ford</a></h3>
+<p>Ford's reliability picture is genuinely segment-dependent. The <a href="ford-f150.html">F-150</a> — particularly in V8 or mature EcoBoost configurations — has maintained respectable dependability. Ford's crossovers and SUVs have shown more variability, with the Explorer's platform transition years producing elevated issue rates that have since improved. Ford's technology-heavy systems (SYNC infotainment, driver assistance features) have been recurring subjects in owner-reported problem data.</p>
+<h3><a href="ram.html">RAM</a></h3>
+<p><a href="ram.html">RAM</a> trucks have risen considerably in J.D. Power truck segment scores over the past decade, with interior quality and ride comfort cited as consistent strengths. The data suggests RAM has closed much of the gap with <a href="ford.html">Ford</a> and <a href="chevrolet.html">Chevrolet</a> that existed in earlier generations.</p>
+<h3><a href="jeep.html">Jeep</a> and <a href="dodge.html">Dodge</a></h3>
+<p>These two brands have generally scored below average in reliability studies, and the gap is real enough to flag honestly. <a href="jeep.html">Jeep</a>'s situation is nuanced — the <a href="jeep-wrangler.html">Wrangler</a>'s scores partly reflect the nature of a purpose-built off-road vehicle being assessed against car-centric reliability criteria. The <a href="jeep-grand-cherokee.html">Grand Cherokee</a> has had more mixed data independent of that context. <a href="dodge.html">Dodge</a>'s performance models deliver what they promise in performance terms, but long-term dependability data has been less consistent.</p>
+
+<h2 id="data">What the Data Shows</h2>
+<table class="data-table">
+<thead><tr><th>Brand</th><th>General VDS Trend (2021&ndash;2024)</th><th>Strongest Area</th><th>Most-Cited Issues</th></tr></thead>
+<tbody>
+<tr><td class="td-n"><a href="buick.html">Buick</a></td><td class="td-good">Consistently strong</td><td>Crossovers</td><td>Relatively few in recent cycles</td></tr>
+<tr><td class="td-n"><a href="chevrolet.html">Chevrolet</a></td><td class="td-good">Above average</td><td>Full-size trucks/SUVs</td><td>Infotainment, newer turbo engines</td></tr>
+<tr><td class="td-n"><a href="gmc.html">GMC</a></td><td class="td-good">Above average</td><td>Trucks</td><td>Technology system complexity</td></tr>
+<tr><td class="td-n"><a href="ram.html">RAM</a></td><td class="td-good">Improving trend</td><td>Full-size trucks</td><td>Diesel powertrain longevity (mixed)</td></tr>
+<tr><td class="td-n"><a href="ford.html">Ford</a></td><td class="td-warn">Mixed / model-dependent</td><td>Trucks, commercial</td><td>Infotainment, crossover consistency</td></tr>
+<tr><td class="td-n"><a href="lincoln.html">Lincoln</a></td><td class="td-warn">Average&ndash;above average</td><td>Luxury crossovers</td><td>Newer model initial quality</td></tr>
+<tr><td class="td-n"><a href="jeep.html">Jeep</a></td><td class="td-bad">Below average</td><td>&mdash;</td><td>Wrangler long-term, electrical</td></tr>
+<tr><td class="td-n"><a href="dodge.html">Dodge</a></td><td class="td-bad">Below average</td><td>Performance specs</td><td>Long-term ownership consistency</td></tr>
+</tbody>
+</table>
+<span class="tbl-note">Trend ratings are directional, based on analysis of publicly available J.D. Power VDS segment data and Consumer Reports reliability surveys (2021&ndash;2024 cycles). Not a verbatim score quotation from any single study.</span>
+
+<h2 id="nuance">The Nuance Most Comparisons Skip</h2>
+<p>The most common framing — American cars versus Japanese cars — obscures more than it reveals at this point. Many vehicles sold under American brand names are assembled in the United States. Many vehicles sold under Japanese brand names are also assembled in the United States. The relationship between corporate headquarters nationality and manufacturing quality is not direct or simple.</p>
+<p>More importantly, <em>segment matters more than brand origin</em> in most reliability analyses. Full-size truck reliability trends are different from compact crossover trends, which are different from performance car trends. A comparison of Tahoe to Civic illuminates almost nothing useful about reliability.</p>
+<p>Individual model years matter too — probably more than most buyers realize. A vehicle entering its first model year on a new platform is a fundamentally different reliability proposition than the same vehicle in its third or fourth production year after early issues have been resolved. Buying a first-year redesign carries statistical risk that buys a mature model does not.</p>
+
+<div class="callout"><div class="callout-label">Practical Rule of Thumb</div><p>Research the specific model <em>and</em> model year you're considering. A vehicle that was below-average in its first year often improves substantially by year three. Check model-specific data on Consumer Reports and J.D. Power, not just brand-level averages.</p></div>
+
+<h2 id="verdict">Bottom Line</h2>
+<p>American cars are, broadly speaking, more reliable today than they were in the decades that shaped the prevailing reputation. The gap that was stark in the 1980s has narrowed to the point where several American models and brands compete at or above segment averages. But the answer to "are American cars reliable?" is still really "which one, which year, and compared to what?"</p>
+<p>For buyers considering American brands: stick to well-established models on platforms with multi-year production histories, check NHTSA recall history on any specific VIN, and treat first-year redesigns as early-adopter purchases with attendant risk. The work has been done to earn more confidence than the old reputation allows — but not unconditional confidence.</p>
+
+    <div class="sources"><div class="sources-title">Sources &amp; References</div><ul><li>J.D. Power 2024 Vehicle Dependability Study &mdash; jdpower.com</li><li>Consumer Reports Annual Auto Reliability Survey &mdash; consumerreports.org</li><li>NHTSA recall database &mdash; nhtsa.dot.gov</li><li>U.S. new vehicle buyer priorities research &mdash; Cox Automotive 2024 Car Buyer Journey Study</li><li>Ford "Quality is Job 1" campaign history &mdash; Ford Motor Company media archives</li><li>GM quality programs, 1990s&ndash;2000s &mdash; GM Corporate News Archives</li><li>Buick J.D. Power VDS historical performance &mdash; jdpower.com press releases</li><li>Consumer Reports: how reliability is measured &mdash; consumerreports.org/about</li></ul></div>
+<p class="disclaimer">&#9432; AmericanCarBrands.com is an independent editorial research publication &mdash; not affiliated with, endorsed by, or sponsored by any vehicle manufacturer. All brand names, model names, and trademarks referenced are the property of their respective owners, used here solely for editorial identification and research purposes. Pricing figures represent publicly available estimates as of March 2026 and are subject to change; always confirm current pricing and availability at the manufacturer&rsquo;s official website before making any purchase decision. Reliability data is sourced from publicly available studies including J.D. Power Vehicle Dependability Study and Consumer Reports annual reliability surveys, and NHTSA public recall databases, except where otherwise noted. Historical production and sales data sourced from manufacturer public records and industry research. This content does not constitute financial, legal, or purchasing advice.</p>
+  </div>
+  <div class="art-sidebar">
+<div class="s-card"><div class="s-title">Brand Research</div>
+<a href="chevrolet.html">Chevrolet</a>
+<a href="buick.html">Buick</a>
+<a href="ford.html">Ford</a>
+<a href="ram.html">RAM</a>
+<a href="jeep.html">Jeep</a>
+<a href="dodge.html">Dodge</a>
+<a href="lincoln.html">Lincoln</a>
+<a href="gmc.html">GMC</a>
+</div>
+<div class="s-card"><div class="s-title">Related Articles</div>
+<a href="most-reliable-american-suvs.html">Most Reliable American SUVs</a>
+<a href="chevy-vs-ford-reliability.html">Chevy vs Ford Reliability</a>
+<a href="best-american-cars-under-30k.html">Best Cars Under $30k</a>
+</div></div>
+</div>
+<footer>
+  <div class="ft-in">
+    <a href="index.html" class="ft-logo">AMERICAN<span>CAR</span>BRANDS</a>
+    <div class="ft-links">
+      <a href="index.html">All Brands</a>
+      <a href="active-american-car-brands.html">Active Brands</a>
+      <a href="defunct-american-car-brands.html">Defunct Brands</a>
+      <a href="complete-database.html">Full Database</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="editorial-policy.html">Editorial Policy</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-use.html">Terms</a>
+    </div>
+  </div>
+  <div class="ft-canonical">
+    <p class="ft-copy-main">&copy; 2026 AmericanCarBrands.com &nbsp; Independent Automotive Ownership Intelligence.</p>
+    <p class="ft-copy-body">AmericanCarBrands.com is an independent automotive research and ownership intelligence platform. We are not affiliated with, endorsed by, or sponsored by any automotive manufacturer, dealership group, broker, or insurance provider.</p>
+    <p class="ft-copy-body">All vehicle brand names and trademarks are the property of their respective owners and are referenced for editorial and informational purposes only.</p>
+    <p class="ft-copy-body">We do not facilitate vehicle sales, insurance transactions, or dealer matchmaking.</p>
+    <p class="ft-copy-links">View our &nbsp;<a href="disclaimer.html">Disclaimer</a> &nbsp;&middot;&nbsp; <a href="editorial-policy.html">Editorial Policy</a> &nbsp;&middot;&nbsp; <a href="privacy-policy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="terms-of-use.html">Terms</a></p>
+  </div>
+
+  <!-- Legal Footer Grid -->
+  <div style="padding:22px 40px 32px;border-top:1px solid rgba(255,255,255,.05);">
+    <p style="font-family:'Barlow Condensed',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.2);margin-bottom:12px;">
+      &copy; 2026 AmericanCarBrands.com &mdash; Independent Automotive Research &mdash; Not affiliated with any manufacturer
+    </p>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,.04);margin-bottom:14px;">
+      <div style="background:#0d0d0d;padding:12px 16px;">
+        <p style="font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:4px;font-family:'Barlow Condensed',sans-serif;">&#x24D8; Independence &amp; Advertising</p>
+        <p style="font-size:.64rem;color:rgba(255,255,255,.26);line-height:1.65;margin:0;">Independent editorial site — not affiliated with any manufacturer. Revenue from <strong style="color:rgba(255,255,255,.4);">Google AdSense</strong> and <strong style="color:rgba(255,255,255,.4);">affiliate marketing</strong>. Per FTC 16 CFR §255, affiliate links are disclosed — commission earned at no cost to you. Affiliate relationships do not influence editorial content. <a href="affiliate-disclosure.html" style="color:#C8102E;text-decoration:none;">Affiliate Disclosure →</a></p>
+      </div>
+      <div style="background:#0d0d0d;padding:12px 16px;">
+        <p style="font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:4px;font-family:'Barlow Condensed',sans-serif;">™ Trademarks &amp; Data</p>
+        <p style="font-size:.64rem;color:rgba(255,255,255,.26);line-height:1.65;margin:0;">All brand names and trademarks referenced on this site belong to their respective owners and are used solely for <strong style="color:rgba(255,255,255,.4);">editorial identification</strong> under nominative fair use. All financial figures, reliability data, and statistics are independently compiled editorial estimates — not licensed data. Verify at primary sources before making decisions. No affiliation. No sponsorship. Brand names and trademarks are used solely to identify the products and companies being discussed — not to imply any official relationship.</p>
+      </div>
+      <div style="background:#0d0d0d;padding:12px 16px;">
+        <p style="font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:4px;font-family:'Barlow Condensed',sans-serif;">⚠ Not Professional Advice</p>
+        <p style="font-size:.64rem;color:rgba(255,255,255,.26);line-height:1.65;margin:0;"><strong style="color:rgba(255,255,255,.4);">Nothing on this site is financial, investment, insurance, legal, or vehicle purchasing advice.</strong> Stock tickers are shown for reference only. Insurance figures are editorial estimates — always get quotes from licensed insurers. We are not a licensed adviser, broker, or dealer.</p>
+      </div>
+      <div style="background:#0d0d0d;padding:12px 16px;">
+        <p style="font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:4px;font-family:'Barlow Condensed',sans-serif;">🛡 Analytics &amp; Privacy</p>
+        <p style="font-size:.64rem;color:rgba(255,255,255,.26);line-height:1.65;margin:0;">Uses <strong style="color:rgba(255,255,255,.4);">Google Analytics</strong> (anonymized) and <strong style="color:rgba(255,255,255,.4);">Google AdSense</strong> (contextual ads). Both may set cookies per Google's privacy policies. Affiliate links may set tracking cookies. We do not sell personal data. <a href="privacy-policy.html" style="color:#C8102E;text-decoration:none;">Privacy Policy →</a></p>
+      </div>
+    </div>
+    <p style="font-size:.6rem;color:rgba(255,255,255,.18);line-height:1.55;">We do not facilitate vehicle sales, dealer referrals, or insurance transactions.</p>
+  </div>
+</footer>
+</body>
+</html>

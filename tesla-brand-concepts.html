@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tesla Brand Page — 10 Design Concepts</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600;700&family=Barlow+Condensed:wght@400;600;700&family=DM+Serif+Display&family=Syne:wght@700;800&family=Space+Mono:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#0a0a0a;font-family:'Barlow',sans-serif;color:#fff;padding-bottom:80px;}
+
+.page-header{background:#050505;border-bottom:1px solid rgba(255,255,255,.08);padding:22px 40px;position:sticky;top:0;z-index:100;display:flex;justify-content:space-between;align-items:center;}
+.page-logo{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.06em;}
+.page-logo span{color:#E31937;}
+.page-title{font-family:'Barlow Condensed',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.35);}
+
+.intro{max-width:1100px;margin:48px auto 36px;padding:0 40px;}
+.intro h1{font-family:'Bebas Neue',sans-serif;font-size:2.4rem;letter-spacing:.04em;margin-bottom:8px;}
+.intro p{font-size:.9rem;color:rgba(255,255,255,.45);max-width:600px;line-height:1.7;}
+.legend{display:flex;gap:20px;margin-top:16px;flex-wrap:wrap;}
+.legend-item{font-family:'Barlow Condensed',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.3);background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);padding:4px 10px;border-radius:2px;}
+.legend-item.winner{color:#E31937;background:rgba(227,25,55,.08);border-color:rgba(227,25,55,.25);}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(480px,1fr));gap:3px;padding:0 3px;}
+
+/* EACH CONCEPT CARD */
+.concept{position:relative;overflow:hidden;cursor:pointer;aspect-ratio:16/9;transition:transform .3s;}
+.concept:hover{transform:scale(1.01);z-index:10;box-shadow:0 24px 80px rgba(0,0,0,.9);}
+.concept-badge{position:absolute;top:18px;left:18px;z-index:5;font-family:'Barlow Condensed',sans-serif;font-size:.55rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;background:rgba(0,0,0,.7);border:1px solid rgba(255,255,255,.15);padding:4px 10px;border-radius:2px;backdrop-filter:blur(6px);}
+.concept-num{position:absolute;top:18px;right:18px;z-index:5;font-family:'Bebas Neue',sans-serif;font-size:2.2rem;line-height:1;opacity:.18;}
+.concept-label{position:absolute;bottom:0;left:0;right:0;z-index:5;padding:18px 22px;background:linear-gradient(0deg,rgba(0,0,0,.9) 0%,transparent 100%);}
+.concept-name{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.04em;margin-bottom:3px;}
+.concept-desc{font-family:'Barlow Condensed',sans-serif;font-size:.62rem;color:rgba(255,255,255,.5);letter-spacing:.06em;}
+.winner-badge{position:absolute;top:18px;left:18px;z-index:6;font-family:'Barlow Condensed',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#E31937;background:rgba(227,25,55,.15);border:1px solid rgba(227,25,55,.4);padding:4px 10px;border-radius:2px;backdrop-filter:blur(8px);}
+
+/* ════════════════════════════════════════
+   CONCEPT 01 — MONOLITH
+   Full-bleed dark, huge type, accent line
+   ════════════════════════════════════════ */
+.c01-bg{position:absolute;inset:0;background:#050505;}
+.c01-bg::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(227,25,55,.06) 0%,transparent 50%);}
+.c01-accent{position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,transparent,#E31937,transparent);}
+.c01-content{position:absolute;inset:0;padding:28px 32px;display:flex;flex-direction:column;justify-content:space-between;}
+.c01-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:.55rem;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:rgba(227,25,55,.8);}
+.c01-name{font-family:'Bebas Neue',sans-serif;font-size:5.5rem;line-height:.88;letter-spacing:-.01em;color:#fff;}
+.c01-sub{font-family:'Barlow',sans-serif;font-size:.72rem;color:rgba(255,255,255,.3);max-width:260px;line-height:1.6;}
+.c01-models{display:flex;gap:8px;}
+.c01-m{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:4px 10px;font-family:'Barlow Condensed',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);}
+.c01-stat{display:flex;flex-direction:column;}
+.c01-stat-v{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:#E31937;}
+.c01-stat-l{font-family:'Barlow Condensed',sans-serif;font-size:.5rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.25);}
+.c01-stats{display:flex;gap:24px;}
+
+/* ════════════════════════════════════════
+   CONCEPT 02 — SPLIT IDENTITY
+   Left dark / Right accent color split
+   ════════════════════════════════════════ */
+.c02-bg{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;}
+.c02-left{background:#0a0a0a;display:flex;flex-direction:column;justify-content:center;padding:28px 28px;}
+.c02-right{background:#E31937;display:flex;flex-direction:column;justify-content:center;align-items:center;position:relative;overflow:hidden;}
+.c02-right::before{content:'TESLA';font-family:'Bebas Neue',sans-serif;font-size:8rem;color:rgba(0,0,0,.12);line-height:1;position:absolute;bottom:-20px;right:-10px;}
+.c02-brand{font-family:'Bebas Neue',sans-serif;font-size:3.5rem;letter-spacing:.04em;color:#fff;line-height:1;}
+.c02-tagline{font-family:'Barlow',sans-serif;font-size:.7rem;color:rgba(255,255,255,.4);margin-top:6px;max-width:180px;}
+.c02-models{display:flex;flex-direction:column;gap:5px;margin-top:16px;}
+.c02-model-item{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.5);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.06);}
+.c02-model-item:last-child{border-bottom:none;}
+.c02-stat-big{font-family:'Bebas Neue',sans-serif;font-size:4rem;color:#fff;line-height:1;text-align:center;}
+.c02-stat-label{font-family:'Barlow Condensed',sans-serif;font-size:.55rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.6);text-align:center;margin-top:4px;}
+
+/* ════════════════════════════════════════
+   CONCEPT 03 — EDITORIAL MAGAZINE ★ WINNER
+   ════════════════════════════════════════ */
+.c03-bg{position:absolute;inset:0;background:#f2f0eb;}
+.c03-bg::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(0,0,0,.015) 0,rgba(0,0,0,.015) 1px,transparent 1px,transparent 28px);}
+.c03-content{position:absolute;inset:0;padding:22px 26px;display:grid;grid-template-columns:1fr auto;gap:16px;align-content:start;}
+.c03-top{display:flex;align-items:center;justify-content:space-between;grid-column:1/-1;border-bottom:2px solid #111;padding-bottom:8px;margin-bottom:8px;}
+.c03-site{font-family:'Barlow Condensed',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(0,0,0,.35);}
+.c03-issue{font-family:'Barlow Condensed',sans-serif;font-size:.55rem;letter-spacing:.1em;color:rgba(0,0,0,.3);}
+.c03-h1{font-family:'Playfair Display',serif;font-size:3.8rem;line-height:.92;color:#111;font-weight:700;}
+.c03-sub{font-family:'Barlow',sans-serif;font-size:.72rem;color:rgba(0,0,0,.45);line-height:1.6;max-width:180px;margin-top:8px;}
+.c03-right-col{display:flex;flex-direction:column;gap:8px;border-left:1px solid rgba(0,0,0,.1);padding-left:16px;}
+.c03-stat-block{display:flex;flex-direction:column;}
+.c03-stat-v{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:#E31937;line-height:1;}
+.c03-stat-l{font-family:'Barlow Condensed',sans-serif;font-size:.52rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(0,0,0,.4);}
+.c03-models{display:flex;flex-wrap:wrap;gap:4px;margin-top:auto;grid-column:1/-1;}
+.c03-m{background:#111;color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.1em;padding:4px 9px;text-transform:uppercase;}
+.c03-m.red{background:#E31937;}
+
+/* ════════════════════════════════════════
+   CONCEPT 04 — GLASSMORPHISM
+   Frosted cards over mesh gradient
+   ════════════════════════════════════════ */
+.c04-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 70% at 20% 30%,#1a0505 0%,#080808 55%,#050510 100%);}
+.c04-bg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 40% at 75% 65%,rgba(227,25,55,.12),transparent);}
+.c04-content{position:absolute;inset:0;padding:24px 26px;display:flex;flex-direction:column;justify-content:space-between;}
+.c04-glass-header{background:rgba(255,255,255,.06);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:14px 18px;display:flex;align-items:center;gap:14px;}
+.c04-glass-name{font-family:'Bebas Neue',sans-serif;font-size:2.4rem;letter-spacing:.04em;color:#fff;}
+.c04-glass-sub{font-family:'Barlow',sans-serif;font-size:.68rem;color:rgba(255,255,255,.4);}
+.c04-cards{display:flex;gap:8px;}
+.c04-card{flex:1;background:rgba(255,255,255,.05);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:12px 14px;}
+.c04-card-name{font-family:'Bebas Neue',sans-serif;font-size:1rem;color:#fff;letter-spacing:.04em;}
+.c04-card-price{font-family:'Barlow Condensed',sans-serif;font-size:.6rem;font-weight:700;color:rgba(227,25,55,.9);}
+.c04-card-range{font-family:'Barlow Condensed',sans-serif;font-size:.56rem;color:rgba(255,255,255,.35);margin-top:3px;}
+
+/* ════════════════════════════════════════
+   CONCEPT 05 — CINEMATIC DARK
+   Full-bleed dark, atmospheric radial
+   ════════════════════════════════════════ */
+.c05-bg{position:absolute;inset:0;background:radial-gradient(ellipse 100% 80% at 50% 100%,#1c0000 0%,#0a0a0a 50%,#050505 100%);}
+.c05-bg::after{content:'';position:absolute;bottom:0;left:0;right:0;height:60%;background:linear-gradient(0deg,rgba(227,25,55,.05) 0%,transparent 100%);}
+.c05-content{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+.c05-wordmark{font-family:'Bebas Neue',sans-serif;font-size:6rem;letter-spacing:.12em;color:#fff;line-height:1;}
+.c05-rule{width:60px;height:2px;background:#E31937;margin:10px auto;}
+.c05-tagline{font-family:'Barlow',sans-serif;font-size:.75rem;color:rgba(255,255,255,.35);letter-spacing:.08em;margin-top:4px;}
+.c05-models{display:flex;gap:14px;margin-top:20px;}
+.c05-model{display:flex;flex-direction:column;align-items:center;gap:3px;}
+.c05-model-name{font-family:'Barlow Condensed',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);}
+.c05-model-dot{width:4px;height:4px;border-radius:50%;background:rgba(227,25,55,.6);}
+
+/* ════════════════════════════════════════
+   CONCEPT 06 — DATA DASHBOARD
+   Stats-first, brand story secondary
+   ════════════════════════════════════════ */
+.c06-bg{position:absolute;inset:0;background:#06080c;}
+.c06-bg::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(227,25,55,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(227,25,55,.04) 1px,transparent 1px);background-size:40px 40px;}
+.c06-content{position:absolute;inset:0;padding:18px 22px;display:flex;flex-direction:column;gap:10px;}
+.c06-header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(227,25,55,.2);padding-bottom:8px;}
+.c06-brand{font-family:'Space Mono',monospace;font-size:.7rem;color:rgba(227,25,55,.8);letter-spacing:.1em;}
+.c06-live{font-family:'Space Mono',monospace;font-size:.52rem;color:rgba(255,255,255,.25);}
+.c06-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}
+.c06-stat{background:rgba(227,25,55,.06);border:1px solid rgba(227,25,55,.15);border-radius:3px;padding:8px 10px;}
+.c06-stat-v{font-family:'Space Mono',monospace;font-size:1.1rem;color:#fff;}
+.c06-stat-l{font-family:'Space Mono',monospace;font-size:.44rem;color:rgba(255,255,255,.3);margin-top:3px;}
+.c06-models{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;}
+.c06-model{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:3px;padding:7px 8px;}
+.c06-model-name{font-family:'Space Mono',monospace;font-size:.52rem;color:rgba(255,255,255,.55);}
+.c06-model-price{font-family:'Space Mono',monospace;font-size:.44rem;color:rgba(227,25,55,.7);margin-top:3px;}
+
+/* ════════════════════════════════════════
+   CONCEPT 07 — SYNE BOLD TYPOGRAPHY
+   Oversized type, structural grid
+   ════════════════════════════════════════ */
+.c07-bg{position:absolute;inset:0;background:#0e0e10;}
+.c07-content{position:absolute;inset:0;padding:20px 24px;display:grid;grid-template-rows:auto 1fr auto;}
+.c07-top{display:flex;justify-content:space-between;align-items:flex-start;}
+.c07-num{font-family:'Syne',sans-serif;font-size:.6rem;font-weight:800;letter-spacing:.2em;color:rgba(255,255,255,.2);text-transform:uppercase;}
+.c07-tag{font-family:'Syne',sans-serif;font-size:.6rem;font-weight:700;color:rgba(227,25,55,.7);}
+.c07-hero-text{font-family:'Syne',sans-serif;font-size:4.5rem;font-weight:800;line-height:.9;color:#fff;letter-spacing:-.03em;align-self:center;}
+.c07-hero-text em{color:#E31937;font-style:normal;}
+.c07-bottom{display:flex;justify-content:space-between;align-items:flex-end;}
+.c07-models{display:flex;gap:10px;}
+.c07-m{font-family:'Syne',sans-serif;font-size:.65rem;font-weight:700;color:rgba(255,255,255,.35);padding-bottom:3px;border-bottom:2px solid transparent;}
+.c07-m.act{color:#fff;border-bottom-color:#E31937;}
+.c07-cta{font-family:'Syne',sans-serif;font-size:.62rem;font-weight:800;color:#E31937;letter-spacing:.1em;text-transform:uppercase;}
+
+/* ════════════════════════════════════════
+   CONCEPT 08 — MINIMAL WHITE SPACE
+   Clean white theme, surgical precision
+   ════════════════════════════════════════ */
+.c08-bg{position:absolute;inset:0;background:#fafaf8;}
+.c08-content{position:absolute;inset:0;padding:24px 28px;display:flex;flex-direction:column;}
+.c08-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;}
+.c08-logo{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.1em;color:#111;}
+.c08-nav{display:flex;gap:14px;}
+.c08-nav-item{font-family:'Barlow Condensed',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,0,0,.3);}
+.c08-hero{flex:1;display:flex;flex-direction:column;justify-content:center;}
+.c08-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(227,25,55,.8);margin-bottom:8px;}
+.c08-h1{font-family:'DM Serif Display',serif;font-size:3.2rem;line-height:1;color:#111;font-weight:400;}
+.c08-sub{font-family:'Barlow',sans-serif;font-size:.75rem;color:rgba(0,0,0,.4);margin-top:8px;max-width:260px;line-height:1.65;}
+.c08-models{display:flex;gap:10px;margin-top:auto;padding-top:16px;border-top:1px solid rgba(0,0,0,.08);}
+.c08-m{display:flex;flex-direction:column;gap:2px;}
+.c08-m-name{font-family:'Barlow Condensed',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.06em;color:rgba(0,0,0,.7);}
+.c08-m-price{font-family:'Barlow Condensed',sans-serif;font-size:.56rem;color:rgba(227,25,55,.8);}
+
+/* ════════════════════════════════════════
+   CONCEPT 09 — BRUTALIST GRID
+   Raw structure, heavy borders, impact
+   ════════════════════════════════════════ */
+.c09-bg{position:absolute;inset:0;background:#e8e4dc;}
+.c09-content{position:absolute;inset:0;display:grid;grid-template-columns:3px 1fr 1fr;grid-template-rows:3px 1fr 50px;}
+.c09-red-bar-v{background:#E31937;grid-row:1/-1;}
+.c09-red-bar-h{background:#E31937;grid-column:2/-1;}
+.c09-main{padding:18px 16px;display:flex;flex-direction:column;justify-content:center;}
+.c09-h1{font-family:'Bebas Neue',sans-serif;font-size:3.8rem;line-height:.9;color:#111;letter-spacing:.02em;}
+.c09-sub{font-family:'Barlow Condensed',sans-serif;font-size:.65rem;color:rgba(0,0,0,.4);margin-top:6px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;}
+.c09-right{padding:18px 16px;border-left:3px solid #111;display:flex;flex-direction:column;justify-content:center;gap:8px;}
+.c09-stat{display:flex;flex-direction:column;}
+.c09-stat-v{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:#E31937;}
+.c09-stat-l{font-family:'Barlow Condensed',sans-serif;font-size:.52rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(0,0,0,.4);}
+.c09-bottom{grid-column:2/-1;border-top:3px solid #111;display:flex;gap:0;}
+.c09-bottom-item{flex:1;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:.85rem;letter-spacing:.08em;color:rgba(0,0,0,.5);border-right:2px solid rgba(0,0,0,.15);}
+.c09-bottom-item:last-child{border-right:none;}
+
+/* ════════════════════════════════════════
+   CONCEPT 10 — IMMERSIVE AMBIENT
+   Deep dark, subtle aurora, model cards
+   ════════════════════════════════════════ */
+.c10-bg{position:absolute;inset:0;background:#04050a;}
+.c10-bg::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 60% 40% at 20% 70%,rgba(227,25,55,.07) 0%,transparent 60%),
+  radial-gradient(ellipse 40% 30% at 80% 20%,rgba(100,100,200,.05) 0%,transparent 55%);}
+.c10-content{position:absolute;inset:0;padding:22px 26px;display:flex;flex-direction:column;justify-content:space-between;}
+.c10-top{display:flex;justify-content:space-between;align-items:flex-start;}
+.c10-brand{display:flex;flex-direction:column;}
+.c10-wordmark{font-family:'Bebas Neue',sans-serif;font-size:3rem;letter-spacing:.08em;color:#fff;}
+.c10-sub{font-family:'Barlow',sans-serif;font-size:.65rem;color:rgba(255,255,255,.28);margin-top:2px;}
+.c10-pill{font-family:'Barlow Condensed',sans-serif;font-size:.55rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(227,25,55,.8);background:rgba(227,25,55,.1);border:1px solid rgba(227,25,55,.25);padding:4px 10px;border-radius:20px;}
+.c10-cards{display:flex;gap:8px;}
+.c10-card{flex:1;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:12px 14px;transition:border-color .2s;}
+.c10-card:hover{border-color:rgba(227,25,55,.3);}
+.c10-card-name{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:#fff;letter-spacing:.04em;}
+.c10-card-range{font-family:'Barlow Condensed',sans-serif;font-size:.6rem;color:rgba(255,255,255,.35);font-weight:700;letter-spacing:.06em;margin-top:3px;}
+.c10-card-price{font-family:'Barlow Condensed',sans-serif;font-size:.6rem;color:rgba(227,25,55,.8);font-weight:700;margin-top:4px;}
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div class="page-logo">AMERICAN<span>CAR</span>BRANDS</div>
+  <div class="page-title">Tesla Brand Page — 10 Design Concepts</div>
+</div>
+
+<div class="intro">
+  <h1>Tesla Brand Page Concepts</h1>
+  <p>Ten distinct design directions. Hover any card to preview at scale. Concept 03 (Editorial Magazine) is selected as the prototype — clean, SEO-friendly semantics, premium feel, works at all screen sizes.</p>
+  <div class="legend">
+    <span class="legend-item winner">★ 03 — Selected Prototype</span>
+    <span class="legend-item">10 total concepts</span>
+    <span class="legend-item">All hover-scalable</span>
+  </div>
+</div>
+
+<div class="grid">
+
+  <!-- 01 MONOLITH -->
+  <div class="concept">
+    <div class="c01-bg"></div>
+    <div class="c01-accent"></div>
+    <div class="c01-content">
+      <div>
+        <div class="c01-eyebrow">American Car Brands &rsaquo; Electric</div>
+        <div class="c01-name">TESLA</div>
+        <div class="c01-sub">The company that redefined what an electric vehicle could be — and the standards every other brand is now measured against.</div>
+      </div>
+      <div class="c01-stats">
+        <div class="c01-stat"><div class="c01-stat-v">$97.7B</div><div class="c01-stat-l">2023 Revenue</div></div>
+        <div class="c01-stat"><div class="c01-stat-v">516 mi</div><div class="c01-stat-l">Max EPA Range</div></div>
+        <div class="c01-stat"><div class="c01-stat-v">2003</div><div class="c01-stat-l">Founded</div></div>
+      </div>
+      <div class="c01-models">
+        <div class="c01-m">Model 3</div>
+        <div class="c01-m">Model Y</div>
+        <div class="c01-m">Model S</div>
+        <div class="c01-m">Model X</div>
+        <div class="c01-m">Cybertruck</div>
+      </div>
+    </div>
+    <div class="concept-num">01</div>
+    <div class="concept-label"><div class="concept-name">Monolith Dark</div><div class="concept-desc">Accent line + massive type + stat row + model chips</div></div>
+  </div>
+
+  <!-- 02 SPLIT IDENTITY -->
+  <div class="concept">
+    <div class="c02-bg">
+      <div class="c02-left">
+        <div class="c02-brand">TESLA</div>
+        <div class="c02-tagline">Accelerating the world's transition to sustainable energy.</div>
+        <div class="c02-models">
+          <div class="c02-model-item">Model 3 &rsaquo; From $38,990</div>
+          <div class="c02-model-item">Model Y &rsaquo; From $43,990</div>
+          <div class="c02-model-item">Model S &rsaquo; From $74,990</div>
+          <div class="c02-model-item">Cybertruck &rsaquo; From $79,990</div>
+        </div>
+      </div>
+      <div class="c02-right">
+        <div class="c02-stat-big">5</div>
+        <div class="c02-stat-label">Models in Production</div>
+      </div>
+    </div>
+    <div class="concept-num">02</div>
+    <div class="concept-label"><div class="concept-name">Split Identity</div><div class="concept-desc">Dark left / brand-color right split with model list</div></div>
+  </div>
+
+  <!-- 03 EDITORIAL ★ WINNER -->
+  <div class="concept">
+    <div class="c03-bg"></div>
+    <div class="c03-content">
+      <div class="c03-top">
+        <div class="c03-site">AmericanCarBrands.com &rsaquo; Electric Vehicles</div>
+        <div class="c03-issue">March 2026</div>
+      </div>
+      <div style="display:contents;">
+        <div>
+          <div class="c03-h1">TESLA</div>
+          <div class="c03-sub">Palo Alto, CA &mdash; Electric-only since founding. The reference benchmark for every American EV brand.</div>
+        </div>
+        <div class="c03-right-col">
+          <div class="c03-stat-block"><div class="c03-stat-v">$97.7B</div><div class="c03-stat-l">2023 Revenue</div></div>
+          <div class="c03-stat-block"><div class="c03-stat-v">516 mi</div><div class="c03-stat-l">Max Range</div></div>
+          <div class="c03-stat-block"><div class="c03-stat-v">2003</div><div class="c03-stat-l">Founded</div></div>
+        </div>
+      </div>
+      <div class="c03-models">
+        <div class="c03-m red">Model 3</div><div class="c03-m">Model Y</div>
+        <div class="c03-m">Model S</div><div class="c03-m">Model X</div>
+        <div class="c03-m">Cybertruck</div><div class="c03-m">Roadster</div>
+      </div>
+    </div>
+    <div class="winner-badge">★ Selected Prototype</div>
+    <div class="concept-num">03</div>
+    <div class="concept-label" style="color:#111;background:linear-gradient(0deg,rgba(242,240,235,.95),transparent);"><div class="concept-name" style="color:#111;">Editorial Magazine</div><div class="concept-desc" style="color:rgba(0,0,0,.5);">Light paper, serif headline, clean grid — premium editorial</div></div>
+  </div>
+
+  <!-- 04 GLASSMORPHISM -->
+  <div class="concept">
+    <div class="c04-bg"></div>
+    <div class="c04-content">
+      <div class="c04-glass-header">
+        <div>
+          <div class="c04-glass-name">TESLA</div>
+          <div class="c04-glass-sub">Electric-only &mdash; Palo Alto, CA &mdash; Est. 2003</div>
+        </div>
+        <div style="margin-left:auto;font-family:'Barlow Condensed',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.14em;color:rgba(227,25,55,.8);">EV ONLY ↗</div>
+      </div>
+      <div class="c04-cards">
+        <div class="c04-card"><div class="c04-card-name">Model 3</div><div class="c04-card-price">From $38,990</div><div class="c04-card-range">358 mi range</div></div>
+        <div class="c04-card"><div class="c04-card-name">Model Y</div><div class="c04-card-price">From $43,990</div><div class="c04-card-range">330 mi range</div></div>
+        <div class="c04-card"><div class="c04-card-name">Cybertruck</div><div class="c04-card-price">From $79,990</div><div class="c04-card-range">340 mi range</div></div>
+        <div class="c04-card"><div class="c04-card-name">Model S</div><div class="c04-card-price">From $74,990</div><div class="c04-card-range">405 mi range</div></div>
+      </div>
+    </div>
+    <div class="concept-num">04</div>
+    <div class="concept-label"><div class="concept-name">Glassmorphism</div><div class="concept-desc">Frosted glass cards over deep radial gradient mesh</div></div>
+  </div>
+
+  <!-- 05 CINEMATIC -->
+  <div class="concept">
+    <div class="c05-bg"></div>
+    <div class="c05-content">
+      <div class="c05-wordmark">TESLA</div>
+      <div class="c05-rule"></div>
+      <div class="c05-tagline">ACCELERATING SUSTAINABLE ENERGY · PALO ALTO 2003</div>
+      <div class="c05-models">
+        <div class="c05-model"><div class="c05-model-dot"></div><div class="c05-model-name">Model 3</div></div>
+        <div class="c05-model"><div class="c05-model-dot"></div><div class="c05-model-name">Model Y</div></div>
+        <div class="c05-model"><div class="c05-model-dot"></div><div class="c05-model-name">Model S</div></div>
+        <div class="c05-model"><div class="c05-model-dot"></div><div class="c05-model-name">Model X</div></div>
+        <div class="c05-model"><div class="c05-model-dot"></div><div class="c05-model-name">Cybertruck</div></div>
+      </div>
+    </div>
+    <div class="concept-num">05</div>
+    <div class="concept-label"><div class="concept-name">Cinematic Centered</div><div class="concept-desc">Centered wordmark, ambient glow, dot-model row</div></div>
+  </div>
+
+  <!-- 06 DATA DASHBOARD -->
+  <div class="concept">
+    <div class="c06-bg"></div>
+    <div class="c06-content">
+      <div class="c06-header">
+        <div class="c06-brand">// TESLA_BRAND_OVERVIEW</div>
+        <div class="c06-live">SYS:ACTIVE &bull; MAR_2026</div>
+      </div>
+      <div class="c06-stats">
+        <div class="c06-stat"><div class="c06-stat-v">$97.7B</div><div class="c06-stat-l">Revenue</div></div>
+        <div class="c06-stat"><div class="c06-stat-v">5</div><div class="c06-stat-l">Models</div></div>
+        <div class="c06-stat"><div class="c06-stat-v">516mi</div><div class="c06-stat-l">Max Range</div></div>
+        <div class="c06-stat"><div class="c06-stat-v">2003</div><div class="c06-stat-l">Founded</div></div>
+      </div>
+      <div class="c06-models">
+        <div class="c06-model"><div class="c06-model-name">MDL_3</div><div class="c06-model-price">$38,990</div></div>
+        <div class="c06-model"><div class="c06-model-name">MDL_Y</div><div class="c06-model-price">$43,990</div></div>
+        <div class="c06-model"><div class="c06-model-name">MDL_S</div><div class="c06-model-price">$74,990</div></div>
+        <div class="c06-model"><div class="c06-model-name">MDL_X</div><div class="c06-model-price">$84,990</div></div>
+        <div class="c06-model"><div class="c06-model-name">CYBRK</div><div class="c06-model-price">$79,990</div></div>
+      </div>
+    </div>
+    <div class="concept-num">06</div>
+    <div class="concept-label"><div class="concept-name">Data Dashboard</div><div class="concept-desc">Monospace terminal aesthetic, grid overlay, stats-first</div></div>
+  </div>
+
+  <!-- 07 SYNE BOLD -->
+  <div class="concept">
+    <div class="c07-bg"></div>
+    <div class="c07-content">
+      <div class="c07-top">
+        <div class="c07-num">Brand 07 of 25</div>
+        <div class="c07-tag">EV · Electric Only ↗</div>
+      </div>
+      <div class="c07-hero-text">TES<br><em>LA</em></div>
+      <div class="c07-bottom">
+        <div class="c07-models">
+          <div class="c07-m act">Model 3</div>
+          <div class="c07-m">Model Y</div>
+          <div class="c07-m">Model S</div>
+          <div class="c07-m">Cybertruck</div>
+        </div>
+        <div class="c07-cta">Explore ↗</div>
+      </div>
+    </div>
+    <div class="concept-num">07</div>
+    <div class="concept-label"><div class="concept-name">Syne Impact</div><div class="concept-desc">Oversized Syne 800 type, color break on second word</div></div>
+  </div>
+
+  <!-- 08 MINIMAL WHITE -->
+  <div class="concept">
+    <div class="c08-bg"></div>
+    <div class="c08-content">
+      <div class="c08-header">
+        <div class="c08-logo">AMERICANCARBRANDS</div>
+        <div class="c08-nav">
+          <div class="c08-nav-item">Models</div>
+          <div class="c08-nav-item">Specs</div>
+          <div class="c08-nav-item">Compare</div>
+        </div>
+      </div>
+      <div class="c08-hero">
+        <div class="c08-eyebrow">Electric Vehicles · Palo Alto, CA</div>
+        <div class="c08-h1">Tesla</div>
+        <div class="c08-sub">The company that turned electric cars from compliance vehicles into objects of desire — and built the infrastructure to make them practical.</div>
+      </div>
+      <div class="c08-models">
+        <div class="c08-m"><div class="c08-m-name">Model 3</div><div class="c08-m-price">From $38,990</div></div>
+        <div class="c08-m"><div class="c08-m-name">Model Y</div><div class="c08-m-price">From $43,990</div></div>
+        <div class="c08-m"><div class="c08-m-name">Model S</div><div class="c08-m-price">From $74,990</div></div>
+        <div class="c08-m"><div class="c08-m-name">Cybertruck</div><div class="c08-m-price">From $79,990</div></div>
+      </div>
+    </div>
+    <div class="concept-num">08</div>
+    <div class="concept-label" style="color:#111;background:linear-gradient(0deg,rgba(250,250,248,.95),transparent);"><div class="concept-name" style="color:#111;">Minimal White</div><div class="concept-desc" style="color:rgba(0,0,0,.45);">Off-white paper, DM Serif Display, surgical spacing</div></div>
+  </div>
+
+  <!-- 09 BRUTALIST -->
+  <div class="concept">
+    <div class="c09-bg"></div>
+    <div class="c09-content">
+      <div class="c09-red-bar-v"></div>
+      <div class="c09-red-bar-h"></div>
+      <div class="c09-main">
+        <div class="c09-h1">TES<br>LA</div>
+        <div class="c09-sub">Electric · American · Disruptive</div>
+      </div>
+      <div class="c09-right">
+        <div class="c09-stat"><div class="c09-stat-v">$97.7B</div><div class="c09-stat-l">Revenue 2023</div></div>
+        <div class="c09-stat"><div class="c09-stat-v">5</div><div class="c09-stat-l">Active Models</div></div>
+        <div class="c09-stat"><div class="c09-stat-v">516mi</div><div class="c09-stat-l">Max EPA Range</div></div>
+      </div>
+      <div class="c09-bottom">
+        <div class="c09-bottom-item">MDL 3</div>
+        <div class="c09-bottom-item">MDL Y</div>
+        <div class="c09-bottom-item">MDL S</div>
+        <div class="c09-bottom-item">MDL X</div>
+        <div class="c09-bottom-item">CYBR</div>
+      </div>
+    </div>
+    <div class="concept-num">09</div>
+    <div class="concept-label" style="color:#111;background:linear-gradient(0deg,rgba(232,228,220,.95),transparent);"><div class="concept-name" style="color:#111;">Brutalist Grid</div><div class="concept-desc" style="color:rgba(0,0,0,.45);">Heavy border grid, newspaper stock, raw structural</div></div>
+  </div>
+
+  <!-- 10 IMMERSIVE AMBIENT -->
+  <div class="concept">
+    <div class="c10-bg"></div>
+    <div class="c10-content">
+      <div class="c10-top">
+        <div class="c10-brand">
+          <div class="c10-wordmark">TESLA</div>
+          <div class="c10-sub">Electric Vehicles · Palo Alto, CA · Est. 2003</div>
+        </div>
+        <div class="c10-pill">EV Only</div>
+      </div>
+      <div class="c10-cards">
+        <div class="c10-card"><div class="c10-card-name">Model 3</div><div class="c10-card-range">358 mi EPA</div><div class="c10-card-price">From $38,990</div></div>
+        <div class="c10-card"><div class="c10-card-name">Model Y</div><div class="c10-card-range">330 mi EPA</div><div class="c10-card-price">From $43,990</div></div>
+        <div class="c10-card"><div class="c10-card-name">Model S</div><div class="c10-card-range">405 mi EPA</div><div class="c10-card-price">From $74,990</div></div>
+        <div class="c10-card"><div class="c10-card-name">Cybertruck</div><div class="c10-card-range">340 mi EPA</div><div class="c10-card-price">From $79,990</div></div>
+      </div>
+    </div>
+    <div class="concept-num">10</div>
+    <div class="concept-label"><div class="concept-name">Immersive Ambient</div><div class="concept-desc">Aurora glow, model cards, cool dark with accent warmth</div></div>
+  </div>
+
+</div>
+</body>
+</html>

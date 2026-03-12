@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tesla Cybertruck — 10 Model Page Concepts</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600;700&family=Barlow+Condensed:wght@400;600;700&family=DM+Serif+Display&family=Syne:wght@700;800&family=Space+Mono:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#080808;font-family:'Barlow',sans-serif;color:#fff;padding-bottom:80px;}
+.page-header{background:#050505;border-bottom:1px solid rgba(255,255,255,.08);padding:22px 40px;position:sticky;top:0;z-index:100;display:flex;justify-content:space-between;align-items:center;}
+.page-logo{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.06em;}
+.page-logo span{color:#E31937;}
+.page-title{font-family:'Barlow Condensed',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.35);}
+.intro{max-width:1100px;margin:48px auto 36px;padding:0 40px;}
+.intro h1{font-family:'Bebas Neue',sans-serif;font-size:2.4rem;letter-spacing:.04em;margin-bottom:8px;}
+.intro p{font-size:.9rem;color:rgba(255,255,255,.45);max-width:600px;line-height:1.7;}
+.legend{display:flex;gap:20px;margin-top:16px;flex-wrap:wrap;}
+.legend-item{font-family:'Barlow Condensed',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.3);background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);padding:4px 10px;border-radius:2px;}
+.legend-item.winner{color:#E31937;background:rgba(227,25,55,.08);border-color:rgba(227,25,55,.25);}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(480px,1fr));gap:3px;padding:0 3px;}
+.concept{position:relative;overflow:hidden;cursor:pointer;aspect-ratio:16/9;transition:transform .3s;}
+.concept:hover{transform:scale(1.01);z-index:10;box-shadow:0 24px 80px rgba(0,0,0,.9);}
+.concept-num{position:absolute;top:18px;right:18px;z-index:5;font-family:'Bebas Neue',sans-serif;font-size:2.2rem;line-height:1;opacity:.15;}
+.concept-label{position:absolute;bottom:0;left:0;right:0;z-index:5;padding:18px 22px;background:linear-gradient(0deg,rgba(0,0,0,.92) 0%,transparent 100%);}
+.concept-name{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.04em;margin-bottom:3px;}
+.concept-desc{font-family:'Barlow Condensed',sans-serif;font-size:.62rem;color:rgba(255,255,255,.5);letter-spacing:.06em;}
+.winner-badge{position:absolute;top:18px;left:18px;z-index:6;font-family:'Barlow Condensed',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#E31937;background:rgba(227,25,55,.15);border:1px solid rgba(227,25,55,.4);padding:4px 10px;border-radius:2px;backdrop-filter:blur(8px);}
+
+/* ════ M01 — SPEC SHEET ════ */
+.m01-bg{position:absolute;inset:0;background:#0a0c10;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.012) 0,rgba(255,255,255,.012) 1px,transparent 1px,transparent 40px),repeating-linear-gradient(90deg,rgba(255,255,255,.012) 0,rgba(255,255,255,.012) 1px,transparent 1px,transparent 40px);}
+.m01-content{position:absolute;inset:0;padding:20px 24px;display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.m01-left{display:flex;flex-direction:column;justify-content:space-between;}
+.m01-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:.52rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(227,25,55,.7);}
+.m01-name{font-family:'Bebas Neue',sans-serif;font-size:3.5rem;line-height:.9;color:#fff;letter-spacing:-.01em;}
+.m01-year{font-family:'Barlow Condensed',sans-serif;font-size:.9rem;font-weight:700;color:rgba(255,255,255,.3);letter-spacing:.1em;}
+.m01-specs{display:flex;flex-direction:column;gap:5px;}
+.m01-spec-row{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.06);font-family:'Barlow Condensed',sans-serif;font-size:.65rem;}
+.m01-spec-k{color:rgba(255,255,255,.32);font-weight:700;letter-spacing:.08em;text-transform:uppercase;}
+.m01-spec-v{color:#fff;font-weight:700;}
+.m01-right{display:flex;flex-direction:column;justify-content:center;gap:10px;padding-left:14px;border-left:1px solid rgba(255,255,255,.07);}
+.m01-stat{display:flex;flex-direction:column;}
+.m01-stat-v{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;color:#E31937;line-height:1;}
+.m01-stat-l{font-family:'Barlow Condensed',sans-serif;font-size:.52rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.28);}
+
+/* ════ M02 — FILM POSTER ════ */
+.m02-bg{position:absolute;inset:0;background:linear-gradient(160deg,#0a0505 0%,#050505 40%,#0a0a05 100%);}
+.m02-bg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 80%,rgba(227,25,55,.09) 0%,transparent 60%);}
+.m02-content{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;}
+.m02-pre{font-family:'Barlow Condensed',sans-serif;font-size:.55rem;font-weight:700;letter-spacing:.35em;text-transform:uppercase;color:rgba(227,25,55,.7);margin-bottom:8px;}
+.m02-title{font-family:'Bebas Neue',sans-serif;font-size:5.2rem;line-height:.88;letter-spacing:.03em;color:#fff;}
+.m02-year{font-family:'Barlow Condensed',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.22em;color:rgba(255,255,255,.25);margin:8px 0;}
+.m02-specs{display:flex;gap:20px;margin-top:12px;}
+.m02-spec{display:flex;flex-direction:column;align-items:center;}
+.m02-spec-v{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:#E31937;}
+.m02-spec-l{font-family:'Barlow Condensed',sans-serif;font-size:.5rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);}
+.m02-divider{width:1px;background:rgba(255,255,255,.1);align-self:stretch;}
+
+/* ════ M03 — COMMAND CENTER ★ WINNER ════ */
+.m03-bg{position:absolute;inset:0;background:#060810;}
+.m03-bg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 10% 50%,rgba(227,25,55,.07) 0%,transparent 60%);}
+.m03-content{position:absolute;inset:0;padding:18px 22px;display:flex;flex-direction:column;gap:10px;}
+.m03-topbar{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.07);padding-bottom:10px;}
+.m03-brand-path{font-family:'Barlow Condensed',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.28);}
+.m03-brand-path span{color:rgba(227,25,55,.8);}
+.m03-year-badge{font-family:'Barlow Condensed',sans-serif;font-size:.55rem;font-weight:700;letter-spacing:.14em;background:rgba(227,25,55,.12);border:1px solid rgba(227,25,55,.28);color:rgba(227,25,55,.9);padding:3px 9px;border-radius:2px;}
+.m03-main{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:end;}
+.m03-title{font-family:'Bebas Neue',sans-serif;font-size:3.8rem;line-height:.9;color:#fff;letter-spacing:.02em;}
+.m03-subtitle{font-family:'Barlow',sans-serif;font-size:.68rem;color:rgba(255,255,255,.35);margin-top:5px;max-width:250px;line-height:1.55;}
+.m03-snap{display:flex;flex-direction:column;gap:6px;text-align:right;}
+.m03-snap-item{display:flex;flex-direction:column;}
+.m03-snap-v{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:#fff;line-height:1;}
+.m03-snap-l{font-family:'Barlow Condensed',sans-serif;font-size:.5rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.28);}
+.m03-trims{display:flex;gap:6px;}
+.m03-trim{flex:1;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:7px 10px;}
+.m03-trim-name{font-family:'Barlow Condensed',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.06em;color:#fff;}
+.m03-trim-price{font-family:'Barlow Condensed',sans-serif;font-size:.6rem;color:rgba(227,25,55,.8);font-weight:700;margin-top:2px;}
+
+/* ════ M04 — TERRAIN MODE ════ */
+.m04-bg{position:absolute;inset:0;background:linear-gradient(135deg,#040906 0%,#080a08 50%,#050505 100%);}
+.m04-bg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 40% at 70% 60%,rgba(30,80,30,.1) 0%,transparent 60%);}
+.m04-content{position:absolute;inset:0;padding:20px 24px;display:flex;flex-direction:column;justify-content:space-between;}
+.m04-header{display:flex;flex-direction:column;}
+.m04-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:.55rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(80,180,80,.8);}
+.m04-h1{font-family:'Bebas Neue',sans-serif;font-size:4rem;line-height:.88;color:#fff;}
+.m04-modes{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}
+.m04-mode{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:4px;padding:10px;display:flex;flex-direction:column;gap:4px;}
+.m04-mode-icon{font-size:1rem;}
+.m04-mode-name{font-family:'Barlow Condensed',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.55);}
+.m04-mode-stat{font-family:'Bebas Neue',sans-serif;font-size:1rem;color:#fff;}
+
+/* ════ M05 — MINIMAL PRECISION ════ */
+.m05-bg{position:absolute;inset:0;background:#f5f4f0;}
+.m05-content{position:absolute;inset:0;padding:22px 28px;display:flex;flex-direction:column;}
+.m05-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(227,25,55,.75);margin-bottom:10px;}
+.m05-h1{font-family:'DM Serif Display',serif;font-size:3.5rem;color:#111;line-height:1;font-weight:400;}
+.m05-sub{font-family:'Barlow',sans-serif;font-size:.72rem;color:rgba(0,0,0,.4);margin-top:8px;max-width:260px;line-height:1.65;}
+.m05-specs{display:flex;gap:20px;margin-top:auto;padding-top:14px;border-top:1px solid rgba(0,0,0,.1);}
+.m05-spec{display:flex;flex-direction:column;}
+.m05-spec-v{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:#111;}
+.m05-spec-l{font-family:'Barlow Condensed',sans-serif;font-size:.52rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(0,0,0,.35);}
+
+/* ════ M06 — STATS TICKER ════ */
+.m06-bg{position:absolute;inset:0;background:#020304;background-image:linear-gradient(rgba(227,25,55,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(227,25,55,.04) 1px,transparent 1px);background-size:32px 32px;}
+.m06-content{position:absolute;inset:0;padding:18px 22px;display:flex;flex-direction:column;gap:10px;}
+.m06-ticker{background:rgba(227,25,55,.1);border-top:1px solid rgba(227,25,55,.3);border-bottom:1px solid rgba(227,25,55,.3);padding:5px 10px;font-family:'Space Mono',monospace;font-size:.55rem;color:rgba(227,25,55,.8);white-space:nowrap;overflow:hidden;}
+.m06-main{display:flex;align-items:flex-end;gap:20px;flex:1;}
+.m06-title{font-family:'Bebas Neue',sans-serif;font-size:4rem;line-height:.9;color:#fff;}
+.m06-live-stats{display:flex;flex-direction:column;gap:6px;margin-left:auto;}
+.m06-ls{display:flex;gap:8px;align-items:center;}
+.m06-ls-label{font-family:'Space Mono',monospace;font-size:.5rem;color:rgba(255,255,255,.28);}
+.m06-ls-val{font-family:'Space Mono',monospace;font-size:.6rem;color:rgba(227,25,55,.9);}
+.m06-bottom-bar{display:flex;gap:0;border-top:1px solid rgba(255,255,255,.07);}
+.m06-bb-item{flex:1;padding:7px 0;text-align:center;font-family:'Space Mono',monospace;font-size:.52rem;color:rgba(255,255,255,.35);border-right:1px solid rgba(255,255,255,.06);}
+.m06-bb-item:last-child{border-right:none;}
+
+/* ════ M07 — BRUTAL INDUSTRIAL ════ */
+.m07-bg{position:absolute;inset:0;background:#e2ddd6;}
+.m07-content{position:absolute;inset:0;display:grid;grid-template-columns:5px 1fr;grid-template-rows:1fr auto;}
+.m07-sidebar{background:#E31937;grid-row:1/-1;}
+.m07-main{padding:18px 20px;display:flex;flex-direction:column;justify-content:space-between;}
+.m07-top{display:flex;justify-content:space-between;}
+.m07-crumb{font-family:'Barlow Condensed',sans-serif;font-size:.55rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(0,0,0,.3);}
+.m07-tag{font-family:'Barlow Condensed',sans-serif;font-size:.55rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(0,0,0,.3);background:rgba(0,0,0,.07);border:1px solid rgba(0,0,0,.15);padding:3px 8px;}
+.m07-h1{font-family:'Bebas Neue',sans-serif;font-size:4.5rem;line-height:.85;color:#111;letter-spacing:.01em;}
+.m07-bottom{display:flex;gap:16px;align-items:flex-end;border-top:3px solid #111;padding-top:8px;}
+.m07-stat{display:flex;flex-direction:column;}
+.m07-stat-v{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:#E31937;}
+.m07-stat-l{font-family:'Barlow Condensed',sans-serif;font-size:.5rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(0,0,0,.4);}
+.m07-div{width:1px;background:rgba(0,0,0,.15);align-self:stretch;}
+
+/* ════ M08 — PREMIUM BROCHURE ════ */
+.m08-bg{position:absolute;inset:0;background:linear-gradient(155deg,#0c0c10 0%,#0a0a0e 40%,#10100c 100%);}
+.m08-bg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 40% at 50% 0%,rgba(255,255,255,.04) 0%,transparent 50%);}
+.m08-bg::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.15),transparent);}
+.m08-content{position:absolute;inset:0;padding:22px 28px;display:flex;flex-direction:column;justify-content:space-between;}
+.m08-header{display:flex;justify-content:space-between;align-items:flex-start;}
+.m08-path{font-family:'Barlow Condensed',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.25);}
+.m08-year{font-family:'Barlow Condensed',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.1em;color:rgba(255,255,255,.25);}
+.m08-hero{display:flex;flex-direction:column;}
+.m08-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:.55rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(227,25,55,.7);margin-bottom:6px;}
+.m08-h1{font-family:'Bebas Neue',sans-serif;font-size:3.8rem;letter-spacing:.03em;color:#fff;line-height:.9;}
+.m08-sub{font-family:'Barlow',sans-serif;font-size:.68rem;color:rgba(255,255,255,.35);margin-top:6px;line-height:1.6;max-width:280px;}
+.m08-specs{display:flex;gap:18px;}
+.m08-spec{display:flex;flex-direction:column;}
+.m08-spec-v{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:#fff;}
+.m08-spec-l{font-family:'Barlow Condensed',sans-serif;font-size:.52rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.28);}
+
+/* ════ M09 — TRIM CONFIGURATOR ════ */
+.m09-bg{position:absolute;inset:0;background:#0d0d0f;}
+.m09-content{position:absolute;inset:0;padding:18px 22px;display:flex;flex-direction:column;gap:10px;}
+.m09-header{display:flex;justify-content:space-between;align-items:center;}
+.m09-h1{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;letter-spacing:.03em;color:#fff;}
+.m09-badge{font-family:'Barlow Condensed',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(227,25,55,.8);background:rgba(227,25,55,.1);border:1px solid rgba(227,25,55,.25);padding:4px 10px;border-radius:2px;}
+.m09-trims{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;}
+.m09-trim{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:4px;padding:10px 12px;cursor:pointer;transition:border-color .2s;}
+.m09-trim.active{background:rgba(227,25,55,.08);border-color:rgba(227,25,55,.35);}
+.m09-trim-name{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:#fff;letter-spacing:.04em;}
+.m09-trim-price{font-family:'Barlow Condensed',sans-serif;font-size:.65rem;color:rgba(227,25,55,.8);font-weight:700;margin-top:2px;}
+.m09-trim-range{font-family:'Barlow Condensed',sans-serif;font-size:.58rem;color:rgba(255,255,255,.32);margin-top:2px;}
+.m09-trim-motor{font-family:'Barlow Condensed',sans-serif;font-size:.56rem;color:rgba(255,255,255,.25);}
+.m09-note{font-family:'Barlow Condensed',sans-serif;font-size:.58rem;color:rgba(255,255,255,.22);text-align:center;letter-spacing:.06em;}
+
+/* ════ M10 — EDITORIAL LONG-FORM ════ */
+.m10-bg{position:absolute;inset:0;background:#f0ede6;}
+.m10-bg::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(0,0,0,.012) 0,rgba(0,0,0,.012) 1px,transparent 1px,transparent 24px);}
+.m10-content{position:absolute;inset:0;padding:20px 26px;display:grid;grid-template-columns:1fr auto;gap:14px;align-content:start;}
+.m10-top{grid-column:1/-1;display:flex;justify-content:space-between;border-bottom:2px solid #111;padding-bottom:8px;margin-bottom:6px;}
+.m10-site{font-family:'Barlow Condensed',sans-serif;font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(0,0,0,.32);}
+.m10-section{font-family:'Barlow Condensed',sans-serif;font-size:.58rem;letter-spacing:.08em;color:rgba(0,0,0,.28);}
+.m10-h1{font-family:'DM Serif Display',serif;font-size:2.8rem;color:#111;line-height:1.02;font-weight:400;}
+.m10-sub{font-family:'Barlow',sans-serif;font-size:.7rem;color:rgba(0,0,0,.42);line-height:1.65;max-width:230px;margin-top:6px;}
+.m10-aside{border-left:1px solid rgba(0,0,0,.12);padding-left:14px;display:flex;flex-direction:column;gap:10px;}
+.m10-as{display:flex;flex-direction:column;}
+.m10-as-v{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:#E31937;line-height:1;}
+.m10-as-l{font-family:'Barlow Condensed',sans-serif;font-size:.5rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(0,0,0,.35);}
+.m10-trims{display:flex;gap:4px;grid-column:1/-1;margin-top:auto;}
+.m10-t{font-family:'Barlow Condensed',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:rgba(0,0,0,.5);background:rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.12);padding:4px 10px;}
+.m10-t.active{background:#E31937;color:#fff;border-color:#E31937;}
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div class="page-logo">AMERICAN<span>CAR</span>BRANDS</div>
+  <div class="page-title">Tesla Cybertruck — 10 Model Page Concepts</div>
+</div>
+
+<div class="intro">
+  <h1>Cybertruck Model Page Concepts</h1>
+  <p>Ten layout directions for the model page template. Concept 03 (Command Center) is selected as the prototype — dark, data-rich, structured, and scales cleanly to all Tesla models and other brand model pages.</p>
+  <div class="legend">
+    <span class="legend-item winner">★ 03 — Selected Prototype</span>
+    <span class="legend-item">10 total concepts</span>
+    <span class="legend-item">Hover to scale</span>
+  </div>
+</div>
+
+<div class="grid">
+
+  <!-- M01 SPEC SHEET -->
+  <div class="concept">
+    <div class="m01-bg"></div>
+    <div class="m01-content">
+      <div class="m01-left">
+        <div>
+          <div class="m01-eyebrow">Tesla &rsaquo; Trucks</div>
+          <div class="m01-name">CYBER<br>TRUCK</div>
+          <div class="m01-year">2024 &ndash; Present</div>
+        </div>
+        <div class="m01-specs">
+          <div class="m01-spec-row"><span class="m01-spec-k">EPA Range</span><span class="m01-spec-v">340 mi</span></div>
+          <div class="m01-spec-row"><span class="m01-spec-k">0–60 mph</span><span class="m01-spec-v">2.6 sec</span></div>
+          <div class="m01-spec-row"><span class="m01-spec-k">Max Tow</span><span class="m01-spec-v">11,000 lb</span></div>
+          <div class="m01-spec-row"><span class="m01-spec-k">Base Price</span><span class="m01-spec-v">$79,990</span></div>
+        </div>
+      </div>
+      <div class="m01-right">
+        <div class="m01-stat"><div class="m01-stat-v">340mi</div><div class="m01-stat-l">EPA Range</div></div>
+        <div class="m01-stat"><div class="m01-stat-v">2.6s</div><div class="m01-stat-l">0 to 60</div></div>
+        <div class="m01-stat"><div class="m01-stat-v">11K lb</div><div class="m01-stat-l">Tow Rating</div></div>
+        <div class="m01-stat"><div class="m01-stat-v">$79,990</div><div class="m01-stat-l">Starting MSRP</div></div>
+      </div>
+    </div>
+    <div class="concept-num">01</div>
+    <div class="concept-label"><div class="concept-name">Spec Sheet</div><div class="concept-desc">Technical grid, spec rows, dual-column data layout</div></div>
+  </div>
+
+  <!-- M02 FILM POSTER -->
+  <div class="concept">
+    <div class="m02-bg"></div>
+    <div class="m02-content">
+      <div class="m02-pre">Tesla &bull; 2024 Model Year</div>
+      <div class="m02-title">CYBER<br>TRUCK</div>
+      <div class="m02-year">STAINLESS STEEL · ELECTRIC · 340 MI EPA RANGE</div>
+      <div class="m02-specs">
+        <div class="m02-spec"><div class="m02-spec-v">340mi</div><div class="m02-spec-l">Range</div></div>
+        <div class="m02-divider"></div>
+        <div class="m02-spec"><div class="m02-spec-v">2.6s</div><div class="m02-spec-l">0–60</div></div>
+        <div class="m02-divider"></div>
+        <div class="m02-spec"><div class="m02-spec-v">11K lb</div><div class="m02-spec-l">Tow</div></div>
+        <div class="m02-divider"></div>
+        <div class="m02-spec"><div class="m02-spec-v">$79,990</div><div class="m02-spec-l">From</div></div>
+      </div>
+    </div>
+    <div class="concept-num">02</div>
+    <div class="concept-label"><div class="concept-name">Film Poster</div><div class="concept-desc">Centered vertical, cinematic type, spec row beneath</div></div>
+  </div>
+
+  <!-- M03 COMMAND CENTER ★ WINNER -->
+  <div class="concept">
+    <div class="m03-bg"></div>
+    <div class="m03-content">
+      <div class="m03-topbar">
+        <div class="m03-brand-path">AmericanCarBrands &rsaquo; <span>Tesla</span> &rsaquo; Trucks</div>
+        <div class="m03-year-badge">2025 Model Year</div>
+      </div>
+      <div class="m03-main">
+        <div>
+          <div class="m03-title">CYBER<br>TRUCK</div>
+          <div class="m03-subtitle">Stainless exoskeleton. Air suspension. 11,000 lb tow. Utility redefined.</div>
+        </div>
+        <div class="m03-snap">
+          <div class="m03-snap-item"><div class="m03-snap-v">340mi</div><div class="m03-snap-l">EPA Range</div></div>
+          <div class="m03-snap-item"><div class="m03-snap-v">2.6s</div><div class="m03-snap-l">0 to 60</div></div>
+          <div class="m03-snap-item"><div class="m03-snap-v">11K lb</div><div class="m03-snap-l">Max Tow</div></div>
+        </div>
+      </div>
+      <div class="m03-trims">
+        <div class="m03-trim"><div class="m03-trim-name">Cyberbeast</div><div class="m03-trim-price">$99,990</div></div>
+        <div class="m03-trim"><div class="m03-trim-name">AWD</div><div class="m03-trim-price">$89,990</div></div>
+        <div class="m03-trim"><div class="m03-trim-name">RWD</div><div class="m03-trim-price">$79,990</div></div>
+      </div>
+    </div>
+    <div class="winner-badge">★ Selected Prototype</div>
+    <div class="concept-num">03</div>
+    <div class="concept-label"><div class="concept-name">Command Center</div><div class="concept-desc">Breadcrumb nav, hero + snap stats, trim cards below</div></div>
+  </div>
+
+  <!-- M04 TERRAIN MODE -->
+  <div class="concept">
+    <div class="m04-bg"></div>
+    <div class="m04-content">
+      <div class="m04-header">
+        <div class="m04-eyebrow">Tesla &rsaquo; All-Purpose Electric Truck</div>
+        <div class="m04-h1">CYBER<br>TRUCK</div>
+      </div>
+      <div class="m04-modes">
+        <div class="m04-mode"><div class="m04-mode-icon">🏕</div><div class="m04-mode-name">Off-Road</div><div class="m04-mode-stat">17" clearance</div></div>
+        <div class="m04-mode"><div class="m04-mode-icon">⚡</div><div class="m04-mode-name">Power</div><div class="m04-mode-stat">2.6s 0-60</div></div>
+        <div class="m04-mode"><div class="m04-mode-icon">🚛</div><div class="m04-mode-name">Towing</div><div class="m04-mode-stat">11,000 lb</div></div>
+        <div class="m04-mode"><div class="m04-mode-icon">🔋</div><div class="m04-mode-name">Range</div><div class="m04-mode-stat">340 mi EPA</div></div>
+      </div>
+    </div>
+    <div class="concept-num">04</div>
+    <div class="concept-label"><div class="concept-name">Use Case Modes</div><div class="concept-desc">Capability cards: off-road, tow, range, power</div></div>
+  </div>
+
+  <!-- M05 MINIMAL PRECISION -->
+  <div class="concept">
+    <div class="m05-bg"></div>
+    <div class="m05-content">
+      <div class="m05-eyebrow">Tesla &bull; Pickup Truck &bull; 2024–Present</div>
+      <div class="m05-h1">Cybertruck</div>
+      <div class="m05-sub">Stainless steel exoskeleton, air suspension adaptive damping, and enough torque to tow a small building.</div>
+      <div class="m05-specs">
+        <div class="m05-spec"><div class="m05-spec-v">340mi</div><div class="m05-spec-l">EPA Range</div></div>
+        <div class="m05-spec"><div class="m05-spec-v">2.6s</div><div class="m05-spec-l">0 to 60</div></div>
+        <div class="m05-spec"><div class="m05-spec-v">11K lb</div><div class="m05-spec-l">Tow Rating</div></div>
+        <div class="m05-spec"><div class="m05-spec-v">$79,990</div><div class="m05-spec-l">Starting MSRP</div></div>
+      </div>
+    </div>
+    <div class="concept-num">05</div>
+    <div class="concept-label" style="color:#111;background:linear-gradient(0deg,rgba(245,244,240,.95),transparent);"><div class="concept-name" style="color:#111;">Minimal Precision</div><div class="concept-desc" style="color:rgba(0,0,0,.45);">Off-white, DM Serif headline, surgical spec row</div></div>
+  </div>
+
+  <!-- M06 STATS TICKER -->
+  <div class="concept">
+    <div class="m06-bg"></div>
+    <div class="m06-content">
+      <div class="m06-ticker">CYBERTRUCK &bull; EPA:340mi &bull; TOWING:11,000lb &bull; 0-60:2.6s &bull; CYBERBEAST:$99,990 &bull; AWD:$89,990 &bull; RWD:$79,990 &bull; &bull; &bull;</div>
+      <div class="m06-main">
+        <div class="m06-title">CYBER<br>TRUCK</div>
+        <div class="m06-live-stats">
+          <div class="m06-ls"><div class="m06-ls-label">RANGE:</div><div class="m06-ls-val">340 mi EPA</div></div>
+          <div class="m06-ls"><div class="m06-ls-label">0-60:</div><div class="m06-ls-val">2.6 sec</div></div>
+          <div class="m06-ls"><div class="m06-ls-label">TOW:</div><div class="m06-ls-val">11,000 lb</div></div>
+          <div class="m06-ls"><div class="m06-ls-label">FROM:</div><div class="m06-ls-val">$79,990</div></div>
+        </div>
+      </div>
+      <div class="m06-bottom-bar">
+        <div class="m06-bb-item">RWD $79,990</div>
+        <div class="m06-bb-item">AWD $89,990</div>
+        <div class="m06-bb-item">CYBERBEAST $99,990</div>
+      </div>
+    </div>
+    <div class="concept-num">06</div>
+    <div class="concept-label"><div class="concept-name">Stats Ticker</div><div class="concept-desc">Scrolling data marquee, Space Mono, terminal feel</div></div>
+  </div>
+
+  <!-- M07 BRUTAL INDUSTRIAL -->
+  <div class="concept">
+    <div class="m07-bg"></div>
+    <div class="m07-content">
+      <div class="m07-sidebar"></div>
+      <div class="m07-main">
+        <div class="m07-top">
+          <div class="m07-crumb">Tesla &rsaquo; Trucks</div>
+          <div class="m07-tag">2024&ndash;Present</div>
+        </div>
+        <div class="m07-h1">CYBER<br>TRUCK</div>
+        <div class="m07-bottom">
+          <div class="m07-stat"><div class="m07-stat-v">340mi</div><div class="m07-stat-l">Range</div></div>
+          <div class="m07-div"></div>
+          <div class="m07-stat"><div class="m07-stat-v">2.6s</div><div class="m07-stat-l">0–60</div></div>
+          <div class="m07-div"></div>
+          <div class="m07-stat"><div class="m07-stat-v">$79,990</div><div class="m07-stat-l">Base MSRP</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="concept-num">07</div>
+    <div class="concept-label" style="color:#111;background:linear-gradient(0deg,rgba(226,221,214,.95),transparent);"><div class="concept-name" style="color:#111;">Brutal Industrial</div><div class="concept-desc" style="color:rgba(0,0,0,.45);">Left red sidebar, newspaper stock, heavy type grid</div></div>
+  </div>
+
+  <!-- M08 PREMIUM BROCHURE -->
+  <div class="concept">
+    <div class="m08-bg"></div>
+    <div class="m08-content">
+      <div class="m08-header">
+        <div class="m08-path">Tesla &rsaquo; All Vehicles &rsaquo; Trucks</div>
+        <div class="m08-year">March 2026</div>
+      </div>
+      <div class="m08-hero">
+        <div class="m08-eyebrow">Electric Truck &bull; 2024 &ndash; Present</div>
+        <div class="m08-h1">CYBER<br>TRUCK</div>
+        <div class="m08-sub">Stainless steel body, air suspension, 11,000 lb tow. The electric utility vehicle that rewrote expectations for the category.</div>
+      </div>
+      <div class="m08-specs">
+        <div class="m08-spec"><div class="m08-spec-v">340 mi</div><div class="m08-spec-l">EPA Range</div></div>
+        <div class="m08-spec"><div class="m08-spec-v">2.6 sec</div><div class="m08-spec-l">0 to 60</div></div>
+        <div class="m08-spec"><div class="m08-spec-v">11,000 lb</div><div class="m08-spec-l">Tow Rating</div></div>
+        <div class="m08-spec"><div class="m08-spec-v">$79,990</div><div class="m08-spec-l">Starting MSRP</div></div>
+      </div>
+    </div>
+    <div class="concept-num">08</div>
+    <div class="concept-label"><div class="concept-name">Premium Brochure</div><div class="concept-desc">Dark luxury, top-edge sheen, editorial sub-copy</div></div>
+  </div>
+
+  <!-- M09 TRIM CONFIGURATOR -->
+  <div class="concept">
+    <div class="m09-bg"></div>
+    <div class="m09-content">
+      <div class="m09-header">
+        <div class="m09-h1">CYBERTRUCK</div>
+        <div class="m09-badge">3 Trims Available</div>
+      </div>
+      <div class="m09-trims">
+        <div class="m09-trim active">
+          <div class="m09-trim-name">Cyberbeast</div>
+          <div class="m09-trim-price">$99,990</div>
+          <div class="m09-trim-range">301 mi EPA</div>
+          <div class="m09-trim-motor">Tri Motor AWD · 2.6s</div>
+        </div>
+        <div class="m09-trim">
+          <div class="m09-trim-name">AWD</div>
+          <div class="m09-trim-price">$89,990</div>
+          <div class="m09-trim-range">318 mi EPA</div>
+          <div class="m09-trim-motor">Dual Motor AWD · 4.1s</div>
+        </div>
+        <div class="m09-trim">
+          <div class="m09-trim-name">RWD</div>
+          <div class="m09-trim-price">$79,990</div>
+          <div class="m09-trim-range">340 mi EPA</div>
+          <div class="m09-trim-motor">Single Motor RWD · 6.5s</div>
+        </div>
+      </div>
+      <div class="m09-note">Tap a trim to compare specs &bull; Prices as of March 2026</div>
+    </div>
+    <div class="concept-num">09</div>
+    <div class="concept-label"><div class="concept-name">Trim Configurator</div><div class="concept-desc">Tab-style trim cards as the hero content block</div></div>
+  </div>
+
+  <!-- M10 EDITORIAL -->
+  <div class="concept">
+    <div class="m10-bg"></div>
+    <div class="m10-content">
+      <div class="m10-top">
+        <div class="m10-site">AmericanCarBrands.com &rsaquo; Tesla &rsaquo; Trucks</div>
+        <div class="m10-section">Model Research</div>
+      </div>
+      <div>
+        <div class="m10-h1">Tesla<br>Cybertruck</div>
+        <div class="m10-sub">Stainless exoskeleton. Air suspension. 11,000 lb tow. The electric truck that polarized opinion and sold out anyway.</div>
+      </div>
+      <div class="m10-aside">
+        <div class="m10-as"><div class="m10-as-v">340mi</div><div class="m10-as-l">EPA Range (RWD)</div></div>
+        <div class="m10-as"><div class="m10-as-v">$79,990</div><div class="m10-as-l">Base MSRP</div></div>
+        <div class="m10-as"><div class="m10-as-v">2024–</div><div class="m10-as-l">Production Year</div></div>
+      </div>
+      <div class="m10-trims">
+        <div class="m10-t active">Cyberbeast</div>
+        <div class="m10-t">AWD</div>
+        <div class="m10-t">RWD</div>
+        <div class="m10-t active" style="background:transparent;color:rgba(0,0,0,.4);border-color:rgba(0,0,0,.1);">+ Recalls</div>
+        <div class="m10-t" style="border:none;color:rgba(0,0,0,.3);">+ Guides</div>
+      </div>
+    </div>
+    <div class="concept-num">10</div>
+    <div class="concept-label" style="color:#111;background:linear-gradient(0deg,rgba(240,237,230,.95),transparent);"><div class="concept-name" style="color:#111;">Editorial Long-Form</div><div class="concept-desc" style="color:rgba(0,0,0,.45);">Light paper, serif, aside stats, model page sections</div></div>
+  </div>
+
+</div>
+</body>
+</html>
