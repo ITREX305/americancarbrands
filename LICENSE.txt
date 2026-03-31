@@ -1,0 +1,72 @@
+================================================================================
+AmericanCarBrands.com — Content License & Copyright Notice
+================================================================================
+
+Copyright © 2025–2026 AmericanCarBrands.com. All rights reserved.
+
+OWNERSHIP
+---------
+All editorial content, page designs, data compilations, CSS, HTML, JavaScript,
+and associated files on AmericanCarBrands.com are the exclusive intellectual
+property of AmericanCarBrands.com unless otherwise noted.
+
+PERMITTED USE
+-------------
+Personal, non-commercial reading and reference is permitted.
+Sharing individual links to pages is permitted with attribution.
+
+PROHIBITED USE
+--------------
+The following are strictly prohibited without prior written permission:
+  • Copying, reproducing, or republishing any page content in whole or part
+  • Scraping or automated data extraction for commercial purposes
+  • Using content or design elements in competing publications or websites
+  • Removing or altering copyright notices, affiliate disclosures, or branding
+  • Training AI/ML models on this content without explicit written consent
+
+AFFILIATE DISCLOSURE
+--------------------
+AmericanCarBrands.com participates in the Amazon Services LLC Associates
+Program, an affiliate advertising program designed to provide a means for
+sites to earn advertising fees by advertising and linking to Amazon.com.
+Some links on this site are affiliate links. We may earn a small commission
+at no extra cost to you. This does not affect our editorial independence.
+
+EDITORIAL INDEPENDENCE
+----------------------
+AmericanCarBrands.com is independently owned and operated. We are NOT
+affiliated with, endorsed by, or sponsored by any automobile manufacturer,
+dealer, or automotive brand mentioned on this site. All brand names,
+trademarks, and logos are the property of their respective owners and are
+used for identification and editorial purposes only.
+
+ACCURACY DISCLAIMER
+-------------------
+Vehicle pricing, specifications, features, and availability change frequently.
+All data on this site reflects publicly available information as of the date
+stated on each page (Updated March 2026). Always verify current pricing,
+specifications, recall status, and availability directly with the manufacturer
+or an authorized dealer before making any purchasing decision.
+
+NHTSA RECALL DATA
+-----------------
+Recall information is sourced from NHTSA public databases. Always check
+nhtsa.gov/recalls with your specific 17-digit VIN for the most current
+recall status applicable to your vehicle.
+
+DMCA
+----
+If you believe any content on AmericanCarBrands.com infringes your copyright,
+please contact us with the following information:
+  • Identification of the copyrighted work claimed to be infringed
+  • Identification of the infringing material and its URL
+  • Your contact information and a statement of good faith belief
+
+GOVERNING LAW
+-------------
+This license is governed by the laws of the United States. Any disputes
+shall be resolved in the jurisdiction where AmericanCarBrands.com is domiciled.
+
+================================================================================
+Last updated: March 2026
+================================================================================
