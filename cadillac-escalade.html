@@ -456,119 +456,152 @@ h2.sec-title { font-size: 2rem !important; }
   <button class="mobile-sidebar-toggle" id="mobileSidebarBtn">Quick Navigation</button>
   <div class="mobile-sidebar-panel" id="mobileSidebarPanel"><a href="#overview" class="sb-link">Overview</a><a href="#trims" class="sb-link">Trims & Pricing</a><a href="#specs" class="sb-link">Full Specs</a><a href="#s4" class="sb-link">37-inch OLED Technology</a><a href="#s5" class="sb-link">V8 Power & Towing</a><a href="#s6" class="sb-link">V-Series & Platinum</a><a href="#reliability" class="sb-link">Reliability</a><a href="#recalls" class="sb-link">Recalls</a><a href="#updates" class="sb-link">Updates</a><a href="#proscons" class="sb-link">Pros & Cons</a><a href="#faq" class="sb-link">FAQ</a><a href="#accessories" class="sb-link">Accessories</a></div>
 </div>
-<div class="page-body">
-<!-- Top Accessories Bar: 4 small product cards -->
+<!-- Compact horizontal scroll bar with 4 small cards -->
 <div style="
-  background:#222;
-  padding:12px 16px;
-  border-radius:6px;
-  margin:20px 0;
-  overflow-x:auto;
-  white-space: nowrap;
-  font-family: 'Oswald', sans-serif;
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+  padding: 10px 8px;
+  margin: 16px 0;
+  background: #222;
+  border-radius: 6px;
+  scrollbar-width: thin;
+  scrollbar-color: #ff7f00 transparent;
+  -webkit-overflow-scrolling: touch;
 ">
-  <div style="
-    display: inline-block;
-    background:#333;
-    color:#fff;
-    padding:12px 16px;
-    margin-right:12px;
-    border-radius:6px;
-    min-width:160px;
-    vertical-align: top;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
-  ">
-    <div style="font-weight:700; font-size:1rem; margin-bottom:6px;">Floor Mats</div>
-    <div style="font-size:.85rem; color:#ccc; margin-bottom:10px;">All-weather rubber mats trap dirt, mud, and moisture — easy to clean.</div>
-    <a href="https://amzn.to/3PxsyDH" target="_blank" rel="nofollow noopener sponsored"
-       style="
-         background:#ff7f00; 
-         color:#111; 
-         padding:6px 12px; 
-         border-radius:4px; 
-         font-weight:700;
-         text-decoration:none;
-         display:inline-block;
-         font-size:.9rem;
-       ">Shop Amazon →</a>
-  </div>
+  <style>
+    /* Scrollbar for WebKit */
+    .accessory-scroll::-webkit-scrollbar {
+      height: 6px;
+    }
+    .accessory-scroll::-webkit-scrollbar-thumb {
+      background: #ff7f00;
+      border-radius: 3px;
+    }
+    .accessory-scroll::-webkit-scrollbar-track {
+      background: transparent;
+    }
+  </style>
 
-  <div style="
-    display: inline-block;
-    background:#333;
-    color:#fff;
-    padding:12px 16px;
-    margin-right:12px;
-    border-radius:6px;
-    min-width:160px;
-    vertical-align: top;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  <div class="accessory-scroll" style="
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
   ">
-    <div style="font-weight:700; font-size:1rem; margin-bottom:6px;">Cargo Organizer</div>
-    <div style="font-size:.85rem; color:#ccc; margin-bottom:10px;">Keep the rear cargo area organized with collapsible organizers.</div>
-    <a href="https://amzn.to/418BxO2" target="_blank" rel="nofollow noopener sponsored"
-       style="
-         background:#ff7f00; 
-         color:#111; 
-         padding:6px 12px; 
-         border-radius:4px; 
-         font-weight:700;
-         text-decoration:none;
-         display:inline-block;
-         font-size:.9rem;
-       ">Shop Amazon →</a>
-  </div>
+    <div style="
+      min-width: 160px;
+      background: #333;
+      border-radius: 6px;
+      padding: 10px 14px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+      flex-shrink: 0;
+      color: #fff;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+    ">
+      Floor Mats
+      <p style="font-weight: 400; font-size: 0.85rem; color: #ccc; margin: 6px 0 12px;">
+        All-weather rubber mats trap dirt, mud, and moisture — easy to clean.
+      </p>
+      <a href="https://amzn.to/3PxsyDH" target="_blank" rel="nofollow noopener sponsored" style="
+        background: #ff7f00;
+        color: #111;
+        padding: 6px 12px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.9rem;
+        display: inline-block;
+      ">Shop Amazon →</a>
+    </div>
 
-  <div style="
-    display: inline-block;
-    background:#333;
-    color:#fff;
-    padding:12px 16px;
-    margin-right:12px;
-    border-radius:6px;
-    min-width:160px;
-    vertical-align: top;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
-  ">
-    <div style="font-weight:700; font-size:1rem; margin-bottom:6px;">Roof Rack / Crossbars</div>
-    <div style="font-size:.85rem; color:#ccc; margin-bottom:10px;">Add cargo-carrying capacity for bikes, kayaks, or luggage boxes.</div>
-    <a href="https://amzn.to/4tnC1fs" target="_blank" rel="nofollow noopener sponsored"
-       style="
-         background:#ff7f00; 
-         color:#111; 
-         padding:6px 12px; 
-         border-radius:4px; 
-         font-weight:700;
-         text-decoration:none;
-         display:inline-block;
-         font-size:.9rem;
-       ">Shop Amazon →</a>
-  </div>
+    <div style="
+      min-width: 160px;
+      background: #333;
+      border-radius: 6px;
+      padding: 10px 14px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+      flex-shrink: 0;
+      color: #fff;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+    ">
+      Cargo Organizer
+      <p style="font-weight: 400; font-size: 0.85rem; color: #ccc; margin: 6px 0 12px;">
+        Keep the rear cargo area organized with collapsible organizers.
+      </p>
+      <a href="https://amzn.to/418BxO2" target="_blank" rel="nofollow noopener sponsored" style="
+        background: #ff7f00;
+        color: #111;
+        padding: 6px 12px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.9rem;
+        display: inline-block;
+      ">Shop Amazon →</a>
+    </div>
 
-  <div style="
-    display: inline-block;
-    background:#333;
-    color:#fff;
-    padding:12px 16px;
-    margin-right:12px;
-    border-radius:6px;
-    min-width:160px;
-    vertical-align: top;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
-  ">
-    <div style="font-weight:700; font-size:1rem; margin-bottom:6px;">Seat Covers</div>
-    <div style="font-size:.85rem; color:#ccc; margin-bottom:10px;">Protect your upholstery — essential for families and pet owners.</div>
-    <a href="https://amzn.to/3NAH3pH" target="_blank" rel="nofollow noopener sponsored"
-       style="
-         background:#ff7f00; 
-         color:#111; 
-         padding:6px 12px; 
-         border-radius:4px; 
-         font-weight:700;
-         text-decoration:none;
-         display:inline-block;
-         font-size:.9rem;
-       ">Shop Amazon →</a>
+    <div style="
+      min-width: 160px;
+      background: #333;
+      border-radius: 6px;
+      padding: 10px 14px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+      flex-shrink: 0;
+      color: #fff;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+    ">
+      Roof Rack / Crossbars
+      <p style="font-weight: 400; font-size: 0.85rem; color: #ccc; margin: 6px 0 12px;">
+        Add cargo-carrying capacity for bikes, kayaks, or luggage boxes.
+      </p>
+      <a href="https://amzn.to/4tnC1fs" target="_blank" rel="nofollow noopener sponsored" style="
+        background: #ff7f00;
+        color: #111;
+        padding: 6px 12px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.9rem;
+        display: inline-block;
+      ">Shop Amazon →</a>
+    </div>
+
+    <div style="
+      min-width: 160px;
+      background: #333;
+      border-radius: 6px;
+      padding: 10px 14px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+      flex-shrink: 0;
+      color: #fff;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+    ">
+      Seat Covers
+      <p style="font-weight: 400; font-size: 0.85rem; color: #ccc; margin: 6px 0 12px;">
+        Protect your upholstery — essential for families and pet owners.
+      </p>
+      <a href="https://amzn.to/3NAH3pH" target="_blank" rel="nofollow noopener sponsored" style="
+        background: #ff7f00;
+        color: #111;
+        padding: 6px 12px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.9rem;
+        display: inline-block;
+      ">Shop Amazon →</a>
+    </div>
   </div>
 </div>
 <main>
