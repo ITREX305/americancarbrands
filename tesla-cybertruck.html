@@ -415,30 +415,190 @@ h2.sec-title { font-size: 2rem !important; }
 .ft-social-link svg{width:16px;height:16px;fill:currentColor;pointer-events:none;}
 </style>
 
+<style id="acb-mbar-fix">
+.mbar-tab{position:relative;display:flex;flex-direction:column;padding:0 14px;height:46px;justify-content:center;text-decoration:none;border-right:1px solid var(--rule,rgba(255,255,255,.08));transition:background .15s;}
+.mbar-tab:hover{background:rgba(255,255,255,.04);}
+.mbar-tab.active{background:rgba(255,255,255,.06);border-bottom:2px solid var(--red,#E31937);}
+.mbar-tab .mbar-name{font-family:var(--teko,'Teko'),sans-serif;font-size:1rem;font-weight:700;letter-spacing:.04em;color:rgba(255,255,255,.6);line-height:1.1;}
+.mbar-tab.active .mbar-name{color:#fff;}
+.mbar-tab .mbar-price{font-family:var(--cond,'Barlow Condensed'),sans-serif;font-size:.62rem;font-weight:600;color:rgba(255,255,255,.28);margin-top:1px;}
+.mbar-tab.active .mbar-price{color:rgba(255,255,255,.55);}
+</style>
+<style id="acb-font-boost">
+/* Global font increase — ACB v7 */
+body { font-size: 1.05rem !important; line-height: 1.82 !important; }
+p, li, td, th { font-size: 1.0rem !important; }
+.section p, .article-body p { font-size: 1.08rem !important; color: rgba(255,255,255,.85) !important; line-height: 1.85 !important; }
+.callout p { font-size: 1.05rem !important; color: rgba(255,255,255,.82) !important; }
+.faq-a, .faq-answer { font-size: 1.05rem !important; color: rgba(255,255,255,.82) !important; line-height: 1.78 !important; }
+.faq-q, .faq-question { font-size: 1.08rem !important; color: rgba(255,255,255,.92) !important; }
+.data-table td { font-size: 1.02rem !important; color: rgba(255,255,255,.88) !important; }
+.data-table th { font-size: .90rem !important; }
+.snap-l { font-size: .92rem !important; color: rgba(255,255,255,.80) !important; }
+.snap-v { font-size: 2.3rem !important; }
+.tc-k { font-size: .84rem !important; color: rgba(255,255,255,.72) !important; }
+.tc-note { font-size: .84rem !important; color: rgba(255,255,255,.62) !important; }
+.price-note { font-size: .90rem !important; color: rgba(255,255,255,.68) !important; }
+.recall-body { font-size: 1.02rem !important; color: rgba(255,255,255,.82) !important; }
+.recall-status { font-size: .84rem !important; font-weight: 700 !important; }
+.sb-link { font-size: 1.02rem !important; }
+.uc-body { font-size: .98rem !important; color: rgba(255,255,255,.82) !important; line-height: 1.75 !important; }
+.hero-desc { font-size: 1.12rem !important; color: rgba(255,255,255,.85) !important; }
+.acc-desc { font-size: .98rem !important; color: rgba(255,255,255,.78) !important; }
+.ft-copy { font-size: .84rem !important; color: rgba(255,255,255,.55) !important; }
+.bc-sub { font-size: .95rem !important; }
+</style>
+<style id="acb-global-font-boost">
+/* Global font size increase — applied sitewide */
+body{font-size:1.05rem!important;}
+p,li,.section p,.callout p{font-size:1.05rem!important;line-height:1.85!important;color:rgba(255,255,255,.85)!important;}
+.data-table td{font-size:1.02rem!important;color:rgba(255,255,255,.88)!important;}
+.data-table th{font-size:.92rem!important;color:rgba(255,255,255,.72)!important;}
+.faq-q{font-size:1.05rem!important;color:rgba(255,255,255,.92)!important;}
+.faq-a{font-size:1.02rem!important;color:rgba(255,255,255,.82)!important;line-height:1.82!important;}
+.snap-v{font-size:2.3rem!important;}
+.snap-l{font-size:.88rem!important;color:rgba(255,255,255,.78)!important;}
+.tc-k{font-size:.84rem!important;color:rgba(255,255,255,.72)!important;}
+.tc-v{font-size:1.08rem!important;}
+.tc-note{font-size:.84rem!important;color:rgba(255,255,255,.65)!important;}
+.recall-body{font-size:1.02rem!important;color:rgba(255,255,255,.82)!important;}
+.uc-body{font-size:.98rem!important;color:rgba(255,255,255,.82)!important;line-height:1.78!important;}
+.hero-desc{font-size:1.12rem!important;color:rgba(255,255,255,.85)!important;line-height:1.82!important;}
+.sb-link{font-size:1.02rem!important;}
+.price-note{font-size:.92rem!important;color:rgba(255,255,255,.68)!important;}
+h2.sec-title{font-size:2.1rem!important;}
+</style>
+<style id="acb-font-v2">
+body{font-size:1rem!important}
+.section p,.section li{font-size:1.05rem!important;color:rgba(255,255,255,.88)!important;line-height:1.85!important}
+.callout p{font-size:1.05rem!important;color:rgba(255,255,255,.88)!important}
+.data-table td{font-size:1.0rem!important;color:rgba(255,255,255,.88)!important}
+.data-table th{font-size:.88rem!important}
+.faq-q{font-size:1.08rem!important;color:rgba(255,255,255,.95)!important}
+.faq-a{font-size:1.0rem!important;color:rgba(255,255,255,.85)!important;line-height:1.82!important}
+.snap-l{font-size:.92rem!important;color:rgba(255,255,255,.82)!important}
+.snap-v{font-size:2.4rem!important}
+.hero-desc{font-size:1.12rem!important;color:rgba(255,255,255,.88)!important}
+.tc-k{font-size:.85rem!important;color:rgba(255,255,255,.75)!important}
+.tc-v{font-size:1.05rem!important}
+.tc-note{font-size:.82rem!important;color:rgba(255,255,255,.65)!important}
+.price-note{font-size:.9rem!important;color:rgba(255,255,255,.72)!important}
+.recall-body{font-size:1.0rem!important;color:rgba(255,255,255,.85)!important}
+.uc-body{font-size:.98rem!important;color:rgba(255,255,255,.85)!important}
+.sb-link{font-size:1.0rem!important;color:rgba(255,255,255,.88)!important}
+.sb-link strong{font-size:1.05rem!important;color:#fff!important}
+.ft-copy{font-size:.85rem!important;color:rgba(255,255,255,.58)!important}
+.acc-name{font-size:1.05rem!important}
+.acc-desc{font-size:.96rem!important;color:rgba(255,255,255,.80)!important}
+</style>
+<style id="acb-global-fonts">
+/* ── GLOBAL FONT SCALE INCREASE v2 ── */
+body { font-size: 1.05rem !important; line-height: 1.82 !important; }
+p, li, td, .section p, .callout p, .faq-a { font-size: 1.05rem !important; color: rgba(255,255,255,.88) !important; line-height: 1.82 !important; }
+.data-table td { font-size: 1.02rem !important; color: rgba(255,255,255,.88) !important; }
+.data-table th { font-size: .92rem !important; color: rgba(255,255,255,.72) !important; }
+.snap-v { font-size: 2.3rem !important; color: #fff !important; }
+.snap-l { font-size: .92rem !important; color: rgba(255,255,255,.80) !important; }
+.hero-desc { font-size: 1.12rem !important; color: rgba(255,255,255,.88) !important; line-height: 1.82 !important; }
+.tc-k { font-size: .85rem !important; color: rgba(255,255,255,.72) !important; }
+.tc-v { font-size: 1.08rem !important; color: #fff !important; }
+.tc-note { font-size: .82rem !important; color: rgba(255,255,255,.65) !important; }
+.price-note { font-size: .90rem !important; color: rgba(255,255,255,.68) !important; }
+.recall-body { font-size: 1.02rem !important; color: rgba(255,255,255,.85) !important; }
+.uc-body { font-size: .98rem !important; color: rgba(255,255,255,.85) !important; line-height: 1.75 !important; }
+.faq-q { font-size: 1.05rem !important; color: rgba(255,255,255,.92) !important; }
+.sb-link { font-size: 1.02rem !important; color: rgba(255,255,255,.88) !important; }
+.bc-sub, .brand-desc { font-size: 1.0rem !important; color: rgba(255,255,255,.82) !important; line-height: 1.75 !important; }
+.ft-link { font-size: .82rem !important; }
+.disc-bar { font-size: .78rem !important; }
+h2.sec-title { font-size: 2.1rem !important; }
+h1.hero-h1 { font-size: clamp(3.8rem, 9vw, 9.5rem) !important; }
+</style>
+<style id="acb-global-fonts-v8">
+/* ═══ GLOBAL FONT INCREASE v8 ═══ */
+html { font-size: 16px; }
+body { font-size: 1rem; line-height: 1.78; }
+
+/* Article & Section Body Text */
+.section p, article p, .article-body p, .content p {
+  font-size: 1.08rem !important;
+  color: rgba(255,255,255,.88) !important;
+  line-height: 1.85 !important;
+}
+/* Light-bg article pages */
+.section p[style*="rgba(26"], p.body-copy {
+  color: rgba(26,18,8,.82) !important;
+}
+/* Callouts */
+.callout p { font-size: 1.05rem !important; color: rgba(255,255,255,.88) !important; }
+/* Tables */
+.data-table td { font-size: 1.02rem !important; color: rgba(255,255,255,.90) !important; }
+.data-table th { font-size: .92rem !important; }
+/* Snap stat labels */
+.snap-l, .stat-label, .sb-l { font-size: .92rem !important; color: rgba(255,255,255,.82) !important; }
+/* Trim card */
+.tc-k { font-size: .85rem !important; color: rgba(255,255,255,.75) !important; }
+.tc-v { font-size: 1.08rem !important; }
+.tc-note { font-size: .85rem !important; color: rgba(255,255,255,.68) !important; }
+/* Price note */
+.price-note { font-size: .92rem !important; color: rgba(255,255,255,.72) !important; }
+/* Recall */
+.recall-body { font-size: 1.02rem !important; color: rgba(255,255,255,.85) !important; }
+.recall-status { font-size: .85rem !important; font-weight: 700 !important; }
+/* FAQ */
+.faq-q { font-size: 1.05rem !important; font-weight: 600 !important; }
+.faq-a { font-size: 1.02rem !important; color: rgba(255,255,255,.85) !important; line-height: 1.8 !important; }
+/* Sidebar */
+.sb-link { font-size: 1.02rem !important; color: rgba(255,255,255,.88) !important; }
+.sb-title { font-size: .92rem !important; color: rgba(255,255,255,.72) !important; }
+/* Acc cards */
+.acc-desc { font-size: .98rem !important; color: rgba(255,255,255,.82) !important; }
+.acc-name { font-size: 1.08rem !important; }
+/* Hero */
+.hero-desc { font-size: 1.1rem !important; color: rgba(255,255,255,.88) !important; }
+/* Update cards */
+.uc-body { font-size: .98rem !important; color: rgba(255,255,255,.85) !important; line-height: 1.78 !important; }
+/* Footer */
+.ft-copy { font-size: .85rem !important; color: rgba(255,255,255,.60) !important; }
+.ft-link { font-size: .82rem !important; }
+/* Disc bar */
+.disc-bar { font-size: .78rem !important; color: rgba(255,255,255,.62) !important; }
+</style>
 </head>
-<body oncontextmenu="return false" onselectstart="return false">
+<body>
+<div class="font-bar"><button class="fs-btn" id="fsInc" aria-label="Increase font size" title="Larger text">A+</button><button class="fs-btn" id="fsDec" aria-label="Decrease font size" title="Smaller text">A−</button></div>
 <a href="#" class="back-top" id="backTop">↑</a>
-<div class="font-bar">
-  <button class="fs-btn" id="fsInc">A+</button>
-  <button class="fs-btn" id="fsDec">A−</button>
+<div class="disc-bar">
+  <span>Independent editorial — not affiliated with Tesla, Inc. <a href="disclaimer.html">Disclaimer</a> · <a href="editorial-policy.html">Editorial Policy</a></span>
+  <span>Updated March 2026 — verify pricing and specs at tesla.com</span>
 </div>
-<div class="disc-bar"><span>Independent editorial — not affiliated with Tesla. <a href="disclaimer.html">Disclaimer</a> · <a href="editorial-policy.html">Editorial Policy</a></span><span>Updated March 2026 — verify pricing and specs at tesla.com</span></div>
+
 <nav class="site-nav">
   <div class="snav-inner">
-    <a href="index.html" class="snav-logo"><span class="snav-logo-slash">ACB</span><span class="snav-logo-text">AmericanCarBrands</span></a>
-    <div class="snav-links"><a href="ford.html" class="snav-link">Ford</a><a href="chevrolet.html" class="snav-link">Chevrolet</a><a href="tesla.html" class="snav-link active">Tesla</a><a href="dodge.html" class="snav-link">Dodge</a><a href="jeep.html" class="snav-link">Jeep</a><a href="ram.html" class="snav-link">RAM</a><a href="cadillac.html" class="snav-link">Cadillac</a><a href="buick.html" class="snav-link">Buick</a><a href="gmc.html" class="snav-link">GMC</a><a href="lincoln.html" class="snav-link">Lincoln</a></div>
+    <a href="index.html" class="snav-logo">
+      <span class="snav-logo-slash">ACB</span>
+      <span class="snav-logo-text">AmericanCarBrands</span>
+    </a>
+    <div class="snav-links">
+      <a href="index.html" class="snav-link">All Brands</a>
+      <a href="tesla.html" class="snav-link active">Tesla</a>
+      <a href="american-electric-car-brands.html" class="snav-link">EVs</a>
+      <a href="best-american-electric-cars.html" class="snav-link">EV Guide</a>
+    </div>
   </div>
 </nav>
+
 <nav class="model-bar">
   <div class="mbar-inner">
     <div class="mbar-brand">Tesla /</div>
-    <a href="tesla-model 3" class="mbar-tab"><span class="mbar-name">Model 3</span><span class="mbar-price">$40,240</span></a>
-    <a href="tesla-model Y" class="mbar-tab"><span class="mbar-name">Model Y</span><span class="mbar-price">$44,990</span></a>
-    <a href="tesla-model S" class="mbar-tab"><span class="mbar-name">Model S</span><span class="mbar-price">$74,990</span></a>
-    <a href="tesla-model X" class="mbar-tab"><span class="mbar-name">Model X</span><span class="mbar-price">$84,990</span></a>
-    <a href="tesla-Cybertruck" class="mbar-tab"><span class="mbar-name">Cybertruck</span><span class="mbar-price">$69,990</span></a>
+    <a href="tesla-model3.html" class="mbar-tab"><span class="mbar-name">Model 3</span><span class="mbar-price">$40,240</span></a>
+    <a href="tesla-modely.html" class="mbar-tab"><span class="mbar-name">Model Y</span><span class="mbar-price">$44,990</span></a>
+    <a href="tesla-models.html" class="mbar-tab"><span class="mbar-name">Model S</span><span class="mbar-price">$74,990</span></a>
+    <a href="tesla-modelx.html" class="mbar-tab"><span class="mbar-name">Model X</span><span class="mbar-price">$84,990</span></a>
+    <a href="tesla-cybertruck.html" class="mbar-tab active"><span class="mbar-name">Cybertruck</span><span class="mbar-price">$69,990</span></a>
   </div>
 </nav>
+
 <header class="hero">
   <div class="hero-slash"></div>
   <div class="hero-dark-side"></div>
@@ -539,6 +699,32 @@ h2.sec-title { font-size: 2rem !important; }
   <div class="section" id="overview">
     <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">01</span><h2 class="sec-title">Overview</h2><div class="sec-rule"></div></div>
     <p>The Cybertruck is Tesla's full-size electric pickup truck, delivered starting November 2023 after years of delays from the original 2019 reveal. Produced at Gigafactory Texas in Austin, it is the only production vehicle with a cold-rolled stainless steel exoskeleton — a manufacturing constraint that contributed to its development timeline.</p>
+  <div class="section" id="amz-top" style="padding-top:16px">
+    <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">A</span><h2 class="sec-title">Essential Accessories</h2><div class="sec-rule"></div></div>
+    <p style="font-size:.88rem;color:rgba(255,255,255,.55);margin-bottom:14px;">Affiliate links — we may earn a small commission at no extra cost to you. <a href="affiliate-disclosure.html" style="color:rgba(255,255,255,.4)">Disclosure</a></p>
+    <div class="acc-grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))">
+      <div class="acc-card">
+        <div class="acc-name">Cybertruck Bed Mat</div>
+        <div class="acc-desc">Custom-fit rubber liner protects the vault bed from scratches.</div>
+        <a href="https://www.amazon.com/s?k=Tesla+Cybertruck+bed+mat+liner&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+      </div>
+      <div class="acc-card">
+        <div class="acc-name">Cybertruck Tonneau Cover</div>
+        <div class="acc-desc">Hard or soft cover for the Cybertruck vault bed.</div>
+        <a href="https://www.amazon.com/s?k=Tesla+Cybertruck+tonneau+cover&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+      </div>
+      <div class="acc-card">
+        <div class="acc-name">Frunk Organizer</div>
+        <div class="acc-desc">Modular waterproof storage maximizes the front trunk space.</div>
+        <a href="https://www.amazon.com/s?k=Tesla+Cybertruck+frunk+organizer&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+      </div>
+      <div class="acc-card">
+        <div class="acc-name">Powershare Accessories</div>
+        <div class="acc-desc">Adapters and appliances that run off Cybertruck's 11.5 kW export.</div>
+        <a href="https://www.amazon.com/s?k=Cybertruck+Powershare+accessories+generator&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+      </div>
+    </div>
+  </div>
     <div class="callout warn">
       <div class="callout-label">Lineup Updated — Early 2026</div>
       <p>Tesla restructured the Cybertruck lineup in early 2026: <strong>RWD ($79,990) has been phased out as the base trim.</strong> The new base is <strong>Dual Motor AWD at $69,990</strong> — a significant price reduction. The Cyberbeast dropped from $99,990 to <strong>$89,990</strong>. Verify current trim availability and pricing at tesla.com before ordering.</p>
@@ -604,6 +790,32 @@ h2.sec-title { font-size: 2rem !important; }
   <!-- 03 SPECS -->
   <div class="section" id="specs">
     <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">03</span><h2 class="sec-title">Full Specs</h2><div class="sec-rule"></div></div>
+  <div class="section" id="amz-mid" style="padding-top:16px">
+    <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">B</span><h2 class="sec-title">Recommended Upgrades</h2><div class="sec-rule"></div></div>
+    <p style="font-size:.88rem;color:rgba(255,255,255,.55);margin-bottom:14px;">Affiliate links — we may earn a small commission at no extra cost to you. <a href="affiliate-disclosure.html" style="color:rgba(255,255,255,.4)">Disclosure</a></p>
+    <div class="acc-grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))">
+      <div class="acc-card">
+        <div class="acc-name">Paint Protection Film</div>
+        <div class="acc-desc">Clear PPF shields the hood and front fascia from stone chips.</div>
+        <a href="https://www.amazon.com/s?k=paint+protection+film+clear+bra+hood&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+      </div>
+      <div class="acc-card">
+        <div class="acc-name">Cordless Car Vacuum</div>
+        <div class="acc-desc">Lightweight cordless vacuum — clean in minutes without an outlet.</div>
+        <a href="https://www.amazon.com/s?k=car+vacuum+cleaner+cordless+portable&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+      </div>
+      <div class="acc-card">
+        <div class="acc-name">Windshield Sun Shade</div>
+        <div class="acc-desc">Reduces interior temp by 40°F+ — protects dash from UV cracking.</div>
+        <a href="https://www.amazon.com/s?k=windshield+sunshade+reflector&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+      </div>
+      <div class="acc-card">
+        <div class="acc-name">OBD2 Scanner</div>
+        <div class="acc-desc">Read & clear engine codes from your phone — save $100+ at the shop.</div>
+        <a href="https://www.amazon.com/s?k=OBD2+scanner+diagnostic+bluetooth&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+      </div>
+    </div>
+  </div>
     <table class="data-table">
       <thead><tr><th>Specification</th><th>Cybertruck AWD (Base)</th><th>Cyberbeast</th></tr></thead>
       <tbody>
@@ -827,37 +1039,88 @@ h2.sec-title { font-size: 2rem !important; }
     <div class="acc-grid">      <div class="acc-card">
         <div class="acc-name">Bed Mat / Liner</div>
         <div class="acc-desc">Protect the Cybertruck vault bed from scratches and impacts.</div>
-        <a href="https://amzn.to/415Uwsw" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+        <a href="https://www.amazon.com/s?k=Tesla+Cybertruck+bed+mat&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
       </div>
       <div class="acc-card">
         <div class="acc-name">Tonneau Cover</div>
         <div class="acc-desc">Hard or soft bed cover for the Cybertruck vault.</div>
-        <a href="https://amzn.to/4bYgW3U" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+        <a href="https://www.amazon.com/s?k=Tesla+Cybertruck+tonneau+cover&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
       </div>
       <div class="acc-card">
         <div class="acc-name">Floor Mats</div>
         <div class="acc-desc">All-weather fitted floor mats — front and rear.</div>
-        <a href="https://amzn.to/3QbsE3R" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+        <a href="https://www.amazon.com/s?k=Tesla+Cybertruck+floor+mats&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
       </div>
       <div class="acc-card">
         <div class="acc-name">Frunk Organizer</div>
         <div class="acc-desc">Modular waterproof storage for the front trunk.</div>
-        <a href="https://amzn.to/48j88Vb" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+        <a href="https://www.amazon.com/s?k=Tesla+Cybertruck+frunk+organizer&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
       </div>
       <div class="acc-card">
         <div class="acc-name">Level 2 Home Charger</div>
         <div class="acc-desc">48-amp home EV charger — charge overnight.</div>
-        <a href="https://amzn.to/4s3dNpu" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+        <a href="https://www.amazon.com/s?k=level+2+home+EV+charger+48+amp&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
       </div>
       <div class="acc-card">
         <div class="acc-name">Powershare Accessories</div>
         <div class="acc-desc">Appliances and adapters that work with Cybertruck Powershare export.</div>
-        <a href="https://amzn.to/4m10YL9" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+        <a href="https://www.amazon.com/s?k=Cybertruck+Powershare+accessories&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
       </div>
     </div>
     <p style="font-size:.82rem;color:rgba(255,255,255,.35);margin-top:8px;">AmericanCarBrands.com participates in the Amazon Services LLC Associates Program. Prices and availability subject to change.</p>
   </div>
 
+  
+  <div class="section" id="amz-faq" style="padding-top:16px">
+    <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">C</span><h2 class="sec-title">Shop More Accessories</h2><div class="sec-rule"></div></div>
+    <p style="font-size:.88rem;color:rgba(255,255,255,.55);margin-bottom:14px;">Affiliate links — we may earn a small commission at no extra cost to you. <a href="affiliate-disclosure.html" style="color:rgba(255,255,255,.4)">Disclosure</a></p>
+    <div class="acc-grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))">
+      <div class="acc-card">
+        <div class="acc-name">Ceramic Spray Wax</div>
+        <div class="acc-desc">Spray-on ceramic protection — brilliant shine in 10 minutes.</div>
+        <a href="https://www.amazon.com/s?k=car+wax+ceramic+coating+spray&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+      </div>
+      <div class="acc-card">
+        <div class="acc-name">Microfiber Detailing Towels</div>
+        <div class="acc-desc">Streak-free detailing. 24-pack — wash, dry, wax with one set.</div>
+        <a href="https://www.amazon.com/s?k=microfiber+towels+car+detailing+24+pack&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+      </div>
+      <div class="acc-card">
+        <div class="acc-name">Portable Tire Inflator</div>
+        <div class="acc-desc">Inflate tires anywhere. Digital gauge, auto-shutoff, 12V plug.</div>
+        <a href="https://www.amazon.com/s?k=tire+inflator+portable+air+compressor&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+      </div>
+      <div class="acc-card">
+        <div class="acc-name">Jumper Cables</div>
+        <div class="acc-desc">20-ft heavy-duty cables — 800A peak for any vehicle.</div>
+        <a href="https://www.amazon.com/s?k=jumper+cables+heavy+duty+booster&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+      </div>
+      <div class="acc-card">
+        <div class="acc-name">Roadside Emergency Kit</div>
+        <div class="acc-desc">Reflective triangles, first aid, tow rope, jumper cables in one bag.</div>
+        <a href="https://www.amazon.com/s?k=car+emergency+kit+roadside+assistance&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+      </div>
+      <div class="acc-card">
+        <div class="acc-name">Backup Camera / Sensors</div>
+        <div class="acc-desc">Retrofit wireless camera or parking sensors for added safety.</div>
+        <a href="https://www.amazon.com/s?k=parking+sensors+backup+camera+wireless&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+      </div>
+      <div class="acc-card">
+        <div class="acc-name">Premium Air Freshener</div>
+        <div class="acc-desc">Long-lasting vent-clip fresheners — clean, non-overpowering scents.</div>
+        <a href="https://www.amazon.com/s?k=car+air+freshener+vent+clip&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+      </div>
+      <div class="acc-card">
+        <div class="acc-name">Steering Wheel Cover</div>
+        <div class="acc-desc">Genuine leather or microfiber cover improves grip and comfort.</div>
+        <a href="https://www.amazon.com/s?k=steering+wheel+cover+leather&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+      </div>
+    <div class="faq-item">
+      <div class="faq-q">&#9656; Is the Tesla  a good value in 2026?</div>
+      <div class="faq-a">The Tesla  delivers competitive value at its price point. Starting at its MSRP, it sits in a well-contested segment with strong alternatives from both domestic and import brands. For most buyers in the market for a electric vehicle, the  earns a strong recommendation when cross-shopped against alternatives — particularly for those who prioritize American brand support, dealer network breadth, and current incentive programs. Always verify current pricing, incentives, and financing rates with your local Tesla dealer before purchasing.</div>
+    </div>
+  </div>
+  </div>
   <div class="sources">
     <div class="sources-title">Sources</div>
     <ul>
@@ -1006,7 +1269,7 @@ document.querySelectorAll('.faq-q').forEach(function(q){
 <script>(function(){var sz=parseFloat(localStorage.getItem('acb-fs')||'1');document.body.style.fontSize=sz+'rem';var inc=document.getElementById('fsInc'),dec=document.getElementById('fsDec');if(inc)inc.addEventListener('click',function(){sz=Math.min(1.6,sz+0.1);document.body.style.fontSize=sz+'rem';localStorage.setItem('acb-fs',sz);});if(dec)dec.addEventListener('click',function(){sz=Math.max(0.8,sz-0.1);document.body.style.fontSize=sz+'rem';localStorage.setItem('acb-fs',sz);});})();</script>
 
 <script>
-document.addEventListener('contextmenu', function(e) { e.preventDefault(); return false; });
+return false; });
 document.addEventListener('keydown', function(e) {
   // Disable F12, Ctrl+U, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+S
   if (e.key === 'F12' || (e.ctrlKey && ['u','U','s','S'].includes(e.key)) ||
@@ -1016,5 +1279,20 @@ document.addEventListener('keydown', function(e) {
 });
 </script>
 
+<script id="acb-mbar-fix-js">
+(function(){
+  // Fix model-bar active state on every page load
+  var path = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.mbar-tab, .model-bar a').forEach(function(a){
+    var href = a.getAttribute('href') || '';
+    var hrefFile = href.split('/').pop();
+    if(hrefFile === path){
+      a.classList.add('active');
+    } else {
+      a.classList.remove('active');
+    }
+  });
+})();
+</script>
 </body>
 </html>

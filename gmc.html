@@ -184,6 +184,153 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;back
 .fs-btn:hover{background:var(--red,#E31937);color:#fff;border-color:var(--red,#E31937);}
 .price-note{display:block;font-family:var(--cond,sans-serif);font-size:.56rem;color:rgba(255,255,255,.25);letter-spacing:.06em;margin-top:8px;line-height:1.5;}
 </style>
+
+<style id="acb-social-footer">
+.ft-social{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px;}
+.ft-social-label{font-family:var(--cond,sans-serif);font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-right:4px;}
+.ft-social-link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.55);text-decoration:none;font-size:.85rem;transition:color .18s,border-color .18s,background .18s;font-family:var(--cond,sans-serif);font-weight:700;letter-spacing:.04em;}
+.ft-social-link:hover{color:#fff;border-color:var(--red,#E31937);background:var(--red,#E31937);}
+.ft-social-link svg{width:16px;height:16px;fill:currentColor;pointer-events:none;}
+</style>
+
+<style id="acb-font-boost">
+/* Global font increase — ACB v7 */
+body { font-size: 1.05rem !important; line-height: 1.82 !important; }
+p, li, td, th { font-size: 1.0rem !important; }
+.section p, .article-body p { font-size: 1.08rem !important; color: rgba(255,255,255,.85) !important; line-height: 1.85 !important; }
+.callout p { font-size: 1.05rem !important; color: rgba(255,255,255,.82) !important; }
+.faq-a, .faq-answer { font-size: 1.05rem !important; color: rgba(255,255,255,.82) !important; line-height: 1.78 !important; }
+.faq-q, .faq-question { font-size: 1.08rem !important; color: rgba(255,255,255,.92) !important; }
+.data-table td { font-size: 1.02rem !important; color: rgba(255,255,255,.88) !important; }
+.data-table th { font-size: .90rem !important; }
+.snap-l { font-size: .92rem !important; color: rgba(255,255,255,.80) !important; }
+.snap-v { font-size: 2.3rem !important; }
+.tc-k { font-size: .84rem !important; color: rgba(255,255,255,.72) !important; }
+.tc-note { font-size: .84rem !important; color: rgba(255,255,255,.62) !important; }
+.price-note { font-size: .90rem !important; color: rgba(255,255,255,.68) !important; }
+.recall-body { font-size: 1.02rem !important; color: rgba(255,255,255,.82) !important; }
+.recall-status { font-size: .84rem !important; font-weight: 700 !important; }
+.sb-link { font-size: 1.02rem !important; }
+.uc-body { font-size: .98rem !important; color: rgba(255,255,255,.82) !important; line-height: 1.75 !important; }
+.hero-desc { font-size: 1.12rem !important; color: rgba(255,255,255,.85) !important; }
+.acc-desc { font-size: .98rem !important; color: rgba(255,255,255,.78) !important; }
+.ft-copy { font-size: .84rem !important; color: rgba(255,255,255,.55) !important; }
+.bc-sub { font-size: .95rem !important; }
+</style>
+<style id="acb-global-font-boost">
+/* Global font size increase — applied sitewide */
+body{font-size:1.05rem!important;}
+p,li,.section p,.callout p{font-size:1.05rem!important;line-height:1.85!important;color:rgba(255,255,255,.85)!important;}
+.data-table td{font-size:1.02rem!important;color:rgba(255,255,255,.88)!important;}
+.data-table th{font-size:.92rem!important;color:rgba(255,255,255,.72)!important;}
+.faq-q{font-size:1.05rem!important;color:rgba(255,255,255,.92)!important;}
+.faq-a{font-size:1.02rem!important;color:rgba(255,255,255,.82)!important;line-height:1.82!important;}
+.snap-v{font-size:2.3rem!important;}
+.snap-l{font-size:.88rem!important;color:rgba(255,255,255,.78)!important;}
+.tc-k{font-size:.84rem!important;color:rgba(255,255,255,.72)!important;}
+.tc-v{font-size:1.08rem!important;}
+.tc-note{font-size:.84rem!important;color:rgba(255,255,255,.65)!important;}
+.recall-body{font-size:1.02rem!important;color:rgba(255,255,255,.82)!important;}
+.uc-body{font-size:.98rem!important;color:rgba(255,255,255,.82)!important;line-height:1.78!important;}
+.hero-desc{font-size:1.12rem!important;color:rgba(255,255,255,.85)!important;line-height:1.82!important;}
+.sb-link{font-size:1.02rem!important;}
+.price-note{font-size:.92rem!important;color:rgba(255,255,255,.68)!important;}
+h2.sec-title{font-size:2.1rem!important;}
+</style>
+<style id="acb-global-fonts">
+/* ── GLOBAL FONT SCALE INCREASE v2 ── */
+body { font-size: 1.05rem !important; line-height: 1.82 !important; }
+p, li, td, .section p, .callout p, .faq-a { font-size: 1.05rem !important; color: rgba(255,255,255,.88) !important; line-height: 1.82 !important; }
+.data-table td { font-size: 1.02rem !important; color: rgba(255,255,255,.88) !important; }
+.data-table th { font-size: .92rem !important; color: rgba(255,255,255,.72) !important; }
+.snap-v { font-size: 2.3rem !important; color: #fff !important; }
+.snap-l { font-size: .92rem !important; color: rgba(255,255,255,.80) !important; }
+.hero-desc { font-size: 1.12rem !important; color: rgba(255,255,255,.88) !important; line-height: 1.82 !important; }
+.tc-k { font-size: .85rem !important; color: rgba(255,255,255,.72) !important; }
+.tc-v { font-size: 1.08rem !important; color: #fff !important; }
+.tc-note { font-size: .82rem !important; color: rgba(255,255,255,.65) !important; }
+.price-note { font-size: .90rem !important; color: rgba(255,255,255,.68) !important; }
+.recall-body { font-size: 1.02rem !important; color: rgba(255,255,255,.85) !important; }
+.uc-body { font-size: .98rem !important; color: rgba(255,255,255,.85) !important; line-height: 1.75 !important; }
+.faq-q { font-size: 1.05rem !important; color: rgba(255,255,255,.92) !important; }
+.sb-link { font-size: 1.02rem !important; color: rgba(255,255,255,.88) !important; }
+.bc-sub, .brand-desc { font-size: 1.0rem !important; color: rgba(255,255,255,.82) !important; line-height: 1.75 !important; }
+.ft-link { font-size: .82rem !important; }
+.disc-bar { font-size: .78rem !important; }
+h2.sec-title { font-size: 2.1rem !important; }
+h1.hero-h1 { font-size: clamp(3.8rem, 9vw, 9.5rem) !important; }
+</style>
+<style id="acb-global-fonts-v8">
+/* ═══ GLOBAL FONT INCREASE v8 ═══ */
+html { font-size: 16px; }
+body { font-size: 1rem; line-height: 1.78; }
+
+/* Article & Section Body Text */
+.section p, article p, .article-body p, .content p {
+  font-size: 1.08rem !important;
+  color: rgba(255,255,255,.88) !important;
+  line-height: 1.85 !important;
+}
+/* Light-bg article pages */
+.section p[style*="rgba(26"], p.body-copy {
+  color: rgba(26,18,8,.82) !important;
+}
+/* Callouts */
+.callout p { font-size: 1.05rem !important; color: rgba(255,255,255,.88) !important; }
+/* Tables */
+.data-table td { font-size: 1.02rem !important; color: rgba(255,255,255,.90) !important; }
+.data-table th { font-size: .92rem !important; }
+/* Snap stat labels */
+.snap-l, .stat-label, .sb-l { font-size: .92rem !important; color: rgba(255,255,255,.82) !important; }
+/* Trim card */
+.tc-k { font-size: .85rem !important; color: rgba(255,255,255,.75) !important; }
+.tc-v { font-size: 1.08rem !important; }
+.tc-note { font-size: .85rem !important; color: rgba(255,255,255,.68) !important; }
+/* Price note */
+.price-note { font-size: .92rem !important; color: rgba(255,255,255,.72) !important; }
+/* Recall */
+.recall-body { font-size: 1.02rem !important; color: rgba(255,255,255,.85) !important; }
+.recall-status { font-size: .85rem !important; font-weight: 700 !important; }
+/* FAQ */
+.faq-q { font-size: 1.05rem !important; font-weight: 600 !important; }
+.faq-a { font-size: 1.02rem !important; color: rgba(255,255,255,.85) !important; line-height: 1.8 !important; }
+/* Sidebar */
+.sb-link { font-size: 1.02rem !important; color: rgba(255,255,255,.88) !important; }
+.sb-title { font-size: .92rem !important; color: rgba(255,255,255,.72) !important; }
+/* Acc cards */
+.acc-desc { font-size: .98rem !important; color: rgba(255,255,255,.82) !important; }
+.acc-name { font-size: 1.08rem !important; }
+/* Hero */
+.hero-desc { font-size: 1.1rem !important; color: rgba(255,255,255,.88) !important; }
+/* Update cards */
+.uc-body { font-size: .98rem !important; color: rgba(255,255,255,.85) !important; line-height: 1.78 !important; }
+/* Footer */
+.ft-copy { font-size: .85rem !important; color: rgba(255,255,255,.60) !important; }
+.ft-link { font-size: .82rem !important; }
+/* Disc bar */
+.disc-bar { font-size: .78rem !important; color: rgba(255,255,255,.62) !important; }
+</style>
+
+<style id="acb-featured-guides">
+.featured-guides{background:#111;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);padding:56px 0;}
+.fg-inner{max-width:1280px;margin:0 auto;padding:0 28px;}
+.fg-hdr{margin-bottom:32px;}
+.fg-label{font-family:'Barlow Condensed',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#E31937;margin-bottom:8px;}
+.fg-heading{font-family:'Teko','Bebas Neue',sans-serif;font-size:2.4rem;font-weight:700;color:#fff;letter-spacing:.04em;margin:0 0 8px;}
+.fg-desc{font-family:'Barlow',sans-serif;font-size:.95rem;color:rgba(255,255,255,.5);margin:0;}
+.fg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;}
+.fg-card{display:flex;flex-direction:column;gap:6px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);padding:18px 16px;text-decoration:none;transition:border-color .18s,background .18s;position:relative;overflow:hidden;}
+.fg-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--fg-accent,#E31937);opacity:0;transition:opacity .18s;}
+.fg-card:hover{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.18);}
+.fg-card:hover::before{opacity:1;}
+.fg-tag{font-family:'Barlow Condensed',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:2px 8px;border:1px solid;align-self:flex-start;margin-bottom:2px;}
+.fg-title{font-family:'Teko','Bebas Neue',sans-serif;font-size:1.1rem;font-weight:700;color:#fff;line-height:1.2;letter-spacing:.02em;}
+.fg-sub{font-family:'Barlow',sans-serif;font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.5;flex:1;}
+.fg-arrow{font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#E31937;margin-top:6px;}
+.fg-card:hover .fg-arrow{color:#ff3355;}
+@media(max-width:600px){.fg-grid{grid-template-columns:1fr 1fr;}.fg-heading{font-size:1.8rem;}}
+</style>
+
 </head>
 <body>
 <a href="#" class="back-top" id="backTop">↑</a>
@@ -534,6 +681,80 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;back
 </aside>
 </div>
 
+
+<!-- ═══ FEATURED GUIDES ═══ -->
+<section class="featured-guides" id="featured-guides">
+  <div class="fg-inner">
+    <div class="fg-hdr">
+      <div class="fg-label">&#9733; AmericanCarBrands Recommends</div>
+      <h2 class="fg-heading">Best of 2026 — Research Guides</h2>
+      <p class="fg-desc">Hand-picked research guides updated for 2026. Everything you need to make a confident car decision.</p>
+    </div>
+    <div class="fg-grid">
+      <a href="best-american-electric-cars.html" class="fg-card">
+        <span class="fg-tag" style="background:#00A86B22;color:#00A86B;border-color:#00A86B44;">EV Guide</span>
+        <div class="fg-title">Best American Electric Cars 2026</div>
+        <div class="fg-sub">Top EVs by range, value & charging speed</div>
+        <span class="fg-arrow">Read Guide →</span>
+      </a>
+      <a href="best-american-muscle-cars.html" class="fg-card">
+        <span class="fg-tag" style="background:#E3193722;color:#E31937;border-color:#E3193744;">Performance</span>
+        <div class="fg-title">Best American Muscle Cars</div>
+        <div class="fg-sub">Hellcat, Blackwing, Corvette Z06 & more</div>
+        <span class="fg-arrow">Read Guide →</span>
+      </a>
+      <a href="best-american-cars-under-30k.html" class="fg-card">
+        <span class="fg-tag" style="background:#F5A62322;color:#F5A623;border-color:#F5A62344;">Value</span>
+        <div class="fg-title">Best Cars Under $30K</div>
+        <div class="fg-sub">Top picks for budget-conscious American buyers</div>
+        <span class="fg-arrow">Read Guide →</span>
+      </a>
+      <a href="most-reliable-american-suvs.html" class="fg-card">
+        <span class="fg-tag" style="background:#4A90D922;color:#4A90D9;border-color:#4A90D944;">Reliability</span>
+        <div class="fg-title">Most Reliable American SUVs</div>
+        <div class="fg-sub">Ranked by owner data & J.D. Power scores</div>
+        <span class="fg-arrow">Read Guide →</span>
+      </a>
+      <a href="american-luxury-car-brands.html" class="fg-card">
+        <span class="fg-tag" style="background:#9B59B622;color:#9B59B6;border-color:#9B59B644;">Luxury</span>
+        <div class="fg-title">American Luxury Car Brands</div>
+        <div class="fg-sub">Cadillac, Lincoln, Lucid — compared</div>
+        <span class="fg-arrow">Read Guide →</span>
+      </a>
+      <a href="american-truck-brands.html" class="fg-card">
+        <span class="fg-tag" style="background:#E67E2222;color:#E67E22;border-color:#E67E2244;">Trucks</span>
+        <div class="fg-title">American Truck Brands Ranked</div>
+        <div class="fg-sub">F-150 vs Silverado vs RAM vs Rivian R1T</div>
+        <span class="fg-arrow">Read Guide →</span>
+      </a>
+      <a href="top-10-american-muscle-cars.html" class="fg-card">
+        <span class="fg-tag" style="background:#E3193722;color:#E31937;border-color:#E3193744;">Performance</span>
+        <div class="fg-title">Top 10 American Muscle Cars</div>
+        <div class="fg-sub">The definitive list — all time and modern</div>
+        <span class="fg-arrow">Read Guide →</span>
+      </a>
+      <a href="best-performance-cars.html" class="fg-card">
+        <span class="fg-tag" style="background:#E3193722;color:#E31937;border-color:#E3193744;">Speed</span>
+        <div class="fg-title">Best Performance Cars 2026</div>
+        <div class="fg-sub">Fastest American production vehicles ranked</div>
+        <span class="fg-arrow">Read Guide →</span>
+      </a>
+      <a href="most-reliable-american-electric-cars.html" class="fg-card">
+        <span class="fg-tag" style="background:#00A86B22;color:#00A86B;border-color:#00A86B44;">EV + Reliability</span>
+        <div class="fg-title">Most Reliable American Electric Cars</div>
+        <div class="fg-sub">EV reliability data — what to buy with confidence</div>
+        <span class="fg-arrow">Read Guide →</span>
+      </a>
+      <a href="are-american-cars-reliable.html" class="fg-card">
+        <span class="fg-tag" style="background:#4A90D922;color:#4A90D9;border-color:#4A90D944;">Research</span>
+        <div class="fg-title">Are American Cars Reliable?</div>
+        <div class="fg-sub">The data-driven answer — broken down by brand</div>
+        <span class="fg-arrow">Read Guide →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="ft-in">
     <a href="index.html" class="ft-logo"><span class="ft-logo-slash">ACB</span>AmericanCarBrands</a>
@@ -545,6 +766,15 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;back
       <a href="gmc-yukon.html" class="ft-link">Yukon</a>
       <a href="disclaimer.html" class="ft-link">Disclaimer</a>
       
+    </div>
+        <div class="ft-social">
+      <span class="ft-social-label">Join the Drive</span>
+      <a href="https://twitter.com/USAutoBrands" class="ft-social-link" target="_blank" rel="noopener noreferrer" aria-label="Follow AmericanCarBrands on X (Twitter)" title="@USAutoBrands on X">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.261 5.636zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/americancarbrands/" class="ft-social-link" target="_blank" rel="noopener noreferrer" aria-label="Follow AmericanCarBrands on Instagram" title="@americancarbrands on Instagram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      </a>
     </div>
     <span class="ft-copy">© 2026 AmericanCarBrands.com — Independent Editorial Research</span>
   </div>

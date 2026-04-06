@@ -233,8 +233,181 @@ footer{background:#060608;padding:44px 52px 36px;border-top:1px solid rgba(255,2
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "WebSite", "name": "AmericanCarBrands.com", "url": "https://americancarbrands.com", "description": "Complete database of American car brands, models, specs, and ownership research guides.", "potentialAction": {"@type": "SearchAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://americancarbrands.com/?q={search_term_string}"}, "query-input": "required name=search_term_string"}}
 </script>
+
+<style id="acb-social-footer">
+.ft-social{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px;}
+.ft-social-label{font-family:var(--cond,sans-serif);font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-right:4px;}
+.ft-social-link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.55);text-decoration:none;font-size:.85rem;transition:color .18s,border-color .18s,background .18s;font-family:var(--cond,sans-serif);font-weight:700;letter-spacing:.04em;}
+.ft-social-link:hover{color:#fff;border-color:var(--red,#E31937);background:var(--red,#E31937);}
+.ft-social-link svg{width:16px;height:16px;fill:currentColor;pointer-events:none;}
+</style>
+
+<style id="acb-float-controls">
+.float-controls{position:fixed;bottom:26px;right:26px;z-index:999;display:flex;flex-direction:column;gap:3px;align-items:center;background:#1a1208;border:1px solid rgba(255,255,255,.12);padding:8px 6px;border-radius:4px;}
+.fc-label{font-family:'Barlow Condensed',sans-serif;font-size:.55rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:2px;}
+.fs-btn{background:transparent;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.6);font-family:'Barlow Condensed',sans-serif;font-size:.82rem;font-weight:700;width:32px;height:28px;cursor:pointer;transition:color .15s,background .15s,border-color .15s;letter-spacing:.04em;}
+.fs-btn:hover{background:#E31937;color:#fff;border-color:#E31937;}
+.back-top{display:flex;align-items:center;justify-content:center;width:32px;height:28px;background:transparent;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.4);text-decoration:none;font-size:.85rem;margin-top:2px;transition:color .15s,background .15s;}
+.back-top:hover{background:#E31937;color:#fff;border-color:#E31937;}
+</style>
+<style id="acb-font-boost">
+/* Global font increase — ACB v7 */
+body { font-size: 1.05rem !important; line-height: 1.82 !important; }
+p, li, td, th { font-size: 1.0rem !important; }
+.section p, .article-body p { font-size: 1.08rem !important; color: rgba(255,255,255,.85) !important; line-height: 1.85 !important; }
+.callout p { font-size: 1.05rem !important; color: rgba(255,255,255,.82) !important; }
+.faq-a, .faq-answer { font-size: 1.05rem !important; color: rgba(255,255,255,.82) !important; line-height: 1.78 !important; }
+.faq-q, .faq-question { font-size: 1.08rem !important; color: rgba(255,255,255,.92) !important; }
+.data-table td { font-size: 1.02rem !important; color: rgba(255,255,255,.88) !important; }
+.data-table th { font-size: .90rem !important; }
+.snap-l { font-size: .92rem !important; color: rgba(255,255,255,.80) !important; }
+.snap-v { font-size: 2.3rem !important; }
+.tc-k { font-size: .84rem !important; color: rgba(255,255,255,.72) !important; }
+.tc-note { font-size: .84rem !important; color: rgba(255,255,255,.62) !important; }
+.price-note { font-size: .90rem !important; color: rgba(255,255,255,.68) !important; }
+.recall-body { font-size: 1.02rem !important; color: rgba(255,255,255,.82) !important; }
+.recall-status { font-size: .84rem !important; font-weight: 700 !important; }
+.sb-link { font-size: 1.02rem !important; }
+.uc-body { font-size: .98rem !important; color: rgba(255,255,255,.82) !important; line-height: 1.75 !important; }
+.hero-desc { font-size: 1.12rem !important; color: rgba(255,255,255,.85) !important; }
+.acc-desc { font-size: .98rem !important; color: rgba(255,255,255,.78) !important; }
+.ft-copy { font-size: .84rem !important; color: rgba(255,255,255,.55) !important; }
+.bc-sub { font-size: .95rem !important; }
+</style>
+<style id="acb-snav-hp">
+.site-nav{position:sticky;top:0;z-index:500;background:var(--dark,#0d0d0d);border-bottom:1px solid rgba(255,255,255,.08);height:56px;display:flex;align-items:center;}
+.snav-inner{max-width:1400px;margin:0 auto;padding:0 24px;display:flex;align-items:center;width:100%;gap:0;}
+.snav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;margin-right:8px;}
+.snav-logo-slash{background:#E31937;color:#fff;font-family:'Teko',sans-serif;font-size:1.1rem;font-weight:700;letter-spacing:.06em;padding:5px 12px 2px;clip-path:polygon(0 0,100% 0,88% 100%,0 100%);margin-right:10px;}
+.snav-logo-text{color:rgba(255,255,255,.45);font-family:'Teko',sans-serif;font-size:.95rem;letter-spacing:.06em;}
+.snav-links{display:flex;align-items:center;overflow-x:auto;scrollbar-width:none;flex:1;}
+.snav-links::-webkit-scrollbar{display:none;}
+.snav-link{font-family:'Barlow Condensed',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4);text-decoration:none;padding:0 13px;height:56px;display:flex;align-items:center;transition:color .15s;border-left:1px solid rgba(255,255,255,.06);white-space:nowrap;}
+.snav-link:hover,.snav-link.active{color:#fff;}
+@media(max-width:700px){.snav-links{display:none;}}
+</style>
+<style id="acb-global-font-boost">
+/* Global font size increase — applied sitewide */
+body{font-size:1.05rem!important;}
+p,li,.section p,.callout p{font-size:1.05rem!important;line-height:1.85!important;color:rgba(255,255,255,.85)!important;}
+.data-table td{font-size:1.02rem!important;color:rgba(255,255,255,.88)!important;}
+.data-table th{font-size:.92rem!important;color:rgba(255,255,255,.72)!important;}
+.faq-q{font-size:1.05rem!important;color:rgba(255,255,255,.92)!important;}
+.faq-a{font-size:1.02rem!important;color:rgba(255,255,255,.82)!important;line-height:1.82!important;}
+.snap-v{font-size:2.3rem!important;}
+.snap-l{font-size:.88rem!important;color:rgba(255,255,255,.78)!important;}
+.tc-k{font-size:.84rem!important;color:rgba(255,255,255,.72)!important;}
+.tc-v{font-size:1.08rem!important;}
+.tc-note{font-size:.84rem!important;color:rgba(255,255,255,.65)!important;}
+.recall-body{font-size:1.02rem!important;color:rgba(255,255,255,.82)!important;}
+.uc-body{font-size:.98rem!important;color:rgba(255,255,255,.82)!important;line-height:1.78!important;}
+.hero-desc{font-size:1.12rem!important;color:rgba(255,255,255,.85)!important;line-height:1.82!important;}
+.sb-link{font-size:1.02rem!important;}
+.price-note{font-size:.92rem!important;color:rgba(255,255,255,.68)!important;}
+h2.sec-title{font-size:2.1rem!important;}
+</style>
+<style id="acb-global-fonts">
+/* ── GLOBAL FONT SCALE INCREASE v2 ── */
+body { font-size: 1.05rem !important; line-height: 1.82 !important; }
+p, li, td, .section p, .callout p, .faq-a { font-size: 1.05rem !important; color: rgba(255,255,255,.88) !important; line-height: 1.82 !important; }
+.data-table td { font-size: 1.02rem !important; color: rgba(255,255,255,.88) !important; }
+.data-table th { font-size: .92rem !important; color: rgba(255,255,255,.72) !important; }
+.snap-v { font-size: 2.3rem !important; color: #fff !important; }
+.snap-l { font-size: .92rem !important; color: rgba(255,255,255,.80) !important; }
+.hero-desc { font-size: 1.12rem !important; color: rgba(255,255,255,.88) !important; line-height: 1.82 !important; }
+.tc-k { font-size: .85rem !important; color: rgba(255,255,255,.72) !important; }
+.tc-v { font-size: 1.08rem !important; color: #fff !important; }
+.tc-note { font-size: .82rem !important; color: rgba(255,255,255,.65) !important; }
+.price-note { font-size: .90rem !important; color: rgba(255,255,255,.68) !important; }
+.recall-body { font-size: 1.02rem !important; color: rgba(255,255,255,.85) !important; }
+.uc-body { font-size: .98rem !important; color: rgba(255,255,255,.85) !important; line-height: 1.75 !important; }
+.faq-q { font-size: 1.05rem !important; color: rgba(255,255,255,.92) !important; }
+.sb-link { font-size: 1.02rem !important; color: rgba(255,255,255,.88) !important; }
+.bc-sub, .brand-desc { font-size: 1.0rem !important; color: rgba(255,255,255,.82) !important; line-height: 1.75 !important; }
+.ft-link { font-size: .82rem !important; }
+.disc-bar { font-size: .78rem !important; }
+h2.sec-title { font-size: 2.1rem !important; }
+h1.hero-h1 { font-size: clamp(3.8rem, 9vw, 9.5rem) !important; }
+</style>
+<style id="acb-global-fonts-v8">
+/* ═══ GLOBAL FONT INCREASE v8 ═══ */
+html { font-size: 16px; }
+body { font-size: 1rem; line-height: 1.78; }
+
+/* Article & Section Body Text */
+.section p, article p, .article-body p, .content p {
+  font-size: 1.08rem !important;
+  color: rgba(255,255,255,.88) !important;
+  line-height: 1.85 !important;
+}
+/* Light-bg article pages */
+.section p[style*="rgba(26"], p.body-copy {
+  color: rgba(26,18,8,.82) !important;
+}
+/* Callouts */
+.callout p { font-size: 1.05rem !important; color: rgba(255,255,255,.88) !important; }
+/* Tables */
+.data-table td { font-size: 1.02rem !important; color: rgba(255,255,255,.90) !important; }
+.data-table th { font-size: .92rem !important; }
+/* Snap stat labels */
+.snap-l, .stat-label, .sb-l { font-size: .92rem !important; color: rgba(255,255,255,.82) !important; }
+/* Trim card */
+.tc-k { font-size: .85rem !important; color: rgba(255,255,255,.75) !important; }
+.tc-v { font-size: 1.08rem !important; }
+.tc-note { font-size: .85rem !important; color: rgba(255,255,255,.68) !important; }
+/* Price note */
+.price-note { font-size: .92rem !important; color: rgba(255,255,255,.72) !important; }
+/* Recall */
+.recall-body { font-size: 1.02rem !important; color: rgba(255,255,255,.85) !important; }
+.recall-status { font-size: .85rem !important; font-weight: 700 !important; }
+/* FAQ */
+.faq-q { font-size: 1.05rem !important; font-weight: 600 !important; }
+.faq-a { font-size: 1.02rem !important; color: rgba(255,255,255,.85) !important; line-height: 1.8 !important; }
+/* Sidebar */
+.sb-link { font-size: 1.02rem !important; color: rgba(255,255,255,.88) !important; }
+.sb-title { font-size: .92rem !important; color: rgba(255,255,255,.72) !important; }
+/* Acc cards */
+.acc-desc { font-size: .98rem !important; color: rgba(255,255,255,.82) !important; }
+.acc-name { font-size: 1.08rem !important; }
+/* Hero */
+.hero-desc { font-size: 1.1rem !important; color: rgba(255,255,255,.88) !important; }
+/* Update cards */
+.uc-body { font-size: .98rem !important; color: rgba(255,255,255,.85) !important; line-height: 1.78 !important; }
+/* Footer */
+.ft-copy { font-size: .85rem !important; color: rgba(255,255,255,.60) !important; }
+.ft-link { font-size: .82rem !important; }
+/* Disc bar */
+.disc-bar { font-size: .78rem !important; color: rgba(255,255,255,.62) !important; }
+</style>
+
+<style id="acb-featured-guides">
+.featured-guides{background:#111;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);padding:56px 0;}
+.fg-inner{max-width:1280px;margin:0 auto;padding:0 28px;}
+.fg-hdr{margin-bottom:32px;}
+.fg-label{font-family:'Barlow Condensed',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#E31937;margin-bottom:8px;}
+.fg-heading{font-family:'Teko','Bebas Neue',sans-serif;font-size:2.4rem;font-weight:700;color:#fff;letter-spacing:.04em;margin:0 0 8px;}
+.fg-desc{font-family:'Barlow',sans-serif;font-size:.95rem;color:rgba(255,255,255,.5);margin:0;}
+.fg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;}
+.fg-card{display:flex;flex-direction:column;gap:6px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);padding:18px 16px;text-decoration:none;transition:border-color .18s,background .18s;position:relative;overflow:hidden;}
+.fg-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--fg-accent,#E31937);opacity:0;transition:opacity .18s;}
+.fg-card:hover{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.18);}
+.fg-card:hover::before{opacity:1;}
+.fg-tag{font-family:'Barlow Condensed',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:2px 8px;border:1px solid;align-self:flex-start;margin-bottom:2px;}
+.fg-title{font-family:'Teko','Bebas Neue',sans-serif;font-size:1.1rem;font-weight:700;color:#fff;line-height:1.2;letter-spacing:.02em;}
+.fg-sub{font-family:'Barlow',sans-serif;font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.5;flex:1;}
+.fg-arrow{font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#E31937;margin-top:6px;}
+.fg-card:hover .fg-arrow{color:#ff3355;}
+@media(max-width:600px){.fg-grid{grid-template-columns:1fr 1fr;}.fg-heading{font-size:1.8rem;}}
+</style>
+
 </head>
 <body>
+<div class="float-controls" id="floatControls">
+  <div class="fc-label">TEXT</div>
+  <button class="fs-btn" id="fsInc" aria-label="Increase font size" title="Larger text">A+</button>
+  <button class="fs-btn" id="fsDec" aria-label="Decrease font size" title="Smaller text">A−</button>
+  <a href="#" class="back-top" id="backTop" aria-label="Back to top">↑</a>
+</div>
 <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">American Car Brands — Complete Guide to US Auto Manufacturers</h1>
 <!-- ═══ FTC §255 + TRADEMARK DISCLOSURE BANNER — shown on every page ═══ -->
 <div id="acb-disc-bar" role="note" aria-live="polite" aria-label="Site disclosure and disclaimer" aria-atomic="true"
@@ -304,16 +477,22 @@ footer{background:#060608;padding:44px 52px 36px;border-top:1px solid rgba(255,2
 </div>
 
 <!-- NAV -->
-<nav>
-  <a href="index.html" class="nav-logo">AMERICAN<span>CAR</span>BRANDS</a>
-  <ul class="nav-links">
-    <li><a href="active-american-car-brands.html" class="active">Active Brands</a></li>
-    <li><a href="ev.html">EV Startups</a></li>
-    <li><a href="defunct-american-car-brands.html">Defunct</a></li>
-    <li></li>
-    <li><a href="ford.html">Brand Pages</a></li>
-  </ul>
-  <a href="active-american-car-brands.html" class="nav-badge">View All Active &#x2192;</a>
+<nav class="site-nav">
+  <div class="snav-inner">
+    <a href="index.html" class="snav-logo"><span class="snav-logo-slash">ACB</span><span class="snav-logo-text">AmericanCarBrands</span></a>
+    <div class="snav-links">
+      <a href="ford.html" class="snav-link">Ford</a>
+      <a href="chevrolet.html" class="snav-link">Chevrolet</a>
+      <a href="tesla.html" class="snav-link">Tesla</a>
+      <a href="dodge.html" class="snav-link">Dodge</a>
+      <a href="jeep.html" class="snav-link">Jeep</a>
+      <a href="ram.html" class="snav-link">RAM</a>
+      <a href="cadillac.html" class="snav-link">Cadillac</a>
+      <a href="buick.html" class="snav-link">Buick</a>
+      <a href="gmc.html" class="snav-link">GMC</a>
+      <a href="lincoln.html" class="snav-link">Lincoln</a>
+    </div>
+  </div>
 </nav>
 
 <!-- SPLIT HERO -->
@@ -523,6 +702,80 @@ footer{background:#060608;padding:44px 52px 36px;border-top:1px solid rgba(255,2
 </div>
 
 <!-- FOOTER -->
+
+<!-- ═══ FEATURED GUIDES ═══ -->
+<section class="featured-guides" id="featured-guides">
+  <div class="fg-inner">
+    <div class="fg-hdr">
+      <div class="fg-label">&#9733; AmericanCarBrands Recommends</div>
+      <h2 class="fg-heading">FEATURED GUIDES — Best of 2026</h2>
+      <p class="fg-desc">Hand-picked research guides updated for 2026. Everything you need to make a confident car decision.</p>
+    </div>
+    <div class="fg-grid">
+      <a href="best-american-electric-cars.html" class="fg-card">
+        <span class="fg-tag" style="background:#00A86B22;color:#00A86B;border-color:#00A86B44;">EV Guide</span>
+        <div class="fg-title">Best American Electric Cars 2026</div>
+        <div class="fg-sub">Top EVs by range, value & charging speed</div>
+        <span class="fg-arrow">Read Guide →</span>
+      </a>
+      <a href="best-american-muscle-cars.html" class="fg-card">
+        <span class="fg-tag" style="background:#E3193722;color:#E31937;border-color:#E3193744;">Performance</span>
+        <div class="fg-title">Best American Muscle Cars</div>
+        <div class="fg-sub">Hellcat, Blackwing, Corvette Z06 & more</div>
+        <span class="fg-arrow">Read Guide →</span>
+      </a>
+      <a href="best-american-cars-under-30k.html" class="fg-card">
+        <span class="fg-tag" style="background:#F5A62322;color:#F5A623;border-color:#F5A62344;">Value</span>
+        <div class="fg-title">Best Cars Under $30K</div>
+        <div class="fg-sub">Top picks for budget-conscious American buyers</div>
+        <span class="fg-arrow">Read Guide →</span>
+      </a>
+      <a href="most-reliable-american-suvs.html" class="fg-card">
+        <span class="fg-tag" style="background:#4A90D922;color:#4A90D9;border-color:#4A90D944;">Reliability</span>
+        <div class="fg-title">Most Reliable American SUVs</div>
+        <div class="fg-sub">Ranked by owner data & J.D. Power scores</div>
+        <span class="fg-arrow">Read Guide →</span>
+      </a>
+      <a href="american-luxury-car-brands.html" class="fg-card">
+        <span class="fg-tag" style="background:#9B59B622;color:#9B59B6;border-color:#9B59B644;">Luxury</span>
+        <div class="fg-title">American Luxury Car Brands</div>
+        <div class="fg-sub">Cadillac, Lincoln, Lucid — compared</div>
+        <span class="fg-arrow">Read Guide →</span>
+      </a>
+      <a href="american-truck-brands.html" class="fg-card">
+        <span class="fg-tag" style="background:#E67E2222;color:#E67E22;border-color:#E67E2244;">Trucks</span>
+        <div class="fg-title">American Truck Brands Ranked</div>
+        <div class="fg-sub">F-150 vs Silverado vs RAM vs Rivian R1T</div>
+        <span class="fg-arrow">Read Guide →</span>
+      </a>
+      <a href="top-10-american-muscle-cars.html" class="fg-card">
+        <span class="fg-tag" style="background:#E3193722;color:#E31937;border-color:#E3193744;">Performance</span>
+        <div class="fg-title">Top 10 American Muscle Cars</div>
+        <div class="fg-sub">The definitive list — all time and modern</div>
+        <span class="fg-arrow">Read Guide →</span>
+      </a>
+      <a href="best-performance-cars.html" class="fg-card">
+        <span class="fg-tag" style="background:#E3193722;color:#E31937;border-color:#E3193744;">Speed</span>
+        <div class="fg-title">Best Performance Cars 2026</div>
+        <div class="fg-sub">Fastest American production vehicles ranked</div>
+        <span class="fg-arrow">Read Guide →</span>
+      </a>
+      <a href="most-reliable-american-electric-cars.html" class="fg-card">
+        <span class="fg-tag" style="background:#00A86B22;color:#00A86B;border-color:#00A86B44;">EV + Reliability</span>
+        <div class="fg-title">Most Reliable American Electric Cars</div>
+        <div class="fg-sub">EV reliability data — what to buy with confidence</div>
+        <span class="fg-arrow">Read Guide →</span>
+      </a>
+      <a href="are-american-cars-reliable.html" class="fg-card">
+        <span class="fg-tag" style="background:#4A90D922;color:#4A90D9;border-color:#4A90D944;">Research</span>
+        <div class="fg-title">Are American Cars Reliable?</div>
+        <div class="fg-sub">The data-driven answer — broken down by brand</div>
+        <span class="fg-arrow">Read Guide →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="ft-in">
     <a href="index.html" class="ft-logo">AMERICAN<span>CAR</span>BRANDS</a>
@@ -595,6 +848,15 @@ footer{background:#060608;padding:44px 52px 36px;border-top:1px solid rgba(255,2
       &ensp;We do not facilitate vehicle sales, dealer referrals, or insurance transactions.
     </p>
   </div>
+    <div class="ft-social">
+      <span class="ft-social-label">Join the Drive</span>
+      <a href="https://twitter.com/USAutoBrands" class="ft-social-link" target="_blank" rel="noopener noreferrer" aria-label="Follow AmericanCarBrands on X" title="@USAutoBrands on X">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.261 5.636zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/americancarbrands/" class="ft-social-link" target="_blank" rel="noopener noreferrer" aria-label="Follow AmericanCarBrands on Instagram" title="@americancarbrands on Instagram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      </a>
+    </div>
 </footer>
 
 <script>
@@ -861,7 +1123,7 @@ img { pointer-events: none; -webkit-user-drag: none; user-drag: none; }
 </style>
 <script>
 (function(){
-  document.addEventListener('contextmenu',function(e){if(e.target.tagName==='IMG')e.preventDefault();});
+  });
   document.addEventListener('keydown',function(e){if(e.key==='PrintScreen'){document.body.style.opacity='0';setTimeout(function(){document.body.style.opacity='1';},400);}});
   document.addEventListener('copy',function(e){
     var sel=window.getSelection?window.getSelection().toString():'';
@@ -871,5 +1133,41 @@ img { pointer-events: none; -webkit-user-drag: none; user-drag: none; }
 </script>
 <a href="privacy-policy.html#do-not-sell" style="display:none;">Do Not Sell or Share My Info</a>
 <a href="privacy-policy.html#limit-spi" style="display:none;">Limit Use of My Sensitive Personal Information</a>
+<div class="font-bar" id="fontBar">
+  <button class="fs-btn" data-dir="-" title="Decrease font size">A−</button>
+  <button class="fs-btn" data-dir="+" title="Increase font size">A+</button>
+</div>
+
+<script>
+(function(){
+  var sz=16,min=13,max=22;
+  var stored=localStorage.getItem('acb-fs');
+  if(stored){sz=parseInt(stored);document.documentElement.style.fontSize=sz+'px';}
+  document.querySelectorAll('.fs-btn').forEach(function(b){
+    b.addEventListener('click',function(){
+      if(this.dataset.dir==='+'){sz=Math.min(sz+1,max);}else{sz=Math.max(sz-1,min);}
+      document.documentElement.style.fontSize=sz+'px';
+      localStorage.setItem('acb-fs',sz);
+    });
+  });
+})();
+</script>
+<script id="acb-font-resize">
+(function(){
+  var sz = parseFloat(localStorage.getItem('acb-fs') || '1');
+  document.body.style.fontSize = sz + 'rem';
+  var inc = document.getElementById('fsInc'), dec = document.getElementById('fsDec');
+  if(inc) inc.addEventListener('click', function(){
+    sz = Math.min(1.6, sz + 0.1);
+    document.body.style.fontSize = sz + 'rem';
+    localStorage.setItem('acb-fs', sz);
+  });
+  if(dec) dec.addEventListener('click', function(){
+    sz = Math.max(0.8, sz - 0.1);
+    document.body.style.fontSize = sz + 'rem';
+    localStorage.setItem('acb-fs', sz);
+  });
+})();
+</script>
 </body>
 </html>
