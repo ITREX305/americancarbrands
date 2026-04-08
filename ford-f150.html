@@ -197,6 +197,12 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;back
 .mobile-sidebar-panel .sb-link{border-bottom:1px solid var(--rule);}
 @media(min-width:1001px){.mobile-sidebar-toggle,.mobile-sidebar-panel{display:none !important;}}
 @media(max-width:1000px){.mobile-sidebar-toggle{display:block;}}
+
+/* HERO_RIGHT_FIX */
+.hero-right-label{font-family:var(--cond);font-size:.90rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.65);padding-bottom:10px;border-bottom:1px solid var(--rule);margin-bottom:4px;}
+.tr-name{font-family:var(--teko);font-size:1.5rem;font-weight:700;letter-spacing:.04em;color:#fff;line-height:1;}
+.tr-price{font-family:var(--teko);font-size:1.35rem;color:var(--red);line-height:1;margin-top:2px;}
+.tr-note{font-family:var(--cond);font-size:.80rem;color:rgba(255,255,255,.55);margin-top:4px;line-height:1.45;}
 </style>
 <style>
 .acc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;margin:16px 0;}
@@ -347,7 +353,6 @@ h2.sec-title { font-size: 2rem !important; }
 .jn.active { color: var(--red) !important; border-bottom-color: var(--red) !important; }
 </style>
 
-
 <style id="acb-social-footer">
 .ft-social{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px;}
 .ft-social-label{font-family:var(--cond,sans-serif);font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-right:4px;}
@@ -356,157 +361,8 @@ h2.sec-title { font-size: 2rem !important; }
 .ft-social-link svg{width:16px;height:16px;fill:currentColor;pointer-events:none;}
 </style>
 
-<style id="acb-mbar-fix">
-.mbar-tab{position:relative;display:flex;flex-direction:column;padding:0 14px;height:46px;justify-content:center;text-decoration:none;border-right:1px solid var(--rule,rgba(255,255,255,.08));transition:background .15s;}
-.mbar-tab:hover{background:rgba(255,255,255,.04);}
-.mbar-tab.active{background:rgba(255,255,255,.06);border-bottom:2px solid var(--red,#E31937);}
-.mbar-tab .mbar-name{font-family:var(--teko,'Teko'),sans-serif;font-size:1rem;font-weight:700;letter-spacing:.04em;color:rgba(255,255,255,.6);line-height:1.1;}
-.mbar-tab.active .mbar-name{color:#fff;}
-.mbar-tab .mbar-price{font-family:var(--cond,'Barlow Condensed'),sans-serif;font-size:.62rem;font-weight:600;color:rgba(255,255,255,.28);margin-top:1px;}
-.mbar-tab.active .mbar-price{color:rgba(255,255,255,.55);}
-</style>
-<style id="acb-font-boost">
-/* Global font increase — ACB v7 */
-body { font-size: 1.05rem !important; line-height: 1.82 !important; }
-p, li, td, th { font-size: 1.0rem !important; }
-.section p, .article-body p { font-size: 1.08rem !important; color: rgba(255,255,255,.85) !important; line-height: 1.85 !important; }
-.callout p { font-size: 1.05rem !important; color: rgba(255,255,255,.82) !important; }
-.faq-a, .faq-answer { font-size: 1.05rem !important; color: rgba(255,255,255,.82) !important; line-height: 1.78 !important; }
-.faq-q, .faq-question { font-size: 1.08rem !important; color: rgba(255,255,255,.92) !important; }
-.data-table td { font-size: 1.02rem !important; color: rgba(255,255,255,.88) !important; }
-.data-table th { font-size: .90rem !important; }
-.snap-l { font-size: .92rem !important; color: rgba(255,255,255,.80) !important; }
-.snap-v { font-size: 2.3rem !important; }
-.tc-k { font-size: .84rem !important; color: rgba(255,255,255,.72) !important; }
-.tc-note { font-size: .84rem !important; color: rgba(255,255,255,.62) !important; }
-.price-note { font-size: .90rem !important; color: rgba(255,255,255,.68) !important; }
-.recall-body { font-size: 1.02rem !important; color: rgba(255,255,255,.82) !important; }
-.recall-status { font-size: .84rem !important; font-weight: 700 !important; }
-.sb-link { font-size: 1.02rem !important; }
-.uc-body { font-size: .98rem !important; color: rgba(255,255,255,.82) !important; line-height: 1.75 !important; }
-.hero-desc { font-size: 1.12rem !important; color: rgba(255,255,255,.85) !important; }
-.acc-desc { font-size: .98rem !important; color: rgba(255,255,255,.78) !important; }
-.ft-copy { font-size: .84rem !important; color: rgba(255,255,255,.55) !important; }
-.bc-sub { font-size: .95rem !important; }
-</style>
-<style id="acb-global-font-boost">
-/* Global font size increase — applied sitewide */
-body{font-size:1.05rem!important;}
-p,li,.section p,.callout p{font-size:1.05rem!important;line-height:1.85!important;color:rgba(255,255,255,.85)!important;}
-.data-table td{font-size:1.02rem!important;color:rgba(255,255,255,.88)!important;}
-.data-table th{font-size:.92rem!important;color:rgba(255,255,255,.72)!important;}
-.faq-q{font-size:1.05rem!important;color:rgba(255,255,255,.92)!important;}
-.faq-a{font-size:1.02rem!important;color:rgba(255,255,255,.82)!important;line-height:1.82!important;}
-.snap-v{font-size:2.3rem!important;}
-.snap-l{font-size:.88rem!important;color:rgba(255,255,255,.78)!important;}
-.tc-k{font-size:.84rem!important;color:rgba(255,255,255,.72)!important;}
-.tc-v{font-size:1.08rem!important;}
-.tc-note{font-size:.84rem!important;color:rgba(255,255,255,.65)!important;}
-.recall-body{font-size:1.02rem!important;color:rgba(255,255,255,.82)!important;}
-.uc-body{font-size:.98rem!important;color:rgba(255,255,255,.82)!important;line-height:1.78!important;}
-.hero-desc{font-size:1.12rem!important;color:rgba(255,255,255,.85)!important;line-height:1.82!important;}
-.sb-link{font-size:1.02rem!important;}
-.price-note{font-size:.92rem!important;color:rgba(255,255,255,.68)!important;}
-h2.sec-title{font-size:2.1rem!important;}
-</style>
-<style id="acb-font-v2">
-body{font-size:1rem!important}
-.section p,.section li{font-size:1.05rem!important;color:rgba(255,255,255,.88)!important;line-height:1.85!important}
-.callout p{font-size:1.05rem!important;color:rgba(255,255,255,.88)!important}
-.data-table td{font-size:1.0rem!important;color:rgba(255,255,255,.88)!important}
-.data-table th{font-size:.88rem!important}
-.faq-q{font-size:1.08rem!important;color:rgba(255,255,255,.95)!important}
-.faq-a{font-size:1.0rem!important;color:rgba(255,255,255,.85)!important;line-height:1.82!important}
-.snap-l{font-size:.92rem!important;color:rgba(255,255,255,.82)!important}
-.snap-v{font-size:2.4rem!important}
-.hero-desc{font-size:1.12rem!important;color:rgba(255,255,255,.88)!important}
-.tc-k{font-size:.85rem!important;color:rgba(255,255,255,.75)!important}
-.tc-v{font-size:1.05rem!important}
-.tc-note{font-size:.82rem!important;color:rgba(255,255,255,.65)!important}
-.price-note{font-size:.9rem!important;color:rgba(255,255,255,.72)!important}
-.recall-body{font-size:1.0rem!important;color:rgba(255,255,255,.85)!important}
-.uc-body{font-size:.98rem!important;color:rgba(255,255,255,.85)!important}
-.sb-link{font-size:1.0rem!important;color:rgba(255,255,255,.88)!important}
-.sb-link strong{font-size:1.05rem!important;color:#fff!important}
-.ft-copy{font-size:.85rem!important;color:rgba(255,255,255,.58)!important}
-.acc-name{font-size:1.05rem!important}
-.acc-desc{font-size:.96rem!important;color:rgba(255,255,255,.80)!important}
-</style>
-<style id="acb-global-fonts">
-/* ── GLOBAL FONT SCALE INCREASE v2 ── */
-body { font-size: 1.05rem !important; line-height: 1.82 !important; }
-p, li, td, .section p, .callout p, .faq-a { font-size: 1.05rem !important; color: rgba(255,255,255,.88) !important; line-height: 1.82 !important; }
-.data-table td { font-size: 1.02rem !important; color: rgba(255,255,255,.88) !important; }
-.data-table th { font-size: .92rem !important; color: rgba(255,255,255,.72) !important; }
-.snap-v { font-size: 2.3rem !important; color: #fff !important; }
-.snap-l { font-size: .92rem !important; color: rgba(255,255,255,.80) !important; }
-.hero-desc { font-size: 1.12rem !important; color: rgba(255,255,255,.88) !important; line-height: 1.82 !important; }
-.tc-k { font-size: .85rem !important; color: rgba(255,255,255,.72) !important; }
-.tc-v { font-size: 1.08rem !important; color: #fff !important; }
-.tc-note { font-size: .82rem !important; color: rgba(255,255,255,.65) !important; }
-.price-note { font-size: .90rem !important; color: rgba(255,255,255,.68) !important; }
-.recall-body { font-size: 1.02rem !important; color: rgba(255,255,255,.85) !important; }
-.uc-body { font-size: .98rem !important; color: rgba(255,255,255,.85) !important; line-height: 1.75 !important; }
-.faq-q { font-size: 1.05rem !important; color: rgba(255,255,255,.92) !important; }
-.sb-link { font-size: 1.02rem !important; color: rgba(255,255,255,.88) !important; }
-.bc-sub, .brand-desc { font-size: 1.0rem !important; color: rgba(255,255,255,.82) !important; line-height: 1.75 !important; }
-.ft-link { font-size: .82rem !important; }
-.disc-bar { font-size: .78rem !important; }
-h2.sec-title { font-size: 2.1rem !important; }
-h1.hero-h1 { font-size: clamp(3.8rem, 9vw, 9.5rem) !important; }
-</style>
-<style id="acb-global-fonts-v8">
-/* ═══ GLOBAL FONT INCREASE v8 ═══ */
-html { font-size: 16px; }
-body { font-size: 1rem; line-height: 1.78; }
-
-/* Article & Section Body Text */
-.section p, article p, .article-body p, .content p {
-  font-size: 1.08rem !important;
-  color: rgba(255,255,255,.88) !important;
-  line-height: 1.85 !important;
-}
-/* Light-bg article pages */
-.section p[style*="rgba(26"], p.body-copy {
-  color: rgba(26,18,8,.82) !important;
-}
-/* Callouts */
-.callout p { font-size: 1.05rem !important; color: rgba(255,255,255,.88) !important; }
-/* Tables */
-.data-table td { font-size: 1.02rem !important; color: rgba(255,255,255,.90) !important; }
-.data-table th { font-size: .92rem !important; }
-/* Snap stat labels */
-.snap-l, .stat-label, .sb-l { font-size: .92rem !important; color: rgba(255,255,255,.82) !important; }
-/* Trim card */
-.tc-k { font-size: .85rem !important; color: rgba(255,255,255,.75) !important; }
-.tc-v { font-size: 1.08rem !important; }
-.tc-note { font-size: .85rem !important; color: rgba(255,255,255,.68) !important; }
-/* Price note */
-.price-note { font-size: .92rem !important; color: rgba(255,255,255,.72) !important; }
-/* Recall */
-.recall-body { font-size: 1.02rem !important; color: rgba(255,255,255,.85) !important; }
-.recall-status { font-size: .85rem !important; font-weight: 700 !important; }
-/* FAQ */
-.faq-q { font-size: 1.05rem !important; font-weight: 600 !important; }
-.faq-a { font-size: 1.02rem !important; color: rgba(255,255,255,.85) !important; line-height: 1.8 !important; }
-/* Sidebar */
-.sb-link { font-size: 1.02rem !important; color: rgba(255,255,255,.88) !important; }
-.sb-title { font-size: .92rem !important; color: rgba(255,255,255,.72) !important; }
-/* Acc cards */
-.acc-desc { font-size: .98rem !important; color: rgba(255,255,255,.82) !important; }
-.acc-name { font-size: 1.08rem !important; }
-/* Hero */
-.hero-desc { font-size: 1.1rem !important; color: rgba(255,255,255,.88) !important; }
-/* Update cards */
-.uc-body { font-size: .98rem !important; color: rgba(255,255,255,.85) !important; line-height: 1.78 !important; }
-/* Footer */
-.ft-copy { font-size: .85rem !important; color: rgba(255,255,255,.60) !important; }
-.ft-link { font-size: .82rem !important; }
-/* Disc bar */
-.disc-bar { font-size: .78rem !important; color: rgba(255,255,255,.62) !important; }
-</style>
 </head>
-<body>
+<body oncontextmenu="return false" onselectstart="return false">
 <a href="#" class="back-top" id="backTop">↑</a>
 <div class="font-bar">
   <button class="fs-btn" id="fsInc">A+</button>
@@ -588,7 +444,7 @@ body { font-size: 1rem; line-height: 1.78; }
     <div class="hero-bottom-bar"><div class="hbb-item">Built<span>Dearborn, MI + Kansas City</span></div><div class="hbb-item">Best Seller<span>43 Consecutive Years</span></div><div class="hbb-item">Max Tow<span>14,000 lbs</span></div><div class="hbb-item">Max Payload<span>2,455 lbs</span></div></div>
   </div>
 </header>
-<nav class="jump-nav"><div class="jn-inner"><a href="#overview" class="jn">Overview</a><a href="#trims" class="jn">Trims</a><a href="#specs" class="jn">Specs</a><a href="#towing" class="jn">Towing & Payload</a><a href="#powertrain" class="jn">Engines & Powertrain</a><a href="#reliability" class="jn">Reliability</a><a href="#recalls" class="jn">Recalls</a><a href="#updates" class="jn">Updates</a><a href="#proscons" class="jn">Pros & Cons</a><a href="#faq" class="jn">FAQ</a></div></nav>
+<nav class="jump-nav"><div class="jn-inner"><a href="#overview" class="jn">Overview</a><a href="#trims" class="jn">Trims</a><a href="#specs" class="jn">Specs</a><a href="#s4" class="jn">Towing & Payload</a><a href="#s5" class="jn">Engines & Powertrain</a><a href="#reliability" class="jn">Reliability</a><a href="#recalls" class="jn">Recalls</a><a href="#updates" class="jn">Updates</a><a href="#proscons" class="jn">Pros & Cons</a><a href="#faq" class="jn">FAQ</a></div></nav>
 <div style="max-width:1300px;margin:0 auto;padding:0 28px;display:none;" id="mobileSidebarWrap">
   <button class="mobile-sidebar-toggle" id="mobileSidebarBtn">Quick Navigation</button>
   <div class="mobile-sidebar-panel" id="mobileSidebarPanel"><a href="#overview" class="sb-link">Overview</a><a href="#trims" class="sb-link">Trims</a><a href="#specs" class="sb-link">Specs</a><a href="#towing" class="sb-link">Towing & Payload</a><a href="#powertrain" class="sb-link">Engines & Powertrain</a><a href="#reliability" class="sb-link">Reliability</a><a href="#recalls" class="sb-link">Recalls</a><a href="#updates" class="sb-link">Updates</a><a href="#proscons" class="sb-link">Pros & Cons</a><a href="#faq" class="sb-link">FAQ</a></div>
@@ -598,32 +454,6 @@ body { font-size: 1rem; line-height: 1.78; }
   <div class="section" id="overview">
     <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">01</span><h2 class="sec-title">Overview</h2><div class="sec-rule"></div></div>
     <p>The Ford F-150 is the best-selling vehicle in the United States for 43 consecutive years through 2025. Built at the Dearborn Truck Plant and Kansas City Assembly, it defines the American pickup truck market. The 14th-generation F-150 (2021+) introduced the PowerBoost hybrid, Pro Power Onboard generator, and a larger center console with fold-down work surface.</p>
-  <div class="section" id="amz-top" style="padding-top:16px">
-    <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">A</span><h2 class="sec-title">Essential Accessories</h2><div class="sec-rule"></div></div>
-    <p style="font-size:.88rem;color:rgba(255,255,255,.55);margin-bottom:14px;">Affiliate links — we may earn a small commission at no extra cost to you. <a href="affiliate-disclosure.html" style="color:rgba(255,255,255,.4)">Disclosure</a></p>
-    <div class="acc-grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))">
-      <div class="acc-card">
-        <div class="acc-name">F-150 Floor Mats</div>
-        <div class="acc-desc">Precision-fit all-weather mats — mud, snow, spills contained.</div>
-        <a href="https://www.amazon.com/s?k=Ford+F150+floor+mats+all+weather&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-      </div>
-      <div class="acc-card">
-        <div class="acc-name">F-150 Tonneau Cover</div>
-        <div class="acc-desc">Aerodynamic bed cover improves MPG and keeps cargo secure.</div>
-        <a href="https://www.amazon.com/s?k=Ford+F150+tonneau+cover&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-      </div>
-      <div class="acc-card">
-        <div class="acc-name">F-150 Bed Liner</div>
-        <div class="acc-desc">Drop-in liner protects the aluminum bed from dents and scratches.</div>
-        <a href="https://www.amazon.com/s?k=Ford+F150+bed+liner+drop+in&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-      </div>
-      <div class="acc-card">
-        <div class="acc-name">Running Boards</div>
-        <div class="acc-desc">Cab-height drop steps make entry easy for any passenger.</div>
-        <a href="https://www.amazon.com/s?k=Ford+F150+running+boards+side+steps&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-      </div>
-    </div>
-  </div>
     <p>Six engine options span from a base 3.3L V6 to the 720 hp supercharged 5.2L Predator V8 in the Raptor R. The PowerBoost 3.5L hybrid (430 hp, up to 700 mi range) is the most capable and fuel-efficient choice for most truck buyers.</p>
     <div class="callout green"><div class="callout-label">NACS Charging — 2025+</div><p>All 2025+ F-150 and Ford vehicles include native NACS connectors — direct access to Tesla Supercharger network for the PowerBoost hybrid's 12V charging and the F-150 Lightning's EV charging. Previous model years required an adapter.</p></div>
   </div>
@@ -658,43 +488,15 @@ body { font-size: 1rem; line-height: 1.78; }
   </div>
   <div class="section" id="specs">
     <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">03</span><h2 class="sec-title">Full Specifications</h2><div class="sec-rule"></div></div>
-  
     <table class="data-table"><thead><tr><th>Specification</th><th>Standard Lineup</th><th>Raptor R</th></tr></thead><tbody><tr><td class="td-n">Base MSRP</td><td>$35,810 (XL)</td><td>$96,870 (Raptor R)</td></tr><tr><td class="td-n">Engines</td><td>3.3L V6 / 2.7L EB / 5.0L V8 / 3.5L PowerBoost</td><td>5.2L Supercharged V8</td></tr><tr><td class="td-n">Max HP</td><td>290–430 hp (PowerBoost)</td><td>720 hp (Raptor R)</td></tr><tr><td class="td-n">Max Tow</td><td>14,000 lbs (5.0 V8 config)</td><td>8,200 lbs (Raptor R)</td></tr><tr><td class="td-n">Max Payload</td><td>2,455 lbs</td><td>1,400 lbs</td></tr><tr><td class="td-n">Bed Lengths</td><td>5.5 / 6.5 / 8 ft</td><td>5.5 ft</td></tr><tr><td class="td-n">Cabs</td><td>Regular / SuperCab / SuperCrew</td><td>SuperCrew only</td></tr><tr><td class="td-n">Suspension</td><td>Solid front axle / coil rear</td><td>Fox Live Valve long-travel</td></tr><tr><td class="td-n">Tow Mirrors</td><td>Available power extending</td><td>Standard</td></tr><tr><td class="td-n">SYNC Version</td><td>SYNC 4 / SYNC 4A</td><td>SYNC 4A</td></tr><tr><td class="td-n">NACS (2025+)</td><td>Yes — native</td><td>Yes</td></tr><tr><td class="td-n">Warranty</td><td>3yr/36K + 5yr/60K powertrain</td><td>Same</td></tr></tbody></table>
   </div>
-
-  <div class="section" id="amz-mid" style="padding-top:16px">
-    <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">B</span><h2 class="sec-title">Recommended Upgrades</h2><div class="sec-rule"></div></div>
-    <p style="font-size:.88rem;color:rgba(255,255,255,.55);margin-bottom:14px;">Affiliate links — we may earn a small commission at no extra cost to you. <a href="affiliate-disclosure.html" style="color:rgba(255,255,255,.4)">Disclosure</a></p>
-    <div class="acc-grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))">
-      <div class="acc-card">
-        <div class="acc-name">Paint Protection Film</div>
-        <div class="acc-desc">Clear PPF shields the hood and front fascia from stone chips.</div>
-        <a href="https://www.amazon.com/s?k=paint+protection+film+clear+bra+hood&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-      </div>
-      <div class="acc-card">
-        <div class="acc-name">Cordless Car Vacuum</div>
-        <div class="acc-desc">Lightweight cordless vacuum — clean in minutes without an outlet.</div>
-        <a href="https://www.amazon.com/s?k=car+vacuum+cleaner+cordless+portable&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-      </div>
-      <div class="acc-card">
-        <div class="acc-name">Windshield Sun Shade</div>
-        <div class="acc-desc">Reduces interior temp by 40°F+ — protects dash from UV cracking.</div>
-        <a href="https://www.amazon.com/s?k=windshield+sunshade+reflector&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-      </div>
-      <div class="acc-card">
-        <div class="acc-name">OBD2 Scanner</div>
-        <div class="acc-desc">Read & clear engine codes from your phone — save $100+ at the shop.</div>
-        <a href="https://www.amazon.com/s?k=OBD2+scanner+diagnostic+bluetooth&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-      </div>
-    </div>
-  </div>
-  <div class="section" id="towing">
+  <div class="section" id="s4">
     <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">04</span><h2 class="sec-title">Towing & Payload</h2><div class="sec-rule"></div></div>
     <p>The F-150 leads the half-ton class in maximum towing at 14,000 lbs with the 5.0L V8, Max Trailer Tow Package, and proper configuration. However, maximum tow ratings require specific cab, bed, engine, and axle combinations — always verify your actual configuration at ford.com.</p>
     <table class="data-table"><thead><tr><th>Engine / Config</th><th>Max Tow</th><th>Max Payload</th></tr></thead><tbody><tr><td class="td-n">3.3L V6 base</td><td>7,700 lbs</td><td>1,985 lbs</td></tr><tr><td class="td-n">2.7L EcoBoost V6</td><td>8,500–9,000 lbs</td><td>2,000–2,238 lbs</td></tr><tr><td class="td-n">5.0L V8</td><td>11,000–14,000 lbs</td><td>2,309–2,455 lbs</td></tr><tr><td class="td-n">3.5L PowerBoost Hybrid</td><td>12,700 lbs</td><td>2,120 lbs</td></tr><tr><td class="td-n">3.5L EcoBoost V6</td><td>11,000–13,000 lbs</td><td>2,000–2,440 lbs</td></tr><tr><td class="td-n">Raptor R (5.2L SC V8)</td><td>8,200 lbs</td><td>1,400 lbs</td></tr></tbody></table>
     <span class="tbl-note">*Max ratings require specific configurations. Verify your exact build at ford.com with Towing & Payload guide. Never exceed GVWR.</span>
   </div>
-  <div class="section" id="powertrain">
+  <div class="section" id="s5">
     <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">05</span><h2 class="sec-title">Engines & Powertrain</h2><div class="sec-rule"></div></div>
     <p>Six powertrain options span the F-150 range. The <strong>PowerBoost 3.5L hybrid</strong> is the recommended choice for most buyers: highest combined tow rating (12,700 lbs), best fuel economy, Pro Power Onboard generator, and 700+ miles estimated range per fill.</p>
     <table class="data-table"><thead><tr><th>Engine</th><th>Output</th><th>Fuel Economy</th><th>Approx. Cost Add</th></tr></thead><tbody><tr><td class="td-n">3.3L Ti-VCT V6</td><td>290 hp / 265 lb-ft</td><td>22 mpg city / 29 hwy</td><td>~$0 add</td></tr><tr><td class="td-n">2.7L EcoBoost V6</td><td>325 hp / 400 lb-ft</td><td>20 mpg / 26 hwy</td><td>~$1,000 add</td></tr><tr><td class="td-n">5.0L V8 Coyote</td><td>400 hp / 410 lb-ft</td><td>18 mpg / 24 hwy</td><td>~$1,500 add</td></tr><tr><td class="td-n">3.5L EcoBoost V6</td><td>400 hp / 500 lb-ft</td><td>18 mpg / 24 hwy</td><td>~$2,000 add</td></tr><tr><td class="td-n">3.5L PowerBoost Hybrid</td><td>430 hp / 570 lb-ft</td><td class="td-good">24 mpg / 24 hwy</td><td>~$4,000 add</td></tr><tr><td class="td-n">5.2L Raptor R SC V8</td><td>720 hp / 640 lb-ft</td><td>15 mpg / 18 hwy</td><td>Raptor R only</td></tr></tbody></table>
@@ -727,100 +529,56 @@ body { font-size: 1rem; line-height: 1.78; }
   </div>
   <div class="section" id="faq">
     <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">10</span><h2 class="sec-title">FAQ</h2><div class="sec-rule"></div></div>
-    <div class="faq-item open"><div class="faq-q">What is the maximum towing capacity of the F-150?</div><div class="faq-a">The F-150 is rated to tow up to 14,000 lbs with the 5.0L V8, Max Trailer Tow Package, and specific cab/bed configuration. The PowerBoost hybrid is rated at 12,700 lbs. The 2.7L EcoBoost tows up to 9,000 lbs. Maximum ratings require specific configurations — verify yours at ford.com with the official Towing & Payload guide.</div></div><div class="faq-item"><div class="faq-q">What is the best F-150 engine?</div><div class="faq-a">For most buyers, the PowerBoost 3.5L hybrid is the best choice: 12,700 lb tow, best fuel economy (~24 mpg combined), 7.2 kW Pro Power Onboard generator, and 700+ miles estimated range. The 5.0L V8 is preferred by buyers who want maximum tow capacity (14,000 lbs) and traditional V8 character. The 2.7L EcoBoost is the best value engine for light-duty use.</div></div><div class="faq-item"><div class="faq-q">What is Pro Power Onboard?</div><div class="faq-a">Pro Power Onboard is Ford's onboard generator system available on F-150 PowerBoost hybrid and F-150 Lightning. It outputs 120V/240V power through outlets in the bed and cab — up to 7.2 kW on PowerBoost and up to 9.6 kW on Lightning. It can power tools, appliances, or charge other vehicles.</div></div><div class="faq-item"><div class="faq-q">How does the F-150 compare to the RAM 1500?</div><div class="faq-a">Both are excellent trucks. Key differences: F-150 has the higher maximum tow (14,000 vs. 12,750 lbs), PowerBoost hybrid is unique to Ford, and RAM 1500 has a more comfortable ride (coil-spring rear suspension) and better interior refinement per most reviewers. RAM air suspension option is excellent. Both are in the top-3 best-selling US vehicles.</div></div><div class="faq-item"><div class="faq-q">Is the F-150 reliable long-term?</div><div class="faq-a">Yes, with the right engine. The 5.0L V8 and 3.5L PowerBoost are among the most proven powertrains in the segment. The 2.7L EcoBoost had timing chain issues on 2015–2017 builds — largely resolved on current production. Consult consumerreports.org for the specific model year you're considering.</div><div class="faq-item">
-  <div class="faq-q">What EV tax credits apply?</div>
-  <div class="faq-a"><p>Electric vehicles assembled in North America may qualify for up to $7,500 in federal EV tax credits under the Inflation Reduction Act. Income limits and MSRP caps apply. Verify eligibility at fueleconomy.gov/feg/taxevb.shtml before purchasing.</p></div>
-</div></div>
+    <div class="faq-item open"><div class="faq-q">What is the maximum towing capacity of the F-150?</div><div class="faq-a">The F-150 is rated to tow up to 14,000 lbs with the 5.0L V8, Max Trailer Tow Package, and specific cab/bed configuration. The PowerBoost hybrid is rated at 12,700 lbs. The 2.7L EcoBoost tows up to 9,000 lbs. Maximum ratings require specific configurations — verify yours at ford.com with the official Towing & Payload guide.</div></div><div class="faq-item"><div class="faq-q">What is the best F-150 engine?</div><div class="faq-a">For most buyers, the PowerBoost 3.5L hybrid is the best choice: 12,700 lb tow, best fuel economy (~24 mpg combined), 7.2 kW Pro Power Onboard generator, and 700+ miles estimated range. The 5.0L V8 is preferred by buyers who want maximum tow capacity (14,000 lbs) and traditional V8 character. The 2.7L EcoBoost is the best value engine for light-duty use.</div></div><div class="faq-item"><div class="faq-q">What is Pro Power Onboard?</div><div class="faq-a">Pro Power Onboard is Ford's onboard generator system available on F-150 PowerBoost hybrid and F-150 Lightning. It outputs 120V/240V power through outlets in the bed and cab — up to 7.2 kW on PowerBoost and up to 9.6 kW on Lightning. It can power tools, appliances, or charge other vehicles.</div></div><div class="faq-item"><div class="faq-q">How does the F-150 compare to the RAM 1500?</div><div class="faq-a">Both are excellent trucks. Key differences: F-150 has the higher maximum tow (14,000 vs. 12,750 lbs), PowerBoost hybrid is unique to Ford, and RAM 1500 has a more comfortable ride (coil-spring rear suspension) and better interior refinement per most reviewers. RAM air suspension option is excellent. Both are in the top-3 best-selling US vehicles.</div></div><div class="faq-item"><div class="faq-q">Is the F-150 reliable long-term?</div><div class="faq-a">Yes, with the right engine. The 5.0L V8 and 3.5L PowerBoost are among the most proven powertrains in the segment. The 2.7L EcoBoost had timing chain issues on 2015–2017 builds — largely resolved on current production. Consult consumerreports.org for the specific model year you're considering.</div></div>
   </div>
   
   <div class="section" id="accessories">
     <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">12</span><h2 class="sec-title">Accessories &amp; Upgrades</h2><div class="sec-rule"></div></div>
-    <p style="font-size:1.0rem;color:rgba(255,255,255,.82);">Popular upgrades and accessories for the Ford F-150. Amazon affiliate links — we may earn a small commission at no extra cost to you.</p>
-    <div class="acc-grid">      <div class="acc-card">
-        <div class="acc-name">Floor Mats</div>
-        <div class="acc-desc">All-weather mats protect the cab from mud and snow.</div>
-        <a href="https://www.amazon.com/s?k=Ford+F150+floor+mats+all+weather&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+    <p style="font-size:1.0rem;color:rgba(255,255,255,.82);">Popular upgrades for the Ford . Amazon affiliate links — small commission at no extra cost to you. <a href="affiliate-disclosure.html" style="color:rgba(255,255,255,.45);">Disclosure</a></p>
+    <div class="acc-grid">
+      <div class="acc-card">
+        <div class="acc-name"> Floor Mats</div>
+        <div class="acc-desc">All-weather rubber mats for cab protection.</div>
+        <a href="https://www.amazon.com/s?k=Ford++floor+mats&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a>
       </div>
       <div class="acc-card">
-        <div class="acc-name">Tonneau Cover</div>
+        <div class="acc-name"> Tonneau Cover</div>
         <div class="acc-desc">Soft roll-up or hard folding bed cover.</div>
-        <a href="https://www.amazon.com/s?k=Ford+F150+tonneau+cover&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+        <a href="https://www.amazon.com/s?k=Ford++tonneau+cover&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a>
       </div>
       <div class="acc-card">
-        <div class="acc-name">Bed Liner</div>
-        <div class="acc-desc">Drop-in or spray-in bed liner protects the aluminum bed.</div>
-        <a href="https://www.amazon.com/s?k=Ford+F150+bed+liner&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+        <div class="acc-name"> Bed Liner</div>
+        <div class="acc-desc">Drop-in or spray-in liner protects the bed.</div>
+        <a href="https://www.amazon.com/s?k=Ford++bed+liner&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a>
       </div>
       <div class="acc-card">
-        <div class="acc-name">Running Boards</div>
+        <div class="acc-name"> Running Boards</div>
         <div class="acc-desc">Side steps for easy cab entry.</div>
-        <a href="https://www.amazon.com/s?k=Ford+F150+running+boards&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+        <a href="https://www.amazon.com/s?k=Ford++running+boards&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a>
       </div>
       <div class="acc-card">
-        <div class="acc-name">Seat Covers</div>
-        <div class="acc-desc">Protect original upholstery from work and wear.</div>
-        <a href="https://www.amazon.com/s?k=Ford+F150+seat+covers&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+        <div class="acc-name"> Seat Covers</div>
+        <div class="acc-desc">Protect seats from work and weather.</div>
+        <a href="https://www.amazon.com/s?k=Ford++seat+covers&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a>
       </div>
       <div class="acc-card">
-        <div class="acc-name">Dash Cam</div>
-        <div class="acc-desc">Front/rear cameras for documentation and security.</div>
-        <a href="https://www.amazon.com/s?k=Ford+F150+dash+cam+front+rear&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+        <div class="acc-name">Dash Cam Front & Rear</div>
+        <div class="acc-desc">4K cameras — insurance documentation.</div>
+        <a href="https://www.amazon.com/s?k=dash+cam+truck+4K&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a>
+      </div>
+      <div class="acc-card">
+        <div class="acc-name"> LED Light Bar</div>
+        <div class="acc-desc">Work site or trail lighting.</div>
+        <a href="https://www.amazon.com/s?k=Ford++LED+light+bar&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a>
+      </div>
+      <div class="acc-card">
+        <div class="acc-name">Truck Bed Toolbox</div>
+        <div class="acc-desc">Weather-sealed aluminum toolbox.</div>
+        <a href="https://www.amazon.com/s?k=Ford++toolbox+aluminum&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a>
       </div>
     </div>
-    <p style="font-size:.82rem;color:rgba(255,255,255,.35);margin-top:8px;">AmericanCarBrands.com participates in the Amazon Services LLC Associates Program. Prices and availability subject to change.</p>
   </div>
 
-  
-  <div class="section" id="amz-faq" style="padding-top:16px">
-    <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">C</span><h2 class="sec-title">Shop More Accessories</h2><div class="sec-rule"></div></div>
-    <p style="font-size:.88rem;color:rgba(255,255,255,.55);margin-bottom:14px;">Affiliate links — we may earn a small commission at no extra cost to you. <a href="affiliate-disclosure.html" style="color:rgba(255,255,255,.4)">Disclosure</a></p>
-    <div class="acc-grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))">
-      <div class="acc-card">
-        <div class="acc-name">Ceramic Spray Wax</div>
-        <div class="acc-desc">Spray-on ceramic protection — brilliant shine in 10 minutes.</div>
-        <a href="https://www.amazon.com/s?k=car+wax+ceramic+coating+spray&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-      </div>
-      <div class="acc-card">
-        <div class="acc-name">Microfiber Detailing Towels</div>
-        <div class="acc-desc">Streak-free detailing. 24-pack — wash, dry, wax with one set.</div>
-        <a href="https://www.amazon.com/s?k=microfiber+towels+car+detailing+24+pack&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-      </div>
-      <div class="acc-card">
-        <div class="acc-name">Portable Tire Inflator</div>
-        <div class="acc-desc">Inflate tires anywhere. Digital gauge, auto-shutoff, 12V plug.</div>
-        <a href="https://www.amazon.com/s?k=tire+inflator+portable+air+compressor&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-      </div>
-      <div class="acc-card">
-        <div class="acc-name">Jumper Cables</div>
-        <div class="acc-desc">20-ft heavy-duty cables — 800A peak for any vehicle.</div>
-        <a href="https://www.amazon.com/s?k=jumper+cables+heavy+duty+booster&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-      </div>
-      <div class="acc-card">
-        <div class="acc-name">Roadside Emergency Kit</div>
-        <div class="acc-desc">Reflective triangles, first aid, tow rope, jumper cables in one bag.</div>
-        <a href="https://www.amazon.com/s?k=car+emergency+kit+roadside+assistance&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-      </div>
-      <div class="acc-card">
-        <div class="acc-name">Backup Camera / Sensors</div>
-        <div class="acc-desc">Retrofit wireless camera or parking sensors for added safety.</div>
-        <a href="https://www.amazon.com/s?k=parking+sensors+backup+camera+wireless&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-      </div>
-      <div class="acc-card">
-        <div class="acc-name">Premium Air Freshener</div>
-        <div class="acc-desc">Long-lasting vent-clip fresheners — clean, non-overpowering scents.</div>
-        <a href="https://www.amazon.com/s?k=car+air+freshener+vent+clip&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-      </div>
-      <div class="acc-card">
-        <div class="acc-name">Steering Wheel Cover</div>
-        <div class="acc-desc">Genuine leather or microfiber cover improves grip and comfort.</div>
-        <a href="https://www.amazon.com/s?k=steering+wheel+cover+leather&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-      </div>
-    <div class="faq-item">
-      <div class="faq-q">&#9656; Is the Ford F-ONE a good value in 2026?</div>
-      <div class="faq-a">The Ford F-ONE delivers competitive value at its price point. Starting at its MSRP, it sits in a well-contested segment with strong alternatives from both domestic and import brands. For most buyers in the market for a truck, the F-ONE earns a strong recommendation when cross-shopped against alternatives — particularly for those who prioritize American brand support, dealer network breadth, and current incentive programs. Always verify current pricing, incentives, and financing rates with your local Ford dealer before purchasing.</div>
-    </div>
-  </div>
-  </div>
   <div class="sources"><div class="sources-title">Sources</div><ul><li>Ford F-150 specs — ford.com (March 2026)</li><li>EPA fuel economy — fueleconomy.gov</li><li>NHTSA recalls — nhtsa.gov/recalls</li><li>Ford Towing & Payload Guide — ford.com</li></ul></div>
   <p class="disclaimer">AmericanCarBrands.com is independent editorial research — not affiliated with Ford. All brand names and trademarks are property of their respective owners. Pricing and specs as of March 2026 — verify at manufacturer website before purchasing.</p>
 </main>
@@ -835,6 +593,17 @@ body { font-size: 1rem; line-height: 1.78; }
     <a href="best-seat-covers-for-ford-f150.html" class="sb-link" style="font-size:.95rem;color:rgba(255,255,255,.82);">📖 Best Seat Covers for Ford F-150</a>
     <a href="chevy-vs-ford-reliability.html" class="sb-link" style="font-size:.95rem;color:rgba(255,255,255,.82);">📖 Chevy vs Ford Reliability</a>
     <a href="is-ford-reliable.html" class="sb-link" style="font-size:.95rem;color:rgba(255,255,255,.82);">📖 Is Ford Reliable?</a>
+  </div>
+  <div class="sb-block" id="acb-article-links">
+    <div class="sb-title" style="background:linear-gradient(90deg,#E31937,#c0112b);font-size:.75rem;letter-spacing:.14em;">&#128240; Research Guides</div>
+    <a href="best-american-electric-cars.html" class="sb-link">Best American EVs 2026</a>
+    <a href="best-american-muscle-cars.html" class="sb-link">Best Muscle Cars</a>
+    <a href="american-luxury-car-brands.html" class="sb-link">American Luxury Brands</a>
+    <a href="american-truck-brands.html" class="sb-link">American Truck Brands</a>
+    <a href="most-reliable-american-suvs.html" class="sb-link">Most Reliable SUVs</a>
+    <a href="are-american-cars-reliable.html" class="sb-link">Are American Cars Reliable?</a>
+    <a href="best-american-cars-under-30k.html" class="sb-link">Best Cars Under $30K</a>
+    <a href="best-performance-cars.html" class="sb-link">Best Performance Cars 2026</a>
   </div>
   </aside>
 </div>
@@ -865,7 +634,7 @@ document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('clic
 </script>
 
 <script>
-return false; });
+document.addEventListener('contextmenu', function(e) { e.preventDefault(); return false; });
 document.addEventListener('keydown', function(e) {
   // Disable F12, Ctrl+U, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+S
   if (e.key === 'F12' || (e.ctrlKey && ['u','U','s','S'].includes(e.key)) ||
@@ -875,20 +644,5 @@ document.addEventListener('keydown', function(e) {
 });
 </script>
 
-<script id="acb-mbar-fix-js">
-(function(){
-  // Fix model-bar active state on every page load
-  var path = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.mbar-tab, .model-bar a').forEach(function(a){
-    var href = a.getAttribute('href') || '';
-    var hrefFile = href.split('/').pop();
-    if(hrefFile === path){
-      a.classList.add('active');
-    } else {
-      a.classList.remove('active');
-    }
-  });
-})();
-</script>
 </body>
 </html>

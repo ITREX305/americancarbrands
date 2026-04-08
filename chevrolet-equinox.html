@@ -212,6 +212,12 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;back
 .rw-val{font-family:var(--teko);font-size:1.6rem;font-weight:700;color:#fff;line-height:1;}
 .rw-lbl{font-size:.72rem;color:rgba(255,255,255,.35);margin-top:3px;font-family:var(--cond);letter-spacing:.1em;text-transform:uppercase;}
 @media(max-width:600px){.rw-grid{grid-template-columns:1fr 1fr;}.acc-grid{grid-template-columns:1fr;}}
+
+/* HERO_RIGHT_FIX */
+.hero-right-label{font-family:var(--cond);font-size:.90rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.65);padding-bottom:10px;border-bottom:1px solid var(--rule);margin-bottom:4px;}
+.tr-name{font-family:var(--teko);font-size:1.5rem;font-weight:700;letter-spacing:.04em;color:#fff;line-height:1;}
+.tr-price{font-family:var(--teko);font-size:1.35rem;color:var(--red);line-height:1;margin-top:2px;}
+.tr-note{font-family:var(--cond);font-size:.80rem;color:rgba(255,255,255,.55);margin-top:4px;line-height:1.45;}
 </style>
 
 <style id="acb-readability-override">
@@ -340,7 +346,6 @@ h2.sec-title { font-size: 2rem !important; }
 .jn.active { color: var(--red) !important; border-bottom-color: var(--red) !important; }
 </style>
 
-
 <style id="acb-social-footer">
 .ft-social{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px;}
 .ft-social-label{font-family:var(--cond,sans-serif);font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-right:4px;}
@@ -349,157 +354,8 @@ h2.sec-title { font-size: 2rem !important; }
 .ft-social-link svg{width:16px;height:16px;fill:currentColor;pointer-events:none;}
 </style>
 
-<style id="acb-mbar-fix">
-.mbar-tab{position:relative;display:flex;flex-direction:column;padding:0 14px;height:46px;justify-content:center;text-decoration:none;border-right:1px solid var(--rule,rgba(255,255,255,.08));transition:background .15s;}
-.mbar-tab:hover{background:rgba(255,255,255,.04);}
-.mbar-tab.active{background:rgba(255,255,255,.06);border-bottom:2px solid var(--red,#E31937);}
-.mbar-tab .mbar-name{font-family:var(--teko,'Teko'),sans-serif;font-size:1rem;font-weight:700;letter-spacing:.04em;color:rgba(255,255,255,.6);line-height:1.1;}
-.mbar-tab.active .mbar-name{color:#fff;}
-.mbar-tab .mbar-price{font-family:var(--cond,'Barlow Condensed'),sans-serif;font-size:.62rem;font-weight:600;color:rgba(255,255,255,.28);margin-top:1px;}
-.mbar-tab.active .mbar-price{color:rgba(255,255,255,.55);}
-</style>
-<style id="acb-font-boost">
-/* Global font increase — ACB v7 */
-body { font-size: 1.05rem !important; line-height: 1.82 !important; }
-p, li, td, th { font-size: 1.0rem !important; }
-.section p, .article-body p { font-size: 1.08rem !important; color: rgba(255,255,255,.85) !important; line-height: 1.85 !important; }
-.callout p { font-size: 1.05rem !important; color: rgba(255,255,255,.82) !important; }
-.faq-a, .faq-answer { font-size: 1.05rem !important; color: rgba(255,255,255,.82) !important; line-height: 1.78 !important; }
-.faq-q, .faq-question { font-size: 1.08rem !important; color: rgba(255,255,255,.92) !important; }
-.data-table td { font-size: 1.02rem !important; color: rgba(255,255,255,.88) !important; }
-.data-table th { font-size: .90rem !important; }
-.snap-l { font-size: .92rem !important; color: rgba(255,255,255,.80) !important; }
-.snap-v { font-size: 2.3rem !important; }
-.tc-k { font-size: .84rem !important; color: rgba(255,255,255,.72) !important; }
-.tc-note { font-size: .84rem !important; color: rgba(255,255,255,.62) !important; }
-.price-note { font-size: .90rem !important; color: rgba(255,255,255,.68) !important; }
-.recall-body { font-size: 1.02rem !important; color: rgba(255,255,255,.82) !important; }
-.recall-status { font-size: .84rem !important; font-weight: 700 !important; }
-.sb-link { font-size: 1.02rem !important; }
-.uc-body { font-size: .98rem !important; color: rgba(255,255,255,.82) !important; line-height: 1.75 !important; }
-.hero-desc { font-size: 1.12rem !important; color: rgba(255,255,255,.85) !important; }
-.acc-desc { font-size: .98rem !important; color: rgba(255,255,255,.78) !important; }
-.ft-copy { font-size: .84rem !important; color: rgba(255,255,255,.55) !important; }
-.bc-sub { font-size: .95rem !important; }
-</style>
-<style id="acb-global-font-boost">
-/* Global font size increase — applied sitewide */
-body{font-size:1.05rem!important;}
-p,li,.section p,.callout p{font-size:1.05rem!important;line-height:1.85!important;color:rgba(255,255,255,.85)!important;}
-.data-table td{font-size:1.02rem!important;color:rgba(255,255,255,.88)!important;}
-.data-table th{font-size:.92rem!important;color:rgba(255,255,255,.72)!important;}
-.faq-q{font-size:1.05rem!important;color:rgba(255,255,255,.92)!important;}
-.faq-a{font-size:1.02rem!important;color:rgba(255,255,255,.82)!important;line-height:1.82!important;}
-.snap-v{font-size:2.3rem!important;}
-.snap-l{font-size:.88rem!important;color:rgba(255,255,255,.78)!important;}
-.tc-k{font-size:.84rem!important;color:rgba(255,255,255,.72)!important;}
-.tc-v{font-size:1.08rem!important;}
-.tc-note{font-size:.84rem!important;color:rgba(255,255,255,.65)!important;}
-.recall-body{font-size:1.02rem!important;color:rgba(255,255,255,.82)!important;}
-.uc-body{font-size:.98rem!important;color:rgba(255,255,255,.82)!important;line-height:1.78!important;}
-.hero-desc{font-size:1.12rem!important;color:rgba(255,255,255,.85)!important;line-height:1.82!important;}
-.sb-link{font-size:1.02rem!important;}
-.price-note{font-size:.92rem!important;color:rgba(255,255,255,.68)!important;}
-h2.sec-title{font-size:2.1rem!important;}
-</style>
-<style id="acb-font-v2">
-body{font-size:1rem!important}
-.section p,.section li{font-size:1.05rem!important;color:rgba(255,255,255,.88)!important;line-height:1.85!important}
-.callout p{font-size:1.05rem!important;color:rgba(255,255,255,.88)!important}
-.data-table td{font-size:1.0rem!important;color:rgba(255,255,255,.88)!important}
-.data-table th{font-size:.88rem!important}
-.faq-q{font-size:1.08rem!important;color:rgba(255,255,255,.95)!important}
-.faq-a{font-size:1.0rem!important;color:rgba(255,255,255,.85)!important;line-height:1.82!important}
-.snap-l{font-size:.92rem!important;color:rgba(255,255,255,.82)!important}
-.snap-v{font-size:2.4rem!important}
-.hero-desc{font-size:1.12rem!important;color:rgba(255,255,255,.88)!important}
-.tc-k{font-size:.85rem!important;color:rgba(255,255,255,.75)!important}
-.tc-v{font-size:1.05rem!important}
-.tc-note{font-size:.82rem!important;color:rgba(255,255,255,.65)!important}
-.price-note{font-size:.9rem!important;color:rgba(255,255,255,.72)!important}
-.recall-body{font-size:1.0rem!important;color:rgba(255,255,255,.85)!important}
-.uc-body{font-size:.98rem!important;color:rgba(255,255,255,.85)!important}
-.sb-link{font-size:1.0rem!important;color:rgba(255,255,255,.88)!important}
-.sb-link strong{font-size:1.05rem!important;color:#fff!important}
-.ft-copy{font-size:.85rem!important;color:rgba(255,255,255,.58)!important}
-.acc-name{font-size:1.05rem!important}
-.acc-desc{font-size:.96rem!important;color:rgba(255,255,255,.80)!important}
-</style>
-<style id="acb-global-fonts">
-/* ── GLOBAL FONT SCALE INCREASE v2 ── */
-body { font-size: 1.05rem !important; line-height: 1.82 !important; }
-p, li, td, .section p, .callout p, .faq-a { font-size: 1.05rem !important; color: rgba(255,255,255,.88) !important; line-height: 1.82 !important; }
-.data-table td { font-size: 1.02rem !important; color: rgba(255,255,255,.88) !important; }
-.data-table th { font-size: .92rem !important; color: rgba(255,255,255,.72) !important; }
-.snap-v { font-size: 2.3rem !important; color: #fff !important; }
-.snap-l { font-size: .92rem !important; color: rgba(255,255,255,.80) !important; }
-.hero-desc { font-size: 1.12rem !important; color: rgba(255,255,255,.88) !important; line-height: 1.82 !important; }
-.tc-k { font-size: .85rem !important; color: rgba(255,255,255,.72) !important; }
-.tc-v { font-size: 1.08rem !important; color: #fff !important; }
-.tc-note { font-size: .82rem !important; color: rgba(255,255,255,.65) !important; }
-.price-note { font-size: .90rem !important; color: rgba(255,255,255,.68) !important; }
-.recall-body { font-size: 1.02rem !important; color: rgba(255,255,255,.85) !important; }
-.uc-body { font-size: .98rem !important; color: rgba(255,255,255,.85) !important; line-height: 1.75 !important; }
-.faq-q { font-size: 1.05rem !important; color: rgba(255,255,255,.92) !important; }
-.sb-link { font-size: 1.02rem !important; color: rgba(255,255,255,.88) !important; }
-.bc-sub, .brand-desc { font-size: 1.0rem !important; color: rgba(255,255,255,.82) !important; line-height: 1.75 !important; }
-.ft-link { font-size: .82rem !important; }
-.disc-bar { font-size: .78rem !important; }
-h2.sec-title { font-size: 2.1rem !important; }
-h1.hero-h1 { font-size: clamp(3.8rem, 9vw, 9.5rem) !important; }
-</style>
-<style id="acb-global-fonts-v8">
-/* ═══ GLOBAL FONT INCREASE v8 ═══ */
-html { font-size: 16px; }
-body { font-size: 1rem; line-height: 1.78; }
-
-/* Article & Section Body Text */
-.section p, article p, .article-body p, .content p {
-  font-size: 1.08rem !important;
-  color: rgba(255,255,255,.88) !important;
-  line-height: 1.85 !important;
-}
-/* Light-bg article pages */
-.section p[style*="rgba(26"], p.body-copy {
-  color: rgba(26,18,8,.82) !important;
-}
-/* Callouts */
-.callout p { font-size: 1.05rem !important; color: rgba(255,255,255,.88) !important; }
-/* Tables */
-.data-table td { font-size: 1.02rem !important; color: rgba(255,255,255,.90) !important; }
-.data-table th { font-size: .92rem !important; }
-/* Snap stat labels */
-.snap-l, .stat-label, .sb-l { font-size: .92rem !important; color: rgba(255,255,255,.82) !important; }
-/* Trim card */
-.tc-k { font-size: .85rem !important; color: rgba(255,255,255,.75) !important; }
-.tc-v { font-size: 1.08rem !important; }
-.tc-note { font-size: .85rem !important; color: rgba(255,255,255,.68) !important; }
-/* Price note */
-.price-note { font-size: .92rem !important; color: rgba(255,255,255,.72) !important; }
-/* Recall */
-.recall-body { font-size: 1.02rem !important; color: rgba(255,255,255,.85) !important; }
-.recall-status { font-size: .85rem !important; font-weight: 700 !important; }
-/* FAQ */
-.faq-q { font-size: 1.05rem !important; font-weight: 600 !important; }
-.faq-a { font-size: 1.02rem !important; color: rgba(255,255,255,.85) !important; line-height: 1.8 !important; }
-/* Sidebar */
-.sb-link { font-size: 1.02rem !important; color: rgba(255,255,255,.88) !important; }
-.sb-title { font-size: .92rem !important; color: rgba(255,255,255,.72) !important; }
-/* Acc cards */
-.acc-desc { font-size: .98rem !important; color: rgba(255,255,255,.82) !important; }
-.acc-name { font-size: 1.08rem !important; }
-/* Hero */
-.hero-desc { font-size: 1.1rem !important; color: rgba(255,255,255,.88) !important; }
-/* Update cards */
-.uc-body { font-size: .98rem !important; color: rgba(255,255,255,.85) !important; line-height: 1.78 !important; }
-/* Footer */
-.ft-copy { font-size: .85rem !important; color: rgba(255,255,255,.60) !important; }
-.ft-link { font-size: .82rem !important; }
-/* Disc bar */
-.disc-bar { font-size: .78rem !important; color: rgba(255,255,255,.62) !important; }
-</style>
 </head>
-<body>
+<body oncontextmenu="return false" onselectstart="return false">
 <a href="#" class="back-top" id="backTop">↑</a>
 <div class="font-bar">
   <button class="fs-btn" id="fsInc">A+</button>
@@ -591,33 +447,7 @@ body { font-size: 1rem; line-height: 1.78; }
 
   <div class="section" id="overview">
     <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">01</span><h2 class="sec-title">Overview</h2><div class="sec-rule"></div></div>
-    <p><p>The <strong>2025 Chevrolet Equinox</strong> is available in two parallel versions: the proven 1.5L turbocharged gas model and the all-new Equinox EV. Together they represent Chevy's full compact SUV offering.</p>
-  <div class="section" id="amz-top" style="padding-top:16px">
-    <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">A</span><h2 class="sec-title">Essential Accessories</h2><div class="sec-rule"></div></div>
-    <p style="font-size:.88rem;color:rgba(255,255,255,.55);margin-bottom:14px;">Affiliate links — we may earn a small commission at no extra cost to you. <a href="affiliate-disclosure.html" style="color:rgba(255,255,255,.4)">Disclosure</a></p>
-    <div class="acc-grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))">
-      <div class="acc-card">
-        <div class="acc-name">All-Weather Floor Mats</div>
-        <div class="acc-desc">Trap mud, snow & water — easy clean rubber mats for any vehicle.</div>
-        <a href="https://www.amazon.com/s?k=all+weather+floor+mats+universal&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-      </div>
-      <div class="acc-card">
-        <div class="acc-name">Seat Covers</div>
-        <div class="acc-desc">Protect your factory seats. Universal fit or brand-specific options.</div>
-        <a href="https://www.amazon.com/s?k=car+seat+covers+universal+fit&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-      </div>
-      <div class="acc-card">
-        <div class="acc-name">Dash Cam Front & Rear</div>
-        <div class="acc-desc">4K front + 1080p rear — document every drive for insurance protection.</div>
-        <a href="https://www.amazon.com/s?k=dash+cam+front+rear+4K&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-      </div>
-      <div class="acc-card">
-        <div class="acc-name">Phone Mount</div>
-        <div class="acc-desc">Magnetic wireless-charging vent or dash mount — hands-free GPS.</div>
-        <a href="https://www.amazon.com/s?k=car+phone+mount+magnetic+wireless+charging&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-      </div>
-    </div>
-  </div><p>The Equinox EV has been especially significant — at $34,995, it undercut every other EV SUV at launch and helped GM demonstrate that affordable EVs are viable.</p></p>
+    <p><p>The <strong>2025 Chevrolet Equinox</strong> is available in two parallel versions: the proven 1.5L turbocharged gas model and the all-new Equinox EV. Together they represent Chevy's full compact SUV offering.</p><p>The Equinox EV has been especially significant — at $34,995, it undercut every other EV SUV at launch and helped GM demonstrate that affordable EVs are viable.</p></p>
     <div class="callout">
       <div class="callout-label">EV Market Impact</div>
       <p>When launched, the Equinox EV was the lowest-priced new EV SUV in the US. GM committed to build 100,000+ units annually — a serious challenge to Tesla Model Y dominance in the compact EV SUV segment.</p>
@@ -659,37 +489,9 @@ body { font-size: 1rem; line-height: 1.78; }
   </div>
 
   <div class="section" id="specs">
-  <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">03</span><h2 class="sec-title">Full Specs</h2><div class="sec-rule"></div></div>
-  
-    <p style="font-size:.88rem;color:rgba(255,255,255,.55);margin-bottom:14px;">Affiliate links — we may earn a small commission at no extra cost to you. <a href="affiliate-disclosure.html" style="color:rgba(255,255,255,.4)">Disclosure</a></p>
-    <div class="acc-grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))">
-      <div class="acc-card">
-        <div class="acc-name">Paint Protection Film</div>
-        <div class="acc-desc">Clear PPF shields the hood and front fascia from stone chips.</div>
-        <a href="https://www.amazon.com/s?k=paint+protection+film+clear+bra+hood&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-      </div>
-      <div class="acc-card">
-        <div class="acc-name">Cordless Car Vacuum</div>
-        <div class="acc-desc">Lightweight cordless vacuum — clean in minutes without an outlet.</div>
-        <a href="https://www.amazon.com/s?k=car+vacuum+cleaner+cordless+portable&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-      </div>
-      <div class="acc-card">
-        <div class="acc-name">Windshield Sun Shade</div>
-        <div class="acc-desc">Reduces interior temp by 40°F+ — protects dash from UV cracking.</div>
-        <a href="https://www.amazon.com/s?k=windshield+sunshade+reflector&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-      </div>
-      <div class="acc-card">
-        <div class="acc-name">OBD2 Scanner</div>
-        <div class="acc-desc">Read & clear engine codes from your phone — save $100+ at the shop.</div>
-        <a href="https://www.amazon.com/s?k=OBD2+scanner+diagnostic+bluetooth&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-      </div>
-    </div>
-  </div>
+    <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">03</span><h2 class="sec-title">Full Specs</h2><div class="sec-rule"></div></div>
     <table class="data-table"><thead><tr><th>Spec</th><th>Gas 1.5L</th><th>EV LT FWD</th><th>EV RS AWD</th></tr></thead><tbody><tr><td class="td-n">Powertrain</td><td class="">1.5L Turbo I-4</td><td class="tc-v green">Single Motor EV</td><td class="tc-v green">Dual Motor EV</td></tr><tr><td class="td-n">HP</td><td class="">175 hp</td><td class="">210 hp</td><td class="tc-v green">290 hp</td></tr><tr><td class="td-n">Range / MPG</td><td class="">28/34 mpg</td><td class="tc-v green">319 mi EPA</td><td class="tc-v green">303 mi EPA</td></tr><tr><td class="td-n">0–60</td><td class="">~8.0 s</td><td class="">~7.2 s</td><td class="tc-v green">~5.8 s</td></tr><tr><td class="td-n">Max Tow</td><td class="">1,500 lb</td><td class="">1,000 lb</td><td class="tc-v green">3,500 lb</td></tr><tr><td class="td-n">DC Fast Charge</td><td class="">N/A</td><td class="tc-v green">150 kW</td><td class="tc-v green">150 kW</td></tr><tr><td class="td-n">Connector</td><td class="">N/A</td><td class="tc-v green">NACS</td><td class="tc-v green">NACS</td></tr><tr><td class="td-n">Cargo</td><td class="">63.9 cu ft max</td><td class="">57.3 cu ft max</td><td class="">57.3 cu ft max</td></tr></tbody></table>
-</div>
-
-  <div class="section" id="amz-mid" style="padding-top:16px">
-    <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">B</span><h2 class="sec-title">Recommended Upgrades</h2><div class="sec-rule"></div></div>
+  </div>
 
   <div class="section" id="s4">
     <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">04</span><h2 class="sec-title">Gas Efficiency</h2><div class="sec-rule"></div></div>
@@ -779,94 +581,56 @@ body { font-size: 1rem; line-height: 1.78; }
 
   <div class="section" id="faq">
     <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">11</span><h2 class="sec-title">FAQ</h2><div class="sec-rule"></div></div>
-    <div class="faq-item open"><div class="faq-q">What is the 2025 Chevrolet Equinox starting price?</div><div class="faq-a">Gas LS starts at $30,995. The Equinox EV LT starts at $34,995. EV RS AWD starts at ~$41,995. Prices exclude destination (~$1,295).</div></div><div class="faq-item"><div class="faq-q">How far can the Equinox EV go on a charge?</div><div class="faq-a">The EV LT (FWD) is EPA-rated at 319 miles. The RS AWD is rated at 303 miles. Both use NACS connectors.</div></div><div class="faq-item"><div class="faq-q">Does the Equinox EV qualify for the tax credit?</div><div class="faq-a">The EV LT at $34,995 is under the federal MSRP cap, and the vehicle is built in the US (Spring Hill, TN), so it may qualify for up to $7,500. Income limits apply.</div></div><div class="faq-item"><div class="faq-q">Is the gas or EV Equinox better?</div><div class="faq-a">Depends on your situation. If you drive under 319 miles/day and can charge at home, the EV is more economical over time. If you need maximum cargo space or tow a trailer, the gas model is better.</div></div><div class="faq-item"><div class="faq-q">How does the Equinox compare to RAV4?</div><div class="faq-a">RAV4 is larger inside and offers a more proven hybrid/PHEV. Equinox EV has more range. Gas Equinox is cheaper than RAV4 base. RAV4 has stronger resale value history.</div><div class="faq-item">
-  <div class="faq-q">What EV tax credits apply?</div>
-  <div class="faq-a"><p>Electric vehicles assembled in North America may qualify for up to $7,500 in federal EV tax credits under the Inflation Reduction Act. Income limits and MSRP caps apply. Verify eligibility at fueleconomy.gov/feg/taxevb.shtml before purchasing.</p></div>
-</div></div>
+    <div class="faq-item open"><div class="faq-q">What is the 2025 Chevrolet Equinox starting price?</div><div class="faq-a">Gas LS starts at $30,995. The Equinox EV LT starts at $34,995. EV RS AWD starts at ~$41,995. Prices exclude destination (~$1,295).</div></div><div class="faq-item"><div class="faq-q">How far can the Equinox EV go on a charge?</div><div class="faq-a">The EV LT (FWD) is EPA-rated at 319 miles. The RS AWD is rated at 303 miles. Both use NACS connectors.</div></div><div class="faq-item"><div class="faq-q">Does the Equinox EV qualify for the tax credit?</div><div class="faq-a">The EV LT at $34,995 is under the federal MSRP cap, and the vehicle is built in the US (Spring Hill, TN), so it may qualify for up to $7,500. Income limits apply.</div></div><div class="faq-item"><div class="faq-q">Is the gas or EV Equinox better?</div><div class="faq-a">Depends on your situation. If you drive under 319 miles/day and can charge at home, the EV is more economical over time. If you need maximum cargo space or tow a trailer, the gas model is better.</div></div><div class="faq-item"><div class="faq-q">How does the Equinox compare to RAV4?</div><div class="faq-a">RAV4 is larger inside and offers a more proven hybrid/PHEV. Equinox EV has more range. Gas Equinox is cheaper than RAV4 base. RAV4 has stronger resale value history.</div></div>
   </div>
 
   <div class="section" id="accessories">
     <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">12</span><h2 class="sec-title">Accessories &amp; Upgrades</h2><div class="sec-rule"></div></div>
-    <p>Popular upgrades and accessories for the Chevrolet Equinox. Links are Amazon affiliate — we may earn a commission at no cost to you.</p>
-    <div class="acc-grid"><div class="acc-card">
-          <div class="acc-name">Floor Mats</div>
-          <div class="acc-desc">All-weather rubber mats trap dirt, mud, and moisture — easy to clean.</div>
-          <a href="https://www.amazon.com/s?k=Chevrolet+Equinox+floor+mats+all+weather&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-        </div><div class="acc-card">
-          <div class="acc-name">Cargo Organizer</div>
-          <div class="acc-desc">Keep the rear cargo area organized with collapsible organizers.</div>
-          <a href="https://www.amazon.com/s?k=Chevrolet+Equinox+cargo+organizer&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-        </div><div class="acc-card">
-          <div class="acc-name">Roof Rack / Crossbars</div>
-          <div class="acc-desc">Add cargo-carrying capacity for bikes, kayaks, or luggage boxes.</div>
-          <a href="https://www.amazon.com/s?k=Chevrolet+Equinox+roof+rack+crossbars&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-        </div><div class="acc-card">
-          <div class="acc-name">Seat Covers</div>
-          <div class="acc-desc">Protect your upholstery — essential for families and pet owners.</div>
-          <a href="https://www.amazon.com/s?k=Chevrolet+Equinox+seat+covers&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-        </div><div class="acc-card">
-          <div class="acc-name">Window Deflectors</div>
-          <div class="acc-desc">Rain guards let you crack windows in rain without getting wet inside.</div>
-          <a href="https://www.amazon.com/s?k=Chevrolet+Equinox+window+deflectors+rain+guards&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-        </div><div class="acc-card">
-          <div class="acc-name">Dash Cam</div>
-          <div class="acc-desc">Front/rear dash cameras for protection and peace of mind.</div>
-          <a href="https://www.amazon.com/s?k=best+dash+cam+SUV&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-        </div></div>
-    <p style="font-size:.8rem;color:rgba(255,255,255,.25);margin-top:8px;">AmericanCarBrands.com participates in the Amazon Services LLC Associates Program. Prices and availability subject to change.</p>
-  </div>
-
-  
-  <div class="section" id="amz-faq" style="padding-top:16px">
-    <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">C</span><h2 class="sec-title">Shop More Accessories</h2><div class="sec-rule"></div></div>
-    <p style="font-size:.88rem;color:rgba(255,255,255,.55);margin-bottom:14px;">Affiliate links — we may earn a small commission at no extra cost to you. <a href="affiliate-disclosure.html" style="color:rgba(255,255,255,.4)">Disclosure</a></p>
-    <div class="acc-grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))">
+    <p style="font-size:1.0rem;color:rgba(255,255,255,.82);">Popular upgrades for the Chevrolet . Amazon affiliate links — small commission at no extra cost to you. <a href="affiliate-disclosure.html" style="color:rgba(255,255,255,.45);">Disclosure</a></p>
+    <div class="acc-grid">
       <div class="acc-card">
-        <div class="acc-name">Ceramic Spray Wax</div>
-        <div class="acc-desc">Spray-on ceramic protection — brilliant shine in 10 minutes.</div>
-        <a href="https://www.amazon.com/s?k=car+wax+ceramic+coating+spray&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+        <div class="acc-name"> Floor Mats</div>
+        <div class="acc-desc">All-weather fitted mats protect your interior.</div>
+        <a href="https://www.amazon.com/s?k=Chevrolet++floor+mats&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a>
       </div>
       <div class="acc-card">
-        <div class="acc-name">Microfiber Detailing Towels</div>
-        <div class="acc-desc">Streak-free detailing. 24-pack — wash, dry, wax with one set.</div>
-        <a href="https://www.amazon.com/s?k=microfiber+towels+car+detailing+24+pack&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+        <div class="acc-name">Level 2 Home Charger</div>
+        <div class="acc-desc">48-amp charger — charges most EVs overnight.</div>
+        <a href="https://www.amazon.com/s?k=level+2+home+EV+charger+48+amp&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a>
       </div>
       <div class="acc-card">
-        <div class="acc-name">Portable Tire Inflator</div>
-        <div class="acc-desc">Inflate tires anywhere. Digital gauge, auto-shutoff, 12V plug.</div>
-        <a href="https://www.amazon.com/s?k=tire+inflator+portable+air+compressor&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+        <div class="acc-name"> Cargo Liner</div>
+        <div class="acc-desc">Protect cargo area from groceries and gear.</div>
+        <a href="https://www.amazon.com/s?k=Chevrolet++cargo+liner&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a>
       </div>
       <div class="acc-card">
-        <div class="acc-name">Jumper Cables</div>
-        <div class="acc-desc">20-ft heavy-duty cables — 800A peak for any vehicle.</div>
-        <a href="https://www.amazon.com/s?k=jumper+cables+heavy+duty+booster&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+        <div class="acc-name"> Seat Covers</div>
+        <div class="acc-desc">Protect original upholstery from daily wear.</div>
+        <a href="https://www.amazon.com/s?k=Chevrolet++seat+covers&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a>
       </div>
       <div class="acc-card">
-        <div class="acc-name">Roadside Emergency Kit</div>
-        <div class="acc-desc">Reflective triangles, first aid, tow rope, jumper cables in one bag.</div>
-        <a href="https://www.amazon.com/s?k=car+emergency+kit+roadside+assistance&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+        <div class="acc-name">Charging Cable Organizer</div>
+        <div class="acc-desc">Keep your cable neat in trunk or frunk.</div>
+        <a href="https://www.amazon.com/s?k=Chevrolet++charging+cable&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a>
       </div>
       <div class="acc-card">
-        <div class="acc-name">Backup Camera / Sensors</div>
-        <div class="acc-desc">Retrofit wireless camera or parking sensors for added safety.</div>
-        <a href="https://www.amazon.com/s?k=parking+sensors+backup+camera+wireless&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+        <div class="acc-name">Paint Protection Film</div>
+        <div class="acc-desc">Clear bra shields front end from stone chips.</div>
+        <a href="https://www.amazon.com/s?k=Chevrolet++paint+protection+film&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a>
       </div>
       <div class="acc-card">
-        <div class="acc-name">Premium Air Freshener</div>
-        <div class="acc-desc">Long-lasting vent-clip fresheners — clean, non-overpowering scents.</div>
-        <a href="https://www.amazon.com/s?k=car+air+freshener+vent+clip&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+        <div class="acc-name">Dash Cam Front & Rear</div>
+        <div class="acc-desc">4K front + 1080p rear — document every drive.</div>
+        <a href="https://www.amazon.com/s?k=dash+cam+front+rear+4K&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a>
       </div>
       <div class="acc-card">
-        <div class="acc-name">Steering Wheel Cover</div>
-        <div class="acc-desc">Genuine leather or microfiber cover improves grip and comfort.</div>
-        <a href="https://www.amazon.com/s?k=steering+wheel+cover+leather&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+        <div class="acc-name">Car Detailing Kit</div>
+        <div class="acc-desc">pH-neutral wash, wax, and microfiber set.</div>
+        <a href="https://www.amazon.com/s?k=car+detailing+kit+microfiber&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a>
       </div>
-    <div class="faq-item">
-      <div class="faq-q">&#9656; Is the Chevrolet Chevrolet Equinox a good value in 2026?</div>
-      <div class="faq-a">The Chevrolet Chevrolet Equinox delivers competitive value at its price point. Starting at $30,995, it sits in a well-contested segment with strong alternatives from both domestic and import brands. For most buyers in the market for a electric vehicle, the Chevrolet Equinox earns a strong recommendation when cross-shopped against alternatives — particularly for those who prioritize American brand support, dealer network breadth, and current incentive programs. Always verify current pricing, incentives, and financing rates with your local Chevrolet dealer before purchasing.</div>
     </div>
   </div>
-  </div>
+
   <div class="sources">
     <div class="sources-title">Sources</div>
     <ul><li>Chevrolet Media; NHTSA; EPA fueleconomy.gov; Consumer Reports</li></ul>
@@ -899,6 +663,17 @@ body { font-size: 1rem; line-height: 1.78; }
     <a href="american-electric-car-brands.html" class="sb-link" style="font-size:.95rem;color:rgba(255,255,255,.82);">📖 American Electric Car Brands</a>
     <a href="are-american-cars-reliable.html" class="sb-link" style="font-size:.95rem;color:rgba(255,255,255,.82);">📖 Are American Cars Reliable?</a>
   </div>
+  <div class="sb-block" id="acb-article-links">
+    <div class="sb-title" style="background:linear-gradient(90deg,#E31937,#c0112b);font-size:.75rem;letter-spacing:.14em;">&#128240; Research Guides</div>
+    <a href="best-american-electric-cars.html" class="sb-link">Best American EVs 2026</a>
+    <a href="best-american-muscle-cars.html" class="sb-link">Best Muscle Cars</a>
+    <a href="american-luxury-car-brands.html" class="sb-link">American Luxury Brands</a>
+    <a href="american-truck-brands.html" class="sb-link">American Truck Brands</a>
+    <a href="most-reliable-american-suvs.html" class="sb-link">Most Reliable SUVs</a>
+    <a href="are-american-cars-reliable.html" class="sb-link">Are American Cars Reliable?</a>
+    <a href="best-american-cars-under-30k.html" class="sb-link">Best Cars Under $30K</a>
+    <a href="best-performance-cars.html" class="sb-link">Best Performance Cars 2026</a>
+  </div>
   <div class="sb-note">All prices March 2026. Verify at manufacturer website before purchasing.</div>
 </aside>
 </div>
@@ -930,7 +705,7 @@ document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('clic
 </script>
 
 <script>
-return false; });
+document.addEventListener('contextmenu', function(e) { e.preventDefault(); return false; });
 document.addEventListener('keydown', function(e) {
   // Disable F12, Ctrl+U, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+S
   if (e.key === 'F12' || (e.ctrlKey && ['u','U','s','S'].includes(e.key)) ||
@@ -940,20 +715,5 @@ document.addEventListener('keydown', function(e) {
 });
 </script>
 
-<script id="acb-mbar-fix-js">
-(function(){
-  // Fix model-bar active state on every page load
-  var path = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.mbar-tab, .model-bar a').forEach(function(a){
-    var href = a.getAttribute('href') || '';
-    var hrefFile = href.split('/').pop();
-    if(hrefFile === path){
-      a.classList.add('active');
-    } else {
-      a.classList.remove('active');
-    }
-  });
-})();
-</script>
 </body>
 </html>

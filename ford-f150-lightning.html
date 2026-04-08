@@ -212,6 +212,12 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;back
 .rw-val{font-family:var(--teko);font-size:1.6rem;font-weight:700;color:#fff;line-height:1;}
 .rw-lbl{font-size:.72rem;color:rgba(255,255,255,.35);margin-top:3px;font-family:var(--cond);letter-spacing:.1em;text-transform:uppercase;}
 @media(max-width:600px){.rw-grid{grid-template-columns:1fr 1fr;}.acc-grid{grid-template-columns:1fr;}}
+
+/* HERO_RIGHT_FIX */
+.hero-right-label{font-family:var(--cond);font-size:.90rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.65);padding-bottom:10px;border-bottom:1px solid var(--rule);margin-bottom:4px;}
+.tr-name{font-family:var(--teko);font-size:1.5rem;font-weight:700;letter-spacing:.04em;color:#fff;line-height:1;}
+.tr-price{font-family:var(--teko);font-size:1.35rem;color:var(--red);line-height:1;margin-top:2px;}
+.tr-note{font-family:var(--cond);font-size:.80rem;color:rgba(255,255,255,.55);margin-top:4px;line-height:1.45;}
 </style>
 
 <style id="acb-readability-override">
@@ -340,7 +346,6 @@ h2.sec-title { font-size: 2rem !important; }
 .jn.active { color: var(--red) !important; border-bottom-color: var(--red) !important; }
 </style>
 
-
 <style id="acb-social-footer">
 .ft-social{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px;}
 .ft-social-label{font-family:var(--cond,sans-serif);font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-right:4px;}
@@ -349,157 +354,8 @@ h2.sec-title { font-size: 2rem !important; }
 .ft-social-link svg{width:16px;height:16px;fill:currentColor;pointer-events:none;}
 </style>
 
-<style id="acb-mbar-fix">
-.mbar-tab{position:relative;display:flex;flex-direction:column;padding:0 14px;height:46px;justify-content:center;text-decoration:none;border-right:1px solid var(--rule,rgba(255,255,255,.08));transition:background .15s;}
-.mbar-tab:hover{background:rgba(255,255,255,.04);}
-.mbar-tab.active{background:rgba(255,255,255,.06);border-bottom:2px solid var(--red,#E31937);}
-.mbar-tab .mbar-name{font-family:var(--teko,'Teko'),sans-serif;font-size:1rem;font-weight:700;letter-spacing:.04em;color:rgba(255,255,255,.6);line-height:1.1;}
-.mbar-tab.active .mbar-name{color:#fff;}
-.mbar-tab .mbar-price{font-family:var(--cond,'Barlow Condensed'),sans-serif;font-size:.62rem;font-weight:600;color:rgba(255,255,255,.28);margin-top:1px;}
-.mbar-tab.active .mbar-price{color:rgba(255,255,255,.55);}
-</style>
-<style id="acb-font-boost">
-/* Global font increase — ACB v7 */
-body { font-size: 1.05rem !important; line-height: 1.82 !important; }
-p, li, td, th { font-size: 1.0rem !important; }
-.section p, .article-body p { font-size: 1.08rem !important; color: rgba(255,255,255,.85) !important; line-height: 1.85 !important; }
-.callout p { font-size: 1.05rem !important; color: rgba(255,255,255,.82) !important; }
-.faq-a, .faq-answer { font-size: 1.05rem !important; color: rgba(255,255,255,.82) !important; line-height: 1.78 !important; }
-.faq-q, .faq-question { font-size: 1.08rem !important; color: rgba(255,255,255,.92) !important; }
-.data-table td { font-size: 1.02rem !important; color: rgba(255,255,255,.88) !important; }
-.data-table th { font-size: .90rem !important; }
-.snap-l { font-size: .92rem !important; color: rgba(255,255,255,.80) !important; }
-.snap-v { font-size: 2.3rem !important; }
-.tc-k { font-size: .84rem !important; color: rgba(255,255,255,.72) !important; }
-.tc-note { font-size: .84rem !important; color: rgba(255,255,255,.62) !important; }
-.price-note { font-size: .90rem !important; color: rgba(255,255,255,.68) !important; }
-.recall-body { font-size: 1.02rem !important; color: rgba(255,255,255,.82) !important; }
-.recall-status { font-size: .84rem !important; font-weight: 700 !important; }
-.sb-link { font-size: 1.02rem !important; }
-.uc-body { font-size: .98rem !important; color: rgba(255,255,255,.82) !important; line-height: 1.75 !important; }
-.hero-desc { font-size: 1.12rem !important; color: rgba(255,255,255,.85) !important; }
-.acc-desc { font-size: .98rem !important; color: rgba(255,255,255,.78) !important; }
-.ft-copy { font-size: .84rem !important; color: rgba(255,255,255,.55) !important; }
-.bc-sub { font-size: .95rem !important; }
-</style>
-<style id="acb-global-font-boost">
-/* Global font size increase — applied sitewide */
-body{font-size:1.05rem!important;}
-p,li,.section p,.callout p{font-size:1.05rem!important;line-height:1.85!important;color:rgba(255,255,255,.85)!important;}
-.data-table td{font-size:1.02rem!important;color:rgba(255,255,255,.88)!important;}
-.data-table th{font-size:.92rem!important;color:rgba(255,255,255,.72)!important;}
-.faq-q{font-size:1.05rem!important;color:rgba(255,255,255,.92)!important;}
-.faq-a{font-size:1.02rem!important;color:rgba(255,255,255,.82)!important;line-height:1.82!important;}
-.snap-v{font-size:2.3rem!important;}
-.snap-l{font-size:.88rem!important;color:rgba(255,255,255,.78)!important;}
-.tc-k{font-size:.84rem!important;color:rgba(255,255,255,.72)!important;}
-.tc-v{font-size:1.08rem!important;}
-.tc-note{font-size:.84rem!important;color:rgba(255,255,255,.65)!important;}
-.recall-body{font-size:1.02rem!important;color:rgba(255,255,255,.82)!important;}
-.uc-body{font-size:.98rem!important;color:rgba(255,255,255,.82)!important;line-height:1.78!important;}
-.hero-desc{font-size:1.12rem!important;color:rgba(255,255,255,.85)!important;line-height:1.82!important;}
-.sb-link{font-size:1.02rem!important;}
-.price-note{font-size:.92rem!important;color:rgba(255,255,255,.68)!important;}
-h2.sec-title{font-size:2.1rem!important;}
-</style>
-<style id="acb-font-v2">
-body{font-size:1rem!important}
-.section p,.section li{font-size:1.05rem!important;color:rgba(255,255,255,.88)!important;line-height:1.85!important}
-.callout p{font-size:1.05rem!important;color:rgba(255,255,255,.88)!important}
-.data-table td{font-size:1.0rem!important;color:rgba(255,255,255,.88)!important}
-.data-table th{font-size:.88rem!important}
-.faq-q{font-size:1.08rem!important;color:rgba(255,255,255,.95)!important}
-.faq-a{font-size:1.0rem!important;color:rgba(255,255,255,.85)!important;line-height:1.82!important}
-.snap-l{font-size:.92rem!important;color:rgba(255,255,255,.82)!important}
-.snap-v{font-size:2.4rem!important}
-.hero-desc{font-size:1.12rem!important;color:rgba(255,255,255,.88)!important}
-.tc-k{font-size:.85rem!important;color:rgba(255,255,255,.75)!important}
-.tc-v{font-size:1.05rem!important}
-.tc-note{font-size:.82rem!important;color:rgba(255,255,255,.65)!important}
-.price-note{font-size:.9rem!important;color:rgba(255,255,255,.72)!important}
-.recall-body{font-size:1.0rem!important;color:rgba(255,255,255,.85)!important}
-.uc-body{font-size:.98rem!important;color:rgba(255,255,255,.85)!important}
-.sb-link{font-size:1.0rem!important;color:rgba(255,255,255,.88)!important}
-.sb-link strong{font-size:1.05rem!important;color:#fff!important}
-.ft-copy{font-size:.85rem!important;color:rgba(255,255,255,.58)!important}
-.acc-name{font-size:1.05rem!important}
-.acc-desc{font-size:.96rem!important;color:rgba(255,255,255,.80)!important}
-</style>
-<style id="acb-global-fonts">
-/* ── GLOBAL FONT SCALE INCREASE v2 ── */
-body { font-size: 1.05rem !important; line-height: 1.82 !important; }
-p, li, td, .section p, .callout p, .faq-a { font-size: 1.05rem !important; color: rgba(255,255,255,.88) !important; line-height: 1.82 !important; }
-.data-table td { font-size: 1.02rem !important; color: rgba(255,255,255,.88) !important; }
-.data-table th { font-size: .92rem !important; color: rgba(255,255,255,.72) !important; }
-.snap-v { font-size: 2.3rem !important; color: #fff !important; }
-.snap-l { font-size: .92rem !important; color: rgba(255,255,255,.80) !important; }
-.hero-desc { font-size: 1.12rem !important; color: rgba(255,255,255,.88) !important; line-height: 1.82 !important; }
-.tc-k { font-size: .85rem !important; color: rgba(255,255,255,.72) !important; }
-.tc-v { font-size: 1.08rem !important; color: #fff !important; }
-.tc-note { font-size: .82rem !important; color: rgba(255,255,255,.65) !important; }
-.price-note { font-size: .90rem !important; color: rgba(255,255,255,.68) !important; }
-.recall-body { font-size: 1.02rem !important; color: rgba(255,255,255,.85) !important; }
-.uc-body { font-size: .98rem !important; color: rgba(255,255,255,.85) !important; line-height: 1.75 !important; }
-.faq-q { font-size: 1.05rem !important; color: rgba(255,255,255,.92) !important; }
-.sb-link { font-size: 1.02rem !important; color: rgba(255,255,255,.88) !important; }
-.bc-sub, .brand-desc { font-size: 1.0rem !important; color: rgba(255,255,255,.82) !important; line-height: 1.75 !important; }
-.ft-link { font-size: .82rem !important; }
-.disc-bar { font-size: .78rem !important; }
-h2.sec-title { font-size: 2.1rem !important; }
-h1.hero-h1 { font-size: clamp(3.8rem, 9vw, 9.5rem) !important; }
-</style>
-<style id="acb-global-fonts-v8">
-/* ═══ GLOBAL FONT INCREASE v8 ═══ */
-html { font-size: 16px; }
-body { font-size: 1rem; line-height: 1.78; }
-
-/* Article & Section Body Text */
-.section p, article p, .article-body p, .content p {
-  font-size: 1.08rem !important;
-  color: rgba(255,255,255,.88) !important;
-  line-height: 1.85 !important;
-}
-/* Light-bg article pages */
-.section p[style*="rgba(26"], p.body-copy {
-  color: rgba(26,18,8,.82) !important;
-}
-/* Callouts */
-.callout p { font-size: 1.05rem !important; color: rgba(255,255,255,.88) !important; }
-/* Tables */
-.data-table td { font-size: 1.02rem !important; color: rgba(255,255,255,.90) !important; }
-.data-table th { font-size: .92rem !important; }
-/* Snap stat labels */
-.snap-l, .stat-label, .sb-l { font-size: .92rem !important; color: rgba(255,255,255,.82) !important; }
-/* Trim card */
-.tc-k { font-size: .85rem !important; color: rgba(255,255,255,.75) !important; }
-.tc-v { font-size: 1.08rem !important; }
-.tc-note { font-size: .85rem !important; color: rgba(255,255,255,.68) !important; }
-/* Price note */
-.price-note { font-size: .92rem !important; color: rgba(255,255,255,.72) !important; }
-/* Recall */
-.recall-body { font-size: 1.02rem !important; color: rgba(255,255,255,.85) !important; }
-.recall-status { font-size: .85rem !important; font-weight: 700 !important; }
-/* FAQ */
-.faq-q { font-size: 1.05rem !important; font-weight: 600 !important; }
-.faq-a { font-size: 1.02rem !important; color: rgba(255,255,255,.85) !important; line-height: 1.8 !important; }
-/* Sidebar */
-.sb-link { font-size: 1.02rem !important; color: rgba(255,255,255,.88) !important; }
-.sb-title { font-size: .92rem !important; color: rgba(255,255,255,.72) !important; }
-/* Acc cards */
-.acc-desc { font-size: .98rem !important; color: rgba(255,255,255,.82) !important; }
-.acc-name { font-size: 1.08rem !important; }
-/* Hero */
-.hero-desc { font-size: 1.1rem !important; color: rgba(255,255,255,.88) !important; }
-/* Update cards */
-.uc-body { font-size: .98rem !important; color: rgba(255,255,255,.85) !important; line-height: 1.78 !important; }
-/* Footer */
-.ft-copy { font-size: .85rem !important; color: rgba(255,255,255,.60) !important; }
-.ft-link { font-size: .82rem !important; }
-/* Disc bar */
-.disc-bar { font-size: .78rem !important; color: rgba(255,255,255,.62) !important; }
-</style>
 </head>
-<body>
+<body oncontextmenu="return false" onselectstart="return false">
 <a href="#" class="back-top" id="backTop">↑</a>
 <div class="font-bar">
   <button class="fs-btn" id="fsInc">A+</button>
@@ -594,33 +450,7 @@ body { font-size: 1rem; line-height: 1.78; }
 
   <div class="section" id="overview">
     <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">01</span><h2 class="sec-title">Overview</h2><div class="sec-rule"></div></div>
-    <p><p>The <strong>2025 Ford F-150 Lightning</strong> remains the top-selling electric pickup in the US, blending proven F-150 capability with a fully electric drivetrain. Dual-motor AWD is standard across all trims, and the frunk adds 14.1 cubic feet of lockable, drainable storage.</p>
-  <div class="section" id="amz-top" style="padding-top:16px">
-    <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">A</span><h2 class="sec-title">Essential Accessories</h2><div class="sec-rule"></div></div>
-    <p style="font-size:.88rem;color:rgba(255,255,255,.55);margin-bottom:14px;">Affiliate links — we may earn a small commission at no extra cost to you. <a href="affiliate-disclosure.html" style="color:rgba(255,255,255,.4)">Disclosure</a></p>
-    <div class="acc-grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))">
-      <div class="acc-card">
-        <div class="acc-name">All-Weather Floor Mats</div>
-        <div class="acc-desc">Trap mud, snow & water — easy clean rubber mats for any vehicle.</div>
-        <a href="https://www.amazon.com/s?k=all+weather+floor+mats+universal&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-      </div>
-      <div class="acc-card">
-        <div class="acc-name">Seat Covers</div>
-        <div class="acc-desc">Protect your factory seats. Universal fit or brand-specific options.</div>
-        <a href="https://www.amazon.com/s?k=car+seat+covers+universal+fit&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-      </div>
-      <div class="acc-card">
-        <div class="acc-name">Dash Cam Front & Rear</div>
-        <div class="acc-desc">4K front + 1080p rear — document every drive for insurance protection.</div>
-        <a href="https://www.amazon.com/s?k=dash+cam+front+rear+4K&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-      </div>
-      <div class="acc-card">
-        <div class="acc-name">Phone Mount</div>
-        <div class="acc-desc">Magnetic wireless-charging vent or dash mount — hands-free GPS.</div>
-        <a href="https://www.amazon.com/s?k=car+phone+mount+magnetic+wireless+charging&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-      </div>
-    </div>
-  </div><p>Ford resized the lineup in 2024, cutting the entry price and focusing development on the popular extended-range Lariat. The 2025 model continues that direction with minor equipment updates and a new Antimatter Blue color.</p></p>
+    <p><p>The <strong>2025 Ford F-150 Lightning</strong> remains the top-selling electric pickup in the US, blending proven F-150 capability with a fully electric drivetrain. Dual-motor AWD is standard across all trims, and the frunk adds 14.1 cubic feet of lockable, drainable storage.</p><p>Ford resized the lineup in 2024, cutting the entry price and focusing development on the popular extended-range Lariat. The 2025 model continues that direction with minor equipment updates and a new Antimatter Blue color.</p></p>
     <div class="callout Pro Power Onboard — up to 9.6 kW of exportable electricity — doubles as a mobile generator for worksites or emergency home backup.">
       <div class="callout-label">callout-label</div>
       <p>Key Strength</p>
@@ -662,37 +492,9 @@ body { font-size: 1rem; line-height: 1.78; }
   </div>
 
   <div class="section" id="specs">
-  <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">03</span><h2 class="sec-title">Full Specs</h2><div class="sec-rule"></div></div>
-  
-    <p style="font-size:.88rem;color:rgba(255,255,255,.55);margin-bottom:14px;">Affiliate links — we may earn a small commission at no extra cost to you. <a href="affiliate-disclosure.html" style="color:rgba(255,255,255,.4)">Disclosure</a></p>
-    <div class="acc-grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))">
-      <div class="acc-card">
-        <div class="acc-name">Paint Protection Film</div>
-        <div class="acc-desc">Clear PPF shields the hood and front fascia from stone chips.</div>
-        <a href="https://www.amazon.com/s?k=paint+protection+film+clear+bra+hood&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-      </div>
-      <div class="acc-card">
-        <div class="acc-name">Cordless Car Vacuum</div>
-        <div class="acc-desc">Lightweight cordless vacuum — clean in minutes without an outlet.</div>
-        <a href="https://www.amazon.com/s?k=car+vacuum+cleaner+cordless+portable&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-      </div>
-      <div class="acc-card">
-        <div class="acc-name">Windshield Sun Shade</div>
-        <div class="acc-desc">Reduces interior temp by 40°F+ — protects dash from UV cracking.</div>
-        <a href="https://www.amazon.com/s?k=windshield+sunshade+reflector&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-      </div>
-      <div class="acc-card">
-        <div class="acc-name">OBD2 Scanner</div>
-        <div class="acc-desc">Read & clear engine codes from your phone — save $100+ at the shop.</div>
-        <a href="https://www.amazon.com/s?k=OBD2+scanner+diagnostic+bluetooth&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-      </div>
-    </div>
-  </div>
+    <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">03</span><h2 class="sec-title">Full Specs</h2><div class="sec-rule"></div></div>
     <table class="data-table"><thead><tr><th>Spec</th><th>Pro / XLT</th><th>Lariat / Platinum</th></tr></thead><tbody><tr><td class="td-n">Battery</td><td class="">87.7 kWh (Std)</td><td class="tc-v green">131 kWh (Ext)</td></tr><tr><td class="td-n">EPA Range</td><td class="">230 mi</td><td class="tc-v green">320 mi</td></tr><tr><td class="td-n">Combined HP</td><td class="">452 hp</td><td class="">580 hp</td></tr><tr><td class="td-n">Combined Torque</td><td class="">775 lb-ft</td><td class="">775 lb-ft</td></tr><tr><td class="td-n">0–60 mph</td><td class="">~7.0 s</td><td class="">~4.0 s</td></tr><tr><td class="td-n">Max Tow (Ext)</td><td class="">5,000 lb</td><td class="">9,100 lb</td></tr><tr><td class="td-n">Max Payload</td><td class="">1,925 lb</td><td class="">2,235 lb</td></tr><tr><td class="td-n">Pro Power Onboard</td><td class="">2.4 kW</td><td class="tc-v green">9.6 kW</td></tr><tr><td class="td-n">Frunk Capacity</td><td class="">14.1 cu ft</td><td class="">14.1 cu ft</td></tr><tr><td class="td-n">DC Fast Charge</td><td class="">80% ~41 min</td><td class="">80% ~44 min</td></tr><tr><td class="td-n">Charge Port</td><td class="tc-v green">NACS</td><td class="tc-v green">NACS</td></tr><tr><td class="td-n">Ford Blue Oval Cred.</td><td class="">Available</td><td class="">Available</td></tr></tbody></table>
-</div>
-
-  <div class="section" id="amz-mid" style="padding-top:16px">
-    <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">B</span><h2 class="sec-title">Recommended Upgrades</h2><div class="sec-rule"></div></div>
+  </div>
 
   <div class="section" id="s4">
     <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">04</span><h2 class="sec-title">Range & Efficiency</h2><div class="sec-rule"></div></div>
@@ -787,98 +589,56 @@ body { font-size: 1rem; line-height: 1.78; }
 
   <div class="section" id="faq">
     <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">11</span><h2 class="sec-title">FAQ</h2><div class="sec-rule"></div></div>
-    <div class="faq-item open"><div class="faq-q">What is the 2025 F-150 Lightning starting price?</div><div class="faq-a">The base Pro trim starts at $52,995. The extended-range Lariat starts around $68,995 and the Platinum at $84,995. All prices exclude destination (~$1,995).</div></div><div class="faq-item"><div class="faq-q">How far can the F-150 Lightning tow?</div><div class="faq-a">Extended-range models tow up to 9,100 lb. Standard-range trims are rated to 7,700 lb. Towing significantly reduces range — budget 50–60% of EPA range when towing near max.</div></div><div class="faq-item"><div class="faq-q">Does the F-150 Lightning have NACS?</div><div class="faq-a">Yes. All 2025 Lightning models ship with NACS connectors, giving plug-and-play access to Tesla Superchargers and the Ford BlueOval network via the FordPass app.</div></div><div class="faq-item"><div class="faq-q">Can the Lightning power my home?</div><div class="faq-a">Yes — with Ford Intelligent Backup Power and a compatible home energy gateway, extended-range Lariat/Platinum can export up to 9.6 kW to keep essential circuits running during outages.</div></div><div class="faq-item"><div class="faq-q">How long to charge the F-150 Lightning?</div><div class="faq-a">On a 48A Level 2 home charger, extended-range charges in ~10–11 hrs. DC fast charging at 150 kW adds ~50 miles per 10 minutes.</div><div class="faq-item">
-  <div class="faq-q">What EV tax credits apply?</div>
-  <div class="faq-a"><p>Electric vehicles assembled in North America may qualify for up to $7,500 in federal EV tax credits under the Inflation Reduction Act. Income limits and MSRP caps apply. Verify eligibility at fueleconomy.gov/feg/taxevb.shtml before purchasing.</p></div>
-</div></div>
+    <div class="faq-item open"><div class="faq-q">What is the 2025 F-150 Lightning starting price?</div><div class="faq-a">The base Pro trim starts at $52,995. The extended-range Lariat starts around $68,995 and the Platinum at $84,995. All prices exclude destination (~$1,995).</div></div><div class="faq-item"><div class="faq-q">How far can the F-150 Lightning tow?</div><div class="faq-a">Extended-range models tow up to 9,100 lb. Standard-range trims are rated to 7,700 lb. Towing significantly reduces range — budget 50–60% of EPA range when towing near max.</div></div><div class="faq-item"><div class="faq-q">Does the F-150 Lightning have NACS?</div><div class="faq-a">Yes. All 2025 Lightning models ship with NACS connectors, giving plug-and-play access to Tesla Superchargers and the Ford BlueOval network via the FordPass app.</div></div><div class="faq-item"><div class="faq-q">Can the Lightning power my home?</div><div class="faq-a">Yes — with Ford Intelligent Backup Power and a compatible home energy gateway, extended-range Lariat/Platinum can export up to 9.6 kW to keep essential circuits running during outages.</div></div><div class="faq-item"><div class="faq-q">How long to charge the F-150 Lightning?</div><div class="faq-a">On a 48A Level 2 home charger, extended-range charges in ~10–11 hrs. DC fast charging at 150 kW adds ~50 miles per 10 minutes.</div></div>
   </div>
 
   <div class="section" id="accessories">
     <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">12</span><h2 class="sec-title">Accessories &amp; Upgrades</h2><div class="sec-rule"></div></div>
-    <p>Popular upgrades and accessories for the Ford F-150 Lightning. Links are Amazon affiliate — we may earn a commission at no cost to you.</p>
-    <div class="acc-grid"><div class="acc-card">
-          <div class="acc-name">Level 2 Home Charger</div>
-          <div class="acc-desc">48-amp home EV charger — charges most EVs overnight, much faster than 120V.</div>
-          <a href="https://www.amazon.com/s?k=level+2+EV+charger+home+48+amp&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-        </div><div class="acc-card">
-          <div class="acc-name">Charging Cable Organizer</div>
-          <div class="acc-desc">Keep your charging cable tidy in the frunk or cargo area.</div>
-          <a href="https://www.amazon.com/s?k=Ford+F-150+Lightning+charging+cable+organizer&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-        </div><div class="acc-card">
-          <div class="acc-name">Floor Mats</div>
-          <div class="acc-desc">All-weather protection for your interior — brand-specific fit is best.</div>
-          <a href="https://www.amazon.com/s?k=Ford+F-150+Lightning+floor+mats&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-        </div><div class="acc-card">
-          <div class="acc-name">Cargo Mat / Trunk Liner</div>
-          <div class="acc-desc">Protect the cargo area from groceries and gear.</div>
-          <a href="https://www.amazon.com/s?k=Ford+F-150+Lightning+cargo+mat+trunk+liner&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-        </div><div class="acc-card">
-          <div class="acc-name">Seat Covers</div>
-          <div class="acc-desc">Protect original seating with custom-fit covers.</div>
-          <a href="https://www.amazon.com/s?k=Ford+F-150+Lightning+seat+covers&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-        </div><div class="acc-card">
-          <div class="acc-name">Paint Protection Film</div>
-          <div class="acc-desc">Clear bra PPF protects high-impact areas from stone chips and road debris.</div>
-          <a href="https://www.amazon.com/s?k=paint+protection+film+clear+bra&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-        </div><div class="acc-card">
-          <div class="acc-name">Frunk Organizer</div>
-          <div class="acc-desc">Maximize the 14-cu-ft front trunk with modular storage organizers.</div>
-          <a href="https://www.amazon.com/s?k=F150+Lightning+frunk+organizer&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
-        </div></div>
-    <p style="font-size:.8rem;color:rgba(255,255,255,.25);margin-top:8px;">AmericanCarBrands.com participates in the Amazon Services LLC Associates Program. Prices and availability subject to change.</p>
-  </div>
-
-  
-  <div class="section" id="amz-faq" style="padding-top:16px">
-    <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">C</span><h2 class="sec-title">Shop More Accessories</h2><div class="sec-rule"></div></div>
-    <p style="font-size:.88rem;color:rgba(255,255,255,.55);margin-bottom:14px;">Affiliate links — we may earn a small commission at no extra cost to you. <a href="affiliate-disclosure.html" style="color:rgba(255,255,255,.4)">Disclosure</a></p>
-    <div class="acc-grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))">
+    <p style="font-size:1.0rem;color:rgba(255,255,255,.82);">Popular upgrades for the Ford . Amazon affiliate links — small commission at no extra cost to you. <a href="affiliate-disclosure.html" style="color:rgba(255,255,255,.45);">Disclosure</a></p>
+    <div class="acc-grid">
       <div class="acc-card">
-        <div class="acc-name">Ceramic Spray Wax</div>
-        <div class="acc-desc">Spray-on ceramic protection — brilliant shine in 10 minutes.</div>
-        <a href="https://www.amazon.com/s?k=car+wax+ceramic+coating+spray&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+        <div class="acc-name"> Floor Mats</div>
+        <div class="acc-desc">All-weather fitted mats protect your interior.</div>
+        <a href="https://www.amazon.com/s?k=Ford++floor+mats&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a>
       </div>
       <div class="acc-card">
-        <div class="acc-name">Microfiber Detailing Towels</div>
-        <div class="acc-desc">Streak-free detailing. 24-pack — wash, dry, wax with one set.</div>
-        <a href="https://www.amazon.com/s?k=microfiber+towels+car+detailing+24+pack&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+        <div class="acc-name">Level 2 Home Charger</div>
+        <div class="acc-desc">48-amp charger — charges most EVs overnight.</div>
+        <a href="https://www.amazon.com/s?k=level+2+home+EV+charger+48+amp&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a>
       </div>
       <div class="acc-card">
-        <div class="acc-name">Portable Tire Inflator</div>
-        <div class="acc-desc">Inflate tires anywhere. Digital gauge, auto-shutoff, 12V plug.</div>
-        <a href="https://www.amazon.com/s?k=tire+inflator+portable+air+compressor&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+        <div class="acc-name"> Cargo Liner</div>
+        <div class="acc-desc">Protect cargo area from groceries and gear.</div>
+        <a href="https://www.amazon.com/s?k=Ford++cargo+liner&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a>
       </div>
       <div class="acc-card">
-        <div class="acc-name">Jumper Cables</div>
-        <div class="acc-desc">20-ft heavy-duty cables — 800A peak for any vehicle.</div>
-        <a href="https://www.amazon.com/s?k=jumper+cables+heavy+duty+booster&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+        <div class="acc-name"> Seat Covers</div>
+        <div class="acc-desc">Protect original upholstery from daily wear.</div>
+        <a href="https://www.amazon.com/s?k=Ford++seat+covers&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a>
       </div>
       <div class="acc-card">
-        <div class="acc-name">Roadside Emergency Kit</div>
-        <div class="acc-desc">Reflective triangles, first aid, tow rope, jumper cables in one bag.</div>
-        <a href="https://www.amazon.com/s?k=car+emergency+kit+roadside+assistance&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+        <div class="acc-name">Charging Cable Organizer</div>
+        <div class="acc-desc">Keep your cable neat in trunk or frunk.</div>
+        <a href="https://www.amazon.com/s?k=Ford++charging+cable&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a>
       </div>
       <div class="acc-card">
-        <div class="acc-name">Backup Camera / Sensors</div>
-        <div class="acc-desc">Retrofit wireless camera or parking sensors for added safety.</div>
-        <a href="https://www.amazon.com/s?k=parking+sensors+backup+camera+wireless&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+        <div class="acc-name">Paint Protection Film</div>
+        <div class="acc-desc">Clear bra shields front end from stone chips.</div>
+        <a href="https://www.amazon.com/s?k=Ford++paint+protection+film&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a>
       </div>
       <div class="acc-card">
-        <div class="acc-name">Premium Air Freshener</div>
-        <div class="acc-desc">Long-lasting vent-clip fresheners — clean, non-overpowering scents.</div>
-        <a href="https://www.amazon.com/s?k=car+air+freshener+vent+clip&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+        <div class="acc-name">Dash Cam Front & Rear</div>
+        <div class="acc-desc">4K front + 1080p rear — document every drive.</div>
+        <a href="https://www.amazon.com/s?k=dash+cam+front+rear+4K&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a>
       </div>
       <div class="acc-card">
-        <div class="acc-name">Steering Wheel Cover</div>
-        <div class="acc-desc">Genuine leather or microfiber cover improves grip and comfort.</div>
-        <a href="https://www.amazon.com/s?k=steering+wheel+cover+leather&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon →</a>
+        <div class="acc-name">Car Detailing Kit</div>
+        <div class="acc-desc">pH-neutral wash, wax, and microfiber set.</div>
+        <a href="https://www.amazon.com/s?k=car+detailing+kit+microfiber&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a>
       </div>
-    <div class="faq-item">
-      <div class="faq-q">&#9656; Is the Ford Ford F-150 Lightning a good value in 2026?</div>
-      <div class="faq-a">The Ford Ford F-150 Lightning delivers competitive value at its price point. Starting at $52,995, it sits in a well-contested segment with strong alternatives from both domestic and import brands. For most buyers in the market for a truck, the Ford F-150 Lightning earns a strong recommendation when cross-shopped against alternatives — particularly for those who prioritize American brand support, dealer network breadth, and current incentive programs. Always verify current pricing, incentives, and financing rates with your local Ford dealer before purchasing.</div>
     </div>
   </div>
-  </div>
+
   <div class="sources">
     <div class="sources-title">Sources</div>
     <ul><li>Ford Media; NHTSA recall database; EPA fueleconomy.gov</li></ul>
@@ -911,6 +671,17 @@ body { font-size: 1rem; line-height: 1.78; }
     <a href="american-electric-car-brands.html" class="sb-link" style="font-size:.95rem;color:rgba(255,255,255,.82);">📖 American Electric Car Brands</a>
     <a href="american-truck-brands.html" class="sb-link" style="font-size:.95rem;color:rgba(255,255,255,.82);">📖 American Truck Brands Guide</a>
   </div>
+  <div class="sb-block" id="acb-article-links">
+    <div class="sb-title" style="background:linear-gradient(90deg,#E31937,#c0112b);font-size:.75rem;letter-spacing:.14em;">&#128240; Research Guides</div>
+    <a href="best-american-electric-cars.html" class="sb-link">Best American EVs 2026</a>
+    <a href="best-american-muscle-cars.html" class="sb-link">Best Muscle Cars</a>
+    <a href="american-luxury-car-brands.html" class="sb-link">American Luxury Brands</a>
+    <a href="american-truck-brands.html" class="sb-link">American Truck Brands</a>
+    <a href="most-reliable-american-suvs.html" class="sb-link">Most Reliable SUVs</a>
+    <a href="are-american-cars-reliable.html" class="sb-link">Are American Cars Reliable?</a>
+    <a href="best-american-cars-under-30k.html" class="sb-link">Best Cars Under $30K</a>
+    <a href="best-performance-cars.html" class="sb-link">Best Performance Cars 2026</a>
+  </div>
   <div class="sb-note">All prices March 2026. Verify at manufacturer website before purchasing.</div>
 </aside>
 </div>
@@ -942,7 +713,7 @@ document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('clic
 </script>
 
 <script>
-return false; });
+document.addEventListener('contextmenu', function(e) { e.preventDefault(); return false; });
 document.addEventListener('keydown', function(e) {
   // Disable F12, Ctrl+U, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+S
   if (e.key === 'F12' || (e.ctrlKey && ['u','U','s','S'].includes(e.key)) ||
@@ -952,20 +723,5 @@ document.addEventListener('keydown', function(e) {
 });
 </script>
 
-<script id="acb-mbar-fix-js">
-(function(){
-  // Fix model-bar active state on every page load
-  var path = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.mbar-tab, .model-bar a').forEach(function(a){
-    var href = a.getAttribute('href') || '';
-    var hrefFile = href.split('/').pop();
-    if(hrefFile === path){
-      a.classList.add('active');
-    } else {
-      a.classList.remove('active');
-    }
-  });
-})();
-</script>
 </body>
 </html>
