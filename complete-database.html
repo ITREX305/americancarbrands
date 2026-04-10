@@ -110,7 +110,7 @@ nav{position:fixed;top:32px;left:0;right:0;z-index:100;height:64px;background:rg
 .db-table-wrap{overflow-x:auto;border:1px solid rgba(255,255,255,0.07);border-radius:4px;}
 .db-table{width:100%;border-collapse:collapse;min-width:900px;}
 .db-table thead tr{background:var(--dark3);}
-.db-table th{padding:13px 18px;text-align:left;font-family:'Barlow Condensed',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.75);border-bottom:2px solid rgba(255,255,255,0.1);white-space:nowrap;cursor:pointer;user-select:none;transition:color 0.2s;}
+.db-table th{padding:13px 18px;text-align:left;font-family:'Barlow Condensed',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.75);border-bottom:2px solid rgba(255,255,255,0.1);white-space:nowrap;cursor:pointer;transition:color 0.2s;}
 .db-table th:hover,.db-table th.sorted{color:var(--gold);}
 .db-table td{padding:12px 18px;border-bottom:1px solid rgba(255,255,255,0.04);color:rgba(255,255,255,0.85);font-size:0.88rem;vertical-align:middle;}
 .db-table tbody tr:hover td{background:rgba(255,255,255,0.025);}
@@ -203,6 +203,10 @@ footer{background:#060608;padding:44px 52px 36px;border-top:1px solid rgba(255,2
 .hero-sub{color:rgba(255,255,255,.9) !important;font-size:1rem;}
 .acb-mu-body{color:rgba(255,255,255,.85);}
 .acb-updates-text{color:rgba(255,255,255,.85);}
+
+.font-bar{position:fixed;bottom:76px;right:24px;z-index:998;display:flex;flex-direction:column;gap:4px;}
+.fs-btn{background:rgba(20,20,20,.92);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.6);font-family:var(--teko,sans-serif);font-size:.85rem;font-weight:700;width:36px;height:32px;cursor:pointer;clip-path:polygon(0 0,100% 0,88% 100%,0 100%);transition:color .15s,background .15s;letter-spacing:.04em;}
+.fs-btn:hover{background:var(--red,#E31937);color:#fff;border-color:var(--red,#E31937);}
 </style>
 <meta property="og:title" content="Complete Database: Every American Car Brand E | ACB">
 <meta property="og:description" content="The most comprehensive database of every American automobile brand ever made — 200+ brands from 1890 to 2026. Active, defunct, independent, and EV.">
@@ -210,6 +214,86 @@ footer{background:#060608;padding:44px 52px 36px;border-top:1px solid rgba(255,2
 <meta property="og:url" content="https://americancarbrands.com/complete-american-car-brand-database/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Complete Database: Every American Car Brand E | ACB">
+<style id="acb-global-font-boost">
+/* Global font size increase — applied sitewide */
+body{font-size:1.05rem!important;}
+p,li,.section p,.callout p{font-size:1.05rem!important;line-height:1.85!important;color:rgba(255,255,255,.85)!important;}
+.data-table td{font-size:1.02rem!important;color:rgba(255,255,255,.88)!important;}
+.data-table th{font-size:.92rem!important;color:rgba(255,255,255,.72)!important;}
+.faq-q{font-size:1.05rem!important;color:rgba(255,255,255,.92)!important;}
+.faq-a{font-size:1.02rem!important;color:rgba(255,255,255,.82)!important;line-height:1.82!important;}
+.snap-v{font-size:2.3rem!important;}
+.snap-l{font-size:.88rem!important;color:rgba(255,255,255,.78)!important;}
+.tc-k{font-size:.84rem!important;color:rgba(255,255,255,.72)!important;}
+.tc-v{font-size:1.08rem!important;}
+.tc-note{font-size:.84rem!important;color:rgba(255,255,255,.65)!important;}
+.recall-body{font-size:1.02rem!important;color:rgba(255,255,255,.82)!important;}
+.uc-body{font-size:.98rem!important;color:rgba(255,255,255,.82)!important;line-height:1.78!important;}
+.hero-desc{font-size:1.12rem!important;color:rgba(255,255,255,.85)!important;line-height:1.82!important;}
+.sb-link{font-size:1.02rem!important;}
+.price-note{font-size:.92rem!important;color:rgba(255,255,255,.68)!important;}
+h2.sec-title{font-size:2.1rem!important;}
+</style>
+
+<style id="acb-vivid-bg">
+/* ── VIVID BACKGROUNDS ── */
+:root {
+  --black: #050508 !important;
+  --dark:  #0d0d18 !important;
+  --panel: #131320 !important;
+  --red:   #FF1A3C !important;
+  --red2:  #cc0028 !important;
+}
+body { background: #050508 !important; }
+.hero { background: linear-gradient(135deg, #0d001a 0%, #1a0010 40%, #0a000f 100%) !important; }
+.hero-slash { background: linear-gradient(160deg, #FF1A3C 0%, #cc0028 60%, #990020 100%) !important; }
+.model-bar { background: linear-gradient(90deg, #0a000f 0%, #0d0d18 100%) !important; border-bottom: 2px solid rgba(255,26,60,.35) !important; }
+.site-nav { background: rgba(5,5,8,.97) !important; border-bottom: 1px solid rgba(255,26,60,.25) !important; }
+.jump-nav { background: #0a000f !important; border-bottom: 1px solid rgba(255,26,60,.2) !important; }
+.section { background: transparent !important; border-bottom: 1px solid rgba(255,26,60,.1) !important; }
+.trim-card { background: linear-gradient(135deg, #131320 0%, #0d0d18 100%) !important; border-color: rgba(255,26,60,.2) !important; }
+.trim-card:hover, .trim-card.featured { border-top-color: #FF1A3C !important; background: linear-gradient(135deg, #1a0010 0%, #131320 100%) !important; }
+.snap-box { background: linear-gradient(135deg, #1a0010 0%, #131320 100%) !important; border-color: rgba(255,26,60,.2) !important; }
+.callout { background: rgba(255,26,60,.08) !important; border-color: rgba(255,26,60,.3) !important; }
+.update-card { background: linear-gradient(135deg, #131320 0%, #0d0d18 100%) !important; border: 1px solid rgba(255,26,60,.15) !important; }
+.recall { background: rgba(255,26,60,.06) !important; }
+.data-table th { background: rgba(255,26,60,.15) !important; }
+.data-table tr:hover td { background: rgba(255,26,60,.06) !important; }
+.sb-link:hover { background: rgba(255,26,60,.12) !important; color: #FF1A3C !important; }
+.mbar-tab:hover, .mbar-tab.active { background: rgba(255,26,60,.1) !important; border-bottom-color: #FF1A3C !important; }
+footer { background: #050508 !important; }
+.disc-bar { background: linear-gradient(90deg, #0a000f, #050508) !important; border-bottom: 1px solid rgba(255,26,60,.2) !important; }
+.sidebar { --panel: #131320; }
+.sb-title { background: linear-gradient(90deg, #FF1A3C, #cc0028) !important; }
+.acc-grid .acc-card { background: linear-gradient(135deg, #131320 0%, #0d0d18 100%) !important; border: 1px solid rgba(255,26,60,.15) !important; }
+.acc-card:hover { border-color: rgba(255,26,60,.4) !important; background: rgba(255,26,60,.06) !important; }
+/* glow on active elements */
+.mbar-tab.active { box-shadow: 0 -2px 12px rgba(255,26,60,.2) inset !important; }
+.hero-slash::after { background: repeating-linear-gradient(-65deg,transparent,transparent 28px,rgba(0,0,0,.08) 28px,rgba(0,0,0,.08) 29px) !important; }
+/* Section heading accent */
+.sec-slash { background: #FF1A3C !important; box-shadow: 0 0 8px rgba(255,26,60,.5) !important; }
+</style>
+
+<style id="acb-font-boost">
+html { font-size: 17px !important; }
+body { font-size: 1rem !important; line-height: 1.82 !important; }
+.section p { font-size: 1.05rem !important; line-height: 1.88 !important; color: rgba(255,255,255,.88) !important; }
+.section p strong { color: #fff !important; }
+.faq-a { font-size: 1.0rem !important; line-height: 1.82 !important; color: rgba(255,255,255,.82) !important; }
+.data-table td { font-size: 1.0rem !important; color: rgba(255,255,255,.85) !important; }
+.tc-k { font-size: .85rem !important; color: rgba(255,255,255,.65) !important; }
+.tc-note { font-size: .85rem !important; color: rgba(255,255,255,.62) !important; }
+.hero-desc { font-size: 1.12rem !important; color: rgba(255,255,255,.85) !important; }
+.sb-link { font-size: 1.0rem !important; }
+.sb-note { font-size: .88rem !important; color: rgba(255,255,255,.5) !important; }
+.recall-body { font-size: .95rem !important; color: rgba(255,255,255,.65) !important; }
+.uc-body { font-size: .92rem !important; color: rgba(255,255,255,.6) !important; }
+.hero-crumb { font-size: .72rem !important; }
+.snap-v { font-size: 2.3rem !important; color: #fff !important; }
+.snap-l { font-size: .88rem !important; color: rgba(255,255,255,.72) !important; }
+.acc-name { font-size: 1.05rem !important; font-weight: 700 !important; color: #fff !important; }
+.acc-desc { font-size: .92rem !important; color: rgba(255,255,255,.72) !important; }
+</style>
 </head>
 <body>
 <!-- ═══ FTC §255 + TRADEMARK DISCLOSURE BANNER ═══ -->
@@ -542,6 +626,15 @@ footer{background:#060608;padding:44px 52px 36px;border-top:1px solid rgba(255,2
     </div>
     <p style="font-size:.6rem;color:rgba(255,255,255,.18);line-height:1.55;">We do not facilitate vehicle sales, dealer referrals, or insurance transactions.</p>
   </div>
+    <div class="ft-social">
+      <span class="ft-social-label">Join the Drive</span>
+      <a href="https://twitter.com/USAutoBrands" class="ft-social-link" target="_blank" rel="noopener noreferrer" aria-label="Follow AmericanCarBrands on X" title="@USAutoBrands on X">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.261 5.636zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/americancarbrands/" class="ft-social-link" target="_blank" rel="noopener noreferrer" aria-label="Follow AmericanCarBrands on Instagram" title="@americancarbrands on Instagram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      </a>
+    </div>
 </footer>
 
 <script>
@@ -704,7 +797,7 @@ img { pointer-events: none; -webkit-user-drag: none; user-drag: none; }
 </style>
 <script>
 (function(){
-  document.addEventListener('contextmenu',function(e){if(e.target.tagName==='IMG')e.preventDefault();});
+  });
   document.addEventListener('keydown',function(e){if(e.key==='PrintScreen'){document.body.style.opacity='0';setTimeout(function(){document.body.style.opacity='1';},400);}});
   document.addEventListener('copy',function(e){
     var sel=window.getSelection?window.getSelection().toString():'';

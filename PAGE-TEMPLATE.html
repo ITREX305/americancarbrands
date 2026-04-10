@@ -137,7 +137,7 @@ nav{position:fixed;top:32px;left:0;right:0;z-index:100;display:flex;align-items:
 /* ── BRAND CARDS (for related brands/models) ── */
 .brands-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:2px;}
 .brand-card{background:var(--dark2);padding:28px 30px 22px;text-decoration:none;position:relative;overflow:hidden;transition:all 0.25s;border:1px solid rgba(255,255,255,0.05);display:flex;flex-direction:column;min-height:185px;}
-.brand-card::after{content:attr(data-logo);position:absolute;right:12px;bottom:8px;font-family:'Bebas Neue',sans-serif;font-size:3.6rem;line-height:1;opacity:0.07;pointer-events:none;transition:opacity 0.25s;user-select:none;color:var(--red);}
+.brand-card::after{content:attr(data-logo);position:absolute;right:12px;bottom:8px;font-family:'Bebas Neue',sans-serif;font-size:3.6rem;line-height:1;opacity:0.07;pointer-events:none;transition:opacity 0.25s;color:var(--red);}
 .brand-card:hover::after{opacity:0.16;}
 .brand-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--red);transform:scaleY(0);transition:transform 0.25s;transform-origin:bottom;}
 .brand-card:hover{background:var(--dark3);transform:translateY(-2px);box-shadow:0 10px 36px rgba(0,0,0,0.55);}.brand-card:hover::before{transform:scaleY(1);}
@@ -232,6 +232,66 @@ footer{background:#060608;padding:44px 52px 36px;border-top:1px solid rgba(255,2
   <meta property="og:description" content="Template page">
   <meta property="og:url" content="#">
   <meta property="og:site_name" content="AmericanCarBrands.com">
+
+<style id="acb-vivid-bg">
+/* ── VIVID BACKGROUNDS ── */
+:root {
+  --black: #050508 !important;
+  --dark:  #0d0d18 !important;
+  --panel: #131320 !important;
+  --red:   #FF1A3C !important;
+  --red2:  #cc0028 !important;
+}
+body { background: #050508 !important; }
+.hero { background: linear-gradient(135deg, #0d001a 0%, #1a0010 40%, #0a000f 100%) !important; }
+.hero-slash { background: linear-gradient(160deg, #FF1A3C 0%, #cc0028 60%, #990020 100%) !important; }
+.model-bar { background: linear-gradient(90deg, #0a000f 0%, #0d0d18 100%) !important; border-bottom: 2px solid rgba(255,26,60,.35) !important; }
+.site-nav { background: rgba(5,5,8,.97) !important; border-bottom: 1px solid rgba(255,26,60,.25) !important; }
+.jump-nav { background: #0a000f !important; border-bottom: 1px solid rgba(255,26,60,.2) !important; }
+.section { background: transparent !important; border-bottom: 1px solid rgba(255,26,60,.1) !important; }
+.trim-card { background: linear-gradient(135deg, #131320 0%, #0d0d18 100%) !important; border-color: rgba(255,26,60,.2) !important; }
+.trim-card:hover, .trim-card.featured { border-top-color: #FF1A3C !important; background: linear-gradient(135deg, #1a0010 0%, #131320 100%) !important; }
+.snap-box { background: linear-gradient(135deg, #1a0010 0%, #131320 100%) !important; border-color: rgba(255,26,60,.2) !important; }
+.callout { background: rgba(255,26,60,.08) !important; border-color: rgba(255,26,60,.3) !important; }
+.update-card { background: linear-gradient(135deg, #131320 0%, #0d0d18 100%) !important; border: 1px solid rgba(255,26,60,.15) !important; }
+.recall { background: rgba(255,26,60,.06) !important; }
+.data-table th { background: rgba(255,26,60,.15) !important; }
+.data-table tr:hover td { background: rgba(255,26,60,.06) !important; }
+.sb-link:hover { background: rgba(255,26,60,.12) !important; color: #FF1A3C !important; }
+.mbar-tab:hover, .mbar-tab.active { background: rgba(255,26,60,.1) !important; border-bottom-color: #FF1A3C !important; }
+footer { background: #050508 !important; }
+.disc-bar { background: linear-gradient(90deg, #0a000f, #050508) !important; border-bottom: 1px solid rgba(255,26,60,.2) !important; }
+.sidebar { --panel: #131320; }
+.sb-title { background: linear-gradient(90deg, #FF1A3C, #cc0028) !important; }
+.acc-grid .acc-card { background: linear-gradient(135deg, #131320 0%, #0d0d18 100%) !important; border: 1px solid rgba(255,26,60,.15) !important; }
+.acc-card:hover { border-color: rgba(255,26,60,.4) !important; background: rgba(255,26,60,.06) !important; }
+/* glow on active elements */
+.mbar-tab.active { box-shadow: 0 -2px 12px rgba(255,26,60,.2) inset !important; }
+.hero-slash::after { background: repeating-linear-gradient(-65deg,transparent,transparent 28px,rgba(0,0,0,.08) 28px,rgba(0,0,0,.08) 29px) !important; }
+/* Section heading accent */
+.sec-slash { background: #FF1A3C !important; box-shadow: 0 0 8px rgba(255,26,60,.5) !important; }
+</style>
+
+<style id="acb-font-boost">
+html { font-size: 17px !important; }
+body { font-size: 1rem !important; line-height: 1.82 !important; }
+.section p { font-size: 1.05rem !important; line-height: 1.88 !important; color: rgba(255,255,255,.88) !important; }
+.section p strong { color: #fff !important; }
+.faq-a { font-size: 1.0rem !important; line-height: 1.82 !important; color: rgba(255,255,255,.82) !important; }
+.data-table td { font-size: 1.0rem !important; color: rgba(255,255,255,.85) !important; }
+.tc-k { font-size: .85rem !important; color: rgba(255,255,255,.65) !important; }
+.tc-note { font-size: .85rem !important; color: rgba(255,255,255,.62) !important; }
+.hero-desc { font-size: 1.12rem !important; color: rgba(255,255,255,.85) !important; }
+.sb-link { font-size: 1.0rem !important; }
+.sb-note { font-size: .88rem !important; color: rgba(255,255,255,.5) !important; }
+.recall-body { font-size: .95rem !important; color: rgba(255,255,255,.65) !important; }
+.uc-body { font-size: .92rem !important; color: rgba(255,255,255,.6) !important; }
+.hero-crumb { font-size: .72rem !important; }
+.snap-v { font-size: 2.3rem !important; color: #fff !important; }
+.snap-l { font-size: .88rem !important; color: rgba(255,255,255,.72) !important; }
+.acc-name { font-size: 1.05rem !important; font-weight: 700 !important; color: #fff !important; }
+.acc-desc { font-size: .92rem !important; color: rgba(255,255,255,.72) !important; }
+</style>
 </head>
 <body>
 <!-- ═══ FTC §255 + TRADEMARK DISCLOSURE BANNER ═══ -->
@@ -495,6 +555,15 @@ footer{background:#060608;padding:44px 52px 36px;border-top:1px solid rgba(255,2
     </div>
     <p style="font-size:.6rem;color:rgba(255,255,255,.18);line-height:1.55;">We do not facilitate vehicle sales, dealer referrals, or insurance transactions.</p>
   </div>
+    <div class="ft-social">
+      <span class="ft-social-label">Join the Drive</span>
+      <a href="https://twitter.com/USAutoBrands" class="ft-social-link" target="_blank" rel="noopener noreferrer" aria-label="Follow AmericanCarBrands on X" title="@USAutoBrands on X">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.261 5.636zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/americancarbrands/" class="ft-social-link" target="_blank" rel="noopener noreferrer" aria-label="Follow AmericanCarBrands on Instagram" title="@americancarbrands on Instagram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      </a>
+    </div>
 </footer>
 
 <!-- ================================================================
@@ -563,6 +632,25 @@ document.querySelectorAll('.brand-card,.data-cell').forEach((el,i)=>{
     var bar=document.getElementById('acb-disc-bar');
     if(bar){new MutationObserver(function(){if(bar.style.display==='none')strip.style.display='block';}).observe(bar,{attributes:true,attributeFilter:['style']});}
   }
+})();
+</script>
+<div class="font-bar" id="fontBar">
+  <button class="fs-btn" data-dir="-" title="Decrease font size">A−</button>
+  <button class="fs-btn" data-dir="+" title="Increase font size">A+</button>
+</div>
+
+<script>
+(function(){
+  var sz=16,min=13,max=22;
+  var stored=localStorage.getItem('acb-fs');
+  if(stored){sz=parseInt(stored);document.documentElement.style.fontSize=sz+'px';}
+  document.querySelectorAll('.fs-btn').forEach(function(b){
+    b.addEventListener('click',function(){
+      if(this.dataset.dir==='+'){sz=Math.min(sz+1,max);}else{sz=Math.max(sz-1,min);}
+      document.documentElement.style.fontSize=sz+'px';
+      localStorage.setItem('acb-fs',sz);
+    });
+  });
 })();
 </script>
 </body>

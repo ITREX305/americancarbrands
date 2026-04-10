@@ -198,6 +198,10 @@ footer{background:#060608;padding:44px 52px 36px;border-top:1px solid rgba(255,2
 .hero-sub{color:rgba(255,255,255,.9) !important;font-size:1rem;}
 .acb-mu-body{color:rgba(255,255,255,.85);}
 .acb-updates-text{color:rgba(255,255,255,.85);}
+
+.font-bar{position:fixed;bottom:76px;right:24px;z-index:998;display:flex;flex-direction:column;gap:4px;}
+.fs-btn{background:rgba(20,20,20,.92);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.6);font-family:var(--teko,sans-serif);font-size:.85rem;font-weight:700;width:36px;height:32px;cursor:pointer;clip-path:polygon(0 0,100% 0,88% 100%,0 100%);transition:color .15s,background .15s;letter-spacing:.04em;}
+.fs-btn:hover{background:var(--red,#E31937);color:#fff;border-color:var(--red,#E31937);}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
@@ -206,6 +210,116 @@ footer{background:#060608;padding:44px 52px 36px;border-top:1px solid rgba(255,2
 {"@type":"Question","name":"Is Lincoln Navigator expensive to insure?","acceptedAnswer":{"@type":"Answer","text":"At an estimated $265/month for full coverage, the Lincoln Navigator is above the national average of approximately $167/month. Always get 3+ quotes from licensed insurers for accurate personalized pricing."}}
 ]}
 </script>
+<style id="acb-global-fonts-v8">
+/* ═══ GLOBAL FONT INCREASE v8 ═══ */
+html { font-size: 16px; }
+body { font-size: 1rem; line-height: 1.78; }
+
+/* Article & Section Body Text */
+.section p, article p, .article-body p, .content p {
+  font-size: 1.08rem !important;
+  color: rgba(255,255,255,.88) !important;
+  line-height: 1.85 !important;
+}
+/* Light-bg article pages */
+.section p[style*="rgba(26"], p.body-copy {
+  color: rgba(26,18,8,.82) !important;
+}
+/* Callouts */
+.callout p { font-size: 1.05rem !important; color: rgba(255,255,255,.88) !important; }
+/* Tables */
+.data-table td { font-size: 1.02rem !important; color: rgba(255,255,255,.90) !important; }
+.data-table th { font-size: .92rem !important; }
+/* Snap stat labels */
+.snap-l, .stat-label, .sb-l { font-size: .92rem !important; color: rgba(255,255,255,.82) !important; }
+/* Trim card */
+.tc-k { font-size: .85rem !important; color: rgba(255,255,255,.75) !important; }
+.tc-v { font-size: 1.08rem !important; }
+.tc-note { font-size: .85rem !important; color: rgba(255,255,255,.68) !important; }
+/* Price note */
+.price-note { font-size: .92rem !important; color: rgba(255,255,255,.72) !important; }
+/* Recall */
+.recall-body { font-size: 1.02rem !important; color: rgba(255,255,255,.85) !important; }
+.recall-status { font-size: .85rem !important; font-weight: 700 !important; }
+/* FAQ */
+.faq-q { font-size: 1.05rem !important; font-weight: 600 !important; }
+.faq-a { font-size: 1.02rem !important; color: rgba(255,255,255,.85) !important; line-height: 1.8 !important; }
+/* Sidebar */
+.sb-link { font-size: 1.02rem !important; color: rgba(255,255,255,.88) !important; }
+.sb-title { font-size: .92rem !important; color: rgba(255,255,255,.72) !important; }
+/* Acc cards */
+.acc-desc { font-size: .98rem !important; color: rgba(255,255,255,.82) !important; }
+.acc-name { font-size: 1.08rem !important; }
+/* Hero */
+.hero-desc { font-size: 1.1rem !important; color: rgba(255,255,255,.88) !important; }
+/* Update cards */
+.uc-body { font-size: .98rem !important; color: rgba(255,255,255,.85) !important; line-height: 1.78 !important; }
+/* Footer */
+.ft-copy { font-size: .85rem !important; color: rgba(255,255,255,.60) !important; }
+.ft-link { font-size: .82rem !important; }
+/* Disc bar */
+.disc-bar { font-size: .78rem !important; color: rgba(255,255,255,.62) !important; }
+</style>
+
+<style id="acb-vivid-bg">
+/* ── VIVID BACKGROUNDS ── */
+:root {
+  --black: #050508 !important;
+  --dark:  #0d0d18 !important;
+  --panel: #131320 !important;
+  --red:   #FF1A3C !important;
+  --red2:  #cc0028 !important;
+}
+body { background: #050508 !important; }
+.hero { background: linear-gradient(135deg, #0d001a 0%, #1a0010 40%, #0a000f 100%) !important; }
+.hero-slash { background: linear-gradient(160deg, #FF1A3C 0%, #cc0028 60%, #990020 100%) !important; }
+.model-bar { background: linear-gradient(90deg, #0a000f 0%, #0d0d18 100%) !important; border-bottom: 2px solid rgba(255,26,60,.35) !important; }
+.site-nav { background: rgba(5,5,8,.97) !important; border-bottom: 1px solid rgba(255,26,60,.25) !important; }
+.jump-nav { background: #0a000f !important; border-bottom: 1px solid rgba(255,26,60,.2) !important; }
+.section { background: transparent !important; border-bottom: 1px solid rgba(255,26,60,.1) !important; }
+.trim-card { background: linear-gradient(135deg, #131320 0%, #0d0d18 100%) !important; border-color: rgba(255,26,60,.2) !important; }
+.trim-card:hover, .trim-card.featured { border-top-color: #FF1A3C !important; background: linear-gradient(135deg, #1a0010 0%, #131320 100%) !important; }
+.snap-box { background: linear-gradient(135deg, #1a0010 0%, #131320 100%) !important; border-color: rgba(255,26,60,.2) !important; }
+.callout { background: rgba(255,26,60,.08) !important; border-color: rgba(255,26,60,.3) !important; }
+.update-card { background: linear-gradient(135deg, #131320 0%, #0d0d18 100%) !important; border: 1px solid rgba(255,26,60,.15) !important; }
+.recall { background: rgba(255,26,60,.06) !important; }
+.data-table th { background: rgba(255,26,60,.15) !important; }
+.data-table tr:hover td { background: rgba(255,26,60,.06) !important; }
+.sb-link:hover { background: rgba(255,26,60,.12) !important; color: #FF1A3C !important; }
+.mbar-tab:hover, .mbar-tab.active { background: rgba(255,26,60,.1) !important; border-bottom-color: #FF1A3C !important; }
+footer { background: #050508 !important; }
+.disc-bar { background: linear-gradient(90deg, #0a000f, #050508) !important; border-bottom: 1px solid rgba(255,26,60,.2) !important; }
+.sidebar { --panel: #131320; }
+.sb-title { background: linear-gradient(90deg, #FF1A3C, #cc0028) !important; }
+.acc-grid .acc-card { background: linear-gradient(135deg, #131320 0%, #0d0d18 100%) !important; border: 1px solid rgba(255,26,60,.15) !important; }
+.acc-card:hover { border-color: rgba(255,26,60,.4) !important; background: rgba(255,26,60,.06) !important; }
+/* glow on active elements */
+.mbar-tab.active { box-shadow: 0 -2px 12px rgba(255,26,60,.2) inset !important; }
+.hero-slash::after { background: repeating-linear-gradient(-65deg,transparent,transparent 28px,rgba(0,0,0,.08) 28px,rgba(0,0,0,.08) 29px) !important; }
+/* Section heading accent */
+.sec-slash { background: #FF1A3C !important; box-shadow: 0 0 8px rgba(255,26,60,.5) !important; }
+</style>
+
+<style id="acb-font-boost">
+html { font-size: 17px !important; }
+body { font-size: 1rem !important; line-height: 1.82 !important; }
+.section p { font-size: 1.05rem !important; line-height: 1.88 !important; color: rgba(255,255,255,.88) !important; }
+.section p strong { color: #fff !important; }
+.faq-a { font-size: 1.0rem !important; line-height: 1.82 !important; color: rgba(255,255,255,.82) !important; }
+.data-table td { font-size: 1.0rem !important; color: rgba(255,255,255,.85) !important; }
+.tc-k { font-size: .85rem !important; color: rgba(255,255,255,.65) !important; }
+.tc-note { font-size: .85rem !important; color: rgba(255,255,255,.62) !important; }
+.hero-desc { font-size: 1.12rem !important; color: rgba(255,255,255,.85) !important; }
+.sb-link { font-size: 1.0rem !important; }
+.sb-note { font-size: .88rem !important; color: rgba(255,255,255,.5) !important; }
+.recall-body { font-size: .95rem !important; color: rgba(255,255,255,.65) !important; }
+.uc-body { font-size: .92rem !important; color: rgba(255,255,255,.6) !important; }
+.hero-crumb { font-size: .72rem !important; }
+.snap-v { font-size: 2.3rem !important; color: #fff !important; }
+.snap-l { font-size: .88rem !important; color: rgba(255,255,255,.72) !important; }
+.acc-name { font-size: 1.05rem !important; font-weight: 700 !important; color: #fff !important; }
+.acc-desc { font-size: .92rem !important; color: rgba(255,255,255,.72) !important; }
+</style>
 </head>
 <body>
 <!-- ═══ FTC §255 + TRADEMARK DISCLOSURE BANNER ═══ -->
@@ -632,8 +746,7 @@ footer{background:#060608;padding:44px 52px 36px;border-top:1px solid rgba(255,2
 </style>
 <script>
 (function(){
-  document.addEventListener('contextmenu', function(e){
-    if(e.target.tagName==='IMG'){e.preventDefault();}
+  }
   });
   document.addEventListener('keydown', function(e){
     if(e.key==='PrintScreen'){document.body.style.opacity='0';setTimeout(function(){document.body.style.opacity='1';},300);}

@@ -363,6 +363,78 @@ h2.sec-title { font-size: 2rem !important; }
 .mbar-brand:hover{color:#fff!important;}
 .mbar-tab{padding:10px 20px!important;}
 </style>
+
+<style id="acb-vivid-bg">
+/* ── VIVID BACKGROUNDS ── */
+:root {
+  --black: #050508 !important;
+  --dark:  #0d0d18 !important;
+  --panel: #131320 !important;
+  --red:   #FF1A3C !important;
+  --red2:  #cc0028 !important;
+}
+body { background: #050508 !important; }
+.hero { background: linear-gradient(135deg, #0d001a 0%, #1a0010 40%, #0a000f 100%) !important; }
+.hero-slash { background: linear-gradient(160deg, #FF1A3C 0%, #cc0028 60%, #990020 100%) !important; }
+.model-bar { background: linear-gradient(90deg, #0a000f 0%, #0d0d18 100%) !important; border-bottom: 2px solid rgba(255,26,60,.35) !important; }
+.site-nav { background: rgba(5,5,8,.97) !important; border-bottom: 1px solid rgba(255,26,60,.25) !important; }
+.jump-nav { background: #0a000f !important; border-bottom: 1px solid rgba(255,26,60,.2) !important; }
+.section { background: transparent !important; border-bottom: 1px solid rgba(255,26,60,.1) !important; }
+.trim-card { background: linear-gradient(135deg, #131320 0%, #0d0d18 100%) !important; border-color: rgba(255,26,60,.2) !important; }
+.trim-card:hover, .trim-card.featured { border-top-color: #FF1A3C !important; background: linear-gradient(135deg, #1a0010 0%, #131320 100%) !important; }
+.snap-box { background: linear-gradient(135deg, #1a0010 0%, #131320 100%) !important; border-color: rgba(255,26,60,.2) !important; }
+.callout { background: rgba(255,26,60,.08) !important; border-color: rgba(255,26,60,.3) !important; }
+.update-card { background: linear-gradient(135deg, #131320 0%, #0d0d18 100%) !important; border: 1px solid rgba(255,26,60,.15) !important; }
+.recall { background: rgba(255,26,60,.06) !important; }
+.data-table th { background: rgba(255,26,60,.15) !important; }
+.data-table tr:hover td { background: rgba(255,26,60,.06) !important; }
+.sb-link:hover { background: rgba(255,26,60,.12) !important; color: #FF1A3C !important; }
+.mbar-tab:hover, .mbar-tab.active { background: rgba(255,26,60,.1) !important; border-bottom-color: #FF1A3C !important; }
+footer { background: #050508 !important; }
+.disc-bar { background: linear-gradient(90deg, #0a000f, #050508) !important; border-bottom: 1px solid rgba(255,26,60,.2) !important; }
+.sidebar { --panel: #131320; }
+.sb-title { background: linear-gradient(90deg, #FF1A3C, #cc0028) !important; }
+.acc-grid .acc-card { background: linear-gradient(135deg, #131320 0%, #0d0d18 100%) !important; border: 1px solid rgba(255,26,60,.15) !important; }
+.acc-card:hover { border-color: rgba(255,26,60,.4) !important; background: rgba(255,26,60,.06) !important; }
+/* glow on active elements */
+.mbar-tab.active { box-shadow: 0 -2px 12px rgba(255,26,60,.2) inset !important; }
+.hero-slash::after { background: repeating-linear-gradient(-65deg,transparent,transparent 28px,rgba(0,0,0,.08) 28px,rgba(0,0,0,.08) 29px) !important; }
+/* Section heading accent */
+.sec-slash { background: #FF1A3C !important; box-shadow: 0 0 8px rgba(255,26,60,.5) !important; }
+</style>
+<style id="acb-ov-bar-css">
+.ov-mini-bar{margin:20px 0 0;padding:14px 0 0;border-top:1px solid rgba(255,26,60,.15);}
+.ov-mini-label{font-family:'Barlow Condensed',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:10px;}
+.ov-mini-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}
+@media(max-width:600px){.ov-mini-grid{grid-template-columns:1fr 1fr;}}
+.ov-mini-card{background:rgba(255,26,60,.05);border:1px solid rgba(255,26,60,.12);padding:10px 12px;display:flex;flex-direction:column;gap:3px;}
+.ov-mini-name{font-family:'Teko',sans-serif;font-size:1.0rem;font-weight:700;color:#fff;line-height:1.1;}
+.ov-mini-desc{font-family:'Barlow',sans-serif;font-size:.78rem;color:rgba(255,255,255,.5);line-height:1.3;flex:1;}
+.ov-mini-btn{font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:800;letter-spacing:.06em;color:#FF9900;text-decoration:none;margin-top:5px;background:rgba(26,26,46,.8);border:1px solid rgba(255,153,0,.4);padding:3px 8px;display:inline-block;transition:all .15s;}
+.ov-mini-btn:hover{background:#FF9900;color:#000;}
+.ov-mini-disc{font-size:.62rem;color:rgba(255,255,255,.2);margin-top:6px;}
+.ov-mini-disc a{color:rgba(255,255,255,.3);}
+</style>
+<style id="acb-font-boost">
+html { font-size: 17px !important; }
+body { font-size: 1rem !important; line-height: 1.82 !important; }
+.section p { font-size: 1.05rem !important; line-height: 1.88 !important; color: rgba(255,255,255,.88) !important; }
+.section p strong { color: #fff !important; }
+.faq-a { font-size: 1.0rem !important; line-height: 1.82 !important; color: rgba(255,255,255,.82) !important; }
+.data-table td { font-size: 1.0rem !important; color: rgba(255,255,255,.85) !important; }
+.tc-k { font-size: .85rem !important; color: rgba(255,255,255,.65) !important; }
+.tc-note { font-size: .85rem !important; color: rgba(255,255,255,.62) !important; }
+.hero-desc { font-size: 1.12rem !important; color: rgba(255,255,255,.85) !important; }
+.sb-link { font-size: 1.0rem !important; }
+.sb-note { font-size: .88rem !important; color: rgba(255,255,255,.5) !important; }
+.recall-body { font-size: .95rem !important; color: rgba(255,255,255,.65) !important; }
+.uc-body { font-size: .92rem !important; color: rgba(255,255,255,.6) !important; }
+.hero-crumb { font-size: .72rem !important; }
+.snap-v { font-size: 2.3rem !important; color: #fff !important; }
+.snap-l { font-size: .88rem !important; color: rgba(255,255,255,.72) !important; }
+.acc-name { font-size: 1.05rem !important; font-weight: 700 !important; color: #fff !important; }
+.acc-desc { font-size: .92rem !important; color: rgba(255,255,255,.72) !important; }
+</style>
 </head>
 <a href="#" class="back-top" id="backTop">↑</a>
 <div class="font-bar">
@@ -453,7 +525,9 @@ h2.sec-title { font-size: 2rem !important; }
       <div class="callout-label">Why Minivan?</div>
       <p>Minivans have lower center of gravity than 3-row SUVs, sliding doors (safer for parking lots), lower step-in height, and more efficient use of space. The Pacifica's 32-mi PHEV is the most efficient 7-passenger family vehicle available in the US.</p>
     </div>
-    <div class="stat-row"><div class="stat-box"><div class="sb-v">32 mi</div><div class="sb-l">PHEV EV Range</div></div><div class="stat-box"><div class="sb-v">82 MPGe</div><div class="sb-l">PHEV Combined</div></div><div class="stat-box"><div class="sb-v">7-pass</div><div class="sb-l">Standard Seating</div></div><div class="stat-box"><div class="sb-v">$39,990</div><div class="sb-l">Starting Price</div></div></div>
+    <div class="stat-row"><div class="stat-box"><div class="sb-v">32 mi</div><div class="sb-l">PHEV EV Range</div></div><div class="stat-box"><div class="sb-v">82 MPGe</div><div class="sb-l">PHEV Combined</div></div><div class="stat-box"><div class="sb-v">7-pass</div><div class="sb-l">Standard Seating</div></div><div class="stat-box"><div class="sb-v">$39,990</div><div class="sb-l">Starting Price
+<div class="ov-mini-bar" id="ov-acc-insert"><div class="ov-mini-label">&#9733; Popular Accessories</div><div class="ov-mini-grid"><div class="ov-mini-card"><div class="ov-mini-name">Chrysler Mats</div><div class="ov-mini-desc">All-weather.</div><a href="https://www.amazon.com/s?k=Chrysler+floor+mats&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Dash Cam</div><div class="ov-mini-desc">4K front/rear.</div><a href="https://www.amazon.com/s?k=car+dash+cam+4K&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Seat Covers</div><div class="ov-mini-desc">Protection.</div><a href="https://www.amazon.com/s?k=Chrysler+seat+covers&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Detailing Kit</div><div class="ov-mini-desc">Wash and wax.</div><a href="https://www.amazon.com/s?k=car+detailing+kit&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div></div><div class="ov-mini-disc">Amazon affiliate links &mdash; small commission at no extra cost. <a href="affiliate-disclosure.html">Disclosure</a></div></div>
+</div></div></div>
     
   </div>
 
@@ -535,7 +609,9 @@ h2.sec-title { font-size: 2rem !important; }
     </table>
     <span class="tbl-note">Sources: Consumer Reports, J.D. Power, NHTSA, owner surveys. Verify current data at consumerreports.org before purchasing.</span>
     <div class="callout">
-      <div class="callout-label">Research Before Purchasing</div>
+      <div class="callout-label">Research Before Purchasing
+<div class="ov-mini-bar" id="rel-acc-insert"><div class="ov-mini-label">&#9733; Recommended Tools & Upgrades</div><div class="ov-mini-grid"><div class="ov-mini-card"><div class="ov-mini-name">OBD2 Scanner Bluetooth</div><div class="ov-mini-desc">Read engine codes from your phone.</div><a href="https://www.amazon.com/s?k=OBD2+bluetooth+scanner+diagnostic&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Tire Pressure Monitor</div><div class="ov-mini-desc">TPMS alert system for all 4 tires.</div><a href="https://www.amazon.com/s?k=TPMS+tire+pressure+monitoring+system&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Emergency Road Kit</div><div class="ov-mini-desc">Jumper cables, reflectors, first aid.</div><a href="https://www.amazon.com/s?k=car+emergency+roadside+kit&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Dash Cam Front & Rear</div><div class="ov-mini-desc">4K documentation for every drive.</div><a href="https://www.amazon.com/s?k=dash+cam+4K+front+rear&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div></div><div class="ov-mini-disc">Amazon affiliate links &mdash; small commission at no extra cost. <a href="affiliate-disclosure.html">Disclosure</a></div></div>
+</div>
       <p>Consult <a href="https://consumerreports.org" target="_blank">Consumer Reports</a>, <a href="https://jdpower.com" target="_blank">J.D. Power</a>, and <a href="https://nhtsa.gov" target="_blank">NHTSA</a> for the specific model year you are considering. Build year matters significantly.</p>
     </div>
   </div>
@@ -691,12 +767,51 @@ h2.sec-title { font-size: 2rem !important; }
 (function(){var ls=document.querySelectorAll('.jn'),ss=[];ls.forEach(function(a){var id=a.getAttribute('href').replace('#',''),el=document.getElementById(id);if(el)ss.push({el:el,a:a});});window.addEventListener('scroll',function(){var y=window.scrollY+165,cur=null;ss.forEach(function(s){if(s.el.getBoundingClientRect().top+window.scrollY<=y)cur=s.a;s.a.classList.remove('active');});if(cur)cur.classList.add('active');},{passive:true});})();
 document.querySelectorAll('.jn').forEach(function(a){a.addEventListener('click',function(e){var h=this.getAttribute('href');if(h&&h.startsWith('#')){e.preventDefault();var t=document.getElementById(h.slice(1));if(t)window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-168,behavior:'smooth'});}});});
 document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){var i=this.parentElement,o=i.classList.contains('open');document.querySelectorAll('.faq-item').forEach(function(x){x.classList.remove('open');});if(!o)i.classList.add('open');});});
-(function(){var sz=parseFloat(localStorage.getItem('acb-fs')||'1');document.body.style.fontSize=sz+'rem';var inc=document.getElementById('fsInc'),dec=document.getElementById('fsDec');if(inc)inc.addEventListener('click',function(){sz=Math.min(1.4,sz+0.1);document.body.style.fontSize=sz+'rem';localStorage.setItem('acb-fs',sz);});if(dec)dec.addEventListener('click',function(){sz=Math.max(0.7,sz-0.1);document.body.style.fontSize=sz+'rem';localStorage.setItem('acb-fs',sz);});})();
+
 (function(){var wrap=document.getElementById('mobileSidebarWrap');var btn=document.getElementById('mobileSidebarBtn');var panel=document.getElementById('mobileSidebarPanel');if(!wrap)return;function checkWidth(){wrap.style.display=window.innerWidth<=1000?'block':'none';}checkWidth();window.addEventListener('resize',checkWidth);btn.addEventListener('click',function(){var open=panel.classList.toggle('open');btn.classList.toggle('open',open);});panel.querySelectorAll('.sb-link').forEach(function(a){a.addEventListener('click',function(){panel.classList.remove('open');btn.classList.remove('open');});});})();
 (function(){var active=document.querySelector('.jn.active');if(!active){var first=document.querySelector('.jn');if(first)first.classList.add('active');}})();
 </script>
 
 
 
+
+<!-- Font size controls - ACB v2 -->
+<script id="acb-font-ctrl">
+(function() {
+  var BASE = 1.0, MIN = 0.8, MAX = 1.6, STEP = 0.1;
+  var stored = parseFloat(localStorage.getItem('acb-fs') || BASE);
+  if (isNaN(stored)) stored = BASE;
+  stored = Math.max(MIN, Math.min(MAX, stored));
+  document.documentElement.style.fontSize = (stored * 16) + 'px';
+
+  function setSize(sz) {
+    sz = Math.max(MIN, Math.min(MAX, Math.round(sz * 10) / 10));
+    document.documentElement.style.fontSize = (sz * 16) + 'px';
+    localStorage.setItem('acb-fs', sz);
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var inc = document.getElementById('fsInc');
+    var dec = document.getElementById('fsDec');
+    var current = function() {
+      return parseFloat(localStorage.getItem('acb-fs') || BASE);
+    };
+    if (inc) {
+      inc.type = 'button';
+      inc.addEventListener('click', function(e) {
+        e.preventDefault(); e.stopPropagation();
+        setSize(current() + STEP);
+      }, true);
+    }
+    if (dec) {
+      dec.type = 'button';
+      dec.addEventListener('click', function(e) {
+        e.preventDefault(); e.stopPropagation();
+        setSize(current() - STEP);
+      }, true);
+    }
+  });
+})();
+</script>
 </body>
 </html>

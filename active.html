@@ -329,7 +329,58 @@ body { font-size: 1rem; line-height: 1.78; }
 .fg-sub{font-family:'Barlow',var(--body),sans-serif;font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.5;flex:1;}
 .fg-arrow{font-family:'Barlow Condensed',var(--cond),sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#E31937;margin-top:6px;}
 </style>
-</head>
+
+<style id="acb-vivid-bg">
+/* ── VIVID BACKGROUNDS ── */
+:root {
+  --black: #050508 !important;
+  --dark:  #0d0d18 !important;
+  --panel: #131320 !important;
+  --red:   #FF1A3C !important;
+  --red2:  #cc0028 !important;
+}
+body { background: #050508 !important; }
+.hero { background: linear-gradient(135deg, #0d001a 0%, #1a0010 40%, #0a000f 100%) !important; }
+.hero-slash { background: linear-gradient(160deg, #FF1A3C 0%, #cc0028 60%, #990020 100%) !important; }
+.model-bar { background: linear-gradient(90deg, #0a000f 0%, #0d0d18 100%) !important; border-bottom: 2px solid rgba(255,26,60,.35) !important; }
+.site-nav { background: rgba(5,5,8,.97) !important; border-bottom: 1px solid rgba(255,26,60,.25) !important; }
+.jump-nav { background: #0a000f !important; border-bottom: 1px solid rgba(255,26,60,.2) !important; }
+.section { background: transparent !important; border-bottom: 1px solid rgba(255,26,60,.1) !important; }
+.trim-card { background: linear-gradient(135deg, #131320 0%, #0d0d18 100%) !important; border-color: rgba(255,26,60,.2) !important; }
+.trim-card:hover, .trim-card.featured { border-top-color: #FF1A3C !important; background: linear-gradient(135deg, #1a0010 0%, #131320 100%) !important; }
+.snap-box { background: linear-gradient(135deg, #1a0010 0%, #131320 100%) !important; border-color: rgba(255,26,60,.2) !important; }
+.callout { background: rgba(255,26,60,.08) !important; border-color: rgba(255,26,60,.3) !important; }
+.update-card { background: linear-gradient(135deg, #131320 0%, #0d0d18 100%) !important; border: 1px solid rgba(255,26,60,.15) !important; }
+.recall { background: rgba(255,26,60,.06) !important; }
+.data-table th { background: rgba(255,26,60,.15) !important; }
+.data-table tr:hover td { background: rgba(255,26,60,.06) !important; }
+.sb-link:hover { background: rgba(255,26,60,.12) !important; color: #FF1A3C !important; }
+.mbar-tab:hover, .mbar-tab.active { background: rgba(255,26,60,.1) !important; border-bottom-color: #FF1A3C !important; }
+footer { background: #050508 !important; }
+.disc-bar { background: linear-gradient(90deg, #0a000f, #050508) !important; border-bottom: 1px solid rgba(255,26,60,.2) !important; }
+.sidebar { --panel: #131320; }
+.sb-title { background: linear-gradient(90deg, #FF1A3C, #cc0028) !important; }
+.acc-grid .acc-card { background: linear-gradient(135deg, #131320 0%, #0d0d18 100%) !important; border: 1px solid rgba(255,26,60,.15) !important; }
+.acc-card:hover { border-color: rgba(255,26,60,.4) !important; background: rgba(255,26,60,.06) !important; }
+/* glow on active elements */
+.mbar-tab.active { box-shadow: 0 -2px 12px rgba(255,26,60,.2) inset !important; }
+.hero-slash::after { background: repeating-linear-gradient(-65deg,transparent,transparent 28px,rgba(0,0,0,.08) 28px,rgba(0,0,0,.08) 29px) !important; }
+/* Section heading accent */
+.sec-slash { background: #FF1A3C !important; box-shadow: 0 0 8px rgba(255,26,60,.5) !important; }
+</style>
+<style id="acb-ov-bar-css">
+.ov-mini-bar{margin:20px 0 0;padding:14px 0 0;border-top:1px solid rgba(255,26,60,.15);}
+.ov-mini-label{font-family:'Barlow Condensed',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:10px;}
+.ov-mini-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}
+@media(max-width:600px){.ov-mini-grid{grid-template-columns:1fr 1fr;}}
+.ov-mini-card{background:rgba(255,26,60,.05);border:1px solid rgba(255,26,60,.12);padding:10px 12px;display:flex;flex-direction:column;gap:3px;}
+.ov-mini-name{font-family:'Teko',sans-serif;font-size:1.0rem;font-weight:700;color:#fff;line-height:1.1;}
+.ov-mini-desc{font-family:'Barlow',sans-serif;font-size:.78rem;color:rgba(255,255,255,.5);line-height:1.3;flex:1;}
+.ov-mini-btn{font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:800;letter-spacing:.06em;color:#FF9900;text-decoration:none;margin-top:5px;background:rgba(26,26,46,.8);border:1px solid rgba(255,153,0,.4);padding:3px 8px;display:inline-block;transition:all .15s;}
+.ov-mini-btn:hover{background:#FF9900;color:#000;}
+.ov-mini-disc{font-size:.62rem;color:rgba(255,255,255,.2);margin-top:6px;}
+.ov-mini-disc a{color:rgba(255,255,255,.3);}
+</style></head>
 <body>
 <!-- ═══ FTC §255 + TRADEMARK DISCLOSURE BANNER ═══ -->
 <div id="acb-disc-bar" role="note" aria-live="polite" aria-label="Site disclosure and disclaimer" aria-atomic="true"
@@ -437,6 +488,7 @@ body { font-size: 1rem; line-height: 1.78; }
     </table>
   </div>
 </div>
+<div class="ov-mini-bar" id="ov-acc-insert"><div class="ov-mini-label">&#9733; Popular Accessories</div><div class="ov-mini-grid"><div class="ov-mini-card"><div class="ov-mini-name">Floor Mats</div><div class="ov-mini-desc">All-weather.</div><a href="https://www.amazon.com/s?k=car+floor+mats+all+weather&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Dash Cam 4K</div><div class="ov-mini-desc">Front/rear cameras.</div><a href="https://www.amazon.com/s?k=car+dash+cam+4K&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Seat Covers</div><div class="ov-mini-desc">Protection.</div><a href="https://www.amazon.com/s?k=car+seat+covers&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Detailing Kit</div><div class="ov-mini-desc">Wash/wax.</div><a href="https://www.amazon.com/s?k=car+detailing+kit&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div></div><div class="ov-mini-disc">Amazon affiliate links &mdash; small commission at no extra cost. <a href="affiliate-disclosure.html">Disclosure</a></div></div>
 
 
 <section class="featured-guides" id="featured-guides">
