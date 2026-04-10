@@ -66,7 +66,7 @@ body{background:var(--black);color:var(--white);font-family:var(--body);overflow
 .hero-slash::before{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(255,255,255,.06) 0%,transparent 50%);}
 .hero-slash::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-65deg,transparent,transparent 28px,rgba(0,0,0,.06) 28px,rgba(0,0,0,.06) 29px);}
 .hero-dark-side{position:absolute;top:0;right:0;bottom:0;left:0;z-index:0;background:repeating-linear-gradient(-65deg,transparent,transparent 28px,rgba(255,255,255,.012) 28px,rgba(255,255,255,.012) 29px);}
-.hero-wm{position:absolute;right:-20px;bottom:-60px;font-family:var(--teko);font-size:38rem;font-weight:700;color:rgba(255,255,255,.02);line-height:.8;pointer-events:none;z-index:1;user-select:none;}
+.hero-wm{position:absolute;right:-20px;bottom:-60px;font-family:var(--teko);font-size:38rem;font-weight:700;color:rgba(255,255,255,.02);line-height:.8;pointer-events:none;z-index:1;}
 .hero-inner{max-width:1300px;margin:0 auto;padding:0 28px;position:relative;z-index:2;}
 .hero-crumb-row{display:flex;justify-content:space-between;align-items:center;padding:18px 0 0;flex-wrap:wrap;gap:10px;}
 .hero-crumb{font-family:var(--cond);font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);}
@@ -201,7 +201,7 @@ h3.sec-sub{font-family:var(--teko);font-size:1rem;font-weight:600;letter-spacing
 
 /* ── FAQ ── */
 .faq-item{border-bottom:1px solid var(--rule);}
-.faq-q{font-family:var(--teko);font-size:1.05rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#fff;padding:14px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;user-select:none;}
+.faq-q{font-family:var(--teko);font-size:1.05rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#fff;padding:14px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;}
 .faq-q::after{content:'';display:block;width:18px;height:18px;flex-shrink:0;background:var(--red);clip-path:polygon(0 0,100% 0,88% 100%,0 100%);transition:transform .2s;}
 .faq-item.open .faq-q::after{transform:rotate(45deg);}
 .faq-item.open .faq-q{color:var(--red);}
@@ -420,8 +420,16 @@ h2.sec-title { font-size: 2rem !important; }
 .ft-social-link svg{width:16px;height:16px;fill:currentColor;pointer-events:none;}
 </style>
 
+
+<style id="acb-mbar-font-fix">
+.mbar-name{font-family:var(--teko,'Teko'),sans-serif;font-size:1.15rem!important;font-weight:700;letter-spacing:.06em;color:#fff;}
+.mbar-price{font-family:var(--cond,'Barlow Condensed'),sans-serif;font-size:.78rem!important;font-weight:700;color:rgba(255,255,255,.38);}
+.mbar-tab.active .mbar-price{color:var(--red,#E31937)!important;}
+.mbar-brand{font-family:var(--teko,'Teko'),sans-serif;font-size:.95rem!important;font-weight:700;letter-spacing:.14em;color:var(--red,#E31937);text-decoration:none;cursor:pointer;transition:color .15s;}
+.mbar-brand:hover{color:#fff!important;}
+.mbar-tab{padding:10px 20px!important;}
+</style>
 </head>
-<body oncontextmenu="return false" onselectstart="return false">
 <div class="font-bar"><button class="fs-btn" id="fsInc" aria-label="Increase font size" title="Larger text">A+</button><button class="fs-btn" id="fsDec" aria-label="Decrease font size" title="Smaller text">A−</button></div>
 <a href="#" class="back-top" id="backTop">↑</a>
 <div class="disc-bar">
@@ -446,7 +454,7 @@ h2.sec-title { font-size: 2rem !important; }
 
 <nav class="model-bar">
   <div class="mbar-inner">
-    <div class="mbar-brand">Tesla /</div>
+    <a href="tesla.html" class="mbar-brand" title="Tesla">Tesla /</a>
     <a href="tesla-model3.html" class="mbar-tab"><span class="mbar-name">Model 3</span><span class="mbar-price">$40,240</span></a>
     <a href="tesla-modely.html" class="mbar-tab"><span class="mbar-name">Model Y</span><span class="mbar-price">$44,990</span></a>
     <a href="tesla-models.html" class="mbar-tab"><span class="mbar-name">Model S</span><span class="mbar-price">$74,990</span></a>
@@ -871,17 +879,7 @@ h2.sec-title { font-size: 2rem !important; }
         <div class="acc-desc">Clear bra shields front end from stone chips.</div>
         <a href="https://www.amazon.com/s?k=Tesla++paint+protection+film&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a>
       </div>
-      <div class="acc-card">
-        <div class="acc-name">Dash Cam Front & Rear</div>
-        <div class="acc-desc">4K front + 1080p rear — document every drive.</div>
-        <a href="https://www.amazon.com/s?k=dash+cam+front+rear+4K&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a>
       </div>
-      <div class="acc-card">
-        <div class="acc-name">Car Detailing Kit</div>
-        <div class="acc-desc">pH-neutral wash, wax, and microfiber set.</div>
-        <a href="https://www.amazon.com/s?k=car+detailing+kit+microfiber&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a>
-      </div>
-    </div>
   </div>
 
   <div class="sources">
@@ -1042,16 +1040,7 @@ document.querySelectorAll('.faq-q').forEach(function(q){
 </script>
 <script>(function(){var sz=parseFloat(localStorage.getItem('acb-fs')||'1');document.body.style.fontSize=sz+'rem';var inc=document.getElementById('fsInc'),dec=document.getElementById('fsDec');if(inc)inc.addEventListener('click',function(){sz=Math.min(1.6,sz+0.1);document.body.style.fontSize=sz+'rem';localStorage.setItem('acb-fs',sz);});if(dec)dec.addEventListener('click',function(){sz=Math.max(0.8,sz-0.1);document.body.style.fontSize=sz+'rem';localStorage.setItem('acb-fs',sz);});})();</script>
 
-<script>
-document.addEventListener('contextmenu', function(e) { e.preventDefault(); return false; });
-document.addEventListener('keydown', function(e) {
-  // Disable F12, Ctrl+U, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+S
-  if (e.key === 'F12' || (e.ctrlKey && ['u','U','s','S'].includes(e.key)) ||
-      (e.ctrlKey && e.shiftKey && ['i','I','j','J','c','C'].includes(e.key))) {
-    e.preventDefault(); return false;
-  }
-});
-</script>
+
 
 </body>
 </html>

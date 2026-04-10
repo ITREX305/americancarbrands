@@ -56,7 +56,7 @@ body{background:var(--black);color:var(--white);font-family:var(--body);overflow
 .hero-slash::before{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(255,255,255,.06) 0%,transparent 50%);}
 .hero-slash::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-65deg,transparent,transparent 28px,rgba(0,0,0,.06) 28px,rgba(0,0,0,.06) 29px);}
 .hero-dark-side{position:absolute;top:0;right:0;bottom:0;left:0;z-index:0;background:repeating-linear-gradient(-65deg,transparent,transparent 28px,rgba(255,255,255,.012) 28px,rgba(255,255,255,.012) 29px);}
-.hero-wm{position:absolute;right:-20px;bottom:-60px;font-family:var(--teko);font-size:38rem;font-weight:700;color:rgba(255,255,255,.02);line-height:.8;pointer-events:none;z-index:1;user-select:none;}
+.hero-wm{position:absolute;right:-20px;bottom:-60px;font-family:var(--teko);font-size:38rem;font-weight:700;color:rgba(255,255,255,.02);line-height:.8;pointer-events:none;z-index:1;}
 .hero-inner{max-width:1300px;margin:0 auto;padding:0 28px;position:relative;z-index:2;}
 .hero-crumb-row{display:flex;justify-content:space-between;align-items:center;padding:18px 0 0;flex-wrap:wrap;gap:10px;}
 .hero-crumb{font-family:var(--cond);font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);}
@@ -150,7 +150,7 @@ h3.sec-sub{font-family:var(--teko);font-size:1rem;font-weight:600;letter-spacing
 .uc-title{font-family:var(--teko);font-size:1rem;font-weight:700;color:#fff;margin-bottom:5px;}
 .uc-body{font-size:.84rem;color:rgba(255,255,255,.45);line-height:1.6;}
 .faq-item{border-bottom:1px solid var(--rule);}
-.faq-q{font-family:var(--teko);font-size:1.05rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#fff;padding:14px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;user-select:none;}
+.faq-q{font-family:var(--teko);font-size:1.05rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#fff;padding:14px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;}
 .faq-q::after{content:'';display:block;width:18px;height:18px;flex-shrink:0;background:var(--red);clip-path:polygon(0 0,100% 0,88% 100%,0 100%);transition:transform .2s;}
 .faq-item.open .faq-q::after{transform:rotate(45deg);}
 .faq-item.open .faq-q{color:var(--red);}
@@ -331,6 +331,62 @@ body { font-size: 1rem; line-height: 1.78; }
 @media(max-width:600px){.fg-grid{grid-template-columns:1fr 1fr;}.fg-heading{font-size:1.8rem;}}
 </style>
 
+
+<style id="acb-lineup-font-fix">
+/* 2026 Model Lineup section — increased fonts */
+.lineup-title, h2.lineup-title, .section-title.lineup {
+  font-size: 2.8rem !important;
+}
+.brand-models-heading, .models-section h2 {
+  font-size: 2.4rem !important;
+}
+.model-card-name, .mc-name {
+  font-size: 1.6rem !important;
+  color: #fff !important;
+}
+.model-card-price, .mc-price {
+  font-size: 1.3rem !important;
+}
+.model-card-desc, .mc-desc {
+  font-size: 1.0rem !important;
+  color: rgba(255,255,255,.78) !important;
+}
+/* Model lineup section headings */
+.brand-lineup h2, .lineup-section h2, #lineup h2 {
+  font-size: 2.6rem !important;
+}
+/* Section heading "2026 Model Lineup" */
+[id*="lineup"] .sec-title,
+[id*="models"] .sec-title {
+  font-size: 2.4rem !important;
+}
+/* Card title for brand model cards */
+.bm-title, .bm-name, .brand-model-title {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+}
+.bm-price {
+  font-size: 1.25rem !important;
+}
+/* Any h3 inside lineup/models sections */
+#lineup h3, #models h3, .lineup-section h3 {
+  font-size: 1.4rem !important;
+}
+</style>
+
+<style id="acb-ov-acc-bar">
+.ov-acc-bar{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-left:3px solid #E31937;padding:18px 20px;margin:24px 0 0;}
+.ov-acc-label{font-family:'Barlow Condensed',var(--cond),sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:12px;}
+.ov-acc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+@media(max-width:700px){.ov-acc-grid{grid-template-columns:1fr 1fr;}}
+.ov-acc-card{background:rgba(255,255,255,.04);padding:12px;display:flex;flex-direction:column;gap:4px;}
+.ov-acc-name{font-family:'Teko',var(--teko),sans-serif;font-size:1.05rem;font-weight:700;color:#fff;line-height:1.1;}
+.ov-acc-desc{font-family:'Barlow',var(--body),sans-serif;font-size:.82rem;color:rgba(255,255,255,.55);line-height:1.4;flex:1;}
+.ov-acc-btn{font-family:'Barlow Condensed',var(--cond),sans-serif;font-size:.75rem;font-weight:800;letter-spacing:.08em;color:#FF9900;text-decoration:none;margin-top:6px;background:#1a1a2e;border:1px solid #FF9900;padding:4px 10px;display:inline-block;transition:all .15s;}
+.ov-acc-btn:hover{background:#FF9900;color:#000;}
+.ov-acc-disc{font-size:.68rem;color:rgba(255,255,255,.25);margin-top:8px;}
+.ov-acc-disc a{color:rgba(255,255,255,.35);}
+</style>
 </head>
 <body>
 <a href="#" class="back-top" id="backTop">↑</a>
@@ -780,7 +836,13 @@ body { font-size: 1rem; line-height: 1.78; }
       </a>
     </div>
   </div>
-</section>
+
+<!-- ═══ OVERVIEW AMAZON BAR ═══ -->
+<div class="ov-acc-bar" id="ov-amazon-bar">
+  <div class="ov-acc-label">&#9733; Popular Chevrolet Accessories &mdash; Affiliate Links</div>
+  <div class="ov-acc-grid"><div class="ov-acc-card"><div class="ov-acc-name">Silverado Floor Mats</div><div class="ov-acc-desc">Heavy-duty all-weather.</div><a href="https://www.amazon.com/s?k=Chevrolet+Silverado+floor+mats&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-acc-btn">Shop Amazon &#x2192;</a></div><div class="ov-acc-card"><div class="ov-acc-name">Chevy Dash Cam</div><div class="ov-acc-desc">4K front/rear.</div><a href="https://www.amazon.com/s?k=Chevrolet+dash+cam+4K&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-acc-btn">Shop Amazon &#x2192;</a></div><div class="ov-acc-card"><div class="ov-acc-name">Chevy Seat Covers</div><div class="ov-acc-desc">Protect upholstery.</div><a href="https://www.amazon.com/s?k=Chevrolet+seat+covers&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-acc-btn">Shop Amazon &#x2192;</a></div><div class="ov-acc-card"><div class="ov-acc-name">Chevy Detailing Kit</div><div class="ov-acc-desc">Professional wash/wax.</div><a href="https://www.amazon.com/s?k=Chevrolet+car+detailing+kit&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-acc-btn">Shop Amazon &#x2192;</a></div></div>
+  <div class="ov-acc-disc">Amazon affiliate links &mdash; we may earn a small commission at no extra cost to you. <a href="affiliate-disclosure.html">Disclosure</a></div>
+</div></section>
 
 <footer>
   <div class="ft-in">

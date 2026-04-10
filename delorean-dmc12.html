@@ -64,7 +64,7 @@ body{background:var(--black);color:var(--white);font-family:var(--body);overflow
 .hero-slash::before{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(255,255,255,.06) 0%,transparent 50%);}
 .hero-slash::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-65deg,transparent,transparent 28px,rgba(0,0,0,.06) 28px,rgba(0,0,0,.06) 29px);}
 .hero-dark-side{position:absolute;top:0;right:0;bottom:0;left:0;z-index:0;background:repeating-linear-gradient(-65deg,transparent,transparent 28px,rgba(255,255,255,.012) 28px,rgba(255,255,255,.012) 29px);}
-.hero-wm{position:absolute;right:-20px;bottom:-60px;font-family:var(--teko);font-size:38rem;font-weight:700;color:rgba(255,255,255,.02);line-height:.8;pointer-events:none;z-index:1;user-select:none;}
+.hero-wm{position:absolute;right:-20px;bottom:-60px;font-family:var(--teko);font-size:38rem;font-weight:700;color:rgba(255,255,255,.02);line-height:.8;pointer-events:none;z-index:1;}
 .hero-inner{max-width:1300px;margin:0 auto;padding:0 28px;position:relative;z-index:2;}
 .hero-crumb-row{display:flex;justify-content:space-between;align-items:center;padding:18px 0 0;flex-wrap:wrap;gap:10px;}
 .hero-crumb{font-family:var(--cond);font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);}
@@ -199,7 +199,7 @@ h3.sec-sub{font-family:var(--teko);font-size:1rem;font-weight:600;letter-spacing
 
 /* ── FAQ ── */
 .faq-item{border-bottom:1px solid var(--rule);}
-.faq-q{font-family:var(--teko);font-size:1.05rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#fff;padding:14px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;user-select:none;}
+.faq-q{font-family:var(--teko);font-size:1.05rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#fff;padding:14px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;}
 .faq-q::after{content:'';display:block;width:18px;height:18px;flex-shrink:0;background:var(--red);clip-path:polygon(0 0,100% 0,88% 100%,0 100%);transition:transform .2s;}
 .faq-item.open .faq-q::after{transform:rotate(45deg);}
 .faq-item.open .faq-q{color:var(--red);}
@@ -272,6 +272,15 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;back
 .ft-social-link svg{width:16px;height:16px;fill:currentColor;}
 .section p{font-size:1.05rem !important;color:rgba(255,255,255,.82) !important;line-height:1.82 !important;}
 .acc-btn{background:#1a1a2e !important;color:#FF9900 !important;border:2px solid #FF9900 !important;font-size:.85rem !important;font-weight:800 !important;}
+</style>
+
+<style id="acb-mbar-font-fix">
+.mbar-name{font-family:var(--teko,'Teko'),sans-serif;font-size:1.15rem!important;font-weight:700;letter-spacing:.06em;color:#fff;}
+.mbar-price{font-family:var(--cond,'Barlow Condensed'),sans-serif;font-size:.78rem!important;font-weight:700;color:rgba(255,255,255,.38);}
+.mbar-tab.active .mbar-price{color:var(--red,#E31937)!important;}
+.mbar-brand{font-family:var(--teko,'Teko'),sans-serif;font-size:.95rem!important;font-weight:700;letter-spacing:.14em;color:var(--red,#E31937);text-decoration:none;cursor:pointer;transition:color .15s;}
+.mbar-brand:hover{color:#fff!important;}
+.mbar-tab{padding:10px 20px!important;}
 </style>
 </head>
 <body>
@@ -426,8 +435,6 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;back
 <div class="acc-card"><div class="acc-name">Paint Protection Film</div><div class="acc-desc">Clear bra for stone chip protection.</div><a href="https://www.amazon.com/s?k=paint+protection+film+PPF&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
 <div class="acc-card"><div class="acc-name">Phone Mount</div><div class="acc-desc">GPS mount for track or road use.</div><a href="https://www.amazon.com/s?k=car+phone+mount+magnetic&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
 <div class="acc-card"><div class="acc-name">OBD2 Scanner</div><div class="acc-desc">Live performance data monitoring.</div><a href="https://www.amazon.com/s?k=OBD2+bluetooth+performance&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
-<div class="acc-card"><div class="acc-name">Detailing Kit</div><div class="acc-desc">Professional wash and wax kit.</div><a href="https://www.amazon.com/s?k=car+detailing+kit+professional&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
-<div class="acc-card"><div class="acc-name">Garage Mat</div><div class="acc-desc">Protect your garage floor.</div><a href="https://www.amazon.com/s?k=DeLorean+DMC-12+(1981-82)+garage+mat&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
 </div>
   </div>
   <div class="sources"><div class="sources-title">Sources</div><ul><li>NHTSA; DeLorean Owners Association; automotive historical records</li></ul></div>
