@@ -289,6 +289,339 @@ body { font-size: 1rem !important; line-height: 1.82 !important; }
 .acc-name { font-size: 1.05rem !important; font-weight: 700 !important; color: #fff !important; }
 .acc-desc { font-size: .92rem !important; color: rgba(255,255,255,.72) !important; }
 </style>
+
+<style id="acb-v11-master">
+
+/* ═══════════════════════════════════════════════
+   1. PREMIUM HERO SLASH — luxury gradient
+   ═══════════════════════════════════════════════ */
+.hero-slash {
+  background: linear-gradient(
+    155deg,
+    #8B0020 0%,
+    #CC0033 20%,
+    #E8003A 40%,
+    #FF1A3C 60%,
+    #CC0033 80%,
+    #6B0018 100%
+  ) !important;
+  box-shadow:
+    4px 0 40px rgba(255,26,60,.35),
+    8px 0 80px rgba(200,0,40,.2),
+    inset -20px 0 60px rgba(0,0,0,.3) !important;
+}
+.hero-slash::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(
+    160deg,
+    rgba(255,255,255,.12) 0%,
+    rgba(255,255,255,.04) 30%,
+    transparent 60%
+  ) !important;
+}
+.hero-slash::after {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: repeating-linear-gradient(
+    -65deg,
+    transparent, transparent 24px,
+    rgba(0,0,0,.07) 24px, rgba(0,0,0,.07) 25px
+  ) !important;
+}
+/* Also give page body a subtle luxury dark */
+body {
+  background: linear-gradient(180deg, #050508 0%, #070710 40%, #050508 100%) !important;
+  min-height: 100vh !important;
+}
+
+/* ═══════════════════════════════════════════════
+   2. GLASS EFFECT — Amazon affiliate cards
+   ═══════════════════════════════════════════════ */
+/* Main accessories section cards */
+.acc-card,
+.ov-mini-card,
+.ov-acc-card {
+  background: rgba(255,255,255,.04) !important;
+  backdrop-filter: blur(12px) saturate(1.4) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(1.4) !important;
+  border: 1px solid rgba(255,255,255,.12) !important;
+  box-shadow:
+    0 4px 16px rgba(0,0,0,.4),
+    inset 0 1px 0 rgba(255,255,255,.08) !important;
+  transition: all .2s ease !important;
+}
+.acc-card:hover,
+.ov-mini-card:hover {
+  background: rgba(255,255,255,.08) !important;
+  border-color: rgba(255,26,60,.4) !important;
+  box-shadow:
+    0 8px 32px rgba(255,26,60,.15),
+    0 4px 16px rgba(0,0,0,.5),
+    inset 0 1px 0 rgba(255,255,255,.12) !important;
+  transform: translateY(-2px) !important;
+}
+.acc-name, .ov-mini-name, .ov-acc-name {
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  font-family: 'Teko', sans-serif !important;
+  letter-spacing: .04em !important;
+}
+.acc-desc, .ov-mini-desc, .ov-acc-desc {
+  font-size: .92rem !important;
+  color: rgba(255,255,255,.72) !important;
+}
+/* acc-grid layout */
+.acc-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)) !important;
+  gap: 14px !important;
+}
+/* Mini 4-card grids */
+.ov-mini-grid, .ov-acc-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 10px !important;
+}
+@media(max-width:700px){
+  .ov-mini-grid, .ov-acc-grid { grid-template-columns: 1fr 1fr !important; }
+}
+/* Glass bar container */
+.ov-mini-bar, .ov-acc-bar {
+  margin: 24px 0 !important;
+  padding: 18px 20px !important;
+  background: rgba(255,255,255,.025) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
+  border-radius: 2px !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06) !important;
+}
+.ov-mini-label, .ov-acc-label {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-size: .72rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .2em !important;
+  text-transform: uppercase !important;
+  color: rgba(255,255,255,.45) !important;
+  margin-bottom: 12px !important;
+}
+.ov-mini-btn, .ov-acc-btn, .acc-btn {
+  background: rgba(26,26,46,.9) !important;
+  color: #FF9900 !important;
+  border: 1px solid rgba(255,153,0,.45) !important;
+  font-size: .78rem !important;
+  font-weight: 800 !important;
+  letter-spacing: .06em !important;
+  padding: 5px 12px !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  transition: all .15s !important;
+  margin-top: 6px !important;
+  font-family: 'Barlow Condensed', sans-serif !important;
+}
+.ov-mini-btn:hover, .ov-acc-btn:hover, .acc-btn:hover {
+  background: #FF9900 !important;
+  color: #000 !important;
+  border-color: #FF9900 !important;
+}
+
+/* ═══════════════════════════════════════════════
+   3. TRIM CARD / MODEL LINEUP — bigger fonts
+   ═══════════════════════════════════════════════ */
+/* Trim cards in section 02 */
+.tc-label {
+  font-size: .85rem !important;
+  font-weight: 700 !important;
+  color: rgba(255,255,255,.55) !important;
+  letter-spacing: .14em !important;
+}
+.tc-name {
+  font-size: 2.4rem !important;
+  line-height: 1 !important;
+  color: #fff !important;
+  font-family: 'Teko', sans-serif !important;
+}
+.tc-price {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  color: #FF1A3C !important;
+  font-family: 'Teko', sans-serif !important;
+}
+.tc-k {
+  font-size: .88rem !important;
+  color: rgba(255,255,255,.65) !important;
+  font-weight: 700 !important;
+}
+.tc-v {
+  font-size: 1.1rem !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+}
+.tc-v.good { color: #3de08a !important; }
+.tc-note {
+  font-size: .88rem !important;
+  color: rgba(255,255,255,.6) !important;
+  line-height: 1.5 !important;
+}
+/* Hero right trim stack */
+.hero-right-label {
+  font-size: .95rem !important;
+  font-weight: 700 !important;
+  color: rgba(255,255,255,.7) !important;
+  letter-spacing: .2em !important;
+  text-transform: uppercase !important;
+  font-family: 'Barlow Condensed', sans-serif !important;
+}
+.tr-name {
+  font-size: 1.55rem !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  font-family: 'Teko', sans-serif !important;
+  line-height: 1 !important;
+}
+.tr-price {
+  font-size: 1.3rem !important;
+  color: #FF1A3C !important;
+  font-family: 'Teko', sans-serif !important;
+  line-height: 1 !important;
+}
+
+/* ═══════════════════════════════════════════════
+   BONUS: Premium section styling
+   ═══════════════════════════════════════════════ */
+.trim-card {
+  border: 1px solid rgba(255,255,255,.1) !important;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,.04) 0%,
+    rgba(255,255,255,.02) 50%,
+    rgba(0,0,0,.3) 100%
+  ) !important;
+  backdrop-filter: blur(4px) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06) !important;
+  transition: all .2s !important;
+}
+.trim-card:hover, .trim-card.featured {
+  border-color: rgba(255,26,60,.5) !important;
+  background: linear-gradient(
+    135deg,
+    rgba(255,26,60,.08) 0%,
+    rgba(255,26,60,.03) 50%,
+    rgba(0,0,0,.3) 100%
+  ) !important;
+  box-shadow:
+    0 4px 20px rgba(255,26,60,.12),
+    inset 0 1px 0 rgba(255,255,255,.1) !important;
+}
+
+/* Model bar premium */
+.mbar-tab {
+  border-bottom: 3px solid transparent !important;
+  transition: all .15s !important;
+}
+.mbar-tab.active {
+  border-bottom-color: #FF1A3C !important;
+  background: linear-gradient(180deg, rgba(255,26,60,.1) 0%, transparent 100%) !important;
+}
+.mbar-name {
+  font-size: 1.12rem !important;
+  font-weight: 700 !important;
+  color: rgba(255,255,255,.92) !important;
+  letter-spacing: .06em !important;
+}
+.mbar-price {
+  font-size: .82rem !important;
+  font-weight: 600 !important;
+}
+</style>
+<style id="acb-brand-color">
+/* Brand-specific hero color: tesla */
+.hero-slash {
+  background: linear-gradient(155deg,#8B0015 0%,#CC0020 40%,#FF1A3C 70%,#CC0020 100%) !important;
+  box-shadow: 4px 0 40px rgba(227,25,55,.5), 8px 0 80px rgba(0,0,0,.3), inset -20px 0 60px rgba(0,0,0,.25) !important;
+}
+.hero-slash::before {
+  content:'' !important; position:absolute !important; inset:0 !important;
+  background:linear-gradient(160deg,rgba(255,255,255,.1) 0%,rgba(255,255,255,.03) 35%,transparent 60%) !important;
+}
+.sec-slash { background: #E31937 !important; box-shadow: 0 0 8px rgba(227,25,55,.5) !important; }
+.mbar-tab.active { border-bottom-color: #E31937 !important; }
+.mbar-tab.active::before { background:linear-gradient(90deg,rgba(227,25,55,,.15),transparent) !important; }
+.mbar-brand { color: #E31937 !important; }
+.back-top { background: #E31937 !important; }
+.snap-box { border-bottom-color: #E31937 !important; }
+.hero-badge.red, .hero-badge { background: #E31937 !important; }
+</style><style id="acb-ov-acc-upgrade">
+.ov-full-acc { margin: 0 0 32px; padding: 20px 0; border-top: 1px solid rgba(255,255,255,.08); border-bottom: 1px solid rgba(255,255,255,.08); }
+.ov-full-acc .ov-acc-head { display:flex; align-items:center; gap:10px; margin-bottom:16px; }
+.ov-full-acc .ov-acc-label { font-family:'Barlow Condensed',sans-serif; font-size:.72rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.ov-full-acc .acc-grid { grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); }
+</style><style id="acb-recalls-tools">
+.recalls-tools{margin-bottom:20px;}
+.recalls-filter-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:14px;}
+.rf-label{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-right:4px;}
+.rf-btn{background:transparent;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;cursor:pointer;transition:all .15s;}
+.rf-btn:hover,.rf-btn.active{background:rgba(255,26,60,.15);color:#fff;border-color:rgba(255,26,60,.4);}
+.vin-checker-box{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);padding:14px 16px;border-left:3px solid rgba(255,26,60,.6);}
+.vin-checker-label{font-family:'Barlow Condensed',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:10px;}
+.vin-checker-input{display:flex;gap:8px;flex-wrap:wrap;}
+#vinInput{flex:1;min-width:200px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:.12em;padding:8px 12px;text-transform:uppercase;outline:none;}
+#vinInput:focus{border-color:rgba(255,26,60,.5);background:rgba(255,26,60,.06);}
+.vin-check-btn{background:rgba(255,26,60,.2);color:#fff;border:1px solid rgba(255,26,60,.4);font-family:'Barlow Condensed',sans-serif;font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:8px 18px;text-decoration:none;transition:all .15s;white-space:nowrap;}
+.vin-check-btn:hover{background:#E31937;border-color:#E31937;}
+.vin-checker-note{font-size:.68rem;color:rgba(255,255,255,.25);margin-top:6px;}
+.recall.hidden{display:none;}
+</style>
+<script id="acb-recalls-js">
+(function(){
+  var vinBtn=document.getElementById('vinCheckBtn');
+  var vinInput=document.getElementById('vinInput');
+  if(vinInput&&vinBtn){
+    vinInput.addEventListener('input',function(){
+      var v=this.value.replace(/[^A-HJ-NPR-Z0-9]/gi,'').toUpperCase().slice(0,17);
+      this.value=v;
+      if(v.length===17){
+        vinBtn.href='https://www.nhtsa.gov/vehicle/recalls#'+v;
+        vinBtn.textContent='Check '+v+' →';
+      } else {
+        vinBtn.href='https://www.nhtsa.gov/vehicle/recalls';
+        vinBtn.textContent='Check NHTSA →';
+      }
+    });
+  }
+  window.filterRecalls=function(type,btn){
+    document.querySelectorAll('.rf-btn').forEach(function(b){b.classList.remove('active');});
+    btn.classList.add('active');
+    document.querySelectorAll('.recall').forEach(function(r){
+      if(type==='all'){r.classList.remove('hidden');}
+      else if(type==='24mo'){
+        var meta=r.querySelector('.recall-meta');
+        if(!meta){r.classList.add('hidden');return;}
+        var yr=parseInt(meta.textContent);
+        r.classList.toggle('hidden', isNaN(yr)||yr<2024);
+      }
+      else if(type==='ota'){r.classList.toggle('hidden',!r.querySelector('.ota'));}
+      else if(type==='physical'){r.classList.toggle('hidden',!r.querySelector('.physical'));}
+    });
+  };
+})();
+</script><style id="acb-deal-score">
+.deal-score-box{background:linear-gradient(135deg,rgba(255,255,255,.04) 0%,rgba(255,255,255,.02) 100%);border:1px solid rgba(255,255,255,.1);border-left:4px solid var(--deal-color,#FF9900);padding:14px 18px;margin:20px 0;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+.deal-score-num{font-family:'Teko',sans-serif;font-size:3rem;font-weight:700;color:var(--deal-color,#FF9900);line-height:1;min-width:48px;}
+.deal-score-info{flex:1;}
+.deal-score-label{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:4px;}
+.deal-score-stars{font-size:1.1rem;color:var(--deal-color,#FF9900);letter-spacing:.05em;margin-bottom:4px;}
+.deal-score-note{font-family:'Barlow',sans-serif;font-size:.9rem;color:rgba(255,255,255,.68);line-height:1.5;}
+</style><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":'How do the Tesla Model X Falcon-wing doors work?',"acceptedAnswer":{"@type":"Answer","text":'The Falcon-wing doors are rear passenger doors that open vertically upward, using articulated hinges that allow them to open with as little as 12 inches of clearance on each side. They use ultrasonic sensors to detect obstacles and adjust the opening angle automatically. They are powered and control'}},
+{"@type":"Question","name":"What is the Tesla Model X's towing capacity?","acceptedAnswer":{"@type":"Answer","text":'Both the Long Range and Plaid Model X are rated to tow up to 5,000 lbs — the highest of any luxury EV SUV. This covers most travel trailers and boat trailers. Expect 40–50% range reduction at maximum tow load; plan charging stops every 100–150 miles.'}},
+{"@type":"Question","name":'Is the Falcon-wing door reliable?',"acceptedAnswer":{"@type":"Answer","text":'It is the most documented reliability concern of the Model X. Sensor calibration issues, actuator failures, and door misalignment have been reported across multiple model years. Tesla has improved the system via OTA updates over time. If purchasing used, budget for potential door service.'}},
+{"@type":"Question","name":'How does the Model X compare to the Cadillac Escalade IQ?',"acceptedAnswer":{"@type":"Answer","text":"The Escalade IQ EV (expected 2026, ~$130K+) will offer an estimated 450+ miles range vs. Model X's 348 miles. The Escalade IQ has a more traditional luxury brand positioning and standard door system. The Model X has Falcon-wing doors, proven production history, and better charging infrastructure acc"}},
+{"@type":"Question","name":'Does the Model X have three rows?',"acceptedAnswer":{"@type":"Answer","text":"Yes — the Model X seats up to 7 passengers in a 3-row configuration (2+3+2) or 6 in a 2+2+2 captain's chair setup. The third row is more usable for adults than the Model Y's 3rd row. Cargo behind the third row is 11.1 cu ft, expanding to 87.6 cu ft with all seats folded."}},
+{"@type":"Question","name":'Is the  a good value in 2026?',"acceptedAnswer":{"@type":"Answer","text":'The  delivers competitive value in its segment. We recommend cross-shopping alternatives and checking current incentive programs before purchasing. Verify all current pricing and incentives with your local Tesla dealer.'}}]}</script>
 </head>
 <a href="#" class="back-top" id="backTop">↑</a>
 <div class="font-bar"><button class="fs-btn" id="fsInc">A+</button><button class="fs-btn" id="fsDec">A−</button></div>
@@ -317,19 +650,62 @@ body { font-size: 1rem !important; line-height: 1.82 !important; }
 <div class="page-body">
 <main>
   <div class="section" id="overview"><div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">01</span><h2 class="sec-title">Overview</h2><div class="sec-rule"></div></div><p>The Tesla Model X is Tesla's full-size luxury electric SUV — a 7-passenger vehicle defined by its Falcon-wing rear doors, which open vertically and require minimal side clearance. It is the only production SUV with these doors at any volume. Built at Gigafactory Fremont, California. The Model X competes with the Cadillac Escalade, Lincoln Navigator, and BMW X7 while offering far greater EV range and the unique door mechanism.</p><div class="stat-row"><div class="stat-box"><div class="sb-v">348 mi</div><div class="sb-l">Long Range EPA</div></div><div class="stat-box"><div class="sb-v">5,000 lb</div><div class="sb-l">Max Towing</div></div><div class="stat-box"><div class="sb-v">$84,990</div><div class="sb-l">Starting MSRP</div></div><div class="stat-box"><div class="sb-v">7</div><div class="sb-l">Max Seating</div></div></div><div class="callout warn"><div class="callout-label">No Federal Tax Credit
-<div class="ov-mini-bar" id="ov-acc-insert"><div class="ov-mini-label">&#9733; Popular Accessories</div><div class="ov-mini-grid"><div class="ov-mini-card"><div class="ov-mini-name">Tesla Floor Mats</div><div class="ov-mini-desc">OEM-fit all-weather.</div><a href="https://www.amazon.com/s?k=Tesla+floor+mats&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Level 2 Charger</div><div class="ov-mini-desc">48A home EV charger.</div><a href="https://www.amazon.com/s?k=Tesla+level+2+charger&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Dash Cam</div><div class="ov-mini-desc">Front/rear cameras.</div><a href="https://www.amazon.com/s?k=Tesla+dash+cam&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Paint PPF</div><div class="ov-mini-desc">Stone chip protection.</div><a href="https://www.amazon.com/s?k=Tesla+paint+protection+film&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div></div><div class="ov-mini-disc">Amazon affiliate links &mdash; small commission at no extra cost. <a href="affiliate-disclosure.html">Disclosure</a></div></div>
+
 </div><p>The Model X (from $84,990) exceeds the $80,000 MSRP cap for SUVs/trucks under the IRA. Neither trim qualifies for the $7,500 federal EV tax credit.</p></div></div>
+  <div class="ov-full-acc" id="ov-acc-insert">
+  <div class="ov-acc-head"><span class="ov-acc-label">&#9733; Popular  Accessories</span></div>
+  <div class="acc-grid">
+      <div class="acc-card"><div class="acc-name">Tesla Floor Mats</div><div class="acc-desc">Precision-fit all-weather mats.</div><a href="https://www.amazon.com/s?k=Tesla+floor+mats+all+weather&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
+      <div class="acc-card"><div class="acc-name">Level 2 Home Charger</div><div class="acc-desc">48A home charger — charges overnight.</div><a href="https://www.amazon.com/s?k=Tesla+level+2+home+charger+48+amp&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
+      <div class="acc-card"><div class="acc-name">Tesla Cargo Liner</div><div class="acc-desc">Trunk/frunk liner protection.</div><a href="https://www.amazon.com/s?k=Tesla+cargo+liner&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
+      <div class="acc-card"><div class="acc-name">Dash Cam</div><div class="acc-desc">Invisible front/rear cameras.</div><a href="https://www.amazon.com/s?k=Tesla+dash+cam+4K&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
+      <div class="acc-card"><div class="acc-name">Paint Protection Film</div><div class="acc-desc">Stone chip clear bra.</div><a href="https://www.amazon.com/s?k=Tesla+paint+protection+film&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
+      <div class="acc-card"><div class="acc-name">Car Cover</div><div class="acc-desc">All-weather outdoor cover.</div><a href="https://www.amazon.com/s?k=Tesla+car+cover&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
+  </div>
+  <p style="font-size:.72rem;color:rgba(255,255,255,.25);margin-top:8px;">Amazon affiliate links &mdash; small commission at no extra cost. <a href="affiliate-disclosure.html" style="color:rgba(255,255,255,.35);">Disclosure</a></p>
+</div>
+
   <div class="section" id="trims"><div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">02</span><h2 class="sec-title">2026 Trims &amp; Pricing</h2><div class="sec-rule"></div></div><span class="price-note">Prices exclude destination (~$1,500–$2,000), taxes &amp; fees. Verify at manufacturer website.</span><p>Two Model X trims for 2026. Both include Falcon-wing rear doors, 17" horizontal touchscreen, air suspension, HEPA filtration, and NACS charging.</p><div class="trim-grid"><div class="trim-card featured"><div class="tc-label">Best Range · Dual Motor</div><div class="tc-name">Long Range</div><div class="tc-price">$84,990</div><div class="tc-specs"><div class="tc-row"><span class="tc-k">EPA Range</span><span class="tc-v td-good">348 mi</span></div><div class="tc-row"><span class="tc-k">Motor</span><span class="tc-v ">Dual AWD</span></div><div class="tc-row"><span class="tc-k">0–60</span><span class="tc-v ">4.4s</span></div><div class="tc-row"><span class="tc-k">Towing</span><span class="tc-v td-good">5,000 lbs</span></div><div class="tc-row"><span class="tc-k">Charge Rate</span><span class="tc-v td-good">250 kW</span></div></div><div class="tc-note">Best range Model X. 5,000 lb towing. 7-seat capacity. Standard steering wheel.</div></div><div class="trim-card"><div class="tc-label">Performance Flagship</div><div class="tc-name">Plaid</div><div class="tc-price">$99,990</div><div class="tc-specs"><div class="tc-row"><span class="tc-k">EPA Range</span><span class="tc-v td-good">333 mi</span></div><div class="tc-row"><span class="tc-k">Motor</span><span class="tc-v td-good">Tri-Motor AWD</span></div><div class="tc-row"><span class="tc-k">0–60</span><span class="tc-v td-good">2.5s</span></div><div class="tc-row"><span class="tc-k">Towing</span><span class="tc-v td-good">5,000 lbs</span></div><div class="tc-row"><span class="tc-k">Output</span><span class="tc-v td-good">1,020 hp</span></div></div><div class="tc-note">1,020 hp in a 7-seat family SUV. 2.5s 0–60. Same Plaid powertrain as the Model S.</div></div></div></div>
   <div class="section" id="specs"><div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">03</span><h2 class="sec-title">Full Specs</h2><div class="sec-rule"></div></div><table class="data-table"><thead><tr><th>Specification</th><th>Detail</th></tr></thead><tbody><tr><td class="td-n">Body Style</td><td class="">Full-Size Luxury SUV</td></tr><tr><td class="td-n">Doors</td><td class="">Falcon-wing rear (power)</td></tr><tr><td class="td-n">Seating</td><td class="">5, 6, or 7 passenger</td></tr><tr><td class="td-n">Drive</td><td class="">Dual AWD (LR) / Tri-Motor AWD (Plaid)</td></tr><tr><td class="td-n">Cargo (behind 3rd row)</td><td class="">11.1 cu ft</td></tr><tr><td class="td-n">Cargo (all seats folded)</td><td class="td-good">87.6 cu ft</td></tr><tr><td class="td-n">Length</td><td class="">198.3 in</td></tr><tr><td class="td-n">Width</td><td class="">78.7 in</td></tr><tr><td class="td-n">Height</td><td class="">66.3 in</td></tr><tr><td class="td-n">Max Tow Rating</td><td class="td-good">5,000 lbs</td></tr><tr><td class="td-n">Curb Weight</td><td class="">5,185–5,390 lbs</td></tr><tr><td class="td-n">Air Suspension</td><td class="td-good">Standard</td></tr><tr><td class="td-n">Screen</td><td class="td-good">17" horizontal</td></tr><tr><td class="td-n">Charging</td><td class="td-good">NACS / 250 kW</td></tr><tr><td class="td-n">Warranty (battery)</td><td class="td-good">8 yr / 150,000 mi</td></tr></tbody></table><span class="tbl-note">*Specs from manufacturer as of March 2026. Verify at manufacturer website.</span></div>
   <div class="section" id="s4"><div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">04</span><h2 class="sec-title">Range &amp; Efficiency</h2><div class="sec-rule"></div></div><p>At 348 miles EPA, the Model X Long Range leads all full-size luxury EVs in range. Real-world highway range at 70 mph is approximately 275–295 miles.</p><table class="data-table"><thead><tr><th>Condition / Trim</th><th>Figure</th></tr></thead><tbody><tr><td class="td-n">Long Range — EPA</td><td class="td-good">348 mi</td></tr><tr><td class="td-n">Plaid — EPA</td><td class="td-good">333 mi</td></tr><tr><td class="td-n">Long Range — Hwy 70 mph (est.)</td><td class="td-good">~280–295 mi</td></tr><tr><td class="td-n">Long Range — Cold (20°F)</td><td class="td-warn">~265–280 mi</td></tr><tr><td class="td-n">Towing at max load (est.)</td><td class="td-bad">~155–200 mi</td></tr></tbody></table><span class="tbl-note">*EPA from fueleconomy.gov. Towing range estimate from third-party testing. Heavy weight impacts efficiency.</span><div class="callout warn"><div class="callout-label">Towing Range Penalty</div><p>Towing near 5,000 lbs reduces range by approximately 40–50%. Plan charging stops every 100–150 miles when towing at max load.</p></div></div>
   <div class="section" id="s5"><div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">05</span><h2 class="sec-title">Performance &amp; Towing</h2><div class="sec-rule"></div></div><p>The Model X Plaid's 2.5s 0–60 in a 5,185+ lb 7-seat SUV is remarkable. Both trims tow 5,000 lbs — more than any other luxury EV SUV.</p><table class="data-table"><thead><tr><th>Specification</th><th>Figure</th></tr></thead><tbody><tr><td class="td-n">0–60 (Long Range)</td><td class="td-good">4.4s</td></tr><tr><td class="td-n">0–60 (Plaid)</td><td class="td-good">2.5s</td></tr><tr><td class="td-n">Top Speed (Long Range)</td><td class="">155 mph</td></tr><tr><td class="td-n">Top Speed (Plaid)</td><td class="">163 mph</td></tr><tr><td class="td-n">Max Tow Rating</td><td class="td-good">5,000 lbs</td></tr><tr><td class="td-n">Max Payload</td><td class="">~1,000 lbs</td></tr><tr><td class="td-n">Air Suspension</td><td class="td-good">Adjustable height</td></tr></tbody></table></div>
   <div class="section" id="s6"><div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">06</span><h2 class="sec-title">Charging</h2><div class="sec-rule"></div></div><p>Model X charges at up to 250 kW at V3 Superchargers. The large battery pack means more miles added per charging session.</p><table class="data-table"><thead><tr><th>Type</th><th>Detail</th></tr></thead><tbody><tr><td class="td-n">Connector</td><td class="td-good">NACS (SAE J3400)</td></tr><tr><td class="td-n">Max DC Fast</td><td class="td-good">250 kW</td></tr><tr><td class="td-n">V3 10–80%</td><td class="td-good">~25–30 min</td></tr><tr><td class="td-n">Level 2 Home</td><td class="">~11.5 kW</td></tr><tr><td class="td-n">Full Charge Level 2</td><td class="">~10–12 hrs</td></tr></tbody></table><div class="callout green"><div class="callout-label">5,000 lb Towing — Best in Class EV SUV</div><p>No other luxury full-size EV SUV matches the Model X's 5,000 lb towing rating. Plan charging stops carefully when towing — expect significant range reduction.</p></div></div>
   <div class="section" id="reliability"><div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">07</span><h2 class="sec-title">Reliability</h2><div class="sec-rule"></div></div><p>Model X reliability is the weakest in the Tesla lineup due to the mechanical complexity of the Falcon-wing doors. Recurring door mechanism issues are well-documented. Powertrain is strong but the door actuators add failure points.</p><table class="data-table"><thead><tr><th>Area</th><th>Status</th><th>Notes</th></tr></thead><tbody><tr><td class="td-n">Powertrain</td><td class="Strong">td-good</td><td style="font-size:.82rem;color:rgba(255,255,255,.4);">Motor and battery longevity good — consistent with other Teslas</td></tr><tr><td class="td-n">Falcon-Wing Doors</td><td class="Below avg">td-bad</td><td style="font-size:.82rem;color:rgba(255,255,255,.4);">Sensor and actuator issues well-documented</td></tr><tr><td class="td-n">Air Suspension</td><td class="Mixed">td-warn</td><td style="font-size:.82rem;color:rgba(255,255,255,.4);">Same concerns as Model S — improved 2023+</td></tr><tr><td class="td-n">CR Reliability</td><td class="Below avg">td-bad</td><td style="font-size:.82rem;color:rgba(255,255,255,.4);">One of the lower-rated luxury SUVs per Consumer Reports</td></tr><tr><td class="td-n">Service Access</td><td class="Limited">td-warn</td><td style="font-size:.82rem;color:rgba(255,255,255,.4);">Complex vehicle requires Tesla-certified technicians</td></tr></tbody></table><span class="tbl-note">Source: Consumer Reports, J.D. Power. Verify current data before purchasing.</span><div class="callout"><div class="callout-label">Research Before Buying
-<div class="ov-mini-bar" id="rel-acc-insert"><div class="ov-mini-label">&#9733; Recommended Tools & Upgrades</div><div class="ov-mini-grid"><div class="ov-mini-card"><div class="ov-mini-name">OBD2 Scanner Bluetooth</div><div class="ov-mini-desc">Read engine codes from your phone.</div><a href="https://www.amazon.com/s?k=OBD2+bluetooth+scanner+diagnostic&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Tire Pressure Monitor</div><div class="ov-mini-desc">TPMS alert system for all 4 tires.</div><a href="https://www.amazon.com/s?k=TPMS+tire+pressure+monitoring+system&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Emergency Road Kit</div><div class="ov-mini-desc">Jumper cables, reflectors, first aid.</div><a href="https://www.amazon.com/s?k=car+emergency+roadside+kit&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Dash Cam Front & Rear</div><div class="ov-mini-desc">4K documentation for every drive.</div><a href="https://www.amazon.com/s?k=dash+cam+4K+front+rear&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div></div><div class="ov-mini-disc">Amazon affiliate links &mdash; small commission at no extra cost. <a href="affiliate-disclosure.html">Disclosure</a></div></div>
-</div><p>Consult <a href="https://www.consumerreports.org" target="_blank" rel="noopener">Consumer Reports</a>, <a href="https://www.jdpower.com" target="_blank" rel="noopener">J.D. Power</a>, and <a href="https://www.nhtsa.gov" target="_blank" rel="noopener">NHTSA</a> for your specific model year.</p></div></div>
-  <div class="section" id="recalls"><div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">08</span><h2 class="sec-title">Recalls</h2><div class="sec-rule"></div></div><div class="recall"><div class="recall-meta">NHTSA · 2024 · Includes Model X</div><div class="recall-title">Autopilot Driver Monitoring Update</div><div class="recall-body">OTA software update required. Verify current software in Tesla app.</div><span class="recall-status ota">OTA Update — Verify App</span></div><div class="recall"><div class="recall-meta">NHTSA · 2022 · ~2,200 Model X</div><div class="recall-title">Falcon-Wing Door May Open While Driving</div><div class="recall-body">Certain 2021–2022 Model X. Falcon-wing door may open unexpectedly while vehicle is in motion. Physical repair at Tesla Service Center required.</div><span class="recall-status physical">Physical Repair Required</span></div><div class="callout"><div class="callout-label">Check Your VIN</div><p>Verify all open recalls at <strong>nhtsa.gov/recalls</strong> using your 17-digit VIN.</p></div></div>
+
+</div><p>Consult <a href="https://www.consumerreports.org" target="_blank" rel="noopener">Consumer Reports</a>, <a href="https://www.jdpower.com" target="_blank" rel="noopener">J.D. Power</a>, and <a href="https://www.nhtsa.gov" target="_blank" rel="noopener">NHTSA</a> for your specific model year.</p></div>
+
+  <div class="ov-mini-bar" id="rel-acc-insert"><div class="ov-mini-label">&#9733; Recommended Tools & Upgrades</div><div class="ov-mini-grid"><div class="ov-mini-card"><div class="ov-mini-name">OBD2 Scanner Bluetooth</div><div class="ov-mini-desc">Read engine codes from your phone.</div><a href="https://www.amazon.com/s?k=OBD2+bluetooth+scanner+diagnostic&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Tire Pressure Monitor</div><div class="ov-mini-desc">TPMS alert system for all 4 tires.</div><a href="https://www.amazon.com/s?k=TPMS+tire+pressure+monitoring+system&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Emergency Road Kit</div><div class="ov-mini-desc">Jumper cables, reflectors, first aid.</div><a href="https://www.amazon.com/s?k=car+emergency+roadside+kit&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Dash Cam Front & Rear</div><div class="ov-mini-desc">4K documentation for every drive.</div><a href="https://www.amazon.com/s?k=dash+cam+4K+front+rear&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div></div><div class="ov-mini-disc">Amazon affiliate links &mdash; small commission at no extra cost. <a href="affiliate-disclosure.html">Disclosure</a></div></div></div>
+
+
+    <div class="section" id="recalls"><div class="sec-hdr"><div class="sec-slash"></div>
+  
+<div class="recalls-tools" id="recalls-tools">
+  <div class="recalls-filter-bar">
+    <span class="rf-label">&#128269; Filter Recalls</span>
+    <button class="rf-btn active" onclick="filterRecalls('all',this)">All</button>
+    <button class="rf-btn" onclick="filterRecalls('24mo',this)">Last 24 Months</button>
+    <button class="rf-btn" onclick="filterRecalls('ota',this)">OTA Fixes</button>
+    <button class="rf-btn" onclick="filterRecalls('physical',this)">Physical Repair</button>
+  </div>
+  <div class="vin-checker-box">
+    <div class="vin-checker-label">&#128203; Check Your VIN for Open Recalls</div>
+    <div class="vin-checker-input">
+      <input type="text" id="vinInput" placeholder="Enter 17-digit VIN&hellip;" maxlength="17" autocomplete="off" spellcheck="false">
+      <a id="vinCheckBtn" href="https://www.nhtsa.gov/vehicle/recalls" target="_blank" rel="noopener noreferrer" class="vin-check-btn">Check NHTSA &#x2192;</a>
+    </div>
+    <div class="vin-checker-note">Powered by NHTSA (nhtsa.gov) — free official recall lookup</div>
+  </div>
+</div><span class="sec-num">08</span><h2 class="sec-title">Recalls</h2><div class="sec-rule"></div></div><div class="recall"><div class="recall-meta">NHTSA · 2024 · Includes Model X</div><div class="recall-title">Autopilot Driver Monitoring Update</div><div class="recall-body">OTA software update required. Verify current software in Tesla app.</div><span class="recall-status ota">OTA Update — Verify App</span></div><div class="recall"><div class="recall-meta">NHTSA · 2022 · ~2,200 Model X</div><div class="recall-title">Falcon-Wing Door May Open While Driving</div><div class="recall-body">Certain 2021–2022 Model X. Falcon-wing door may open unexpectedly while vehicle is in motion. Physical repair at Tesla Service Center required.</div><span class="recall-status physical">Physical Repair Required</span></div><div class="callout"><div class="callout-label">Check Your VIN</div><p>Verify all open recalls at <strong>nhtsa.gov/recalls</strong> using your 17-digit VIN.</p></div></div>
   <div class="section" id="updates"><div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">09</span><h2 class="sec-title">Recent Updates</h2><div class="sec-rule"></div></div><div class="update-grid"><div class="update-card"><div class="uc-date">2021</div><div class="uc-title">Model X Redesigned — 17" Screen, Plaid</div><div class="uc-body">Complete interior redesign with 17" screen, revised falcon-wing door controls, Plaid powertrain option added.</div></div><div class="update-card"><div class="uc-date">2022</div><div class="uc-title">6-Seat Layout Available</div><div class="uc-body">New 6-seat configuration with individual captain's chairs in 2nd row — popular upgrade for families.</div></div><div class="update-card"><div class="uc-date">2025</div><div class="uc-title">Software — Falcon-Wing Door Improvements</div><div class="uc-body">OTA updates have progressively improved falcon-wing door reliability and reduced false sensor triggers.</div></div><div class="update-card"><div class="uc-date">2026</div><div class="uc-title">Long Range — 348 mi EPA Maintained</div><div class="uc-body">Long Range continues at 348 miles EPA — most of any full-size luxury EV SUV.</div></div></div></div>
-  <div class="section" id="proscons"><div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">10</span><h2 class="sec-title">Pros &amp; Cons</h2><div class="sec-rule"></div></div><div class="update-grid"><div class="update-card"><div class="uc-date" style="color:#2db37a;">Strengths</div><div class="uc-title">What Works Well</div><div class="uc-body"><strong>Falcon-wing doors</strong> — Unique, genuinely useful in tight parking — nothing else has them at production scale<br><br><strong>Best towing EV SUV</strong> — 5,000 lbs — more than any luxury EV SUV competitor<br><br><strong>Range leader</strong> — 348 mi EPA outpaces BMW X7 EV and Cadillac Escalade IQ projections<br><br><strong>7-seat configuration</strong> — Genuine 7-passenger capacity in a premium EV<br><br><strong>Supercharger access</strong> — Native NACS access to 45,000+ stalls<br><br></div></div><div class="update-card"><div class="uc-date" style="color:var(--red);">Weaknesses</div><div class="uc-title">Where It Falls Short</div><div class="uc-body"><strong>Falcon-wing door reliability</strong> — Well-documented failure points — primary ownership risk<br><br><strong>CR reliability below average</strong> — Lowest rated Tesla in Consumer Reports data<br><br><strong>No tax credit</strong> — Exceeds $80K SUV MSRP cap<br><br><strong>Service complexity</strong> — Requires specialized Tesla technicians<br><br><strong>High price</strong> — $84,990 base — limited competition but significant investment<br><br></div></div></div></div>
+  <div class="section" id="proscons"><div class="sec-hdr"><div class="sec-slash"></div>
+  <div class="deal-score-box" style="--deal-color:#f5a623">
+  <div class="deal-score-num">7<span style="font-size:1.5rem;color:rgba(255,255,255,.3)">/10</span></div>
+  <div class="deal-score-info">
+    <div class="deal-score-label">&#128200; Deal Score &mdash; March 2026</div>
+    <div class="deal-score-stars">★★★★★★★☆☆☆</div>
+    <div class="deal-score-note">Premium SUV — check Tesla.com for incentives</div>
+  </div>
+</div><span class="sec-num">10</span><h2 class="sec-title">Pros &amp; Cons</h2><div class="sec-rule"></div></div><div class="update-grid"><div class="update-card"><div class="uc-date" style="color:#2db37a;">Strengths</div><div class="uc-title">What Works Well</div><div class="uc-body"><strong>Falcon-wing doors</strong> — Unique, genuinely useful in tight parking — nothing else has them at production scale<br><br><strong>Best towing EV SUV</strong> — 5,000 lbs — more than any luxury EV SUV competitor<br><br><strong>Range leader</strong> — 348 mi EPA outpaces BMW X7 EV and Cadillac Escalade IQ projections<br><br><strong>7-seat configuration</strong> — Genuine 7-passenger capacity in a premium EV<br><br><strong>Supercharger access</strong> — Native NACS access to 45,000+ stalls<br><br></div></div><div class="update-card"><div class="uc-date" style="color:var(--red);">Weaknesses</div><div class="uc-title">Where It Falls Short</div><div class="uc-body"><strong>Falcon-wing door reliability</strong> — Well-documented failure points — primary ownership risk<br><br><strong>CR reliability below average</strong> — Lowest rated Tesla in Consumer Reports data<br><br><strong>No tax credit</strong> — Exceeds $80K SUV MSRP cap<br><br><strong>Service complexity</strong> — Requires specialized Tesla technicians<br><br><strong>High price</strong> — $84,990 base — limited competition but significant investment<br><br></div></div></div></div>
   <div class="section" id="faq"><div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">11</span><h2 class="sec-title">FAQ</h2><div class="sec-rule"></div></div><div class="faq-item open"><div class="faq-q">How do the Tesla Model X Falcon-wing doors work?</div><div class="faq-a">The Falcon-wing doors are rear passenger doors that open vertically upward, using articulated hinges that allow them to open with as little as 12 inches of clearance on each side. They use ultrasonic sensors to detect obstacles and adjust the opening angle automatically. They are powered and controlled via the touchscreen, key fob, or app.</div></div><div class="faq-item"><div class="faq-q">What is the Tesla Model X's towing capacity?</div><div class="faq-a">Both the Long Range and Plaid Model X are rated to tow up to 5,000 lbs — the highest of any luxury EV SUV. This covers most travel trailers and boat trailers. Expect 40–50% range reduction at maximum tow load; plan charging stops every 100–150 miles.</div></div><div class="faq-item"><div class="faq-q">Is the Falcon-wing door reliable?</div><div class="faq-a">It is the most documented reliability concern of the Model X. Sensor calibration issues, actuator failures, and door misalignment have been reported across multiple model years. Tesla has improved the system via OTA updates over time. If purchasing used, budget for potential door service.</div></div><div class="faq-item"><div class="faq-q">How does the Model X compare to the Cadillac Escalade IQ?</div><div class="faq-a">The Escalade IQ EV (expected 2026, ~$130K+) will offer an estimated 450+ miles range vs. Model X's 348 miles. The Escalade IQ has a more traditional luxury brand positioning and standard door system. The Model X has Falcon-wing doors, proven production history, and better charging infrastructure access.</div></div><div class="faq-item"><div class="faq-q">Does the Model X have three rows?</div><div class="faq-a">Yes — the Model X seats up to 7 passengers in a 3-row configuration (2+3+2) or 6 in a 2+2+2 captain's chair setup. The third row is more usable for adults than the Model Y's 3rd row. Cargo behind the third row is 11.1 cu ft, expanding to 87.6 cu ft with all seats folded.</div></div></div>
   
   <div class="faq-item"><div class="faq-q">Is the  a good value in 2026?</div><div class="faq-a">The  delivers competitive value in its segment. We recommend cross-shopping alternatives and checking current incentive programs before purchasing. Verify all current pricing and incentives with your local Tesla dealer.</div></div>
@@ -456,6 +832,34 @@ document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('clic
       }, true);
     }
   });
+})();
+</script>
+
+<style id="acb-parallax-wm">
+/* ── Parallax hero watermark ── */
+.hero-wm {
+  will-change: transform;
+  transition: transform .05s linear;
+}
+/* Position fix */
+.hero { overflow: hidden; }
+</style>
+<script id="acb-parallax-js">
+(function(){
+  var wm = document.querySelector('.hero-wm');
+  if (!wm) return;
+  var hero = document.querySelector('.hero');
+  if (!hero) return;
+  var heroTop = 0;
+  function updateHeroTop() { heroTop = hero.getBoundingClientRect().top + window.scrollY; }
+  updateHeroTop();
+  window.addEventListener('scroll', function(){
+    var scrolled = window.scrollY - heroTop;
+    if (scrolled < 400) {
+      wm.style.transform = 'translateY(' + (scrolled * 0.25) + 'px) translateX(0)';
+    }
+  }, { passive: true });
+  window.addEventListener('resize', updateHeroTop, { passive: true });
 })();
 </script>
 </body></html>

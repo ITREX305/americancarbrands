@@ -435,6 +435,339 @@ body { font-size: 1rem !important; line-height: 1.82 !important; }
 .acc-name { font-size: 1.05rem !important; font-weight: 700 !important; color: #fff !important; }
 .acc-desc { font-size: .92rem !important; color: rgba(255,255,255,.72) !important; }
 </style>
+
+<style id="acb-v11-master">
+
+/* ═══════════════════════════════════════════════
+   1. PREMIUM HERO SLASH — luxury gradient
+   ═══════════════════════════════════════════════ */
+.hero-slash {
+  background: linear-gradient(
+    155deg,
+    #8B0020 0%,
+    #CC0033 20%,
+    #E8003A 40%,
+    #FF1A3C 60%,
+    #CC0033 80%,
+    #6B0018 100%
+  ) !important;
+  box-shadow:
+    4px 0 40px rgba(255,26,60,.35),
+    8px 0 80px rgba(200,0,40,.2),
+    inset -20px 0 60px rgba(0,0,0,.3) !important;
+}
+.hero-slash::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(
+    160deg,
+    rgba(255,255,255,.12) 0%,
+    rgba(255,255,255,.04) 30%,
+    transparent 60%
+  ) !important;
+}
+.hero-slash::after {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: repeating-linear-gradient(
+    -65deg,
+    transparent, transparent 24px,
+    rgba(0,0,0,.07) 24px, rgba(0,0,0,.07) 25px
+  ) !important;
+}
+/* Also give page body a subtle luxury dark */
+body {
+  background: linear-gradient(180deg, #050508 0%, #070710 40%, #050508 100%) !important;
+  min-height: 100vh !important;
+}
+
+/* ═══════════════════════════════════════════════
+   2. GLASS EFFECT — Amazon affiliate cards
+   ═══════════════════════════════════════════════ */
+/* Main accessories section cards */
+.acc-card,
+.ov-mini-card,
+.ov-acc-card {
+  background: rgba(255,255,255,.04) !important;
+  backdrop-filter: blur(12px) saturate(1.4) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(1.4) !important;
+  border: 1px solid rgba(255,255,255,.12) !important;
+  box-shadow:
+    0 4px 16px rgba(0,0,0,.4),
+    inset 0 1px 0 rgba(255,255,255,.08) !important;
+  transition: all .2s ease !important;
+}
+.acc-card:hover,
+.ov-mini-card:hover {
+  background: rgba(255,255,255,.08) !important;
+  border-color: rgba(255,26,60,.4) !important;
+  box-shadow:
+    0 8px 32px rgba(255,26,60,.15),
+    0 4px 16px rgba(0,0,0,.5),
+    inset 0 1px 0 rgba(255,255,255,.12) !important;
+  transform: translateY(-2px) !important;
+}
+.acc-name, .ov-mini-name, .ov-acc-name {
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  font-family: 'Teko', sans-serif !important;
+  letter-spacing: .04em !important;
+}
+.acc-desc, .ov-mini-desc, .ov-acc-desc {
+  font-size: .92rem !important;
+  color: rgba(255,255,255,.72) !important;
+}
+/* acc-grid layout */
+.acc-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)) !important;
+  gap: 14px !important;
+}
+/* Mini 4-card grids */
+.ov-mini-grid, .ov-acc-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 10px !important;
+}
+@media(max-width:700px){
+  .ov-mini-grid, .ov-acc-grid { grid-template-columns: 1fr 1fr !important; }
+}
+/* Glass bar container */
+.ov-mini-bar, .ov-acc-bar {
+  margin: 24px 0 !important;
+  padding: 18px 20px !important;
+  background: rgba(255,255,255,.025) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
+  border-radius: 2px !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06) !important;
+}
+.ov-mini-label, .ov-acc-label {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-size: .72rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .2em !important;
+  text-transform: uppercase !important;
+  color: rgba(255,255,255,.45) !important;
+  margin-bottom: 12px !important;
+}
+.ov-mini-btn, .ov-acc-btn, .acc-btn {
+  background: rgba(26,26,46,.9) !important;
+  color: #FF9900 !important;
+  border: 1px solid rgba(255,153,0,.45) !important;
+  font-size: .78rem !important;
+  font-weight: 800 !important;
+  letter-spacing: .06em !important;
+  padding: 5px 12px !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  transition: all .15s !important;
+  margin-top: 6px !important;
+  font-family: 'Barlow Condensed', sans-serif !important;
+}
+.ov-mini-btn:hover, .ov-acc-btn:hover, .acc-btn:hover {
+  background: #FF9900 !important;
+  color: #000 !important;
+  border-color: #FF9900 !important;
+}
+
+/* ═══════════════════════════════════════════════
+   3. TRIM CARD / MODEL LINEUP — bigger fonts
+   ═══════════════════════════════════════════════ */
+/* Trim cards in section 02 */
+.tc-label {
+  font-size: .85rem !important;
+  font-weight: 700 !important;
+  color: rgba(255,255,255,.55) !important;
+  letter-spacing: .14em !important;
+}
+.tc-name {
+  font-size: 2.4rem !important;
+  line-height: 1 !important;
+  color: #fff !important;
+  font-family: 'Teko', sans-serif !important;
+}
+.tc-price {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  color: #FF1A3C !important;
+  font-family: 'Teko', sans-serif !important;
+}
+.tc-k {
+  font-size: .88rem !important;
+  color: rgba(255,255,255,.65) !important;
+  font-weight: 700 !important;
+}
+.tc-v {
+  font-size: 1.1rem !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+}
+.tc-v.good { color: #3de08a !important; }
+.tc-note {
+  font-size: .88rem !important;
+  color: rgba(255,255,255,.6) !important;
+  line-height: 1.5 !important;
+}
+/* Hero right trim stack */
+.hero-right-label {
+  font-size: .95rem !important;
+  font-weight: 700 !important;
+  color: rgba(255,255,255,.7) !important;
+  letter-spacing: .2em !important;
+  text-transform: uppercase !important;
+  font-family: 'Barlow Condensed', sans-serif !important;
+}
+.tr-name {
+  font-size: 1.55rem !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  font-family: 'Teko', sans-serif !important;
+  line-height: 1 !important;
+}
+.tr-price {
+  font-size: 1.3rem !important;
+  color: #FF1A3C !important;
+  font-family: 'Teko', sans-serif !important;
+  line-height: 1 !important;
+}
+
+/* ═══════════════════════════════════════════════
+   BONUS: Premium section styling
+   ═══════════════════════════════════════════════ */
+.trim-card {
+  border: 1px solid rgba(255,255,255,.1) !important;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,.04) 0%,
+    rgba(255,255,255,.02) 50%,
+    rgba(0,0,0,.3) 100%
+  ) !important;
+  backdrop-filter: blur(4px) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06) !important;
+  transition: all .2s !important;
+}
+.trim-card:hover, .trim-card.featured {
+  border-color: rgba(255,26,60,.5) !important;
+  background: linear-gradient(
+    135deg,
+    rgba(255,26,60,.08) 0%,
+    rgba(255,26,60,.03) 50%,
+    rgba(0,0,0,.3) 100%
+  ) !important;
+  box-shadow:
+    0 4px 20px rgba(255,26,60,.12),
+    inset 0 1px 0 rgba(255,255,255,.1) !important;
+}
+
+/* Model bar premium */
+.mbar-tab {
+  border-bottom: 3px solid transparent !important;
+  transition: all .15s !important;
+}
+.mbar-tab.active {
+  border-bottom-color: #FF1A3C !important;
+  background: linear-gradient(180deg, rgba(255,26,60,.1) 0%, transparent 100%) !important;
+}
+.mbar-name {
+  font-size: 1.12rem !important;
+  font-weight: 700 !important;
+  color: rgba(255,255,255,.92) !important;
+  letter-spacing: .06em !important;
+}
+.mbar-price {
+  font-size: .82rem !important;
+  font-weight: 600 !important;
+}
+</style>
+<style id="acb-brand-color">
+/* Brand-specific hero color: ford */
+.hero-slash {
+  background: linear-gradient(155deg,#001a5c 0%,#003087 40%,#0044b8 70%,#003087 100%) !important;
+  box-shadow: 4px 0 40px rgba(0,48,135,.5), 8px 0 80px rgba(0,0,0,.3), inset -20px 0 60px rgba(0,0,0,.25) !important;
+}
+.hero-slash::before {
+  content:'' !important; position:absolute !important; inset:0 !important;
+  background:linear-gradient(160deg,rgba(255,255,255,.1) 0%,rgba(255,255,255,.03) 35%,transparent 60%) !important;
+}
+.sec-slash { background: #003087 !important; box-shadow: 0 0 8px rgba(0,48,135,.5) !important; }
+.mbar-tab.active { border-bottom-color: #003087 !important; }
+.mbar-tab.active::before { background:linear-gradient(90deg,rgba(0,48,135,,.15),transparent) !important; }
+.mbar-brand { color: #003087 !important; }
+.back-top { background: #003087 !important; }
+.snap-box { border-bottom-color: #003087 !important; }
+.hero-badge.red, .hero-badge { background: #003087 !important; }
+</style><style id="acb-ov-acc-upgrade">
+.ov-full-acc { margin: 0 0 32px; padding: 20px 0; border-top: 1px solid rgba(255,255,255,.08); border-bottom: 1px solid rgba(255,255,255,.08); }
+.ov-full-acc .ov-acc-head { display:flex; align-items:center; gap:10px; margin-bottom:16px; }
+.ov-full-acc .ov-acc-label { font-family:'Barlow Condensed',sans-serif; font-size:.72rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.ov-full-acc .acc-grid { grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); }
+</style><style id="acb-recalls-tools">
+.recalls-tools{margin-bottom:20px;}
+.recalls-filter-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:14px;}
+.rf-label{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-right:4px;}
+.rf-btn{background:transparent;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;cursor:pointer;transition:all .15s;}
+.rf-btn:hover,.rf-btn.active{background:rgba(255,26,60,.15);color:#fff;border-color:rgba(255,26,60,.4);}
+.vin-checker-box{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);padding:14px 16px;border-left:3px solid rgba(255,26,60,.6);}
+.vin-checker-label{font-family:'Barlow Condensed',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:10px;}
+.vin-checker-input{display:flex;gap:8px;flex-wrap:wrap;}
+#vinInput{flex:1;min-width:200px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:.12em;padding:8px 12px;text-transform:uppercase;outline:none;}
+#vinInput:focus{border-color:rgba(255,26,60,.5);background:rgba(255,26,60,.06);}
+.vin-check-btn{background:rgba(255,26,60,.2);color:#fff;border:1px solid rgba(255,26,60,.4);font-family:'Barlow Condensed',sans-serif;font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:8px 18px;text-decoration:none;transition:all .15s;white-space:nowrap;}
+.vin-check-btn:hover{background:#E31937;border-color:#E31937;}
+.vin-checker-note{font-size:.68rem;color:rgba(255,255,255,.25);margin-top:6px;}
+.recall.hidden{display:none;}
+</style>
+<script id="acb-recalls-js">
+(function(){
+  var vinBtn=document.getElementById('vinCheckBtn');
+  var vinInput=document.getElementById('vinInput');
+  if(vinInput&&vinBtn){
+    vinInput.addEventListener('input',function(){
+      var v=this.value.replace(/[^A-HJ-NPR-Z0-9]/gi,'').toUpperCase().slice(0,17);
+      this.value=v;
+      if(v.length===17){
+        vinBtn.href='https://www.nhtsa.gov/vehicle/recalls#'+v;
+        vinBtn.textContent='Check '+v+' →';
+      } else {
+        vinBtn.href='https://www.nhtsa.gov/vehicle/recalls';
+        vinBtn.textContent='Check NHTSA →';
+      }
+    });
+  }
+  window.filterRecalls=function(type,btn){
+    document.querySelectorAll('.rf-btn').forEach(function(b){b.classList.remove('active');});
+    btn.classList.add('active');
+    document.querySelectorAll('.recall').forEach(function(r){
+      if(type==='all'){r.classList.remove('hidden');}
+      else if(type==='24mo'){
+        var meta=r.querySelector('.recall-meta');
+        if(!meta){r.classList.add('hidden');return;}
+        var yr=parseInt(meta.textContent);
+        r.classList.toggle('hidden', isNaN(yr)||yr<2024);
+      }
+      else if(type==='ota'){r.classList.toggle('hidden',!r.querySelector('.ota'));}
+      else if(type==='physical'){r.classList.toggle('hidden',!r.querySelector('.physical'));}
+    });
+  };
+})();
+</script><style id="acb-deal-score">
+.deal-score-box{background:linear-gradient(135deg,rgba(255,255,255,.04) 0%,rgba(255,255,255,.02) 100%);border:1px solid rgba(255,255,255,.1);border-left:4px solid var(--deal-color,#FF9900);padding:14px 18px;margin:20px 0;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+.deal-score-num{font-family:'Teko',sans-serif;font-size:3rem;font-weight:700;color:var(--deal-color,#FF9900);line-height:1;min-width:48px;}
+.deal-score-info{flex:1;}
+.deal-score-label{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:4px;}
+.deal-score-stars{font-size:1.1rem;color:var(--deal-color,#FF9900);letter-spacing:.05em;margin-bottom:4px;}
+.deal-score-note{font-family:'Barlow',sans-serif;font-size:.9rem;color:rgba(255,255,255,.68);line-height:1.5;}
+</style><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":'What is the 2026 Ford Bronco starting price?',"acceptedAnswer":{"@type":"Answer","text":'The base 2-door Bronco starts at $36,995. The 4-door starts at $40,495. The Raptor starts at $74,995. Prices exclude destination (~$1,695).'}},
+{"@type":"Question","name":'Do the doors really come off the Bronco?',"acceptedAnswer":{"@type":"Answer","text":'Yes — all doors are removable on every Bronco trim. The windshield also folds flat. The modular hardtop (or soft top) also removes for full open-air driving.'}},
+{"@type":"Question","name":'What are GOAT modes?',"acceptedAnswer":{"@type":"Answer","text":'GOAT stands for "Goes Over Any Type of Terrain." Seven drive modes — Normal, Eco, Sport, Slippery, Sand, Baja, and Rock Crawl — optimize throttle, traction, and 4WD for specific conditions.'}},
+{"@type":"Question","name":'How does the Bronco compare to Jeep Wrangler?',"acceptedAnswer":{"@type":"Answer","text":'The Bronco has better ground clearance, approach/breakover angles, and more terrain modes. The Wrangler has a larger aftermarket, iconic looks, and a simpler soft-top system. Both are excellent off-roaders.'}},
+{"@type":"Question","name":'What is the Sasquatch Package?',"acceptedAnswer":{"@type":"Answer","text":'The Sasquatch Package adds 35-inch mud-terrain tires on beadlock-capable wheels, a lifted suspension, wider fenders, and electronic front and rear locking differentials. It is available on most trims.'}},
+{"@type":"Question","name":'Is the  a good value in 2026?',"acceptedAnswer":{"@type":"Answer","text":'The  delivers competitive value in its segment. We recommend cross-shopping alternatives and checking current incentive programs before purchasing. Verify all current pricing and incentives with your local Ford dealer.'}}]}</script>
 </head>
 <a href="#" class="back-top" id="backTop">↑</a>
 <div class="font-bar">
@@ -536,10 +869,23 @@ body { font-size: 1rem !important; line-height: 1.82 !important; }
       <p>vs. Wrangler</p>
     </div>
     <div class="stat-row"><div class="stat-box"><div class="sb-v">418 hp</div><div class="sb-l">Raptor V6</div></div><div class="stat-box"><div class="sb-v">11.6″</div><div class="sb-l">Badlands Clearance</div></div><div class="stat-box"><div class="sb-v">37″</div><div class="sb-l">Raptor Tires</div></div><div class="stat-box"><div class="sb-v">43.2°</div><div class="sb-l">Approach Angle
-<div class="ov-mini-bar" id="ov-acc-insert"><div class="ov-mini-label">&#9733; Popular Accessories</div><div class="ov-mini-grid"><div class="ov-mini-card"><div class="ov-mini-name">F-150 Floor Mats</div><div class="ov-mini-desc">Top-rated all-weather mats.</div><a href="https://www.amazon.com/s?k=Ford+F150+floor+mats&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Dash Cam 4K</div><div class="ov-mini-desc">Front/rear cameras.</div><a href="https://www.amazon.com/s?k=Ford+dash+cam+4K&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Seat Covers</div><div class="ov-mini-desc">Premium protection.</div><a href="https://www.amazon.com/s?k=Ford+seat+covers&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Car Cover</div><div class="ov-mini-desc">All-weather storage.</div><a href="https://www.amazon.com/s?k=Ford+car+cover&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div></div><div class="ov-mini-disc">Amazon affiliate links &mdash; small commission at no extra cost. <a href="affiliate-disclosure.html">Disclosure</a></div></div>
+
 </div></div></div>
     
   </div>
+
+  <div class="ov-full-acc" id="ov-acc-insert">
+  <div class="ov-acc-head"><span class="ov-acc-label">&#9733; Popular  Accessories</span></div>
+  <div class="acc-grid">
+      <div class="acc-card"><div class="acc-name">Floor Mats</div><div class="acc-desc">Heavy-duty all-weather.</div><a href="https://www.amazon.com/s?k=Ford+floor+mats+all+weather&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
+      <div class="acc-card"><div class="acc-name">Dash Cam 4K</div><div class="acc-desc">4K front/rear documentation.</div><a href="https://www.amazon.com/s?k=Ford+dash+cam+4K&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
+      <div class="acc-card"><div class="acc-name">Seat Covers</div><div class="acc-desc">Durable seat protection.</div><a href="https://www.amazon.com/s?k=Ford+seat+covers&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
+      <div class="acc-card"><div class="acc-name">Bed Liner</div><div class="acc-desc">Spray or drop-in bed protection.</div><a href="https://www.amazon.com/s?k=Ford+F150+bed+liner&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
+      <div class="acc-card"><div class="acc-name">Running Boards</div><div class="acc-desc">Side entry steps.</div><a href="https://www.amazon.com/s?k=Ford+F150+running+boards&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
+      <div class="acc-card"><div class="acc-name">Tonneau Cover</div><div class="acc-desc">Bed cover for security.</div><a href="https://www.amazon.com/s?k=Ford+F150+tonneau+cover&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
+  </div>
+  <p style="font-size:.72rem;color:rgba(255,255,255,.25);margin-top:8px;">Amazon affiliate links &mdash; small commission at no extra cost. <a href="affiliate-disclosure.html" style="color:rgba(255,255,255,.35);">Disclosure</a></p>
+</div>
 
   <div class="section" id="trims">
     <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">02</span><h2 class="sec-title">2026 Trims & Pricing</h2><div class="sec-rule"></div></div>
@@ -620,14 +966,36 @@ body { font-size: 1rem !important; line-height: 1.82 !important; }
     <span class="tbl-note">Sources: Consumer Reports, J.D. Power, NHTSA, owner surveys. Verify current data at consumerreports.org before purchasing.</span>
     <div class="callout">
       <div class="callout-label">Research Before Purchasing
-<div class="ov-mini-bar" id="rel-acc-insert"><div class="ov-mini-label">&#9733; Recommended Tools & Upgrades</div><div class="ov-mini-grid"><div class="ov-mini-card"><div class="ov-mini-name">OBD2 Scanner Bluetooth</div><div class="ov-mini-desc">Read engine codes from your phone.</div><a href="https://www.amazon.com/s?k=OBD2+bluetooth+scanner+diagnostic&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Tire Pressure Monitor</div><div class="ov-mini-desc">TPMS alert system for all 4 tires.</div><a href="https://www.amazon.com/s?k=TPMS+tire+pressure+monitoring+system&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Emergency Road Kit</div><div class="ov-mini-desc">Jumper cables, reflectors, first aid.</div><a href="https://www.amazon.com/s?k=car+emergency+roadside+kit&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Dash Cam Front & Rear</div><div class="ov-mini-desc">4K documentation for every drive.</div><a href="https://www.amazon.com/s?k=dash+cam+4K+front+rear&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div></div><div class="ov-mini-disc">Amazon affiliate links &mdash; small commission at no extra cost. <a href="affiliate-disclosure.html">Disclosure</a></div></div>
+
 </div>
       <p>Consult <a href="https://consumerreports.org" target="_blank">Consumer Reports</a>, <a href="https://jdpower.com" target="_blank">J.D. Power</a>, and <a href="https://nhtsa.gov" target="_blank">NHTSA</a> for the specific model year you are considering. Build year matters significantly.</p>
     </div>
+
+  <div class="ov-mini-bar" id="rel-acc-insert"><div class="ov-mini-label">&#9733; Recommended Tools & Upgrades</div><div class="ov-mini-grid"><div class="ov-mini-card"><div class="ov-mini-name">OBD2 Scanner Bluetooth</div><div class="ov-mini-desc">Read engine codes from your phone.</div><a href="https://www.amazon.com/s?k=OBD2+bluetooth+scanner+diagnostic&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Tire Pressure Monitor</div><div class="ov-mini-desc">TPMS alert system for all 4 tires.</div><a href="https://www.amazon.com/s?k=TPMS+tire+pressure+monitoring+system&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Emergency Road Kit</div><div class="ov-mini-desc">Jumper cables, reflectors, first aid.</div><a href="https://www.amazon.com/s?k=car+emergency+roadside+kit&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Dash Cam Front & Rear</div><div class="ov-mini-desc">4K documentation for every drive.</div><a href="https://www.amazon.com/s?k=dash+cam+4K+front+rear&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div></div><div class="ov-mini-disc">Amazon affiliate links &mdash; small commission at no extra cost. <a href="affiliate-disclosure.html">Disclosure</a></div></div>
+
+  
   </div>
 
   <div class="section" id="recalls">
-    <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">08</span><h2 class="sec-title">Recalls</h2><div class="sec-rule"></div></div>
+    <div class="sec-hdr"><div class="sec-slash"></div>
+  
+<div class="recalls-tools" id="recalls-tools">
+  <div class="recalls-filter-bar">
+    <span class="rf-label">&#128269; Filter Recalls</span>
+    <button class="rf-btn active" onclick="filterRecalls('all',this)">All</button>
+    <button class="rf-btn" onclick="filterRecalls('24mo',this)">Last 24 Months</button>
+    <button class="rf-btn" onclick="filterRecalls('ota',this)">OTA Fixes</button>
+    <button class="rf-btn" onclick="filterRecalls('physical',this)">Physical Repair</button>
+  </div>
+  <div class="vin-checker-box">
+    <div class="vin-checker-label">&#128203; Check Your VIN for Open Recalls</div>
+    <div class="vin-checker-input">
+      <input type="text" id="vinInput" placeholder="Enter 17-digit VIN&hellip;" maxlength="17" autocomplete="off" spellcheck="false">
+      <a id="vinCheckBtn" href="https://www.nhtsa.gov/vehicle/recalls" target="_blank" rel="noopener noreferrer" class="vin-check-btn">Check NHTSA &#x2192;</a>
+    </div>
+    <div class="vin-checker-note">Powered by NHTSA (nhtsa.gov) — free official recall lookup</div>
+  </div>
+</div><span class="sec-num">08</span><h2 class="sec-title">Recalls</h2><div class="sec-rule"></div></div>
     <div class="recall">
       <div class="recall-meta">2024</div>
       <div class="recall-title">2024</div>
@@ -656,7 +1024,15 @@ body { font-size: 1rem !important; line-height: 1.82 !important; }
   </div>
 
   <div class="section" id="proscons">
-    <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">10</span><h2 class="sec-title">Pros &amp; Cons</h2><div class="sec-rule"></div></div>
+    <div class="sec-hdr"><div class="sec-slash"></div>
+  <div class="deal-score-box" style="--deal-color:#f5a623">
+  <div class="deal-score-num">7<span style="font-size:1.5rem;color:rgba(255,255,255,.3)">/10</span></div>
+  <div class="deal-score-info">
+    <div class="deal-score-label">&#128200; Deal Score &mdash; March 2026</div>
+    <div class="deal-score-stars">★★★★★★★☆☆☆</div>
+    <div class="deal-score-note">Verify current incentives and dealer availability before purchasing</div>
+  </div>
+</div><span class="sec-num">10</span><h2 class="sec-title">Pros &amp; Cons</h2><div class="sec-rule"></div></div>
     <div class="update-grid">
       <div class="update-card">
         <div class="uc-date" style="color:#2db37a;">Strengths</div>
@@ -826,6 +1202,34 @@ document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('clic
       }, true);
     }
   });
+})();
+</script>
+
+<style id="acb-parallax-wm">
+/* ── Parallax hero watermark ── */
+.hero-wm {
+  will-change: transform;
+  transition: transform .05s linear;
+}
+/* Position fix */
+.hero { overflow: hidden; }
+</style>
+<script id="acb-parallax-js">
+(function(){
+  var wm = document.querySelector('.hero-wm');
+  if (!wm) return;
+  var hero = document.querySelector('.hero');
+  if (!hero) return;
+  var heroTop = 0;
+  function updateHeroTop() { heroTop = hero.getBoundingClientRect().top + window.scrollY; }
+  updateHeroTop();
+  window.addEventListener('scroll', function(){
+    var scrolled = window.scrollY - heroTop;
+    if (scrolled < 400) {
+      wm.style.transform = 'translateY(' + (scrolled * 0.25) + 'px) translateX(0)';
+    }
+  }, { passive: true });
+  window.addEventListener('resize', updateHeroTop, { passive: true });
 })();
 </script>
 </body>

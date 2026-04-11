@@ -327,11 +327,387 @@ body { font-size: 1rem !important; line-height: 1.82 !important; }
 .acc-name { font-size: 1.05rem !important; font-weight: 700 !important; color: #fff !important; }
 .acc-desc { font-size: .92rem !important; color: rgba(255,255,255,.72) !important; }
 </style>
+
+<style id="acb-v11-master">
+
+/* ═══════════════════════════════════════════════
+   1. PREMIUM HERO SLASH — luxury gradient
+   ═══════════════════════════════════════════════ */
+.hero-slash {
+  background: linear-gradient(
+    155deg,
+    #8B0020 0%,
+    #CC0033 20%,
+    #E8003A 40%,
+    #FF1A3C 60%,
+    #CC0033 80%,
+    #6B0018 100%
+  ) !important;
+  box-shadow:
+    4px 0 40px rgba(255,26,60,.35),
+    8px 0 80px rgba(200,0,40,.2),
+    inset -20px 0 60px rgba(0,0,0,.3) !important;
+}
+.hero-slash::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(
+    160deg,
+    rgba(255,255,255,.12) 0%,
+    rgba(255,255,255,.04) 30%,
+    transparent 60%
+  ) !important;
+}
+.hero-slash::after {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: repeating-linear-gradient(
+    -65deg,
+    transparent, transparent 24px,
+    rgba(0,0,0,.07) 24px, rgba(0,0,0,.07) 25px
+  ) !important;
+}
+/* Also give page body a subtle luxury dark */
+body {
+  background: linear-gradient(180deg, #050508 0%, #070710 40%, #050508 100%) !important;
+  min-height: 100vh !important;
+}
+
+/* ═══════════════════════════════════════════════
+   2. GLASS EFFECT — Amazon affiliate cards
+   ═══════════════════════════════════════════════ */
+/* Main accessories section cards */
+.acc-card,
+.ov-mini-card,
+.ov-acc-card {
+  background: rgba(255,255,255,.04) !important;
+  backdrop-filter: blur(12px) saturate(1.4) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(1.4) !important;
+  border: 1px solid rgba(255,255,255,.12) !important;
+  box-shadow:
+    0 4px 16px rgba(0,0,0,.4),
+    inset 0 1px 0 rgba(255,255,255,.08) !important;
+  transition: all .2s ease !important;
+}
+.acc-card:hover,
+.ov-mini-card:hover {
+  background: rgba(255,255,255,.08) !important;
+  border-color: rgba(255,26,60,.4) !important;
+  box-shadow:
+    0 8px 32px rgba(255,26,60,.15),
+    0 4px 16px rgba(0,0,0,.5),
+    inset 0 1px 0 rgba(255,255,255,.12) !important;
+  transform: translateY(-2px) !important;
+}
+.acc-name, .ov-mini-name, .ov-acc-name {
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  font-family: 'Teko', sans-serif !important;
+  letter-spacing: .04em !important;
+}
+.acc-desc, .ov-mini-desc, .ov-acc-desc {
+  font-size: .92rem !important;
+  color: rgba(255,255,255,.72) !important;
+}
+/* acc-grid layout */
+.acc-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)) !important;
+  gap: 14px !important;
+}
+/* Mini 4-card grids */
+.ov-mini-grid, .ov-acc-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 10px !important;
+}
+@media(max-width:700px){
+  .ov-mini-grid, .ov-acc-grid { grid-template-columns: 1fr 1fr !important; }
+}
+/* Glass bar container */
+.ov-mini-bar, .ov-acc-bar {
+  margin: 24px 0 !important;
+  padding: 18px 20px !important;
+  background: rgba(255,255,255,.025) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
+  border-radius: 2px !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06) !important;
+}
+.ov-mini-label, .ov-acc-label {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-size: .72rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .2em !important;
+  text-transform: uppercase !important;
+  color: rgba(255,255,255,.45) !important;
+  margin-bottom: 12px !important;
+}
+.ov-mini-btn, .ov-acc-btn, .acc-btn {
+  background: rgba(26,26,46,.9) !important;
+  color: #FF9900 !important;
+  border: 1px solid rgba(255,153,0,.45) !important;
+  font-size: .78rem !important;
+  font-weight: 800 !important;
+  letter-spacing: .06em !important;
+  padding: 5px 12px !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  transition: all .15s !important;
+  margin-top: 6px !important;
+  font-family: 'Barlow Condensed', sans-serif !important;
+}
+.ov-mini-btn:hover, .ov-acc-btn:hover, .acc-btn:hover {
+  background: #FF9900 !important;
+  color: #000 !important;
+  border-color: #FF9900 !important;
+}
+
+/* ═══════════════════════════════════════════════
+   3. TRIM CARD / MODEL LINEUP — bigger fonts
+   ═══════════════════════════════════════════════ */
+/* Trim cards in section 02 */
+.tc-label {
+  font-size: .85rem !important;
+  font-weight: 700 !important;
+  color: rgba(255,255,255,.55) !important;
+  letter-spacing: .14em !important;
+}
+.tc-name {
+  font-size: 2.4rem !important;
+  line-height: 1 !important;
+  color: #fff !important;
+  font-family: 'Teko', sans-serif !important;
+}
+.tc-price {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  color: #FF1A3C !important;
+  font-family: 'Teko', sans-serif !important;
+}
+.tc-k {
+  font-size: .88rem !important;
+  color: rgba(255,255,255,.65) !important;
+  font-weight: 700 !important;
+}
+.tc-v {
+  font-size: 1.1rem !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+}
+.tc-v.good { color: #3de08a !important; }
+.tc-note {
+  font-size: .88rem !important;
+  color: rgba(255,255,255,.6) !important;
+  line-height: 1.5 !important;
+}
+/* Hero right trim stack */
+.hero-right-label {
+  font-size: .95rem !important;
+  font-weight: 700 !important;
+  color: rgba(255,255,255,.7) !important;
+  letter-spacing: .2em !important;
+  text-transform: uppercase !important;
+  font-family: 'Barlow Condensed', sans-serif !important;
+}
+.tr-name {
+  font-size: 1.55rem !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  font-family: 'Teko', sans-serif !important;
+  line-height: 1 !important;
+}
+.tr-price {
+  font-size: 1.3rem !important;
+  color: #FF1A3C !important;
+  font-family: 'Teko', sans-serif !important;
+  line-height: 1 !important;
+}
+
+/* ═══════════════════════════════════════════════
+   BONUS: Premium section styling
+   ═══════════════════════════════════════════════ */
+.trim-card {
+  border: 1px solid rgba(255,255,255,.1) !important;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,.04) 0%,
+    rgba(255,255,255,.02) 50%,
+    rgba(0,0,0,.3) 100%
+  ) !important;
+  backdrop-filter: blur(4px) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06) !important;
+  transition: all .2s !important;
+}
+.trim-card:hover, .trim-card.featured {
+  border-color: rgba(255,26,60,.5) !important;
+  background: linear-gradient(
+    135deg,
+    rgba(255,26,60,.08) 0%,
+    rgba(255,26,60,.03) 50%,
+    rgba(0,0,0,.3) 100%
+  ) !important;
+  box-shadow:
+    0 4px 20px rgba(255,26,60,.12),
+    inset 0 1px 0 rgba(255,255,255,.1) !important;
+}
+
+/* Model bar premium */
+.mbar-tab {
+  border-bottom: 3px solid transparent !important;
+  transition: all .15s !important;
+}
+.mbar-tab.active {
+  border-bottom-color: #FF1A3C !important;
+  background: linear-gradient(180deg, rgba(255,26,60,.1) 0%, transparent 100%) !important;
+}
+.mbar-name {
+  font-size: 1.12rem !important;
+  font-weight: 700 !important;
+  color: rgba(255,255,255,.92) !important;
+  letter-spacing: .06em !important;
+}
+.mbar-price {
+  font-size: .82rem !important;
+  font-weight: 600 !important;
+}
+</style>
+<style id="acb-brand-color">
+/* Brand-specific hero color: roush */
+.hero-slash {
+  background: linear-gradient(155deg,#8B0015 0%,#D42B2B 40%,#f03030 70%,#D42B2B 100%) !important;
+  box-shadow: 4px 0 40px rgba(212,43,43,.5), 8px 0 80px rgba(0,0,0,.3), inset -20px 0 60px rgba(0,0,0,.25) !important;
+}
+.hero-slash::before {
+  content:'' !important; position:absolute !important; inset:0 !important;
+  background:linear-gradient(160deg,rgba(255,255,255,.1) 0%,rgba(255,255,255,.03) 35%,transparent 60%) !important;
+}
+.sec-slash { background: #D42B2B !important; box-shadow: 0 0 8px rgba(212,43,43,.5) !important; }
+.mbar-tab.active { border-bottom-color: #D42B2B !important; }
+.mbar-tab.active::before { background:linear-gradient(90deg,rgba(212,43,43,,.15),transparent) !important; }
+.mbar-brand { color: #D42B2B !important; }
+.back-top { background: #D42B2B !important; }
+.snap-box { border-bottom-color: #D42B2B !important; }
+.hero-badge.red, .hero-badge { background: #D42B2B !important; }
+</style><style id="acb-ov-acc-upgrade">
+.ov-full-acc { margin: 0 0 32px; padding: 20px 0; border-top: 1px solid rgba(255,255,255,.08); border-bottom: 1px solid rgba(255,255,255,.08); }
+.ov-full-acc .ov-acc-head { display:flex; align-items:center; gap:10px; margin-bottom:16px; }
+.ov-full-acc .ov-acc-label { font-family:'Barlow Condensed',sans-serif; font-size:.72rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.ov-full-acc .acc-grid { grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); }
+</style><style id="acb-recalls-tools">
+.recalls-tools{margin-bottom:20px;}
+.recalls-filter-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:14px;}
+.rf-label{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-right:4px;}
+.rf-btn{background:transparent;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;cursor:pointer;transition:all .15s;}
+.rf-btn:hover,.rf-btn.active{background:rgba(255,26,60,.15);color:#fff;border-color:rgba(255,26,60,.4);}
+.vin-checker-box{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);padding:14px 16px;border-left:3px solid rgba(255,26,60,.6);}
+.vin-checker-label{font-family:'Barlow Condensed',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:10px;}
+.vin-checker-input{display:flex;gap:8px;flex-wrap:wrap;}
+#vinInput{flex:1;min-width:200px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:.12em;padding:8px 12px;text-transform:uppercase;outline:none;}
+#vinInput:focus{border-color:rgba(255,26,60,.5);background:rgba(255,26,60,.06);}
+.vin-check-btn{background:rgba(255,26,60,.2);color:#fff;border:1px solid rgba(255,26,60,.4);font-family:'Barlow Condensed',sans-serif;font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:8px 18px;text-decoration:none;transition:all .15s;white-space:nowrap;}
+.vin-check-btn:hover{background:#E31937;border-color:#E31937;}
+.vin-checker-note{font-size:.68rem;color:rgba(255,255,255,.25);margin-top:6px;}
+.recall.hidden{display:none;}
+</style>
+<script id="acb-recalls-js">
+(function(){
+  var vinBtn=document.getElementById('vinCheckBtn');
+  var vinInput=document.getElementById('vinInput');
+  if(vinInput&&vinBtn){
+    vinInput.addEventListener('input',function(){
+      var v=this.value.replace(/[^A-HJ-NPR-Z0-9]/gi,'').toUpperCase().slice(0,17);
+      this.value=v;
+      if(v.length===17){
+        vinBtn.href='https://www.nhtsa.gov/vehicle/recalls#'+v;
+        vinBtn.textContent='Check '+v+' →';
+      } else {
+        vinBtn.href='https://www.nhtsa.gov/vehicle/recalls';
+        vinBtn.textContent='Check NHTSA →';
+      }
+    });
+  }
+  window.filterRecalls=function(type,btn){
+    document.querySelectorAll('.rf-btn').forEach(function(b){b.classList.remove('active');});
+    btn.classList.add('active');
+    document.querySelectorAll('.recall').forEach(function(r){
+      if(type==='all'){r.classList.remove('hidden');}
+      else if(type==='24mo'){
+        var meta=r.querySelector('.recall-meta');
+        if(!meta){r.classList.add('hidden');return;}
+        var yr=parseInt(meta.textContent);
+        r.classList.toggle('hidden', isNaN(yr)||yr<2024);
+      }
+      else if(type==='ota'){r.classList.toggle('hidden',!r.querySelector('.ota'));}
+      else if(type==='physical'){r.classList.toggle('hidden',!r.querySelector('.physical'));}
+    });
+  };
+})();
+</script><style id="acb-deal-score">
+.deal-score-box{background:linear-gradient(135deg,rgba(255,255,255,.04) 0%,rgba(255,255,255,.02) 100%);border:1px solid rgba(255,255,255,.1);border-left:4px solid var(--deal-color,#FF9900);padding:14px 18px;margin:20px 0;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+.deal-score-num{font-family:'Teko',sans-serif;font-size:3rem;font-weight:700;color:var(--deal-color,#FF9900);line-height:1;min-width:48px;}
+.deal-score-info{flex:1;}
+.deal-score-label{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:4px;}
+.deal-score-stars{font-size:1.1rem;color:var(--deal-color,#FF9900);letter-spacing:.05em;margin-bottom:4px;}
+.deal-score-note{font-family:'Barlow',sans-serif;font-size:.9rem;color:rgba(255,255,255,.68);line-height:1.5;}
+</style><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":'What is Roush Performance?',"acceptedAnswer":{"@type":"Answer","text":'Founded by Jack Roush in 1995 in Livonia, Michigan — backed by 5 NASCAR Cup championships.'}},
+{"@type":"Question","name":'How to order?',"acceptedAnswer":{"@type":"Answer","text":'Contact roushperformance.com.'}},
+{"@type":"Question","name":'Street legal?',"acceptedAnswer":{"@type":"Answer","text":'Yes.'}},
+{"@type":"Question","name":'Affects Ford warranty?',"acceptedAnswer":{"@type":"Answer","text":'Roush works to maintain warranty — verify with Roush.'}},
+{"@type":"Question","name":'Roush vs Shelby?',"acceptedAnswer":{"@type":"Answer","text":'Both build documented Mustangs. Shelby heritage since 1962; Roush brings NASCAR championship credibility.'}},
+{"@type":"Question","name":'Where built?',"acceptedAnswer":{"@type":"Answer","text":'Livonia, Michigan.'}}]}</script>
 </head><body><a href="#" class="back-top" id="backTop">&#8593;</a><div class="font-bar"><button class="fs-btn" id="fsInc">A+</button><button class="fs-btn" id="fsDec">A&#8722;</button></div><div class="disc-bar"><span>Not affiliated with Roush. <a href="disclaimer.html">Disclaimer</a> &middot; March 2026</span></div><nav class="site-nav"><div class="snav-inner"><a href="index.html" class="snav-logo"><span class="snav-logo-slash">ACB</span><span class="snav-logo-text">AmericanCarBrands</span></a><div class="snav-links"><a href="ford.html" class="snav-link">Ford</a><a href="chevrolet.html" class="snav-link">Chevrolet</a><a href="tesla.html" class="snav-link">Tesla</a><a href="dodge.html" class="snav-link">Dodge</a><a href="jeep.html" class="snav-link">Jeep</a><a href="ram.html" class="snav-link">RAM</a><a href="cadillac.html" class="snav-link">Cadillac</a><a href="gmc.html" class="snav-link">GMC</a></div></div></nav><nav class="model-bar"><div class="mbar-inner"><a href="roush.html" class="mbar-brand" title="Roush">Roush /</a><a href="roush-stage1-mustang.html" class="mbar-tab"><span class="mbar-name">Stage 1 Mustang</span><span class="mbar-price">~$52K</span></a><a href="roush-stage2-mustang.html" class="mbar-tab"><span class="mbar-name">Stage 2 Mustang</span><span class="mbar-price">~$62K</span></a><a href="roush-stage3-mustang.html" class="mbar-tab"><span class="mbar-name">Stage 3 Mustang</span><span class="mbar-price">~$75K</span></a><a href="roush-f150.html" class="mbar-tab"><span class="mbar-name">Roush F-150</span><span class="mbar-price">~$75K</span></a><a href="roush-f150-nitemare.html" class="mbar-tab"><span class="mbar-name">F-150 Nitemare</span><span class="mbar-price">~$90K</span></a></div></nav><div class="hero"><div class="hero-slash"></div><div class="hero-dark-side"></div><div class="hero-wm">R</div><div class="hero-inner"><div class="hero-crumb-row"><div class="hero-crumb"><a href="index.html">Home</a> &rsaquo; <a href="roush.html">Roush</a> &rsaquo; F-150 Nitemare</div><div class="hero-badge-row"><span class="hero-badge plain">Roush Performance</span><span class="hero-badge plain">710 hp</span><span class="hero-badge plain">Ford F-150 Based</span></div></div><div class="hero-body"><div class="hero-left"><div class="hero-eyebrow">Roush &middot; March 2026</div><h1 class="hero-h1">Roush F-150 Nitemare</h1><p class="hero-desc">Roush Performance's F-150 Nitemare — 710 hp on the Ford F-150 platform. Born from Jack Roush's 5 NASCAR championship pedigree. Built in Livonia, Michigan.</p><div class="snap-stats"><div class="snap-box"><div class="snap-v">~$90,000</div><div class="snap-l">From</div></div><div class="snap-box"><div class="snap-v">710 hp</div><div class="snap-l">Power</div></div><div class="snap-box"><div class="snap-v">Ford F-150</div><div class="snap-l">Base</div></div><div class="snap-box"><div class="snap-v">MI</div><div class="snap-l">Built USA</div></div></div></div><div class="hero-right"><div class="hero-right-label">2026 Trims &mdash; Updated</div><div class="trim-row hl"><span class="tr-name">F-150 Nitemare</span><span class="tr-price">~$90,000</span></div></div></div><div class="hero-bottom-bar"><span class="hbb-item">Roush Performance<span>Livonia, MI</span></span><span class="hbb-item">Jack Roush<span>5 NASCAR Cups</span></span></div></div></div><nav class="jump-nav"><div class="jn-inner"><a class="jn active" href="#overview">Overview</a><a class="jn" href="#trims">Trims</a><a class="jn" href="#specs">Specs</a><a class="jn" href="#s4">Roush Powertrain</a><a class="jn" href="#s5">Roush Package</a><a class="jn" href="#s6">Jack Roush Heritage</a><a class="jn" href="#reliability">Reliability</a><a class="jn" href="#recalls">Recalls</a><a class="jn" href="#updates">Updates</a><a class="jn" href="#proscons">Pros &amp; Cons</a><a class="jn" href="#faq">FAQ</a><a class="jn" href="#accessories">Accessories</a></div></nav><button class="mobile-sidebar-toggle" id="mobileSidebarBtn">&#9776; Quick Facts</button><div class="mobile-sidebar-panel" id="mobileSidebarPanel"><div class="sb-link" style="cursor:default"><span style="opacity:.85;font-size:.85rem">HP</span>&nbsp;<strong style="color:#fff;font-size:1.08rem">710 hp</strong></div><div class="sb-link" style="cursor:default"><span style="opacity:.85;font-size:.85rem">Base</span>&nbsp;<strong style="color:#fff;font-size:1.08rem">Ford F-150</strong></div><div class="sb-link" style="cursor:default"><span style="opacity:.85;font-size:.85rem">Price</span>&nbsp;<strong style="color:#fff;font-size:1.08rem">~$90,000</strong></div><div class="sb-link" style="cursor:default"><span style="opacity:.85;font-size:.85rem">Built</span>&nbsp;<strong style="color:#fff;font-size:1.08rem">Livonia, MI</strong></div></div><div class="page-body"><main><div class="section" id="overview"><div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">01</span><h2 class="sec-title">Overview</h2><div class="sec-rule"></div></div><p>The Roush F-150 Nitemare is a 710-hp vehicle built by Roush Performance in Livonia, Michigan — carrying Jack Roush's 5 NASCAR Cup championship pedigree.</p><div class="callout"><div class="callout-label">NASCAR Champions Build This</div><p>Jack Roush has won 5 NASCAR Cup Series championships. Every Roush upgrade carries that engineering heritage.</p></div><div class="stat-row"><div class="stat-box"><div class="sb-v">710 hp</div><div class="sb-l">Power</div></div><div class="stat-box"><div class="sb-v">~$90,000</div><div class="sb-l">From</div></div><div class="stat-box"><div class="sb-v">1995</div><div class="sb-l">Since</div></div><div class="stat-box"><div class="sb-v">MI
-<div class="ov-mini-bar" id="ov-acc-insert"><div class="ov-mini-label">&#9733; Popular Accessories</div><div class="ov-mini-grid"><div class="ov-mini-card"><div class="ov-mini-name">Floor Mats</div><div class="ov-mini-desc">All-weather.</div><a href="https://www.amazon.com/s?k=car+floor+mats+all+weather&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Dash Cam 4K</div><div class="ov-mini-desc">Front/rear cameras.</div><a href="https://www.amazon.com/s?k=car+dash+cam+4K&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Seat Covers</div><div class="ov-mini-desc">Protection.</div><a href="https://www.amazon.com/s?k=car+seat+covers&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Detailing Kit</div><div class="ov-mini-desc">Wash/wax.</div><a href="https://www.amazon.com/s?k=car+detailing+kit&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div></div><div class="ov-mini-disc">Amazon affiliate links &mdash; small commission at no extra cost. <a href="affiliate-disclosure.html">Disclosure</a></div></div>
-</div><div class="sb-l">Built</div></div></div></div><div class="section" id="trims"><div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">02</span><h2 class="sec-title">2026 Trims &amp; Pricing</h2><div class="sec-rule"></div></div><span class="price-note">Verify pricing at manufacturer website.</span><p>Built to order by Roush Performance in Livonia, Michigan.</p><div class="trim-grid"><div class="trim-card featured"><div class="tc-label"></div><div class="tc-name">F-150 Nitemare</div><div class="tc-price">~$90,000</div><div class="tc-specs"><div class="tc-row"><span class="tc-k">HP</span><span class="tc-v">710 hp</span></div><div class="tc-row"><span class="tc-k">Base</span><span class="tc-v">Ford F-150</span></div><div class="tc-row"><span class="tc-k">Docs</span><span class="tc-v">Yes</span></div><div class="tc-row"><span class="tc-k">Built</span><span class="tc-v">Livonia MI</span></div></div><div class="tc-note">Includes Roush documentation. Contact roushperformance.com.</div></div></div></div><div class="section" id="specs"><div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">03</span><h2 class="sec-title">Full Specs</h2><div class="sec-rule"></div></div><table class="data-table"><thead><tr><th>Spec</th><th>F-150 Nitemare</th></tr></thead><tbody><tr><td class="td-n">Price</td><td>~$90,000</td></tr><tr><td class="td-n">HP</td><td>710 hp</td></tr><tr><td class="td-n">Base</td><td>Ford F-150</td></tr><tr><td class="td-n">Assembly</td><td>Livonia, MI</td></tr><tr><td class="td-n">Documentation</td><td>Roush included</td></tr></tbody></table> </div><div class="section" id="s4"><div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">04</span><h2 class="sec-title">Roush Powertrain</h2><div class="sec-rule"></div></div><p>Roush Nitemare: 710 hp supercharged F-150 with suspension lift and full Nitemare styling package. Competes with Ram TRX and Raptor R.</p><div class="callout"><div class="callout-label">NASCAR Heritage</div><p>Jack Roush's 5 NASCAR Cup championships provide engineering credibility that most performance tuners cannot match.</p></div></div><div class="section" id="s5"><div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">05</span><h2 class="sec-title">Roush Package</h2><div class="sec-rule"></div></div><p>Roush packages include supercharger/tune, exhaust, suspension, aero body kit, wheels, and full documentation with warranty on upgrades.</p><div class="callout"><div class="callout-label">Documented Performance</div><p>Every Roush vehicle is dyno-tested and documented before delivery.</p></div></div><div class="section" id="s6"><div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">06</span><h2 class="sec-title">Jack Roush Heritage</h2><div class="sec-rule"></div></div><p>Jack Roush founded Roush Performance in 1995. He is also one of NASCAR's most successful team owners with 5 Cup Series championships — racing DNA that informs every Roush upgrade.</p><div class="callout"><div class="callout-label">NASCAR Championship DNA</div><p>Jack Roush's 5 NASCAR Cup titles provide motorsport credibility that most performance tuners cannot match.</p></div></div><div class="section" id="reliability"><div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">07</span><h2 class="sec-title">Reliability</h2><div class="sec-rule"></div></div><p>Reliability data from Consumer Reports, J.D. Power, and NHTSA.</p><table class="data-table"><thead><tr><th>Area</th><th>Rating</th><th>Status</th><th>Notes</th></tr></thead><tbody><tr><td class="td-n">Ford Base</td><td>★★★★★</td><td>Excellent</td><td>Proven Ford platform</td></tr><tr><td class="td-n">Roush Upgrades</td><td>★★★★☆</td><td>Good</td><td>Professional quality</td></tr><tr><td class="td-n">Overall</td><td>★★★★☆</td><td>Good</td><td>Strong reliability</td></tr></tbody></table><div class="callout"><div class="callout-label">Research First
-<div class="ov-mini-bar" id="rel-acc-insert"><div class="ov-mini-label">&#9733; Recommended Tools & Upgrades</div><div class="ov-mini-grid"><div class="ov-mini-card"><div class="ov-mini-name">OBD2 Scanner Bluetooth</div><div class="ov-mini-desc">Read engine codes from your phone.</div><a href="https://www.amazon.com/s?k=OBD2+bluetooth+scanner+diagnostic&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Tire Pressure Monitor</div><div class="ov-mini-desc">TPMS alert system for all 4 tires.</div><a href="https://www.amazon.com/s?k=TPMS+tire+pressure+monitoring+system&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Emergency Road Kit</div><div class="ov-mini-desc">Jumper cables, reflectors, first aid.</div><a href="https://www.amazon.com/s?k=car+emergency+roadside+kit&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Dash Cam Front & Rear</div><div class="ov-mini-desc">4K documentation for every drive.</div><a href="https://www.amazon.com/s?k=dash+cam+4K+front+rear&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div></div><div class="ov-mini-disc">Amazon affiliate links &mdash; small commission at no extra cost. <a href="affiliate-disclosure.html">Disclosure</a></div></div>
-</div><p>Check consumerreports.org and nhtsa.gov before purchasing.</p></div></div><div class="section" id="recalls"><div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">08</span><h2 class="sec-title">Recalls</h2><div class="sec-rule"></div></div><div class="callout green"><div class="callout-label">No Active Recalls</div><p>Verify at nhtsa.gov/recalls.</p></div><div class="callout"><div class="callout-label">Check VIN</div><p>Verify at nhtsa.gov/recalls.</p></div></div><div class="section" id="updates"><div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">09</span><h2 class="sec-title">Updates</h2><div class="sec-rule"></div></div><div class="update-grid"><div class="update-card"><div class="uc-date">2025</div><div class="uc-title">Current</div><div class="uc-body">Contact roushperformance.com.</div></div></div></div><div class="section" id="proscons"><div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">10</span><h2 class="sec-title">Pros &amp; Cons</h2><div class="sec-rule"></div></div><div class="update-grid"><div class="update-card"><div class="uc-date" style="color:#2db37a;">Strengths</div><p>&#10003; Roush documentation adds collector/resale value</p><p>&#10003; Jack Roush NASCAR championship heritage</p><p>&#10003; 710 hp — more power than Ram TRX</p><p>&#10003; Full Nitemare styling</p><p>&#10003; Roush documentation</p></div><div class="update-card"><div class="uc-date" style="color:var(--red);">Weaknesses</div><p>&#10007; Premium over base Ford vehicle</p><p>&#10007; ~$90K for F-150-based build</p><p>&#10007; Less off-road focused than Raptor R/TRX</p></div></div></div><div class="section" id="faq"><div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">11</span><h2 class="sec-title">FAQ</h2><div class="sec-rule"></div></div><div class="faq-item open"><div class="faq-q">What is Roush Performance?</div><div class="faq-a">Founded by Jack Roush in 1995 in Livonia, Michigan — backed by 5 NASCAR Cup championships.</div></div><div class="faq-item"><div class="faq-q">How to order?</div><div class="faq-a">Contact roushperformance.com.</div></div><div class="faq-item"><div class="faq-q">Street legal?</div><div class="faq-a">Yes.</div></div><div class="faq-item"><div class="faq-q">Affects Ford warranty?</div><div class="faq-a">Roush works to maintain warranty — verify with Roush.</div></div><div class="faq-item"><div class="faq-q">Roush vs Shelby?</div><div class="faq-a">Both build documented Mustangs. Shelby heritage since 1962; Roush brings NASCAR championship credibility.</div></div><div class="faq-item"><div class="faq-q">Where built?</div><div class="faq-a">Livonia, Michigan.</div></div></div><div class="section" id="accessories"><div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">12</span><h2 class="sec-title">Accessories &amp; Upgrades</h2><div class="sec-rule"></div></div><p style="font-size:1.0rem;color:rgba(255,255,255,.82);">Popular upgrades. Amazon affiliate links. <a href="affiliate-disclosure.html" style="color:rgba(255,255,255,.45);">Disclosure</a></p><div class="acc-grid"><div class="acc-card"><div class="acc-name">F-150 Nitemare Floor Mats</div><div class="acc-desc">All-weather.</div><a href="https://www.amazon.com/s?k=Roush+F-150+Nitemare+floor+mats&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
+
+</div><div class="sb-l">Built</div></div></div></div><div class="ov-full-acc" id="ov-acc-insert">
+  <div class="ov-acc-head"><span class="ov-acc-label">&#9733; Popular  Accessories</span></div>
+  <div class="acc-grid">
+      <div class="acc-card"><div class="acc-name">Floor Mats</div><div class="acc-desc">All-weather protection.</div><a href="https://www.amazon.com/s?k=car+floor+mats+all+weather&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
+      <div class="acc-card"><div class="acc-name">Dash Cam 4K</div><div class="acc-desc">Front/rear cameras.</div><a href="https://www.amazon.com/s?k=car+dash+cam+4K+front+rear&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
+      <div class="acc-card"><div class="acc-name">Seat Covers</div><div class="acc-desc">Interior protection.</div><a href="https://www.amazon.com/s?k=car+seat+covers+universal&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
+      <div class="acc-card"><div class="acc-name">Paint PPF</div><div class="acc-desc">Stone chip protection.</div><a href="https://www.amazon.com/s?k=car+paint+protection+film&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
+      <div class="acc-card"><div class="acc-name">Car Cover</div><div class="acc-desc">Storage cover.</div><a href="https://www.amazon.com/s?k=car+cover+all+weather&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
+      <div class="acc-card"><div class="acc-name">Detailing Kit</div><div class="acc-desc">Professional wash/wax.</div><a href="https://www.amazon.com/s?k=car+detailing+kit+professional&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
+  </div>
+  <p style="font-size:.72rem;color:rgba(255,255,255,.25);margin-top:8px;">Amazon affiliate links &mdash; small commission at no extra cost. <a href="affiliate-disclosure.html" style="color:rgba(255,255,255,.35);">Disclosure</a></p>
+</div>
+
+  <div class="section" id="trims"><div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">02</span><h2 class="sec-title">2026 Trims &amp; Pricing</h2><div class="sec-rule"></div></div><span class="price-note">Verify pricing at manufacturer website.</span><p>Built to order by Roush Performance in Livonia, Michigan.</p><div class="trim-grid"><div class="trim-card featured"><div class="tc-label"></div><div class="tc-name">F-150 Nitemare</div><div class="tc-price">~$90,000</div><div class="tc-specs"><div class="tc-row"><span class="tc-k">HP</span><span class="tc-v">710 hp</span></div><div class="tc-row"><span class="tc-k">Base</span><span class="tc-v">Ford F-150</span></div><div class="tc-row"><span class="tc-k">Docs</span><span class="tc-v">Yes</span></div><div class="tc-row"><span class="tc-k">Built</span><span class="tc-v">Livonia MI</span></div></div><div class="tc-note">Includes Roush documentation. Contact roushperformance.com.</div></div></div></div><div class="section" id="specs"><div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">03</span><h2 class="sec-title">Full Specs</h2><div class="sec-rule"></div></div><table class="data-table"><thead><tr><th>Spec</th><th>F-150 Nitemare</th></tr></thead><tbody><tr><td class="td-n">Price</td><td>~$90,000</td></tr><tr><td class="td-n">HP</td><td>710 hp</td></tr><tr><td class="td-n">Base</td><td>Ford F-150</td></tr><tr><td class="td-n">Assembly</td><td>Livonia, MI</td></tr><tr><td class="td-n">Documentation</td><td>Roush included</td></tr></tbody></table> </div><div class="section" id="s4"><div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">04</span><h2 class="sec-title">Roush Powertrain</h2><div class="sec-rule"></div></div><p>Roush Nitemare: 710 hp supercharged F-150 with suspension lift and full Nitemare styling package. Competes with Ram TRX and Raptor R.</p><div class="callout"><div class="callout-label">NASCAR Heritage</div><p>Jack Roush's 5 NASCAR Cup championships provide engineering credibility that most performance tuners cannot match.</p></div></div><div class="section" id="s5"><div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">05</span><h2 class="sec-title">Roush Package</h2><div class="sec-rule"></div></div><p>Roush packages include supercharger/tune, exhaust, suspension, aero body kit, wheels, and full documentation with warranty on upgrades.</p><div class="callout"><div class="callout-label">Documented Performance</div><p>Every Roush vehicle is dyno-tested and documented before delivery.</p></div></div><div class="section" id="s6"><div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">06</span><h2 class="sec-title">Jack Roush Heritage</h2><div class="sec-rule"></div></div><p>Jack Roush founded Roush Performance in 1995. He is also one of NASCAR's most successful team owners with 5 Cup Series championships — racing DNA that informs every Roush upgrade.</p><div class="callout"><div class="callout-label">NASCAR Championship DNA</div><p>Jack Roush's 5 NASCAR Cup titles provide motorsport credibility that most performance tuners cannot match.</p></div></div><div class="section" id="reliability"><div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">07</span><h2 class="sec-title">Reliability</h2><div class="sec-rule"></div></div><p>Reliability data from Consumer Reports, J.D. Power, and NHTSA.</p><table class="data-table"><thead><tr><th>Area</th><th>Rating</th><th>Status</th><th>Notes</th></tr></thead><tbody><tr><td class="td-n">Ford Base</td><td>★★★★★</td><td>Excellent</td><td>Proven Ford platform</td></tr><tr><td class="td-n">Roush Upgrades</td><td>★★★★☆</td><td>Good</td><td>Professional quality</td></tr><tr><td class="td-n">Overall</td><td>★★★★☆</td><td>Good</td><td>Strong reliability</td></tr></tbody></table><div class="callout"><div class="callout-label">Research First
+
+</div><p>Check consumerreports.org and nhtsa.gov before purchasing.</p></div>
+
+  <div class="ov-mini-bar" id="rel-acc-insert"><div class="ov-mini-label">&#9733; Recommended Tools & Upgrades</div><div class="ov-mini-grid"><div class="ov-mini-card"><div class="ov-mini-name">OBD2 Scanner Bluetooth</div><div class="ov-mini-desc">Read engine codes from your phone.</div><a href="https://www.amazon.com/s?k=OBD2+bluetooth+scanner+diagnostic&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Tire Pressure Monitor</div><div class="ov-mini-desc">TPMS alert system for all 4 tires.</div><a href="https://www.amazon.com/s?k=TPMS+tire+pressure+monitoring+system&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Emergency Road Kit</div><div class="ov-mini-desc">Jumper cables, reflectors, first aid.</div><a href="https://www.amazon.com/s?k=car+emergency+roadside+kit&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Dash Cam Front & Rear</div><div class="ov-mini-desc">4K documentation for every drive.</div><a href="https://www.amazon.com/s?k=dash+cam+4K+front+rear&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div></div><div class="ov-mini-disc">Amazon affiliate links &mdash; small commission at no extra cost. <a href="affiliate-disclosure.html">Disclosure</a></div></div>
+
+  </div><div class="section" id="recalls"><div class="sec-hdr"><div class="sec-slash"></div>
+  
+<div class="recalls-tools" id="recalls-tools">
+  <div class="recalls-filter-bar">
+    <span class="rf-label">&#128269; Filter Recalls</span>
+    <button class="rf-btn active" onclick="filterRecalls('all',this)">All</button>
+    <button class="rf-btn" onclick="filterRecalls('24mo',this)">Last 24 Months</button>
+    <button class="rf-btn" onclick="filterRecalls('ota',this)">OTA Fixes</button>
+    <button class="rf-btn" onclick="filterRecalls('physical',this)">Physical Repair</button>
+  </div>
+  <div class="vin-checker-box">
+    <div class="vin-checker-label">&#128203; Check Your VIN for Open Recalls</div>
+    <div class="vin-checker-input">
+      <input type="text" id="vinInput" placeholder="Enter 17-digit VIN&hellip;" maxlength="17" autocomplete="off" spellcheck="false">
+      <a id="vinCheckBtn" href="https://www.nhtsa.gov/vehicle/recalls" target="_blank" rel="noopener noreferrer" class="vin-check-btn">Check NHTSA &#x2192;</a>
+    </div>
+    <div class="vin-checker-note">Powered by NHTSA (nhtsa.gov) — free official recall lookup</div>
+  </div>
+</div><span class="sec-num">08</span><h2 class="sec-title">Recalls</h2><div class="sec-rule"></div></div><div class="callout green"><div class="callout-label">No Active Recalls</div><p>Verify at nhtsa.gov/recalls.</p></div><div class="callout"><div class="callout-label">Check VIN</div><p>Verify at nhtsa.gov/recalls.</p></div></div><div class="section" id="updates"><div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">09</span><h2 class="sec-title">Updates</h2><div class="sec-rule"></div></div><div class="update-grid"><div class="update-card"><div class="uc-date">2025</div><div class="uc-title">Current</div><div class="uc-body">Contact roushperformance.com.</div></div></div></div><div class="section" id="proscons"><div class="sec-hdr"><div class="sec-slash"></div>
+  <div class="deal-score-box" style="--deal-color:#f5a623">
+  <div class="deal-score-num">7<span style="font-size:1.5rem;color:rgba(255,255,255,.3)">/10</span></div>
+  <div class="deal-score-info">
+    <div class="deal-score-label">&#128200; Deal Score &mdash; March 2026</div>
+    <div class="deal-score-stars">★★★★★★★☆☆☆</div>
+    <div class="deal-score-note">Verify current incentives and dealer availability before purchasing</div>
+  </div>
+</div><span class="sec-num">10</span><h2 class="sec-title">Pros &amp; Cons</h2><div class="sec-rule"></div></div><div class="update-grid"><div class="update-card"><div class="uc-date" style="color:#2db37a;">Strengths</div><p>&#10003; Roush documentation adds collector/resale value</p><p>&#10003; Jack Roush NASCAR championship heritage</p><p>&#10003; 710 hp — more power than Ram TRX</p><p>&#10003; Full Nitemare styling</p><p>&#10003; Roush documentation</p></div><div class="update-card"><div class="uc-date" style="color:var(--red);">Weaknesses</div><p>&#10007; Premium over base Ford vehicle</p><p>&#10007; ~$90K for F-150-based build</p><p>&#10007; Less off-road focused than Raptor R/TRX</p></div></div></div><div class="section" id="faq"><div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">11</span><h2 class="sec-title">FAQ</h2><div class="sec-rule"></div></div><div class="faq-item open"><div class="faq-q">What is Roush Performance?</div><div class="faq-a">Founded by Jack Roush in 1995 in Livonia, Michigan — backed by 5 NASCAR Cup championships.</div></div><div class="faq-item"><div class="faq-q">How to order?</div><div class="faq-a">Contact roushperformance.com.</div></div><div class="faq-item"><div class="faq-q">Street legal?</div><div class="faq-a">Yes.</div></div><div class="faq-item"><div class="faq-q">Affects Ford warranty?</div><div class="faq-a">Roush works to maintain warranty — verify with Roush.</div></div><div class="faq-item"><div class="faq-q">Roush vs Shelby?</div><div class="faq-a">Both build documented Mustangs. Shelby heritage since 1962; Roush brings NASCAR championship credibility.</div></div><div class="faq-item"><div class="faq-q">Where built?</div><div class="faq-a">Livonia, Michigan.</div></div></div><div class="section" id="accessories"><div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">12</span><h2 class="sec-title">Accessories &amp; Upgrades</h2><div class="sec-rule"></div></div><p style="font-size:1.0rem;color:rgba(255,255,255,.82);">Popular upgrades. Amazon affiliate links. <a href="affiliate-disclosure.html" style="color:rgba(255,255,255,.45);">Disclosure</a></p><div class="acc-grid"><div class="acc-card"><div class="acc-name">F-150 Nitemare Floor Mats</div><div class="acc-desc">All-weather.</div><a href="https://www.amazon.com/s?k=Roush+F-150+Nitemare+floor+mats&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
 <div class="acc-card"><div class="acc-name">F-150 Nitemare Seat Covers</div><div class="acc-desc">Upholstery.</div><a href="https://www.amazon.com/s?k=Roush+F-150+Nitemare+seat+covers&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
 <div class="acc-card"><div class="acc-name">Dash Cam 4K</div><div class="acc-desc">Documentation.</div><a href="https://www.amazon.com/s?k=dash+cam+4K+truck&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
 <div class="acc-card"><div class="acc-name">Running Boards</div><div class="acc-desc">Side steps.</div><a href="https://www.amazon.com/s?k=Roush+F-150+Nitemare+running+boards&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
@@ -374,6 +750,34 @@ body { font-size: 1rem !important; line-height: 1.82 !important; }
       }, true);
     }
   });
+})();
+</script>
+
+<style id="acb-parallax-wm">
+/* ── Parallax hero watermark ── */
+.hero-wm {
+  will-change: transform;
+  transition: transform .05s linear;
+}
+/* Position fix */
+.hero { overflow: hidden; }
+</style>
+<script id="acb-parallax-js">
+(function(){
+  var wm = document.querySelector('.hero-wm');
+  if (!wm) return;
+  var hero = document.querySelector('.hero');
+  if (!hero) return;
+  var heroTop = 0;
+  function updateHeroTop() { heroTop = hero.getBoundingClientRect().top + window.scrollY; }
+  updateHeroTop();
+  window.addEventListener('scroll', function(){
+    var scrolled = window.scrollY - heroTop;
+    if (scrolled < 400) {
+      wm.style.transform = 'translateY(' + (scrolled * 0.25) + 'px) translateX(0)';
+    }
+  }, { passive: true });
+  window.addEventListener('resize', updateHeroTop, { passive: true });
 })();
 </script>
 </body></html>

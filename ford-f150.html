@@ -442,6 +442,339 @@ body { font-size: 1rem !important; line-height: 1.82 !important; }
 .acc-name { font-size: 1.05rem !important; font-weight: 700 !important; color: #fff !important; }
 .acc-desc { font-size: .92rem !important; color: rgba(255,255,255,.72) !important; }
 </style>
+
+<style id="acb-v11-master">
+
+/* ═══════════════════════════════════════════════
+   1. PREMIUM HERO SLASH — luxury gradient
+   ═══════════════════════════════════════════════ */
+.hero-slash {
+  background: linear-gradient(
+    155deg,
+    #8B0020 0%,
+    #CC0033 20%,
+    #E8003A 40%,
+    #FF1A3C 60%,
+    #CC0033 80%,
+    #6B0018 100%
+  ) !important;
+  box-shadow:
+    4px 0 40px rgba(255,26,60,.35),
+    8px 0 80px rgba(200,0,40,.2),
+    inset -20px 0 60px rgba(0,0,0,.3) !important;
+}
+.hero-slash::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(
+    160deg,
+    rgba(255,255,255,.12) 0%,
+    rgba(255,255,255,.04) 30%,
+    transparent 60%
+  ) !important;
+}
+.hero-slash::after {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: repeating-linear-gradient(
+    -65deg,
+    transparent, transparent 24px,
+    rgba(0,0,0,.07) 24px, rgba(0,0,0,.07) 25px
+  ) !important;
+}
+/* Also give page body a subtle luxury dark */
+body {
+  background: linear-gradient(180deg, #050508 0%, #070710 40%, #050508 100%) !important;
+  min-height: 100vh !important;
+}
+
+/* ═══════════════════════════════════════════════
+   2. GLASS EFFECT — Amazon affiliate cards
+   ═══════════════════════════════════════════════ */
+/* Main accessories section cards */
+.acc-card,
+.ov-mini-card,
+.ov-acc-card {
+  background: rgba(255,255,255,.04) !important;
+  backdrop-filter: blur(12px) saturate(1.4) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(1.4) !important;
+  border: 1px solid rgba(255,255,255,.12) !important;
+  box-shadow:
+    0 4px 16px rgba(0,0,0,.4),
+    inset 0 1px 0 rgba(255,255,255,.08) !important;
+  transition: all .2s ease !important;
+}
+.acc-card:hover,
+.ov-mini-card:hover {
+  background: rgba(255,255,255,.08) !important;
+  border-color: rgba(255,26,60,.4) !important;
+  box-shadow:
+    0 8px 32px rgba(255,26,60,.15),
+    0 4px 16px rgba(0,0,0,.5),
+    inset 0 1px 0 rgba(255,255,255,.12) !important;
+  transform: translateY(-2px) !important;
+}
+.acc-name, .ov-mini-name, .ov-acc-name {
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  font-family: 'Teko', sans-serif !important;
+  letter-spacing: .04em !important;
+}
+.acc-desc, .ov-mini-desc, .ov-acc-desc {
+  font-size: .92rem !important;
+  color: rgba(255,255,255,.72) !important;
+}
+/* acc-grid layout */
+.acc-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)) !important;
+  gap: 14px !important;
+}
+/* Mini 4-card grids */
+.ov-mini-grid, .ov-acc-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 10px !important;
+}
+@media(max-width:700px){
+  .ov-mini-grid, .ov-acc-grid { grid-template-columns: 1fr 1fr !important; }
+}
+/* Glass bar container */
+.ov-mini-bar, .ov-acc-bar {
+  margin: 24px 0 !important;
+  padding: 18px 20px !important;
+  background: rgba(255,255,255,.025) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
+  border-radius: 2px !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06) !important;
+}
+.ov-mini-label, .ov-acc-label {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-size: .72rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .2em !important;
+  text-transform: uppercase !important;
+  color: rgba(255,255,255,.45) !important;
+  margin-bottom: 12px !important;
+}
+.ov-mini-btn, .ov-acc-btn, .acc-btn {
+  background: rgba(26,26,46,.9) !important;
+  color: #FF9900 !important;
+  border: 1px solid rgba(255,153,0,.45) !important;
+  font-size: .78rem !important;
+  font-weight: 800 !important;
+  letter-spacing: .06em !important;
+  padding: 5px 12px !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  transition: all .15s !important;
+  margin-top: 6px !important;
+  font-family: 'Barlow Condensed', sans-serif !important;
+}
+.ov-mini-btn:hover, .ov-acc-btn:hover, .acc-btn:hover {
+  background: #FF9900 !important;
+  color: #000 !important;
+  border-color: #FF9900 !important;
+}
+
+/* ═══════════════════════════════════════════════
+   3. TRIM CARD / MODEL LINEUP — bigger fonts
+   ═══════════════════════════════════════════════ */
+/* Trim cards in section 02 */
+.tc-label {
+  font-size: .85rem !important;
+  font-weight: 700 !important;
+  color: rgba(255,255,255,.55) !important;
+  letter-spacing: .14em !important;
+}
+.tc-name {
+  font-size: 2.4rem !important;
+  line-height: 1 !important;
+  color: #fff !important;
+  font-family: 'Teko', sans-serif !important;
+}
+.tc-price {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  color: #FF1A3C !important;
+  font-family: 'Teko', sans-serif !important;
+}
+.tc-k {
+  font-size: .88rem !important;
+  color: rgba(255,255,255,.65) !important;
+  font-weight: 700 !important;
+}
+.tc-v {
+  font-size: 1.1rem !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+}
+.tc-v.good { color: #3de08a !important; }
+.tc-note {
+  font-size: .88rem !important;
+  color: rgba(255,255,255,.6) !important;
+  line-height: 1.5 !important;
+}
+/* Hero right trim stack */
+.hero-right-label {
+  font-size: .95rem !important;
+  font-weight: 700 !important;
+  color: rgba(255,255,255,.7) !important;
+  letter-spacing: .2em !important;
+  text-transform: uppercase !important;
+  font-family: 'Barlow Condensed', sans-serif !important;
+}
+.tr-name {
+  font-size: 1.55rem !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  font-family: 'Teko', sans-serif !important;
+  line-height: 1 !important;
+}
+.tr-price {
+  font-size: 1.3rem !important;
+  color: #FF1A3C !important;
+  font-family: 'Teko', sans-serif !important;
+  line-height: 1 !important;
+}
+
+/* ═══════════════════════════════════════════════
+   BONUS: Premium section styling
+   ═══════════════════════════════════════════════ */
+.trim-card {
+  border: 1px solid rgba(255,255,255,.1) !important;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,.04) 0%,
+    rgba(255,255,255,.02) 50%,
+    rgba(0,0,0,.3) 100%
+  ) !important;
+  backdrop-filter: blur(4px) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06) !important;
+  transition: all .2s !important;
+}
+.trim-card:hover, .trim-card.featured {
+  border-color: rgba(255,26,60,.5) !important;
+  background: linear-gradient(
+    135deg,
+    rgba(255,26,60,.08) 0%,
+    rgba(255,26,60,.03) 50%,
+    rgba(0,0,0,.3) 100%
+  ) !important;
+  box-shadow:
+    0 4px 20px rgba(255,26,60,.12),
+    inset 0 1px 0 rgba(255,255,255,.1) !important;
+}
+
+/* Model bar premium */
+.mbar-tab {
+  border-bottom: 3px solid transparent !important;
+  transition: all .15s !important;
+}
+.mbar-tab.active {
+  border-bottom-color: #FF1A3C !important;
+  background: linear-gradient(180deg, rgba(255,26,60,.1) 0%, transparent 100%) !important;
+}
+.mbar-name {
+  font-size: 1.12rem !important;
+  font-weight: 700 !important;
+  color: rgba(255,255,255,.92) !important;
+  letter-spacing: .06em !important;
+}
+.mbar-price {
+  font-size: .82rem !important;
+  font-weight: 600 !important;
+}
+</style>
+<style id="acb-brand-color">
+/* Brand-specific hero color: ford */
+.hero-slash {
+  background: linear-gradient(155deg,#001a5c 0%,#003087 40%,#0044b8 70%,#003087 100%) !important;
+  box-shadow: 4px 0 40px rgba(0,48,135,.5), 8px 0 80px rgba(0,0,0,.3), inset -20px 0 60px rgba(0,0,0,.25) !important;
+}
+.hero-slash::before {
+  content:'' !important; position:absolute !important; inset:0 !important;
+  background:linear-gradient(160deg,rgba(255,255,255,.1) 0%,rgba(255,255,255,.03) 35%,transparent 60%) !important;
+}
+.sec-slash { background: #003087 !important; box-shadow: 0 0 8px rgba(0,48,135,.5) !important; }
+.mbar-tab.active { border-bottom-color: #003087 !important; }
+.mbar-tab.active::before { background:linear-gradient(90deg,rgba(0,48,135,,.15),transparent) !important; }
+.mbar-brand { color: #003087 !important; }
+.back-top { background: #003087 !important; }
+.snap-box { border-bottom-color: #003087 !important; }
+.hero-badge.red, .hero-badge { background: #003087 !important; }
+</style><style id="acb-ov-acc-upgrade">
+.ov-full-acc { margin: 0 0 32px; padding: 20px 0; border-top: 1px solid rgba(255,255,255,.08); border-bottom: 1px solid rgba(255,255,255,.08); }
+.ov-full-acc .ov-acc-head { display:flex; align-items:center; gap:10px; margin-bottom:16px; }
+.ov-full-acc .ov-acc-label { font-family:'Barlow Condensed',sans-serif; font-size:.72rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.ov-full-acc .acc-grid { grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); }
+</style><style id="acb-recalls-tools">
+.recalls-tools{margin-bottom:20px;}
+.recalls-filter-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:14px;}
+.rf-label{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-right:4px;}
+.rf-btn{background:transparent;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;cursor:pointer;transition:all .15s;}
+.rf-btn:hover,.rf-btn.active{background:rgba(255,26,60,.15);color:#fff;border-color:rgba(255,26,60,.4);}
+.vin-checker-box{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);padding:14px 16px;border-left:3px solid rgba(255,26,60,.6);}
+.vin-checker-label{font-family:'Barlow Condensed',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:10px;}
+.vin-checker-input{display:flex;gap:8px;flex-wrap:wrap;}
+#vinInput{flex:1;min-width:200px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:.12em;padding:8px 12px;text-transform:uppercase;outline:none;}
+#vinInput:focus{border-color:rgba(255,26,60,.5);background:rgba(255,26,60,.06);}
+.vin-check-btn{background:rgba(255,26,60,.2);color:#fff;border:1px solid rgba(255,26,60,.4);font-family:'Barlow Condensed',sans-serif;font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:8px 18px;text-decoration:none;transition:all .15s;white-space:nowrap;}
+.vin-check-btn:hover{background:#E31937;border-color:#E31937;}
+.vin-checker-note{font-size:.68rem;color:rgba(255,255,255,.25);margin-top:6px;}
+.recall.hidden{display:none;}
+</style>
+<script id="acb-recalls-js">
+(function(){
+  var vinBtn=document.getElementById('vinCheckBtn');
+  var vinInput=document.getElementById('vinInput');
+  if(vinInput&&vinBtn){
+    vinInput.addEventListener('input',function(){
+      var v=this.value.replace(/[^A-HJ-NPR-Z0-9]/gi,'').toUpperCase().slice(0,17);
+      this.value=v;
+      if(v.length===17){
+        vinBtn.href='https://www.nhtsa.gov/vehicle/recalls#'+v;
+        vinBtn.textContent='Check '+v+' →';
+      } else {
+        vinBtn.href='https://www.nhtsa.gov/vehicle/recalls';
+        vinBtn.textContent='Check NHTSA →';
+      }
+    });
+  }
+  window.filterRecalls=function(type,btn){
+    document.querySelectorAll('.rf-btn').forEach(function(b){b.classList.remove('active');});
+    btn.classList.add('active');
+    document.querySelectorAll('.recall').forEach(function(r){
+      if(type==='all'){r.classList.remove('hidden');}
+      else if(type==='24mo'){
+        var meta=r.querySelector('.recall-meta');
+        if(!meta){r.classList.add('hidden');return;}
+        var yr=parseInt(meta.textContent);
+        r.classList.toggle('hidden', isNaN(yr)||yr<2024);
+      }
+      else if(type==='ota'){r.classList.toggle('hidden',!r.querySelector('.ota'));}
+      else if(type==='physical'){r.classList.toggle('hidden',!r.querySelector('.physical'));}
+    });
+  };
+})();
+</script><style id="acb-deal-score">
+.deal-score-box{background:linear-gradient(135deg,rgba(255,255,255,.04) 0%,rgba(255,255,255,.02) 100%);border:1px solid rgba(255,255,255,.1);border-left:4px solid var(--deal-color,#FF9900);padding:14px 18px;margin:20px 0;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+.deal-score-num{font-family:'Teko',sans-serif;font-size:3rem;font-weight:700;color:var(--deal-color,#FF9900);line-height:1;min-width:48px;}
+.deal-score-info{flex:1;}
+.deal-score-label{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:4px;}
+.deal-score-stars{font-size:1.1rem;color:var(--deal-color,#FF9900);letter-spacing:.05em;margin-bottom:4px;}
+.deal-score-note{font-family:'Barlow',sans-serif;font-size:.9rem;color:rgba(255,255,255,.68);line-height:1.5;}
+</style><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":'What is the maximum towing capacity of the F-150?',"acceptedAnswer":{"@type":"Answer","text":'The F-150 is rated to tow up to 14,000 lbs with the 5.0L V8, Max Trailer Tow Package, and specific cab/bed configuration. The PowerBoost hybrid is rated at 12,700 lbs. The 2.7L EcoBoost tows up to 9,000 lbs. Maximum ratings require specific configurations — verify yours at ford.com with the official'}},
+{"@type":"Question","name":'What is the best F-150 engine?',"acceptedAnswer":{"@type":"Answer","text":'For most buyers, the PowerBoost 3.5L hybrid is the best choice: 12,700 lb tow, best fuel economy (~24 mpg combined), 7.2 kW Pro Power Onboard generator, and 700+ miles estimated range. The 5.0L V8 is preferred by buyers who want maximum tow capacity (14,000 lbs) and traditional V8 character. The 2.7'}},
+{"@type":"Question","name":'What is Pro Power Onboard?',"acceptedAnswer":{"@type":"Answer","text":"Pro Power Onboard is Ford's onboard generator system available on F-150 PowerBoost hybrid and F-150 Lightning. It outputs 120V/240V power through outlets in the bed and cab — up to 7.2 kW on PowerBoost and up to 9.6 kW on Lightning. It can power tools, appliances, or charge other vehicles."}},
+{"@type":"Question","name":'How does the F-150 compare to the RAM 1500?',"acceptedAnswer":{"@type":"Answer","text":'Both are excellent trucks. Key differences: F-150 has the higher maximum tow (14,000 vs. 12,750 lbs), PowerBoost hybrid is unique to Ford, and RAM 1500 has a more comfortable ride (coil-spring rear suspension) and better interior refinement per most reviewers. RAM air suspension option is excellent.'}},
+{"@type":"Question","name":'Is the F-150 reliable long-term?',"acceptedAnswer":{"@type":"Answer","text":"Yes, with the right engine. The 5.0L V8 and 3.5L PowerBoost are among the most proven powertrains in the segment. The 2.7L EcoBoost had timing chain issues on 2015–2017 builds — largely resolved on current production. Consult consumerreports.org for the specific model year you're considering."}},
+{"@type":"Question","name":'Is the  a good value in 2026?',"acceptedAnswer":{"@type":"Answer","text":'The  delivers competitive value in its segment. We recommend cross-shopping alternatives and checking current incentive programs before purchasing. Verify all current pricing and incentives with your local Ford dealer.'}}]}</script>
 </head>
 <a href="#" class="back-top" id="backTop">↑</a>
 <div class="font-bar">
@@ -536,9 +869,22 @@ body { font-size: 1rem !important; line-height: 1.82 !important; }
     <p>The Ford F-150 is the best-selling vehicle in the United States for 43 consecutive years through 2025. Built at the Dearborn Truck Plant and Kansas City Assembly, it defines the American pickup truck market. The 14th-generation F-150 (2021+) introduced the PowerBoost hybrid, Pro Power Onboard generator, and a larger center console with fold-down work surface.</p>
     <p>Six engine options span from a base 3.3L V6 to the 720 hp supercharged 5.2L Predator V8 in the Raptor R. The PowerBoost 3.5L hybrid (430 hp, up to 700 mi range) is the most capable and fuel-efficient choice for most truck buyers.</p>
     <div class="callout green"><div class="callout-label">NACS Charging — 2025+
-<div class="ov-mini-bar" id="ov-acc-insert"><div class="ov-mini-label">&#9733; Popular Accessories</div><div class="ov-mini-grid"><div class="ov-mini-card"><div class="ov-mini-name">F-150 Floor Mats</div><div class="ov-mini-desc">Top-rated all-weather mats.</div><a href="https://www.amazon.com/s?k=Ford+F150+floor+mats&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Dash Cam 4K</div><div class="ov-mini-desc">Front/rear cameras.</div><a href="https://www.amazon.com/s?k=Ford+dash+cam+4K&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Seat Covers</div><div class="ov-mini-desc">Premium protection.</div><a href="https://www.amazon.com/s?k=Ford+seat+covers&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div><div class="ov-mini-card"><div class="ov-mini-name">Car Cover</div><div class="ov-mini-desc">All-weather storage.</div><a href="https://www.amazon.com/s?k=Ford+car+cover&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="ov-mini-btn">Shop Amazon &#x2192;</a></div></div><div class="ov-mini-disc">Amazon affiliate links &mdash; small commission at no extra cost. <a href="affiliate-disclosure.html">Disclosure</a></div></div>
+
 </div><p>All 2025+ F-150 and Ford vehicles include native NACS connectors — direct access to Tesla Supercharger network for the PowerBoost hybrid's 12V charging and the F-150 Lightning's EV charging. Previous model years required an adapter.</p></div>
   </div>
+  <div class="ov-full-acc" id="ov-acc-insert">
+  <div class="ov-acc-head"><span class="ov-acc-label">&#9733; Popular  Accessories</span></div>
+  <div class="acc-grid">
+      <div class="acc-card"><div class="acc-name">Floor Mats</div><div class="acc-desc">Heavy-duty all-weather.</div><a href="https://www.amazon.com/s?k=Ford+floor+mats+all+weather&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
+      <div class="acc-card"><div class="acc-name">Dash Cam 4K</div><div class="acc-desc">4K front/rear documentation.</div><a href="https://www.amazon.com/s?k=Ford+dash+cam+4K&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
+      <div class="acc-card"><div class="acc-name">Seat Covers</div><div class="acc-desc">Durable seat protection.</div><a href="https://www.amazon.com/s?k=Ford+seat+covers&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
+      <div class="acc-card"><div class="acc-name">Bed Liner</div><div class="acc-desc">Spray or drop-in bed protection.</div><a href="https://www.amazon.com/s?k=Ford+F150+bed+liner&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
+      <div class="acc-card"><div class="acc-name">Running Boards</div><div class="acc-desc">Side entry steps.</div><a href="https://www.amazon.com/s?k=Ford+F150+running+boards&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
+      <div class="acc-card"><div class="acc-name">Tonneau Cover</div><div class="acc-desc">Bed cover for security.</div><a href="https://www.amazon.com/s?k=Ford+F150+tonneau+cover&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div>
+  </div>
+  <p style="font-size:.72rem;color:rgba(255,255,255,.25);margin-top:8px;">Amazon affiliate links &mdash; small commission at no extra cost. <a href="affiliate-disclosure.html" style="color:rgba(255,255,255,.35);">Disclosure</a></p>
+</div>
+
   <div class="section" id="trims">
     <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">02</span><h2 class="sec-title">Trims &amp; Pricing</h2><div class="sec-rule"></div></div>
     <span class="price-note">Prices exclude destination (~$1,500–$2,000), taxes &amp; fees. Verify at manufacturer website.</span>
@@ -591,7 +937,25 @@ body { font-size: 1rem !important; line-height: 1.82 !important; }
     <table class="data-table"><thead><tr><th>System</th><th>Rating</th><th>Notes</th></tr></thead><tbody><tr><td class="td-n">5.0L V8 Coyote</td><td class="td-good">Strong</td><td>Decades of proven durability</td></tr><tr><td class="td-n">PowerBoost 3.5L Hybrid</td><td class="td-good">Strong</td><td>Hybrid system adds complexity but proven</td></tr><tr><td class="td-n">2.7L EcoBoost (2018+)</td><td class="td-good">Good</td><td>Early chain issues resolved — current builds solid</td></tr><tr><td class="td-n">3.5L EcoBoost</td><td class="td-good">Strong</td><td>High-mileage fleet examples verify durability</td></tr><tr><td class="td-n">10-Speed Transmission</td><td class="td-warn">Mixed</td><td>Early gen had concerns — improved significantly</td></tr><tr><td class="td-n">Pro Power Onboard</td><td class="td-good">Good</td><td>Useful and reliable generator system</td></tr></tbody></table>
   </div>
   <div class="section" id="recalls">
-    <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">07</span><h2 class="sec-title">Recalls</h2><div class="sec-rule"></div></div>
+    <div class="sec-hdr"><div class="sec-slash"></div>
+  
+<div class="recalls-tools" id="recalls-tools">
+  <div class="recalls-filter-bar">
+    <span class="rf-label">&#128269; Filter Recalls</span>
+    <button class="rf-btn active" onclick="filterRecalls('all',this)">All</button>
+    <button class="rf-btn" onclick="filterRecalls('24mo',this)">Last 24 Months</button>
+    <button class="rf-btn" onclick="filterRecalls('ota',this)">OTA Fixes</button>
+    <button class="rf-btn" onclick="filterRecalls('physical',this)">Physical Repair</button>
+  </div>
+  <div class="vin-checker-box">
+    <div class="vin-checker-label">&#128203; Check Your VIN for Open Recalls</div>
+    <div class="vin-checker-input">
+      <input type="text" id="vinInput" placeholder="Enter 17-digit VIN&hellip;" maxlength="17" autocomplete="off" spellcheck="false">
+      <a id="vinCheckBtn" href="https://www.nhtsa.gov/vehicle/recalls" target="_blank" rel="noopener noreferrer" class="vin-check-btn">Check NHTSA &#x2192;</a>
+    </div>
+    <div class="vin-checker-note">Powered by NHTSA (nhtsa.gov) — free official recall lookup</div>
+  </div>
+</div><span class="sec-num">07</span><h2 class="sec-title">Recalls</h2><div class="sec-rule"></div></div>
     <div class="recall">
       <div class="recall-meta">NHTSA · 2024 · ~100,151 F-150 Lightning</div>
       <div class="recall-title">Battery Fire Risk — Lightning</div>
@@ -605,7 +969,15 @@ body { font-size: 1rem !important; line-height: 1.82 !important; }
     <div class="update-grid"><div class="update-card"><div class="uc-date">2026</div><div class="uc-title">NACS Standard — 2025+ All F-150</div><div class="uc-body">All 2025+ F-150 include native NACS connectors. Pro Power Onboard charging and any future EV charging works without adapters.</div></div><div class="update-card"><div class="uc-date">2025</div><div class="uc-title">Raptor R — Continues Production</div><div class="uc-body">720 hp Raptor R with supercharged 5.2L continues as the performance flagship. Fox Live Valve suspension standard.</div></div><div class="update-card"><div class="uc-date">2025</div><div class="uc-title">Pro Power Onboard — 7.2 kW Max</div><div class="uc-body">PowerBoost hybrid with Pro Power Onboard remains one of the best job-site generator vehicles available — 7.2 kW of 120/240V power.</div></div><div class="update-card"><div class="uc-date">2024</div><div class="uc-title">F-150 14th Gen — Ongoing Refinements</div><div class="uc-body">2024/2025 updates include revised front lighting, expanded SYNC 4A availability, additional safety tech standard on lower trims.</div></div></div>
   </div>
   <div class="section" id="proscons">
-    <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">09</span><h2 class="sec-title">Pros &amp; Cons</h2><div class="sec-rule"></div></div>
+    <div class="sec-hdr"><div class="sec-slash"></div>
+  <div class="deal-score-box" style="--deal-color:#3de08a">
+  <div class="deal-score-num">9<span style="font-size:1.5rem;color:rgba(255,255,255,.3)">/10</span></div>
+  <div class="deal-score-info">
+    <div class="deal-score-label">&#128200; Deal Score &mdash; March 2026</div>
+    <div class="deal-score-stars">★★★★★★★★★☆</div>
+    <div class="deal-score-note">Largest inventory — excellent dealer competition and incentive availability</div>
+  </div>
+</div><span class="sec-num">09</span><h2 class="sec-title">Pros &amp; Cons</h2><div class="sec-rule"></div></div>
     <div class="pc-grid">
       <div class="pc-card"><div class="pc-label good">Strengths</div><div class="pc-item"><strong>+</strong> Maximum tow capacity in class — up to 14,000 lbs</div><div class="pc-item"><strong>+</strong> PowerBoost hybrid: 12,700 lb tow + 700 mi+ range + 7.2 kW generator</div><div class="pc-item"><strong>+</strong> Three cab and three bed length combinations</div><div class="pc-item"><strong>+</strong> 43 years as #1 best-seller — proven demand and resale</div><div class="pc-item"><strong>+</strong> NACS standard on 2025+ — Supercharger access</div><div class="pc-item"><strong>+</strong> Pro Power Onboard makes it a mobile generator for job sites</div></div>
       <div class="pc-card"><div class="pc-label bad">Weaknesses</div><div class="pc-item"><strong>−</strong> Base 3.3L V6 is underpowered for serious towing — upgrade the engine</div><div class="pc-item"><strong>−</strong> 10-speed transmission had reliability concerns early — improved but monitor</div><div class="pc-item"><strong>−</strong> Complex pricing: max tow/payload requires specific configs — easy to miss</div><div class="pc-item"><strong>−</strong> Raptor R at ~$97K is not a practical daily truck</div><div class="pc-item"><strong>−</strong> Steep option pricing — desirable features add up quickly</div><div class="pc-item"><strong>−</strong> F-150 Lightning (EV) is a separate model with separate reliability profile</div></div>
@@ -747,6 +1119,34 @@ document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('clic
       }, true);
     }
   });
+})();
+</script>
+
+<style id="acb-parallax-wm">
+/* ── Parallax hero watermark ── */
+.hero-wm {
+  will-change: transform;
+  transition: transform .05s linear;
+}
+/* Position fix */
+.hero { overflow: hidden; }
+</style>
+<script id="acb-parallax-js">
+(function(){
+  var wm = document.querySelector('.hero-wm');
+  if (!wm) return;
+  var hero = document.querySelector('.hero');
+  if (!hero) return;
+  var heroTop = 0;
+  function updateHeroTop() { heroTop = hero.getBoundingClientRect().top + window.scrollY; }
+  updateHeroTop();
+  window.addEventListener('scroll', function(){
+    var scrolled = window.scrollY - heroTop;
+    if (scrolled < 400) {
+      wm.style.transform = 'translateY(' + (scrolled * 0.25) + 'px) translateX(0)';
+    }
+  }, { passive: true });
+  window.addEventListener('resize', updateHeroTop, { passive: true });
 })();
 </script>
 </body>
