@@ -167,15 +167,22 @@ h2.sec-title{font-family:var(--teko);font-size:2rem;font-weight:700;letter-spaci
 .sb-link:last-child{border-bottom:none;}
 .sb-link:hover{color:#fff;background:rgba(255,255,255,.05);}
 .acc-bar{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06);border-left:3px solid var(--red);padding:16px 18px;margin:22px 0;}
-.acc-bar-label{font-family:var(--cond);font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-bottom:12px;}
+.acc-bar-label{font-family:var(--cond);font-size:1rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#ffa500;margin-bottom:12px;}
 .acc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
 @media(max-width:700px){.acc-grid{grid-template-columns:1fr 1fr;}}
 .acc-card{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-top:2px solid rgba(255,255,255,.12);padding:12px;display:flex;flex-direction:column;gap:6px;transition:all .18s;}
 .acc-card:hover{background:rgba(255,255,255,.06);border-top-color:var(--red);transform:translateY(-2px);}
 .acc-name{font-family:var(--teko);font-size:1rem;font-weight:700;color:#fff;letter-spacing:.04em;}
-.acc-desc{font-size:.85rem;color:rgba(255,255,255,.48);flex:1;line-height:1.45;}
-.acc-btn{background:rgba(15,15,25,.9);color:#FF9900;border:1px solid rgba(255,153,0,.35);font-family:var(--cond);font-size:.68rem;font-weight:700;letter-spacing:.06em;padding:4px 10px;text-decoration:none;display:inline-block;transition:all .15s;margin-top:4px;align-self:flex-start;}
-.acc-btn:hover{background:#FF9900;color:#000;}
+.acc-desc{font-size:1rem;color:rgba(255,255,255,.48);flex:1;line-height:1.45;}
+.acc-btn{background:#fff!important;color:#111!important;;border:1px solid rgba(255,153,0,.35);font-family:var(--cond);font-size:.68rem;font-weight:700;letter-spacing:.06em;padding:4px 10px;text-decoration:none;display:inline-block;transition:all .15s;margin-top:4px;align-self:flex-start;}
+.acc-btn:hover{background:#FF9500! important;color:#000 !important;border-color:#e08800!important;
+  box-shadow:0 4px 0 #c97000,0 6px 14px rgba(255,149,0,.4)!important;
+  transform:translateY(-3px)!important;
+}
+.acc-btn:active{
+  transform:translateY(0)!important;
+  box-shadow:0 1px 0 #b8b8b8!important;
+}}
 .acc-disc{font-family:var(--cond);font-size:.6rem;color:rgba(255,255,255,.22);margin-top:6px;}
 .acc-disc a{color:rgba(255,255,255,.32);}
 .review-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:14px;}
@@ -311,9 +318,10 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;back
   <p>All current GMC models available in the United States. Pricing reflects base MSRP before destination, taxes, and fees. Verify at the manufacturer website.</p>
   <span class="price-note">Prices exclude destination (~$1,200&#x2013;$2,000), taxes &amp; fees. Verify at manufacturer website before purchasing.</span>
   <div class="model-grid"><a href="gmc-sierra-1500.html" class="model-card"><div class="mc-type">Full-size pickup</div><div class="mc-name">Sierra 1500</div><div class="mc-price">$39,500</div><div class="mc-range">&nbsp;</div></a><a href="gmc-yukon.html" class="model-card"><div class="mc-type">Full-size SUV</div><div class="mc-name">Yukon</div><div class="mc-price">$58,095</div><div class="mc-range">&nbsp;</div></a><a href="gmc-hummer-ev.html" class="model-card"><div class="mc-type">Electric supertruck</div><div class="mc-name">HUMMER EV</div><div class="mc-price">$79,995</div><div class="mc-range">&nbsp;</div></a><a href="gmc-canyon.html" class="model-card"><div class="mc-type">Midsize pickup</div><div class="mc-name">Canyon</div><div class="mc-price">$33,700</div><div class="mc-range">&nbsp;</div></a><a href="gmc-terrain.html" class="model-card"><div class="mc-type">Compact SUV</div><div class="mc-name">Terrain</div><div class="mc-price">$32,800</div><div class="mc-range">&nbsp;</div></a><a href="gmc-acadia.html" class="model-card"><div class="mc-type">3-row SUV</div><div class="mc-name">Acadia</div><div class="mc-price">$42,900</div><div class="mc-range">&nbsp;</div></a></div>
+  
   <div class="acc-bar" style="margin-top:20px;">
     <div class="acc-bar-label">&#9733; Popular GMC Accessories</div>
-    <div class="acc-grid"><div class="acc-card"><div class="acc-name">GMC Floor Mats</div><div class="acc-desc">All-weather.</div><a href="https://www.amazon.com/s?k=GMC+floor+mats&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">GMC Dash Cam 4K</div><div class="acc-desc">Cameras.</div><a href="https://www.amazon.com/s?k=GMC+dash+cam+4K&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">GMC Seat Covers</div><div class="acc-desc">Protection.</div><a href="https://www.amazon.com/s?k=GMC+seat+covers&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">GMC Car Cover</div><div class="acc-desc">Storage.</div><a href="https://www.amazon.com/s?k=GMC+car+cover&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div></div>
+    <div class="acc-grid"><div class="acc-card"><div class="acc-name">GMC Floor Mats</div><div class="acc-desc">All-weather.</div><a href="https://amzn.to/4sO1FZM" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">GMC Dash Cam 4K</div><div class="acc-desc">Cameras.</div><a href="https://amzn.to/3ODmTLW" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">GMC Seat Covers</div><div class="acc-desc">Protection.</div><a href="https://amzn.to/491W8HY" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">GMC Car Cover</div><div class="acc-desc">Storage.</div><a href="https://amzn.to/48hkE7S" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div></div>
     <div class="acc-disc">Amazon affiliate links &#x2014; small commission at no extra cost. <a href="affiliate-disclosure.html">Disclosure</a></div>
   </div>
 </div>
@@ -390,6 +398,13 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;back
   <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">08</span><h2 class="sec-title">Recent Updates</h2><div class="sec-rule"></div></div>
   <div class="update-grid"><div class="update-card"><div class="uc-date">2026</div><div class="uc-title">2026 Model Year Updates</div><div class="uc-body">Verify current model year updates and availability at the manufacturer website.</div></div><div class="update-card"><div class="uc-date">2026</div><div class="uc-title">Pricing Updates</div><div class="uc-body">Pricing for 2026 models reflects MSRP. Verify all current pricing at manufacturer website.</div></div></div>
 </div>
+
+  <div class="acc-bar" style="margin-top:20px;">
+    <div class="acc-bar-label">&#9733; Popular GMC Accessories</div>
+    <div class="acc-grid"><div class="acc-card"><div class="acc-name">GMC Floor Mats</div><div class="acc-desc">All-weather.</div><a href="https://amzn.to/4sO1FZM" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">GMC Dash Cam 4K</div><div class="acc-desc">Cameras.</div><a href="https://amzn.to/3ODmTLW" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">GMC Seat Covers</div><div class="acc-desc">Protection.</div><a href="https://amzn.to/491W8HY" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">GMC Car Cover</div><div class="acc-desc">Storage.</div><a href="https://amzn.to/48hkE7S" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div></div>
+    <div class="acc-disc">Amazon affiliate links &#x2014; small commission at no extra cost. <a href="affiliate-disclosure.html">Disclosure</a></div>
+  </div>
+
 
 <div class="section" id="ownership">
   <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">09</span><h2 class="sec-title">Ownership Cost Estimator</h2><div class="sec-rule"></div></div>
@@ -469,6 +484,12 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;back
   </div>
 </div>
 
+  <div class="acc-bar" style="margin-top:20px;">
+    <div class="acc-bar-label">&#9733; Popular GMC Accessories</div>
+    <div class="acc-grid"><div class="acc-card"><div class="acc-name">GMC Floor Mats</div><div class="acc-desc">All-weather.</div><a href="https://amzn.to/4sO1FZM" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">GMC Dash Cam 4K</div><div class="acc-desc">Cameras.</div><a href="https://amzn.to/3ODmTLW" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">GMC Seat Covers</div><div class="acc-desc">Protection.</div><a href="https://amzn.to/491W8HY" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">GMC Car Cover</div><div class="acc-desc">Storage.</div><a href="https://amzn.to/48hkE7S" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div></div>
+    <div class="acc-disc">Amazon affiliate links &#x2014; small commission at no extra cost. <a href="affiliate-disclosure.html">Disclosure</a></div>
+  </div>
+  
 <div class="section" id="faq">
   <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">15</span><h2 class="sec-title">FAQ</h2><div class="sec-rule"></div></div>
   <div class="faq-item"><div class="faq-q">Where can I verify current GMC pricing?</div><div class="faq-a">Always verify current pricing at the official manufacturer website before visiting a dealer. Prices change frequently and exclude destination charges, taxes, and fees.</div></div><div class="faq-item"><div class="faq-q">How do I check for open recalls on a GMC vehicle?</div><div class="faq-a">Enter your VIN at nhtsa.gov/recalls for a free official recall check. Always do this before purchasing a used vehicle.</div></div><div class="faq-item"><div class="faq-q">Where can I find GMC reliability data?</div><div class="faq-a">Check Consumer Reports (consumerreports.org) and J.D. Power (jdpower.com) for current reliability ratings. Verify data for your specific model year before purchasing.</div></div>

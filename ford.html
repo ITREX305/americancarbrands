@@ -167,15 +167,22 @@ h2.sec-title{font-family:var(--teko);font-size:2rem;font-weight:700;letter-spaci
 .sb-link:last-child{border-bottom:none;}
 .sb-link:hover{color:#fff;background:rgba(255,255,255,.05);}
 .acc-bar{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06);border-left:3px solid var(--red);padding:16px 18px;margin:22px 0;}
-.acc-bar-label{font-family:var(--cond);font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-bottom:12px;}
+.acc-bar-label{font-family:var(--cond);font-size:1rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#ffa500;margin-bottom:12px;}
 .acc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
 @media(max-width:700px){.acc-grid{grid-template-columns:1fr 1fr;}}
 .acc-card{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-top:2px solid rgba(255,255,255,.12);padding:12px;display:flex;flex-direction:column;gap:6px;transition:all .18s;}
 .acc-card:hover{background:rgba(255,255,255,.06);border-top-color:var(--red);transform:translateY(-2px);}
 .acc-name{font-family:var(--teko);font-size:1rem;font-weight:700;color:#fff;letter-spacing:.04em;}
-.acc-desc{font-size:.85rem;color:rgba(255,255,255,.48);flex:1;line-height:1.45;}
-.acc-btn{background:rgba(15,15,25,.9);color:#FF9900;border:1px solid rgba(255,153,0,.35);font-family:var(--cond);font-size:.68rem;font-weight:700;letter-spacing:.06em;padding:4px 10px;text-decoration:none;display:inline-block;transition:all .15s;margin-top:4px;align-self:flex-start;}
-.acc-btn:hover{background:#FF9900;color:#000;}
+.acc-desc{font-size:1rem;color:rgba(255,255,255,.48);flex:1;line-height:1.45;}
+.acc-btn{background:#fff!important;color:#111!important;;border:1px solid rgba(255,153,0,.35);font-family:var(--cond);font-size:.68rem;font-weight:700;letter-spacing:.06em;padding:4px 10px;text-decoration:none;display:inline-block;transition:all .15s;margin-top:4px;align-self:flex-start;}
+.acc-btn:hover{background:#FF9500! important;color:#000 !important;border-color:#e08800!important;
+  box-shadow:0 4px 0 #c97000,0 6px 14px rgba(255,149,0,.4)!important;
+  transform:translateY(-3px)!important;
+}
+.acc-btn:active{
+  transform:translateY(0)!important;
+  box-shadow:0 1px 0 #b8b8b8!important;
+}}
 .acc-disc{font-family:var(--cond);font-size:.6rem;color:rgba(255,255,255,.22);margin-top:6px;}
 .acc-disc a{color:rgba(255,255,255,.32);}
 .review-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:14px;}
@@ -311,9 +318,10 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;back
   <p>All current Ford models available in the United States. Pricing reflects base MSRP before destination, taxes, and fees. Verify at the manufacturer website.</p>
   <span class="price-note">Prices exclude destination (~$1,200&#x2013;$2,000), taxes &amp; fees. Verify at manufacturer website before purchasing.</span>
   <div class="model-grid"><a href="ford-f150.html" class="model-card"><div class="mc-type">Full-Size Pickup</div><div class="mc-name">F-150</div><div class="mc-price">From $35,810</div><div class="mc-range">Best-selling vehicle in USA</div></a><a href="ford-mustang.html" class="model-card"><div class="mc-type">Sports Coupe</div><div class="mc-name">Mustang</div><div class="mc-price">From $32,995</div><div class="mc-range">Pony car icon · Dark Horse 500hp</div></a><a href="ford-bronco.html" class="model-card"><div class="mc-type">Off-Road SUV</div><div class="mc-name">Bronco</div><div class="mc-price">From $34,995</div><div class="mc-range">Trail-rated · removable doors/roof</div></a><a href="ford-lightning.html" class="model-card"><div class="mc-type">Electric Pickup</div><div class="mc-name">F-150 Lightning</div><div class="mc-price">From $52,995</div><div class="mc-range">Electric F-150 · up to 320 mi</div></a><a href="ford-explorer.html" class="model-card"><div class="mc-type">Midsize SUV</div><div class="mc-name">Explorer</div><div class="mc-price">From $38,890</div><div class="mc-range">3-row family SUV</div></a><a href="ford-maverick.html" class="model-card"><div class="mc-type">Compact Pickup</div><div class="mc-name">Maverick</div><div class="mc-price">From $23,920</div><div class="mc-range">Hybrid standard · 42 mpg city</div></a><a href="ford-ranger.html" class="model-card"><div class="mc-type">Midsize Pickup</div><div class="mc-name">Ranger</div><div class="mc-price">From $34,385</div><div class="mc-range">Mid-size truck · Raptor available</div></a><a href="ford-expedition.html" class="model-card"><div class="mc-type">Full-Size SUV</div><div class="mc-name">Expedition</div><div class="mc-price">From $57,890</div><div class="mc-range">3-row · up to 9,300 lb tow</div></a></div>
+  
   <div class="acc-bar" style="margin-top:20px;">
     <div class="acc-bar-label">&#9733; Popular Ford Accessories</div>
-    <div class="acc-grid"><div class="acc-card"><div class="acc-name">F-150 Floor Mats</div><div class="acc-desc">Heavy-duty all-weather.</div><a href="https://www.amazon.com/s?k=Ford+F150+floor+mats+all+weather&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">Tonneau Cover</div><div class="acc-desc">F-150 bed security.</div><a href="https://www.amazon.com/s?k=Ford+F150+tonneau+cover&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">Dash Cam 4K</div><div class="acc-desc">Front & rear cameras.</div><a href="https://www.amazon.com/s?k=Ford+dash+cam+4K&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">Running Boards</div><div class="acc-desc">Easy entry.</div><a href="https://www.amazon.com/s?k=Ford+F150+running+boards&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div></div>
+    <div class="acc-grid"><div class="acc-card"><div class="acc-name">F-150 Floor Mats</div><div class="acc-desc">Heavy-duty all-weather.</div><a href="https://amzn.to/4sTwEDL" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">Tonneau Cover</div><div class="acc-desc">F-150 bed security.</div><a href="https://amzn.to/4e3TWDu" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">Dash Cam 4K</div><div class="acc-desc">Front & rear cameras.</div><a href="https://amzn.to/41PMiVO" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">Running Boards</div><div class="acc-desc">Easy entry.</div><a href="https://amzn.to/3OTiYec" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div></div>
     <div class="acc-disc">Amazon affiliate links &#x2014; small commission at no extra cost. <a href="affiliate-disclosure.html">Disclosure</a></div>
   </div>
 </div>
@@ -390,6 +398,12 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;back
   <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">08</span><h2 class="sec-title">Recent Updates</h2><div class="sec-rule"></div></div>
   <div class="update-grid"><div class="update-card"><div class="uc-date">2026</div><div class="uc-title">Mustang Dark Horse R Track Package</div><div class="uc-body">Optional $8K package adds roll cage mounts, harness attachment points, fire suppression prep. For dedicated track use. Verify at ford.com.</div></div><div class="update-card"><div class="uc-date">2026</div><div class="uc-title">F-150 Ranger Raptor Expands</div><div class="uc-body">Ranger Raptor with Fox 2.5 shocks and 405hp EcoBoost now available nationwide after limited 2025 rollout.</div></div><div class="update-card"><div class="uc-date">2025</div><div class="uc-title">F-150 Lightning Price Reduction</div><div class="uc-body">Lightning base price reduced to $52,995 to improve EV competitiveness. Check current incentives at ford.com.</div></div><div class="update-card"><div class="uc-date">2025</div><div class="uc-title">Mustang GTD Deliveries Begin</div><div class="uc-body">$300K GT3-derived Mustang GTD with active pushrod suspension begins deliveries to pre-order customers.</div></div></div>
 </div>
+
+  <div class="acc-bar" style="margin-top:20px;">
+    <div class="acc-bar-label">&#9733; Popular Ford Accessories</div>
+    <div class="acc-grid"><div class="acc-card"><div class="acc-name">F-150 Floor Mats</div><div class="acc-desc">Heavy-duty all-weather.</div><a href="https://amzn.to/4sTwEDL" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">Tonneau Cover</div><div class="acc-desc">F-150 bed security.</div><a href="https://amzn.to/4e3TWDu" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">Dash Cam 4K</div><div class="acc-desc">Front & rear cameras.</div><a href="https://amzn.to/41PMiVO" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">Running Boards</div><div class="acc-desc">Easy entry.</div><a href="https://amzn.to/3OTiYec" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div></div>
+    <div class="acc-disc">Amazon affiliate links &#x2014; small commission at no extra cost. <a href="affiliate-disclosure.html">Disclosure</a></div>
+  </div>
 
 <div class="section" id="ownership">
   <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">09</span><h2 class="sec-title">Ownership Cost Estimator</h2><div class="sec-rule"></div></div>
@@ -468,6 +482,12 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;back
     <p>1. Verify current pricing at manufacturer website (prices change frequently). 2. Check all open NHTSA recalls at nhtsa.gov/recalls using the VIN. 3. Confirm any EV/PHEV tax credit eligibility at fueleconomy.gov/feg/taxcenter.do. 4. Get a pre-purchase inspection from an independent certified shop for used vehicles. 5. Compare Consumer Reports and J.D. Power data for your specific model year.</p>
   </div>
 </div>
+
+  <div class="acc-bar" style="margin-top:20px;">
+    <div class="acc-bar-label">&#9733; Popular Ford Accessories</div>
+    <div class="acc-grid"><div class="acc-card"><div class="acc-name">F-150 Floor Mats</div><div class="acc-desc">Heavy-duty all-weather.</div><a href="https://amzn.to/4sTwEDL" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">Tonneau Cover</div><div class="acc-desc">F-150 bed security.</div><a href="https://amzn.to/4e3TWDu" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">Dash Cam 4K</div><div class="acc-desc">Front & rear cameras.</div><a href="https://amzn.to/41PMiVO" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">Running Boards</div><div class="acc-desc">Easy entry.</div><a href="https://amzn.to/3OTiYec" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div></div>
+    <div class="acc-disc">Amazon affiliate links &#x2014; small commission at no extra cost. <a href="affiliate-disclosure.html">Disclosure</a></div>
+  </div>
 
 <div class="section" id="faq">
   <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">15</span><h2 class="sec-title">FAQ</h2><div class="sec-rule"></div></div>

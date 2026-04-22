@@ -167,15 +167,22 @@ h2.sec-title{font-family:var(--teko);font-size:2rem;font-weight:700;letter-spaci
 .sb-link:last-child{border-bottom:none;}
 .sb-link:hover{color:#fff;background:rgba(255,255,255,.05);}
 .acc-bar{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06);border-left:3px solid var(--red);padding:16px 18px;margin:22px 0;}
-.acc-bar-label{font-family:var(--cond);font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-bottom:12px;}
+.acc-bar-label{font-family:var(--cond);font-size:1rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#ffa500;margin-bottom:12px;}
 .acc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
 @media(max-width:700px){.acc-grid{grid-template-columns:1fr 1fr;}}
 .acc-card{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-top:2px solid rgba(255,255,255,.12);padding:12px;display:flex;flex-direction:column;gap:6px;transition:all .18s;}
 .acc-card:hover{background:rgba(255,255,255,.06);border-top-color:var(--red);transform:translateY(-2px);}
 .acc-name{font-family:var(--teko);font-size:1rem;font-weight:700;color:#fff;letter-spacing:.04em;}
-.acc-desc{font-size:.85rem;color:rgba(255,255,255,.48);flex:1;line-height:1.45;}
-.acc-btn{background:rgba(15,15,25,.9);color:#FF9900;border:1px solid rgba(255,153,0,.35);font-family:var(--cond);font-size:.68rem;font-weight:700;letter-spacing:.06em;padding:4px 10px;text-decoration:none;display:inline-block;transition:all .15s;margin-top:4px;align-self:flex-start;}
-.acc-btn:hover{background:#FF9900;color:#000;}
+.acc-desc{font-size:1rem;color:rgba(255,255,255,.48);flex:1;line-height:1.45;}
+.acc-btn{background:#fff!important;color:#111!important;;border:1px solid rgba(255,153,0,.35);font-family:var(--cond);font-size:.68rem;font-weight:700;letter-spacing:.06em;padding:4px 10px;text-decoration:none;display:inline-block;transition:all .15s;margin-top:4px;align-self:flex-start;}
+.acc-btn:hover{background:#FF9500! important;color:#000 !important;border-color:#e08800!important;
+  box-shadow:0 4px 0 #c97000,0 6px 14px rgba(255,149,0,.4)!important;
+  transform:translateY(-3px)!important;
+}
+.acc-btn:active{
+  transform:translateY(0)!important;
+  box-shadow:0 1px 0 #b8b8b8!important;
+}}
 .acc-disc{font-family:var(--cond);font-size:.6rem;color:rgba(255,255,255,.22);margin-top:6px;}
 .acc-disc a{color:rgba(255,255,255,.32);}
 .review-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:14px;}
@@ -311,9 +318,10 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;back
   <p>All current Tesla models available in the United States. Pricing reflects base MSRP before destination, taxes, and fees. Verify at the manufacturer website.</p>
   <span class="price-note">Prices exclude destination (~$1,200&#x2013;$2,000), taxes &amp; fees. Verify at manufacturer website before purchasing.</span>
   <div class="model-grid"><a href="tesla-cybertruck.html" class="model-card"><div class="mc-type">Stainless steel EV truck</div><div class="mc-name">Cybertruck</div><div class="mc-price">$69,990</div><div class="mc-range">&nbsp;</div></a><a href="tesla-model-y.html" class="model-card"><div class="mc-type">Best-selling EV USA</div><div class="mc-name">Model Y</div><div class="mc-price">$44,990</div><div class="mc-range">&nbsp;</div></a><a href="tesla-model-3.html" class="model-card"><div class="mc-type">Long range sedan</div><div class="mc-name">Model 3</div><div class="mc-price">$40,240</div><div class="mc-range">&nbsp;</div></a><a href="tesla-model-s.html" class="model-card"><div class="mc-type">Flagship sedan · 405 mi</div><div class="mc-name">Model S</div><div class="mc-price">$74,990</div><div class="mc-range">&nbsp;</div></a><a href="tesla-model-x.html" class="model-card"><div class="mc-type">Falcon-wing doors</div><div class="mc-name">Model X</div><div class="mc-price">$84,990</div><div class="mc-range">&nbsp;</div></a><a href="tesla-roadster.html" class="model-card"><div class="mc-type">0-60 in under 2s</div><div class="mc-name">Roadster</div><div class="mc-price">TBD</div><div class="mc-range">&nbsp;</div></a></div>
+
   <div class="acc-bar" style="margin-top:20px;">
     <div class="acc-bar-label">&#9733; Popular Tesla Accessories</div>
-    <div class="acc-grid"><div class="acc-card"><div class="acc-name">Tesla Floor Mats</div><div class="acc-desc">All-weather.</div><a href="https://www.amazon.com/s?k=Tesla+floor+mats&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">Tesla Dash Cam 4K</div><div class="acc-desc">Cameras.</div><a href="https://www.amazon.com/s?k=Tesla+dash+cam+4K&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">Tesla Seat Covers</div><div class="acc-desc">Protection.</div><a href="https://www.amazon.com/s?k=Tesla+seat+covers&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">Tesla Car Cover</div><div class="acc-desc">Storage.</div><a href="https://www.amazon.com/s?k=Tesla+car+cover&tag=americancar0d-20" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div></div>
+    <div class="acc-grid"><div class="acc-card"><div class="acc-name">Tesla Floor Mats</div><div class="acc-desc">All-weather.</div><a href="https://amzn.to/4eBRFzq" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">Tesla Dash Cam 4K</div><div class="acc-desc">Cameras.</div><a href="https://amzn.to/4tmTrsJ" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">Tesla Seat Covers</div><div class="acc-desc">Protection.</div><a href="https://amzn.to/4vMe03v" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">Tesla Car Cover</div><div class="acc-desc">Storage.</div><a href="https://amzn.to/4trwuor" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div></div>
     <div class="acc-disc">Amazon affiliate links &#x2014; small commission at no extra cost. <a href="affiliate-disclosure.html">Disclosure</a></div>
   </div>
 </div>
@@ -329,39 +337,6 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;back
   </div>
 </div>
 
-<div class="section" id="specs">
-  <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">03</span><h2 class="sec-title">Lineup Key Specs Comparison</h2><div class="sec-rule"></div></div>
-  <p>Quick comparison of every 2026 Tesla model by the numbers that matter most for buyers. Verify all data at manufacturer website.</p>
-  <table class="data-table">
-    <thead><tr><th>Model</th><th>Base Price</th><th>Range / Fuel</th><th>Horsepower</th><th>Seating</th><th>Max Towing</th></tr></thead>
-    <tbody><tr><td class="td-n">Cybertruck</td><td>$69,990</td><td>&#x2014;</td><td>&#x2014;</td><td>&#x2014;</td><td>&#x2014;</td></tr><tr><td class="td-n">Model Y</td><td>$44,990</td><td>&#x2014;</td><td>&#x2014;</td><td>&#x2014;</td><td>&#x2014;</td></tr><tr><td class="td-n">Model 3</td><td>$40,240</td><td>&#x2014;</td><td>&#x2014;</td><td>&#x2014;</td><td>&#x2014;</td></tr><tr><td class="td-n">Model S</td><td>$74,990</td><td>&#x2014;</td><td>&#x2014;</td><td>&#x2014;</td><td>&#x2014;</td></tr><tr><td class="td-n">Model X</td><td>$84,990</td><td>&#x2014;</td><td>&#x2014;</td><td>&#x2014;</td><td>&#x2014;</td></tr><tr><td class="td-n">Roadster</td><td>TBD</td><td>&#x2014;</td><td>&#x2014;</td><td>&#x2014;</td><td>&#x2014;</td></tr></tbody>
-  </table>
-  <span class="tbl-note">Sources: manufacturer specs, EPA fueleconomy.gov. Verify all figures at manufacturer website before purchasing. Fuel economy at EPA combined rating.</span>
-</div>
-
-<div class="section" id="tech">
-  <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">04</span><h2 class="sec-title">Driver Assist Technology Technology</h2><div class="sec-rule"></div></div>
-  <p>Verify available driver assistance and safety technology for each Tesla model at the manufacturer website. Features vary by trim level.</p>
-  <table class="data-table">
-    <thead><tr><th>Model / Trim</th><th>Driver Assist Technology Availability</th></tr></thead>
-    <tbody><tr><td class="td-n">Cybertruck</td><td>Verify at manufacturer website</td></tr><tr><td class="td-n">Model Y</td><td>Verify at manufacturer website</td></tr><tr><td class="td-n">Model 3</td><td>Verify at manufacturer website</td></tr><tr><td class="td-n">Model S</td><td>Verify at manufacturer website</td></tr><tr><td class="td-n">Model X</td><td>Verify at manufacturer website</td></tr><tr><td class="td-n">Roadster</td><td>Verify at manufacturer website</td></tr></tbody>
-  </table>
-  <span class="tbl-note">Available technology varies by trim. Verify all features at the manufacturer website before purchasing.</span>
-</div>
-
-<div class="section" id="reliability">
-  <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">05</span><h2 class="sec-title">Reliability</h2><div class="sec-rule"></div></div>
-  <p>Reliability data for Tesla models. Always verify current ratings at consumerreports.org and jdpower.com before purchasing.</p>
-  <table class="data-table">
-    <thead><tr><th>Model / Year</th><th>CR Reliability</th><th>Powertrain</th><th>Primary Concerns</th></tr></thead>
-    <tbody><tr><td class="td-n">Cybertruck</td><td class="td-warn">&#x2014; Verify</td><td class="td-warn">&#x2014; Verify</td><td style="font-size:.82rem;color:rgba(255,255,255,.4);">Check consumerreports.org and jdpower.com</td></tr><tr><td class="td-n">Model Y</td><td class="td-warn">&#x2014; Verify</td><td class="td-warn">&#x2014; Verify</td><td style="font-size:.82rem;color:rgba(255,255,255,.4);">Check consumerreports.org and jdpower.com</td></tr><tr><td class="td-n">Model 3</td><td class="td-warn">&#x2014; Verify</td><td class="td-warn">&#x2014; Verify</td><td style="font-size:.82rem;color:rgba(255,255,255,.4);">Check consumerreports.org and jdpower.com</td></tr><tr><td class="td-n">Model S</td><td class="td-warn">&#x2014; Verify</td><td class="td-warn">&#x2014; Verify</td><td style="font-size:.82rem;color:rgba(255,255,255,.4);">Check consumerreports.org and jdpower.com</td></tr><tr><td class="td-n">Model X</td><td class="td-warn">&#x2014; Verify</td><td class="td-warn">&#x2014; Verify</td><td style="font-size:.82rem;color:rgba(255,255,255,.4);">Check consumerreports.org and jdpower.com</td></tr><tr><td class="td-n">Roadster</td><td class="td-warn">&#x2014; Verify</td><td class="td-warn">&#x2014; Verify</td><td style="font-size:.82rem;color:rgba(255,255,255,.4);">Check consumerreports.org and jdpower.com</td></tr></tbody>
-  </table>
-  <span class="tbl-note">CR = Consumer Reports predicted reliability. J.D. Power VDS 2026. Always verify current data at <a href="https://www.consumerreports.org" target="_blank" rel="noopener">consumerreports.org</a> and <a href="https://www.jdpower.com" target="_blank" rel="noopener">jdpower.com</a> before purchasing.</span>
-  <div class="callout">
-    <div class="callout-label">Research Before Buying</div>
-    <p>Consult Consumer Reports, J.D. Power VDS, NHTSA safety ratings, and IIHS before committing to any specific model year.</p>
-  </div>
-</div>
 
 <div class="section" id="maintenance">
   <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">06</span><h2 class="sec-title">Maintenance &amp; Common Issues</h2><div class="sec-rule"></div></div>
@@ -389,6 +364,12 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;back
 <div class="section" id="updates">
   <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">08</span><h2 class="sec-title">Recent Updates</h2><div class="sec-rule"></div></div>
   <div class="update-grid"><div class="update-card"><div class="uc-date">2026</div><div class="uc-title">2026 Model Year Updates</div><div class="uc-body">Verify current model year updates and availability at the manufacturer website.</div></div><div class="update-card"><div class="uc-date">2026</div><div class="uc-title">Pricing Updates</div><div class="uc-body">Pricing for 2026 models reflects MSRP. Verify all current pricing at manufacturer website.</div></div></div>
+</div>
+
+<div class="acc-bar" style="margin-top:20px;">
+    <div class="acc-bar-label">&#9733; Popular Tesla Accessories</div>
+    <div class="acc-grid"><div class="acc-card"><div class="acc-name">Tesla Floor Mats</div><div class="acc-desc">All-weather.</div><a href="https://amzn.to/4eBRFzq" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">Tesla Dash Cam 4K</div><div class="acc-desc">Cameras.</div><a href="https://amzn.to/4tmTrsJ" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">Tesla Seat Covers</div><div class="acc-desc">Protection.</div><a href="https://amzn.to/4vMe03v" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">Tesla Car Cover</div><div class="acc-desc">Storage.</div><a href="https://amzn.to/4trwuor" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div></div>
+    <div class="acc-disc">Amazon affiliate links &#x2014; small commission at no extra cost. <a href="affiliate-disclosure.html">Disclosure</a></div>
 </div>
 
 <div class="section" id="ownership">
@@ -449,17 +430,6 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;back
 </div>
 
 
-
-<div class="section" id="compare">
-  <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">13</span><h2 class="sec-title">Tesla vs. Competitors</h2><div class="sec-rule"></div></div>
-  <p>Editorial comparison. Verify all figures at manufacturer websites before purchasing.</p>
-  <table class="data-table">
-    <thead><tr><th>Brand / Vehicle</th><th>Base Price</th><th>Range / Fuel</th><th>Max Tow</th><th>Driver Assist Tech</th><th>Reliability</th></tr></thead>
-    <tbody><tr><td class="td-n">Tesla (fleet)</td><td>Varies</td><td>Varies</td><td>Varies</td><td>&#x2014;</td><td class="td-warn">&#x2014; Verify</td></tr></tbody>
-  </table>
-  <span class="tbl-note">Data from manufacturer specs and EPA (2026). Reliability from Consumer Reports and J.D. Power — verify current ratings before purchasing.</span>
-</div>
-
 <div class="section" id="buying">
   <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">14</span><h2 class="sec-title">Buying Tips 2026</h2><div class="sec-rule"></div></div>
   <p>Verify current pricing and incentives at the manufacturer website. Get a pre-purchase inspection from a certified independent mechanic for used vehicles. Check all open recalls at nhtsa.gov/recalls before purchasing.</p>
@@ -469,10 +439,17 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;back
   </div>
 </div>
 
+<div class="acc-bar" style="margin-top:20px;">
+    <div class="acc-bar-label">&#9733; Popular Tesla Accessories</div>
+    <div class="acc-grid"><div class="acc-card"><div class="acc-name">Tesla Floor Mats</div><div class="acc-desc">All-weather.</div><a href="https://amzn.to/4eBRFzq" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">Tesla Dash Cam 4K</div><div class="acc-desc">Cameras.</div><a href="https://amzn.to/4tmTrsJ" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">Tesla Seat Covers</div><div class="acc-desc">Protection.</div><a href="https://amzn.to/4vMe03v" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div><div class="acc-card"><div class="acc-name">Tesla Car Cover</div><div class="acc-desc">Storage.</div><a href="https://amzn.to/4trwuor" target="_blank" rel="nofollow noopener sponsored" class="acc-btn">Shop Amazon &#x2192;</a></div></div>
+    <div class="acc-disc">Amazon affiliate links &#x2014; small commission at no extra cost. <a href="affiliate-disclosure.html">Disclosure</a></div>
+</div>
+
 <div class="section" id="faq">
   <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">15</span><h2 class="sec-title">FAQ</h2><div class="sec-rule"></div></div>
   <div class="faq-item"><div class="faq-q">Where can I verify current Tesla pricing?</div><div class="faq-a">Always verify current pricing at the official manufacturer website before visiting a dealer. Prices change frequently and exclude destination charges, taxes, and fees.</div></div><div class="faq-item"><div class="faq-q">How do I check for open recalls on a Tesla vehicle?</div><div class="faq-a">Enter your VIN at nhtsa.gov/recalls for a free official recall check. Always do this before purchasing a used vehicle.</div></div><div class="faq-item"><div class="faq-q">Where can I find Tesla reliability data?</div><div class="faq-a">Check Consumer Reports (consumerreports.org) and J.D. Power (jdpower.com) for current reliability ratings. Verify data for your specific model year before purchasing.</div></div>
 </div>
+
 
 <div class="sources">
   <div class="sources-title">Sources</div>
