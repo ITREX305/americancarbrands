@@ -246,7 +246,6 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;back
   display:flex;flex-direction:column;gap:7px;
   box-shadow:0 4px 24px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.18);
   transition:transform .22s,box-shadow .22s;
-  animation:cardFloat 5s ease-in-out infinite;
 }
 .aff-card:nth-child(2){animation-delay:.6s;}
 .aff-card:nth-child(3){animation-delay:1.2s;}
@@ -257,7 +256,6 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;back
   content:'';position:absolute;top:0;left:-200%;width:400%;height:100%;
   background:linear-gradient(105deg,transparent 20%,rgba(255,255,255,.08) 40%,rgba(255,255,255,.14) 50%,rgba(255,255,255,.08) 60%,transparent 80%);
   background-size:200% auto;
-  animation:glassShimmer 6s linear infinite;
   pointer-events:none;
 }
 .aff-card:hover{transform:translateY(-6px);box-shadow:0 12px 36px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.25);animation-play-state:paused;}
@@ -411,11 +409,6 @@ Its success isn’t built on standout moments—it’s built on sustained, wide-
 <div class="section" id="quiz">
   <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">10</span><h2 class="sec-title">Is Chevrolet Right For You?</h2><div class="sec-rule"></div></div>
 <p>Answer one question and get a personalized model recommendation.</p><div class="quiz-wrap"><div class="quiz-q-text">Which Chevrolet model interests you most?</div><div class="quiz-opts"><div class="quiz-opt" data-result="→ Silverado 1500 ($38,195). Verify current pricing at manufacturer website.">Silverado 1500 — Full-Size Pickup</div><div class="quiz-opt" data-result="→ Corvette ($69,995). Verify current pricing at manufacturer website.">Corvette — Sports Car</div><div class="quiz-opt" data-result="→ Tahoe ($57,095). Verify current pricing at manufacturer website.">Tahoe — Full-Size SUV</div><div class="quiz-opt" data-result="→ Equinox ($31,995). Verify current pricing at manufacturer website.">Equinox — Compact SUV</div></div><div class="quiz-result" id="quiz-result"><div class="quiz-result-text" id="quiz-result-text"></div></div></div>
-</div>
-
-<div class="section" id="compare">
-  <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">11</span><h2 class="sec-title">Chevrolet vs. Competitors</h2><div class="sec-rule"></div></div>
-<p>Editorial comparison as of 2026. Verify all figures at manufacturer websites before purchasing.</p><table class="data-table"><thead><tr><th>Brand / Vehicle</th><th>Base Price</th><th>Range / Fuel</th><th>Max Tow</th><th>Driver Assist</th><th>Reliability</th></tr></thead><tbody><tr><td class="td-n">Chevrolet (fleet)</td><td>Varies</td><td>Varies</td><td>Varies</td><td>—</td><td class="td-warn">— Verify</td></tr></tbody></table><span class="tbl-note">Data from manufacturer specs and EPA 2026. Reliability from Consumer Reports and J.D. Power.</span>
 </div>
 
 <div class="section" id="buying">
