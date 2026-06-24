@@ -1,0 +1,619 @@
+<style>
+:root{--red:#E31937;--ink:#1a1208;--cream:#f5f0e8;--rule:rgba(255,255,255,.08);--body:'Barlow',sans-serif;--cond:'Barlow Condensed',sans-serif;--teko:'Teko',sans-serif;}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--cream);color:var(--ink);font-family:var(--body);overflow-x:hidden;line-height:1.72;font-size:1rem;}
+.float-controls{position:fixed;bottom:26px;right:26px;z-index:999;display:flex;flex-direction:column;gap:3px;align-items:center;background:#1a1208;border:1px solid rgba(255,255,255,.12);padding:8px 6px;border-radius:4px;}
+.fc-label{font-family:var(--cond);font-size:.55rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:2px;}
+.fs-btn{background:transparent;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.6);font-family:var(--cond);font-size:.82rem;font-weight:700;width:32px;height:28px;cursor:pointer;transition:all .15s;}
+.fs-btn:hover{background:var(--red);color:#fff;border-color:var(--red);}
+.back-top{display:flex;align-items:center;justify-content:center;width:32px;height:28px;background:transparent;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.4);text-decoration:none;font-size:.85rem;margin-top:2px;transition:all .15s;}
+.back-top:hover{background:var(--red);color:#fff;}
+.disc-bar{background:#111;border-bottom:1px solid rgba(255,255,255,.06);padding:6px 28px;font-family:var(--cond);font-size:.78rem;color:rgba(255,255,255,.5);display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px;}
+.disc-bar a{color:rgba(255,255,255,.55);text-decoration:none;}
+.site-nav{position:sticky;top:0;z-index:500;background:rgba(13,13,13,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule);height:54px;}
+.snav-inner{max-width:1280px;margin:0 auto;padding:0 20px;height:100%;display:flex;align-items:center;}
+.snav-logo{display:flex;align-items:center;text-decoration:none;margin-right:8px;flex-shrink:0;}
+.snav-logo-slash{background:var(--red);color:#fff;font-family:var(--teko);font-size:1.1rem;font-weight:700;letter-spacing:.06em;padding:5px 12px 2px;clip-path:polygon(0 0,100% 0,88% 100%,0 100%);margin-right:10px;}
+.snav-logo-text{color:rgba(255,255,255,.45);font-family:var(--teko);font-size:.95rem;letter-spacing:.06em;}
+.snav-links{display:flex;align-items:center;overflow-x:auto;scrollbar-width:none;flex:1;}
+.snav-links::-webkit-scrollbar{display:none;}
+.snav-link{font-family:var(--cond);font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.38);text-decoration:none;padding:0 13px;height:54px;display:flex;align-items:center;transition:color .15s;border-left:1px solid var(--rule);white-space:nowrap;}
+.snav-link:hover{color:#fff;}
+.hero{background:#1a1208;overflow:hidden;border-bottom:3px solid var(--red);position:relative;padding:56px 0 48px;}
+.hero::after{content:'EV';position:absolute;right:-20px;bottom:-40px;font-family:var(--teko);font-size:22rem;font-weight:700;color:rgba(255,255,255,.025);line-height:.8;pointer-events:none;}
+.hero-inner{max-width:1280px;margin:0 auto;padding:0 28px;position:relative;z-index:2;}
+.hero-crumb{font-family:var(--cond);font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:10px;}
+.hero-crumb a{color:rgba(255,255,255,.45);text-decoration:none;}
+.hero-eyebrow{font-family:var(--cond);font-size:.78rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:8px;}
+h1.hero-h1{font-family:var(--teko);font-size:clamp(3rem,8vw,6.5rem);font-weight:700;line-height:.9;letter-spacing:.02em;color:#fff;margin-bottom:16px;}
+h1.hero-h1 span{color:var(--red);}
+.hero-deck{font-family:var(--body);font-size:1.05rem;color:rgba(255,255,255,.72);line-height:1.75;max-width:580px;margin-bottom:24px;}
+.hero-meta-bar{display:flex;gap:20px;flex-wrap:wrap;}
+.hero-meta{font-family:var(--cond);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);}
+.hero-meta span{color:rgba(255,255,255,.75);}
+.jump-nav{background:#fff;border-bottom:2px solid rgba(26,18,8,.1);position:sticky;top:54px;z-index:480;overflow-x:auto;scrollbar-width:none;box-shadow:0 2px 8px rgba(26,18,8,.06);}
+.jump-nav::-webkit-scrollbar{display:none;}
+.jn-inner{max-width:1280px;margin:0 auto;padding:0 28px;display:flex;}
+.jn{font-family:var(--cond);font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(26,18,8,.4);text-decoration:none;padding:13px 16px;border-bottom:3px solid transparent;transition:color .15s,border-color .15s;white-space:nowrap;}
+.jn:hover,.jn.active{color:var(--red);border-bottom-color:var(--red);}
+.page-wrap{max-width:1280px;margin:0 auto;padding:48px 28px;display:grid;grid-template-columns:1fr 300px;gap:40px;align-items:start;}
+@media(max-width:900px){.page-wrap{grid-template-columns:1fr;}.sidebar{display:none;}}
+.section{margin-bottom:52px;}
+.sec-hdr{display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid rgba(26,18,8,.08);}
+.sec-num{font-family:var(--cond);font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(26,18,8,.3);}
+.sec-title{font-family:var(--teko);font-size:2rem;font-weight:700;color:var(--ink);letter-spacing:.03em;text-transform:uppercase;}
+.sec-slash{width:3px;height:28px;background:var(--red);flex-shrink:0;}
+.sec-rule{flex:1;height:1px;background:rgba(26,18,8,.1);}
+.section p{font-size:1.0rem;color:rgba(26,18,8,.75);line-height:1.85;margin-bottom:14px;}
+.section h3{font-family:var(--teko);font-size:1.2rem;font-weight:700;color:var(--ink);letter-spacing:.06em;text-transform:uppercase;margin:24px 0 10px;}
+.ev-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin:20px 0;}
+.ev-card{display:flex;flex-direction:column;gap:6px;background:#fff;border:1px solid rgba(26,18,8,.1);padding:20px;text-decoration:none;transition:box-shadow .18s,border-color .18s;position:relative;overflow:hidden;}
+.ev-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--ev-accent,var(--red));}
+.ev-card:hover{box-shadow:0 4px 20px rgba(26,18,8,.12);border-color:rgba(26,18,8,.2);}
+.ev-rank{position:absolute;top:14px;right:14px;width:26px;height:26px;background:var(--red);color:#fff;font-family:var(--teko);font-size:.9rem;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.ev-brand{font-family:var(--cond);font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(26,18,8,.4);margin-bottom:2px;}
+.ev-model{font-family:var(--teko);font-size:1.3rem;font-weight:700;color:var(--ink);line-height:1.1;margin-bottom:8px;}
+.ev-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0;}
+.ev-stat-val{font-family:var(--teko);font-size:1.4rem;font-weight:700;color:var(--ink);line-height:1;}
+.ev-stat-lbl{font-family:var(--cond);font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(26,18,8,.4);}
+.ev-price{font-family:var(--cond);font-size:.82rem;font-weight:700;color:var(--red);margin-top:4px;}
+.comp-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:.9rem;}
+.comp-table th{background:var(--ink);color:#fff;padding:9px 12px;text-align:left;font-family:var(--cond);font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;}
+.comp-table td{padding:9px 12px;border-bottom:1px solid rgba(26,18,8,.07);color:rgba(26,18,8,.78);}
+.comp-table tr:nth-child(even) td{background:rgba(26,18,8,.02);}
+.winner{font-weight:700;color:#00763d !important;}
+.callout{background:#fff;border-left:4px solid var(--red);padding:16px 20px;margin:20px 0;box-shadow:0 2px 8px rgba(26,18,8,.06);}
+.callout-label{font-family:var(--cond);font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:6px;}
+.callout p{font-size:1.0rem;color:rgba(26,18,8,.78);margin:0;line-height:1.7;}
+.faq-item{border-bottom:1px solid rgba(26,18,8,.1);margin-bottom:2px;}
+.faq-q{font-family:var(--cond);font-size:1.0rem;font-weight:700;color:var(--ink);padding:14px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+.faq-q::after{content:'+';font-family:var(--teko);font-size:1.2rem;color:rgba(26,18,8,.3);flex-shrink:0;margin-left:8px;}
+.faq-item.open .faq-q::after{content:'−';}
+.faq-a{font-size:.95rem;color:rgba(26,18,8,.7);line-height:1.8;padding:0 0 16px;display:none;}
+.faq-item.open .faq-a{display:block;}
+.faq-a a{color:var(--red);}
+.sidebar{position:sticky;top:100px;}
+.sb-block{background:#fff;border:1px solid rgba(26,18,8,.1);padding:16px;margin-bottom:14px;}
+.sb-title{font-family:var(--cond);font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(26,18,8,.38);margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid rgba(26,18,8,.08);}
+.sb-link{display:block;font-family:var(--cond);font-size:.88rem;font-weight:600;color:rgba(26,18,8,.65);text-decoration:none;padding:6px 0;border-bottom:1px solid rgba(26,18,8,.06);}
+.sb-link:last-child{border-bottom:none;}
+.sb-link:hover{color:var(--red);}
+.sb-kv{display:flex;justify-content:space-between;align-items:baseline;font-size:.85rem;padding:5px 0;border-bottom:1px solid rgba(26,18,8,.06);}
+.sb-kv:last-child{border-bottom:none;}
+.sb-kv-k{color:rgba(26,18,8,.48);font-family:var(--cond);}
+.sb-kv-v{font-weight:700;color:var(--ink);font-family:var(--cond);}
+.fg-strip{background:#1a1a1a;border-top:1px solid rgba(255,255,255,.06);padding:28px 0;}
+.fg-strip-inner{max-width:1280px;margin:0 auto;padding:0 28px;}
+.fg-strip-label{font-family:var(--cond);font-size:.68rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:12px;}
+.fg-strip-grid{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px;}
+.fg-strip-grid::-webkit-scrollbar{display:none;}
+.fg-chip{flex-shrink:0;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);padding:8px 14px;text-decoration:none;font-family:var(--cond);font-size:.78rem;font-weight:700;letter-spacing:.06em;color:rgba(255,255,255,.65);transition:all .15s;white-space:nowrap;}
+.fg-chip:hover{background:var(--red);color:#fff;border-color:var(--red);}
+footer{background:#111;padding:32px 0;}
+.ft-in{max-width:1280px;margin:0 auto;padding:0 28px;display:flex;flex-direction:column;gap:12px;}
+.ft-logo{font-family:var(--teko);font-size:1.2rem;font-weight:700;color:rgba(255,255,255,.4);text-decoration:none;}
+.ft-logo-slash{color:var(--red);margin-right:6px;}
+.ft-links{display:flex;gap:16px;flex-wrap:wrap;}
+.ft-link{font-family:var(--cond);font-size:.72rem;color:rgba(255,255,255,.35);text-decoration:none;}
+.ft-link:hover{color:rgba(255,255,255,.7);}
+.ft-social{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:4px;}
+.ft-social-label{font-family:var(--cond);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-right:4px;}
+.ft-social-link{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.45);text-decoration:none;transition:all .18s;}
+.ft-social-link:hover{color:#fff;border-color:var(--red);background:var(--red);}
+.ft-social-link svg{width:15px;height:15px;fill:currentColor;}
+.ft-copy{font-family:var(--cond);font-size:.72rem;color:rgba(255,255,255,.25);}
+</style>
+
+<style id="acb-font-boost">
+html { font-size: 17px !important; }
+body { font-size: 1rem !important; line-height: 1.82 !important; }
+.section p { font-size: 1.05rem !important; line-height: 1.88 !important; color: rgba(255,255,255,.88) !important; }
+.section p strong { color: #fff !important; }
+.faq-a { font-size: 1.0rem !important; line-height: 1.82 !important; color: rgba(255,255,255,.82) !important; }
+.data-table td { font-size: 1.0rem !important; color: rgba(255,255,255,.85) !important; }
+.tc-k { font-size: .85rem !important; color: rgba(255,255,255,.65) !important; }
+.tc-note { font-size: .85rem !important; color: rgba(255,255,255,.62) !important; }
+.hero-desc { font-size: 1.12rem !important; color: rgba(255,255,255,.85) !important; }
+.sb-link { font-size: 1.0rem !important; }
+.sb-note { font-size: .88rem !important; color: rgba(255,255,255,.5) !important; }
+.recall-body { font-size: .95rem !important; color: rgba(255,255,255,.65) !important; }
+.uc-body { font-size: .92rem !important; color: rgba(255,255,255,.6) !important; }
+.hero-crumb { font-size: .72rem !important; }
+.snap-v { font-size: 2.3rem !important; color: #fff !important; }
+.snap-l { font-size: .88rem !important; color: rgba(255,255,255,.72) !important; }
+.acc-name { font-size: 1.05rem !important; font-weight: 700 !important; color: #fff !important; }
+.acc-desc { font-size: .92rem !important; color: rgba(255,255,255,.72) !important; }
+</style>
+
+<style id="acb-v11-master">
+
+/* ═══════════════════════════════════════════════
+   1. PREMIUM HERO SLASH — luxury gradient
+   ═══════════════════════════════════════════════ */
+.hero-slash {
+  background: linear-gradient(
+    155deg,
+    #8B0020 0%,
+    #CC0033 20%,
+    #E8003A 40%,
+    #FF1A3C 60%,
+    #CC0033 80%,
+    #6B0018 100%
+  ) !important;
+  box-shadow:
+    4px 0 40px rgba(255,26,60,.35),
+    8px 0 80px rgba(200,0,40,.2),
+    inset -20px 0 60px rgba(0,0,0,.3) !important;
+}
+.hero-slash::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(
+    160deg,
+    rgba(255,255,255,.12) 0%,
+    rgba(255,255,255,.04) 30%,
+    transparent 60%
+  ) !important;
+}
+.hero-slash::after {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: repeating-linear-gradient(
+    -65deg,
+    transparent, transparent 24px,
+    rgba(0,0,0,.07) 24px, rgba(0,0,0,.07) 25px
+  ) !important;
+}
+/* Also give page body a subtle luxury dark */
+body {
+  background: linear-gradient(180deg, #050508 0%, #070710 40%, #050508 100%) !important;
+  min-height: 100vh !important;
+}
+
+/* ═══════════════════════════════════════════════
+   2. GLASS EFFECT — Amazon affiliate cards
+   ═══════════════════════════════════════════════ */
+/* Main accessories section cards */
+.acc-card,
+.ov-mini-card,
+.ov-acc-card {
+  background: rgba(255,255,255,.04) !important;
+  backdrop-filter: blur(12px) saturate(1.4) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(1.4) !important;
+  border: 1px solid rgba(255,255,255,.12) !important;
+  box-shadow:
+    0 4px 16px rgba(0,0,0,.4),
+    inset 0 1px 0 rgba(255,255,255,.08) !important;
+  transition: all .2s ease !important;
+}
+.acc-card:hover,
+.ov-mini-card:hover {
+  background: rgba(255,255,255,.08) !important;
+  border-color: rgba(255,26,60,.4) !important;
+  box-shadow:
+    0 8px 32px rgba(255,26,60,.15),
+    0 4px 16px rgba(0,0,0,.5),
+    inset 0 1px 0 rgba(255,255,255,.12) !important;
+  transform: translateY(-2px) !important;
+}
+.acc-name, .ov-mini-name, .ov-acc-name {
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  font-family: 'Teko', sans-serif !important;
+  letter-spacing: .04em !important;
+}
+.acc-desc, .ov-mini-desc, .ov-acc-desc {
+  font-size: .92rem !important;
+  color: rgba(255,255,255,.72) !important;
+}
+/* acc-grid layout */
+.acc-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)) !important;
+  gap: 14px !important;
+}
+/* Mini 4-card grids */
+.ov-mini-grid, .ov-acc-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 10px !important;
+}
+@media(max-width:700px){
+  .ov-mini-grid, .ov-acc-grid { grid-template-columns: 1fr 1fr !important; }
+}
+/* Glass bar container */
+.ov-mini-bar, .ov-acc-bar {
+  margin: 24px 0 !important;
+  padding: 18px 20px !important;
+  background: rgba(255,255,255,.025) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
+  border-radius: 2px !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06) !important;
+}
+.ov-mini-label, .ov-acc-label {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-size: .72rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .2em !important;
+  text-transform: uppercase !important;
+  color: rgba(255,255,255,.45) !important;
+  margin-bottom: 12px !important;
+}
+.ov-mini-btn, .ov-acc-btn, .acc-btn {
+  background: rgba(26,26,46,.9) !important;
+  color: #FF9900 !important;
+  border: 1px solid rgba(255,153,0,.45) !important;
+  font-size: .78rem !important;
+  font-weight: 800 !important;
+  letter-spacing: .06em !important;
+  padding: 5px 12px !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  transition: all .15s !important;
+  margin-top: 6px !important;
+  font-family: 'Barlow Condensed', sans-serif !important;
+}
+.ov-mini-btn:hover, .ov-acc-btn:hover, .acc-btn:hover {
+  background: #FF9900 !important;
+  color: #000 !important;
+  border-color: #FF9900 !important;
+}
+
+/* ═══════════════════════════════════════════════
+   3. TRIM CARD / MODEL LINEUP — bigger fonts
+   ═══════════════════════════════════════════════ */
+/* Trim cards in section 02 */
+.tc-label {
+  font-size: .85rem !important;
+  font-weight: 700 !important;
+  color: rgba(255,255,255,.55) !important;
+  letter-spacing: .14em !important;
+}
+.tc-name {
+  font-size: 2.4rem !important;
+  line-height: 1 !important;
+  color: #fff !important;
+  font-family: 'Teko', sans-serif !important;
+}
+.tc-price {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  color: #FF1A3C !important;
+  font-family: 'Teko', sans-serif !important;
+}
+.tc-k {
+  font-size: .88rem !important;
+  color: rgba(255,255,255,.65) !important;
+  font-weight: 700 !important;
+}
+.tc-v {
+  font-size: 1.1rem !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+}
+.tc-v.good { color: #3de08a !important; }
+.tc-note {
+  font-size: .88rem !important;
+  color: rgba(255,255,255,.6) !important;
+  line-height: 1.5 !important;
+}
+/* Hero right trim stack */
+.hero-right-label {
+  font-size: .95rem !important;
+  font-weight: 700 !important;
+  color: rgba(255,255,255,.7) !important;
+  letter-spacing: .2em !important;
+  text-transform: uppercase !important;
+  font-family: 'Barlow Condensed', sans-serif !important;
+}
+.tr-name {
+  font-size: 1.55rem !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  font-family: 'Teko', sans-serif !important;
+  line-height: 1 !important;
+}
+.tr-price {
+  font-size: 1.3rem !important;
+  color: #FF1A3C !important;
+  font-family: 'Teko', sans-serif !important;
+  line-height: 1 !important;
+}
+
+/* ═══════════════════════════════════════════════
+   BONUS: Premium section styling
+   ═══════════════════════════════════════════════ */
+.trim-card {
+  border: 1px solid rgba(255,255,255,.1) !important;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,.04) 0%,
+    rgba(255,255,255,.02) 50%,
+    rgba(0,0,0,.3) 100%
+  ) !important;
+  backdrop-filter: blur(4px) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06) !important;
+  transition: all .2s !important;
+}
+.trim-card:hover, .trim-card.featured {
+  border-color: rgba(255,26,60,.5) !important;
+  background: linear-gradient(
+    135deg,
+    rgba(255,26,60,.08) 0%,
+    rgba(255,26,60,.03) 50%,
+    rgba(0,0,0,.3) 100%
+  ) !important;
+  box-shadow:
+    0 4px 20px rgba(255,26,60,.12),
+    inset 0 1px 0 rgba(255,255,255,.1) !important;
+}
+
+/* Model bar premium */
+.mbar-tab {
+  border-bottom: 3px solid transparent !important;
+  transition: all .15s !important;
+}
+.mbar-tab.active {
+  border-bottom-color: #FF1A3C !important;
+  background: linear-gradient(180deg, rgba(255,26,60,.1) 0%, transparent 100%) !important;
+}
+.mbar-name {
+  font-size: 1.12rem !important;
+  font-weight: 700 !important;
+  color: rgba(255,255,255,.92) !important;
+  letter-spacing: .06em !important;
+}
+.mbar-price {
+  font-size: .82rem !important;
+  font-weight: 600 !important;
+}
+</style>
+</head>
+<body>
+<div class="float-controls">
+  <div class="fc-label">TEXT</div>
+  <button class="fs-btn" id="fsInc">A+</button>
+  <button class="fs-btn" id="fsDec">A−</button>
+  <a href="#" class="back-top" id="backTop">↑</a>
+</div>
+<div class="disc-bar">
+  <span>Independent editorial — not affiliated with any manufacturer — <a href="disclaimer.html">Disclaimer</a></span>
+  <span>Updated March 2026 · verify pricing at manufacturer website</span>
+</div>
+<nav class="site-nav">
+  <div class="snav-inner">
+    <a href="index.html" class="snav-logo"><span class="snav-logo-slash">ACB</span><span class="snav-logo-text">AmericanCarBrands</span></a>
+    <div class="snav-links">
+      <a href="ford.html" class="snav-link">Ford</a>
+      <a href="chevrolet.html" class="snav-link">Chevrolet</a>
+      <a href="tesla.html" class="snav-link">Tesla</a>
+      <a href="dodge.html" class="snav-link">Dodge</a>
+      <a href="jeep.html" class="snav-link">Jeep</a>
+      <a href="ram.html" class="snav-link">RAM</a>
+      <a href="cadillac.html" class="snav-link">Cadillac</a>
+      <a href="gmc.html" class="snav-link">GMC</a>
+      <a href="lincoln.html" class="snav-link">Lincoln</a>
+    </div>
+  </div>
+</nav>
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-crumb"><a href="index.html">AmericanCarBrands</a> › Electric Vehicles</div>
+    <div class="hero-eyebrow">2026 Complete Guide</div>
+    <h1 class="hero-h1">American <span>Electric</span><br>Car Brands</h1>
+    <p class="hero-deck">Every American EV ranked for 2026 — from Tesla's network dominance to Rivian's off-road capability and Lucid's record 516-mile range. Real-world data, honest assessments.</p>
+    <div class="hero-meta-bar">
+      <div class="hero-meta">Brands: <span>12 active</span></div>
+      <div class="hero-meta">Models: <span>22+</span></div>
+      <div class="hero-meta">Updated: <span>March 2026</span></div>
+    </div>
+  </div>
+</div>
+<nav class="jump-nav">
+  <div class="jn-inner">
+    <a class="jn active" href="#overview">Overview</a>
+    <a class="jn" href="#ranked">All EVs Ranked</a>
+    <a class="jn" href="#compare">Comparison</a>
+    <a class="jn" href="#buying">Buying Guide</a>
+    <a class="jn" href="#charging">Charging</a>
+    <a class="jn" href="#faq">FAQ</a>
+  </div>
+</nav>
+<div class="page-wrap">
+<main>
+<div class="section" id="overview">
+  <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">01</span><h2 class="sec-title">Overview</h2><div class="sec-rule"></div></div>
+  <p>American electric vehicles crossed a critical threshold in 2026: range anxiety is largely solved. The Lucid Air Grand Touring holds the EPA record at <strong>516 miles</strong>. Tesla's Supercharger network spans 17,000+ US locations. Rivian tows 11,000 lb at 410 miles on the Max Pack.</p>
+  <p>The question for 2026 buyers isn't "will it get me there?" — it's "which American EV best fits my life?" This guide covers every current American EV brand with real-world range data, honest reliability assessments, and direct recommendations.</p>
+  <div class="callout">
+    <div class="callout-label">2026 Key Finding</div>
+    <p>The US has <strong>eight active American EV manufacturers</strong> delivering production vehicles. Tesla leads on infrastructure. Rivian leads on towing and off-road. Lucid leads on range. Cadillac LYRIQ leads on luxury value under $65K. No single brand dominates every category.</p>
+  </div>
+  <p>All prices are March 2026 MSRPs before destination, taxes, or incentives. Many qualify for the $7,500 federal EV tax credit — verify at fueleconomy.gov/tax.</p>
+</div>
+<div class="section" id="ranked">
+  <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">02</span><h2 class="sec-title">All American EVs Ranked</h2><div class="sec-rule"></div></div>
+  <p>Composite score: range (30%), value (25%), charging speed (20%), reliability (15%), brand support (10%).</p>
+  <div class="ev-grid">
+    <a href="lucid-air.html" class="ev-card" style="--ev-accent:#1A8FBF"><div class="ev-rank">1</div><div class="ev-brand">Lucid</div><div class="ev-model">Air Grand Touring</div><div class="ev-stats"><div><div class="ev-stat-val">516 mi</div><div class="ev-stat-lbl">EPA Range</div></div><div><div class="ev-stat-val">300 kW</div><div class="ev-stat-lbl">DC Charge</div></div></div><div class="ev-price">From $138,000</div></a>
+    <a href="rivian-r1t.html" class="ev-card" style="--ev-accent:#00A86B"><div class="ev-rank">2</div><div class="ev-brand">Rivian</div><div class="ev-model">R1T Max Pack</div><div class="ev-stats"><div><div class="ev-stat-val">410 mi</div><div class="ev-stat-lbl">EPA Range</div></div><div><div class="ev-stat-val">11,000 lb</div><div class="ev-stat-lbl">Max Tow</div></div></div><div class="ev-price">From $86,900</div></a>
+    <a href="tesla-cybertruck.html" class="ev-card" style="--ev-accent:#E31937"><div class="ev-rank">3</div><div class="ev-brand">Tesla</div><div class="ev-model">Cybertruck AWD</div><div class="ev-stats"><div><div class="ev-stat-val">314 mi</div><div class="ev-stat-lbl">EPA Range</div></div><div><div class="ev-stat-val">11,000 lb</div><div class="ev-stat-lbl">Max Tow</div></div></div><div class="ev-price">From $69,990</div></a>
+    <a href="tesla-modely.html" class="ev-card" style="--ev-accent:#E31937"><div class="ev-rank">4</div><div class="ev-brand">Tesla</div><div class="ev-model">Model Y Long Range</div><div class="ev-stats"><div><div class="ev-stat-val">330 mi</div><div class="ev-stat-lbl">EPA Range</div></div><div><div class="ev-stat-val">$44,990</div><div class="ev-stat-lbl">Starting</div></div></div><div class="ev-price">Best-selling EV globally</div></a>
+    <a href="cadillac-lyriq.html" class="ev-card" style="--ev-accent:#8B1C2C"><div class="ev-rank">5</div><div class="ev-brand">Cadillac</div><div class="ev-model">LYRIQ RWD</div><div class="ev-stats"><div><div class="ev-stat-val">314 mi</div><div class="ev-stat-lbl">EPA Range</div></div><div><div class="ev-stat-val">190 kW</div><div class="ev-stat-lbl">DC Charge</div></div></div><div class="ev-price">From $59,990</div></a>
+    <a href="ford-f150-lightning.html" class="ev-card" style="--ev-accent:#003087"><div class="ev-rank">6</div><div class="ev-brand">Ford</div><div class="ev-model">F-150 Lightning</div><div class="ev-stats"><div><div class="ev-stat-val">320 mi</div><div class="ev-stat-lbl">EPA Range</div></div><div><div class="ev-stat-val">9,100 lb</div><div class="ev-stat-lbl">Max Tow</div></div></div><div class="ev-price">From $52,995</div></a>
+    <a href="chevrolet-equinox.html" class="ev-card" style="--ev-accent:#C8102E"><div class="ev-rank">7</div><div class="ev-brand">Chevrolet</div><div class="ev-model">Equinox EV</div><div class="ev-stats"><div><div class="ev-stat-val">319 mi</div><div class="ev-stat-lbl">EPA Range</div></div><div><div class="ev-stat-val">$34,995</div><div class="ev-stat-lbl">Starting</div></div></div><div class="ev-price">Best-value American EV</div></a>
+    <a href="gmc-hummer-ev.html" class="ev-card" style="--ev-accent:#C8102E"><div class="ev-rank">8</div><div class="ev-brand">GMC</div><div class="ev-model">HUMMER EV Pickup</div><div class="ev-stats"><div><div class="ev-stat-val">314 mi</div><div class="ev-stat-lbl">EPA Range</div></div><div><div class="ev-stat-val">350 kW</div><div class="ev-stat-lbl">DC Charge</div></div></div><div class="ev-price">From $98,845</div></a>
+  </div>
+</div>
+<div class="section" id="compare">
+  <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">03</span><h2 class="sec-title">Comparison Table</h2><div class="sec-rule"></div></div>
+  <div style="overflow-x:auto;">
+  <table class="comp-table">
+    <thead><tr><th>Vehicle</th><th>From</th><th>EPA Range</th><th>DC Charge</th><th>0–60</th><th>Max Tow</th><th>Connector</th></tr></thead>
+    <tbody>
+      <tr><td><a href="lucid-air.html" style="color:inherit;font-weight:700">Lucid Air GT</a></td><td>$138,000</td><td class="winner">516 mi</td><td class="winner">300 kW</td><td>~3.0 s</td><td>—</td><td>NACS</td></tr>
+      <tr><td><a href="lucid-gravity.html" style="color:inherit;font-weight:700">Lucid Gravity GT</a></td><td>$119,900</td><td>440 mi</td><td class="winner">300 kW</td><td>~3.5 s</td><td>6,000 lb</td><td>NACS</td></tr>
+      <tr><td><a href="rivian-r1t.html" style="color:inherit;font-weight:700">Rivian R1T Max</a></td><td>$86,900</td><td>410 mi</td><td>200 kW</td><td>~3.0 s</td><td class="winner">11,000 lb</td><td>NACS</td></tr>
+      <tr><td><a href="rivian-r1s.html" style="color:inherit;font-weight:700">Rivian R1S Max</a></td><td>$92,900</td><td>410 mi</td><td>200 kW</td><td>~3.0 s</td><td class="winner">11,000 lb</td><td>NACS</td></tr>
+      <tr><td><a href="tesla-models.html" style="color:inherit;font-weight:700">Tesla Model S Plaid</a></td><td>$89,990</td><td>396 mi</td><td>250 kW</td><td class="winner">1.99 s</td><td>—</td><td>NACS</td></tr>
+      <tr><td><a href="tesla-model3.html" style="color:inherit;font-weight:700">Tesla Model 3 LR</a></td><td>$45,990</td><td>358 mi</td><td>250 kW</td><td>~4.2 s</td><td>—</td><td>NACS</td></tr>
+      <tr><td><a href="tesla-modely.html" style="color:inherit;font-weight:700">Tesla Model Y LR</a></td><td>$44,990</td><td>330 mi</td><td>250 kW</td><td>~4.8 s</td><td>3,500 lb</td><td>NACS</td></tr>
+      <tr><td><a href="tesla-cybertruck.html" style="color:inherit;font-weight:700">Cybertruck AWD</a></td><td>$69,990</td><td>314 mi</td><td>250 kW</td><td>~4.1 s</td><td class="winner">11,000 lb</td><td>NACS</td></tr>
+      <tr><td><a href="ford-f150-lightning.html" style="color:inherit;font-weight:700">F-150 Lightning</a></td><td>$52,995</td><td>320 mi</td><td>150 kW</td><td>~4.0 s</td><td>9,100 lb</td><td>NACS</td></tr>
+      <tr><td><a href="cadillac-lyriq.html" style="color:inherit;font-weight:700">Cadillac LYRIQ V</a></td><td>$74,990</td><td>287 mi</td><td>190 kW</td><td>~3.9 s</td><td>—</td><td>NACS</td></tr>
+      <tr><td><a href="gmc-hummer-ev.html" style="color:inherit;font-weight:700">GMC HUMMER EV</a></td><td>$98,845</td><td>314 mi</td><td class="winner">350 kW</td><td>~3.0 s</td><td>7,500 lb</td><td>NACS</td></tr>
+      <tr><td><a href="chevrolet-equinox.html" style="color:inherit;font-weight:700">Chevy Equinox EV</a></td><td class="winner">$34,995</td><td>319 mi</td><td>150 kW</td><td>~6.0 s</td><td>—</td><td>NACS</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p style="font-size:.82rem;color:rgba(26,18,8,.45);margin-top:8px;">March 2026 MSRPs before destination &amp; incentives. EPA range at varied speed/temp — real-world 70 mph is typically 18–22% lower. Verify at fueleconomy.gov.</p>
+</div>
+<div class="section" id="buying">
+  <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">04</span><h2 class="sec-title">2026 Buying Guide</h2><div class="sec-rule"></div></div>
+  <h3>Best Overall Value: Chevy Equinox EV ($34,995)</h3>
+  <p>The most affordable NACS-equipped American EV. 319-mile range, GM's Ultium platform, and 900+ Chevy dealers nationwide. Before tax credit: potentially $27,495 for eligible buyers.</p>
+  <div class="callout">
+    <div class="callout-label">Federal Tax Credit</div>
+    <p>Many American EVs qualify for the $7,500 federal credit under the IRA. Eligibility depends on income, vehicle price, and assembly location. Check <a href="https://fueleconomy.gov/tax" target="_blank" rel="noopener">fueleconomy.gov/tax</a> for current status before purchasing.</p>
+  </div>
+  <h3>Best for Towing: Rivian R1T / Tesla Cybertruck</h3>
+  <p>Both hit 11,000 lb max tow — the highest of any electric vehicle. R1T wins on off-road capability (14.9-inch clearance vs CT's 9-inch) and the Gear Tunnel. Cybertruck wins on Powershare bidirectional power and the Supercharger network.</p>
+  <h3>Best Range: Lucid Air</h3>
+  <p>Grand Touring at 516 miles EPA. Nothing else is close. If range is the primary concern, the Air is the answer — period. At 300 kW charging, add 200 miles in 22 minutes.</p>
+  <h3>Best Family EV: Tesla Model Y</h3>
+  <p>Best-selling EV globally in 2023–2024. 330 miles, Supercharger access, 72.8 cu ft cargo, and the most proven long-term ownership experience of any EV brand. The default choice for family buyers.</p>
+</div>
+<div class="section" id="charging">
+  <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">05</span><h2 class="sec-title">Charging in 2026</h2><div class="sec-rule"></div></div>
+  <p>All major American EVs now use <strong>NACS</strong> — giving access to Tesla's 17,000+ Superchargers plus Electrify America, ChargePoint, and EVgo. The connector "war" is over for American buyers.</p>
+  <p>Differentiation now is <em>charge rate</em>. For daily home charging on a 48-amp Level 2 (adds 25–35 mi/hour), peak DC speed rarely matters. It matters on road trips — where 150 kW vs 300 kW is roughly 15 extra minutes per stop.</p>
+  <div class="callout">
+    <div class="callout-label">DC Fast Charge Speed Ranking</div>
+    <p><strong>GMC HUMMER EV:</strong> 350 kW · <strong>Lucid Air/Gravity:</strong> 300 kW · <strong>Tesla (all models):</strong> 250 kW · <strong>Rivian:</strong> 200 kW · <strong>Cadillac LYRIQ:</strong> 190 kW · <strong>Ford Lightning / Chevy Equinox:</strong> 150 kW</p>
+  </div>
+</div>
+<div class="section" id="faq">
+  <div class="sec-hdr"><div class="sec-slash"></div><span class="sec-num">06</span><h2 class="sec-title">FAQ</h2><div class="sec-rule"></div></div>
+  <div class="faq-item open"><div class="faq-q">Which American EV has the longest range?</div><div class="faq-a">The Lucid Air Grand Touring at 516 miles EPA — the longest of any production vehicle ever tested. Lucid Gravity SUV: 440 miles. Rivian R1T Max Pack: 410 miles. Tesla Model 3 Long Range: 358 miles. Tesla Model Y Long Range: 330 miles.</div></div>
+  <div class="faq-item"><div class="faq-q">What's the cheapest American EV in 2026?</div><div class="faq-a">Chevrolet Equinox EV at $34,995 — the most affordable NACS-equipped American EV. Before the $7,500 federal tax credit (if eligible), effective cost can drop to ~$27,495. Tesla Model 3 starts at $40,240 and Model Y at $44,990.</div></div>
+  <div class="faq-item"><div class="faq-q">Do all American EVs use the same charger now?</div><div class="faq-a">Yes — all major American EV brands now use NACS as standard: Tesla, Rivian, Ford, all GM brands (Chevy, GMC, Cadillac, Buick), Lucid, and Scout (expected 2026). NACS enables Tesla Supercharger access plus adapters for all other networks.</div></div>
+  <div class="faq-item"><div class="faq-q">Rivian R1T vs Tesla Cybertruck — which to buy?</div><div class="faq-a">R1T wins: off-road (14.9-inch clearance), Gear Tunnel, 410-mile max range, proven towing. Cybertruck wins: Powershare bidirectional power, Supercharger network, stainless exterior, $69,990 base. Similar tow (11,000 lb each). Choose R1T for adventure; CT for Tesla ecosystem.</div></div>
+  <div class="faq-item"><div class="faq-q">Which American EV brand is most reliable?</div><div class="faq-a">Tesla has the most long-term data and generally performs well in Consumer Reports surveys. Rivian improved significantly from 2022 to 2023+ production. GM Ultium (Equinox EV, LYRIQ) is newer but building a track record. Lucid has limited long-term data. See our <a href="most-reliable-american-electric-cars.html">Most Reliable American EVs guide</a>.</div></div>
+  <div class="faq-item"><div class="faq-q">Are American EVs eligible for the $7,500 tax credit?</div><div class="faq-a">Many are, but eligibility depends on vehicle purchase price caps, buyer income limits, assembly location, and battery component sourcing. Always verify at fueleconomy.gov/tax or with a tax advisor before purchasing — eligibility rules change frequently and vary by model year.</div></div>
+</div>
+</main>
+<aside class="sidebar">
+  <div class="sb-block">
+    <div class="sb-title">Quick Stats 2026</div>
+    <div class="sb-kv"><span class="sb-kv-k">Active EV brands</span><span class="sb-kv-v">12</span></div>
+    <div class="sb-kv"><span class="sb-kv-k">Longest range</span><span class="sb-kv-v">516 mi (Lucid)</span></div>
+    <div class="sb-kv"><span class="sb-kv-k">Most affordable</span><span class="sb-kv-v">$34,995 (Equinox)</span></div>
+    <div class="sb-kv"><span class="sb-kv-k">Fastest charge</span><span class="sb-kv-v">350 kW (HUMMER)</span></div>
+    <div class="sb-kv"><span class="sb-kv-k">Max tow</span><span class="sb-kv-v">11,000 lb (R1T/CT)</span></div>
+    <div class="sb-kv"><span class="sb-kv-k">Connector standard</span><span class="sb-kv-v">NACS all brands</span></div>
+  </div>
+  <div class="sb-block">
+    <div class="sb-title">Model Pages</div>
+    <a href="tesla-cybertruck.html" class="sb-link">Tesla Cybertruck</a>
+    <a href="rivian-r1t.html" class="sb-link">Rivian R1T</a>
+    <a href="lucid-air.html" class="sb-link">Lucid Air</a>
+    <a href="cadillac-lyriq.html" class="sb-link">Cadillac LYRIQ</a>
+    <a href="ford-f150-lightning.html" class="sb-link">F-150 Lightning</a>
+    <a href="chevrolet-equinox.html" class="sb-link">Equinox EV</a>
+    <a href="gmc-hummer-ev.html" class="sb-link">GMC HUMMER EV</a>
+  </div>
+  <div class="sb-block">
+    <div class="sb-title">Related Guides</div>
+    <a href="best-american-electric-cars.html" class="sb-link">Best American EVs 2026</a>
+    <a href="most-reliable-american-electric-cars.html" class="sb-link">Most Reliable EVs</a>
+    <a href="tesla-vs-rivian.html" class="sb-link">Tesla vs Rivian</a>
+    <a href="american-electric-car-brands.html" class="sb-link">All EV Brands</a>
+    <a href="cars-made-in-usa.html" class="sb-link">Made in USA Guide</a>
+  </div>
+</aside>
+</div>
+<div class="fg-strip">
+  <div class="fg-strip-inner">
+    <div class="fg-strip-label">&#9733; More Research Guides</div>
+    <div class="fg-strip-grid">
+      <a href="best-american-muscle-cars.html" class="fg-chip">Best Muscle Cars</a>
+      <a href="american-luxury-car-brands.html" class="fg-chip">Luxury Brands</a>
+      <a href="american-truck-brands.html" class="fg-chip">Truck Brands</a>
+      <a href="best-american-cars-under-30k.html" class="fg-chip">Cars Under $30K</a>
+      <a href="most-reliable-american-suvs.html" class="fg-chip">Reliable SUVs</a>
+      <a href="best-performance-cars.html" class="fg-chip">Performance Cars</a>
+      <a href="are-american-cars-reliable.html" class="fg-chip">Reliability Data</a>
+      <a href="top-10-american-muscle-cars.html" class="fg-chip">Top 10 Muscle</a>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="ft-in">
+    <a href="index.html" class="ft-logo"><span class="ft-logo-slash">ACB</span>AmericanCarBrands</a>
+    <div class="ft-links">
+      <a href="index.html" class="ft-link">All Brands</a>
+      <a href="american-electric-car-brands.html" class="ft-link">EV Brands</a>
+      <a href="disclaimer.html" class="ft-link">Disclaimer</a>
+      <a href="editorial-policy.html" class="ft-link">Editorial Policy</a>
+    </div>
+    <div class="ft-social">
+      <span class="ft-social-label">Join the Drive</span>
+      <a href="https://twitter.com/USAutoBrands" class="ft-social-link" target="_blank" rel="noopener noreferrer" aria-label="@USAutoBrands on X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.261 5.636zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+      <a href="https://www.instagram.com/americancarbrands/" class="ft-social-link" target="_blank" rel="noopener noreferrer" aria-label="@americancarbrands on Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+    </div>
+    <span class="ft-copy">&copy; 2025&ndash;2026 AmericanCarBrands.com &mdash; Independent Editorial. Not affiliated with any automaker. All trademarks are property of their respective owners.</span>
+  </div>
+</footer>
+<script>
+(function(){var ls=document.querySelectorAll('.jn'),ss=[];ls.forEach(function(a){var id=a.getAttribute('href').replace('#',''),el=document.getElementById(id);if(el)ss.push({el:el,a:a});});window.addEventListener('scroll',function(){var y=window.scrollY+120,cur=null;ss.forEach(function(s){if(s.el.getBoundingClientRect().top+window.scrollY<=y)cur=s.a;s.a.classList.remove('active');});if(cur)cur.classList.add('active');},{passive:true});ls.forEach(function(a){a.addEventListener('click',function(e){var h=this.getAttribute('href');if(h&&h.startsWith('#')){e.preventDefault();var t=document.getElementById(h.slice(1));if(t)window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-120,behavior:'smooth'});}});});})();
+document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){var i=this.parentElement,o=i.classList.contains('open');document.querySelectorAll('.faq-item').forEach(function(x){x.classList.remove('open');});if(!o)i.classList.add('open');});});
+(function(){var b=document.getElementById('backTop');if(!b)return;window.addEventListener('scroll',function(){b.style.opacity=window.scrollY>400?'1':'0';},{passive:true});b.addEventListener('click',function(e){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});});})();
+
+</script>
+
+<!-- Font size controls - ACB v2 -->
+<script id="acb-font-ctrl">
+(function() {
+  var BASE = 1.0, MIN = 0.8, MAX = 1.6, STEP = 0.1;
+  var stored = parseFloat(localStorage.getItem('acb-fs') || BASE);
+  if (isNaN(stored)) stored = BASE;
+  stored = Math.max(MIN, Math.min(MAX, stored));
+  document.documentElement.style.fontSize = (stored * 16) + 'px';
+
+  function setSize(sz) {
+    sz = Math.max(MIN, Math.min(MAX, Math.round(sz * 10) / 10));
+    document.documentElement.style.fontSize = (sz * 16) + 'px';
+    localStorage.setItem('acb-fs', sz);
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var inc = document.getElementById('fsInc');
+    var dec = document.getElementById('fsDec');
+    var current = function() {
+      return parseFloat(localStorage.getItem('acb-fs') || BASE);
+    };
+    if (inc) {
+      inc.type = 'button';
+      inc.addEventListener('click', function(e) {
+        e.preventDefault(); e.stopPropagation();
+        setSize(current() + STEP);
+      }, true);
+    }
+    if (dec) {
+      dec.type = 'button';
+      dec.addEventListener('click', function(e) {
+        e.preventDefault(); e.stopPropagation();
+        setSize(current() - STEP);
+      }, true);
+    }
+  });
+})();
+</script>
+</body>
+</html>
